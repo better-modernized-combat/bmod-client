@@ -9,9 +9,13 @@ Freelancer: Better Modernized Combat (BMOD) is a modification for Freelancer the
 - Launch VS Code and install the Python Extension from Microsoft.
 - Open a terminal window in Visual Studio Code and run `pip install -r requirements.txt`.
 - You're ready to go! See below for usage.
-- (Optional) A number of demo and placeholder files can be found in the `mod-assets` directory. You may wish to remove them before proceeding.
 
 ## Usage
+
+- Install Freelancer.
+- Copy the installation to a non write-protected location. We recommend `%APPDATA%\freelancer-bmod`.
+- Set the system environment variable `FL_PATH` to the `EXE` folder of your copied Freelancer installation.
+- Install the [FL Combined Patch](https://cdn.discordapp.com/attachments/661329208609603617/752174852722393169/FLCombinedPatch.exe) over the top of your copied Freelancer installation.
 
 The intended workflow for this script is to have an installation of vanilla Freelancer set up somewhere that this script copies files over to. Using utf.py, the script allows for proper version control and tracking of infocard .dlls and many Freelancer .utf files that are usually compiled binary by compiling them to binary and copying them over at runtime. The script also tails the game's log into the Visual Studio Code console window, and attempts to fetch relevant information when Freelancer.exe crashes unexpectedly.
 
