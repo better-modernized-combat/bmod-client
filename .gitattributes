@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+# Reclassifies `.thn` files as Lua
+*.thn linguist-language=lua
+# Git LFS for image and binary files
+*.xcf filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.pdn filter=lfs diff=lfs merge=lfs -text
