@@ -1,0 +1,108 @@
+[
+    {
+        "sheetName": "BMOD Player Blasters",
+        "sheetContents": [
+            "bm_blst_gn.ini",
+            "bm_blst_mn.ini",
+            "bm_blst_gd.ini"
+        ]
+    },
+    {
+        "sheetName": "BMOD Shields",
+        "sheetContents": [
+            "bm_sh_eq.ini",
+            "bm_sh_gd.ini"
+        ]
+    },
+    {
+        "sheetName": "BMOD Player Fleet Blasters",
+        "sheetContents": [
+            "bm_f_blst_gn.ini",
+            "bm_f_blst_mn.ini",
+            "bm_f_blst_gd.ini"
+        ]
+    },
+    {
+        "sheetName": "Player Aux Weapons (Guns)",
+        "sheetContents": [
+            "bm_agun_gn.ini",
+            "bm_agun_mn.ini",
+            "bm_agun_gd.ini",
+            "bm_agun_ammo_gd.ini"
+        ]
+    },
+    {
+        "sheetName": "Solar Guns",
+        "sheetContents": [
+            "bm_slrgun_gn.ini",
+            "bm_slrgun_mn.ini"
+        ]
+    },
+    {
+        "sheetName": "Player Aux Weapons (Missiles)",
+        "sheetContents": [
+            "bm_amssle_gn.ini",
+            "bm_amssle_mn.ini",
+            "bm_amssle_gd.ini",
+            "bm_amssle_ammo_gd.ini",
+            "bm_amssle_mot.ini",
+            "bm_amssle_expl.ini"
+        ]
+    },
+    {
+        "sheetName": "Solar Guns",
+        "sheetContents": [
+            "bm_slrgun_gn.ini",
+            "bm_slrgun_mn.ini"
+        ]
+    },
+    {
+        "sheetName": "Solar Missiles",
+        "sheetContents": [
+            "bm_slrmssle_gn.ini",
+            "bm_slrmssle_mn.ini",
+            "bm_slrmssle_mot.ini",
+            "bm_slrmssle_expl.ini"
+        ]
+    },
+    {
+        "sheetName": "Shiparch",
+        "sheetContents": [
+            "shiparch.ini",
+            "shiparch_simple.ini",
+            "shiparch_collisiongroup.ini",
+            "bm_ship_gd_hull.ini",
+            "bm_ship_gd_pkge.ini",
+            "bm_engine_eq.ini",
+            "bm_engine_gd.ini",
+            "bm_pplant_eq.ini",
+            "bm_pplant_gd.ini",
+            "bm_scan_eq.ini",
+            "bm_scan_gd.ini",
+            "bm_trac_eq.ini",
+            "bm_trac_gd.ini"
+        ]
+    },
+    {
+        "sheetContents": [
+            "npcships.ini",
+            "bm_npcu_gun_gd.ini",
+            "bm_npcu_gun_gn.ini",
+            "bm_npcu_gun_agun_mn.ini",
+            "bm_npc_scan_gd.ini",
+            "bm_npc_scan_eq.ini",
+            "bm_npc_trac_gd.ini",
+            "bm_npc_trac_eq.ini",
+            "bm_npc_engine_gd.ini",
+            "bm_npc_engine_eq.ini",
+            "npc_shiparch.ini",
+            "npc_shiparch_simple.ini",
+            "npc_shiparch_collisiongroup.ini",
+            "bm_npc_blst_mn.ini",
+            "bm_npc_blst_gn.ini",
+            "bm_npc_blst_gd.ini",
+            "bm_cmdt_gd.ini",
+            "bm_cmdt_eq.ini"
+        ]
+    }
+]

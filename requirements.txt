@@ -1,0 +1,6 @@
+gspread==5.12.2
+pandas==2.1.4
+pywin32==306
+tqdm==4.66.1
+WMI==1.5.1
+openpyxl==3.1.2

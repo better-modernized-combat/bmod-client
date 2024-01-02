@@ -1,0 +1,222 @@
+{
+    "./build-tools/python/csv_dump/bm_blst_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_blst_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_blst_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_blst_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_blst_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_blst_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_f_blst_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_fleet_blaster.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_f_blst_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_fleet_blaster.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_f_blst_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_fleet_blaster.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_agun_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_agun_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_agun_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_agun_ammo_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_amssle_expl.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "block_name": "[Explosion]"
+    },
+    "./build-tools/python/csv_dump/bm_amssle_mot.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "block_name": "[Motor]"
+    },
+    "./build-tools/python/csv_dump/bm_amssle_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_amssle_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_amssle_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_amssle_ammo_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_sh_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_shield.ini",
+        "block_name": "[ShieldGenerator]"
+    },
+    "./build-tools/python/csv_dump/bm_sh_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_shield.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/shiparch.ini": {
+        "ship_csv": "./build-tools/python/csv_dump/shiparch.ini.csv",
+        "simples_csv": "./build-tools/python/csv_dump/shiparch_simple.ini.csv",
+        "cgroups_csv": "./build-tools/python/csv_dump/shiparch_collisiongroup.ini.csv",
+        "ini": "./mod-assets/DATA/SHIPS/shiparch.ini",
+        "static_ini_content": [
+            "[Simple]",
+            "nickname = generic_pilot",
+            "DA_archetype = equipment/models/pilot/ship_pilot.3db",
+            "material_library = Equipment/models/pilots.mat",
+            "LODranges = 0, 999999",
+            "MinSpecLOD = 2"
+        ],
+        "old_content": "./mod-assets/STATIC/SHIPS/static_shiparch.ini"
+    },
+    "./build-tools/python/csv_dump/bm_ship_gd_hull.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/SHIPS/bmod_ship_good.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_ship_gd_pkge.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/SHIPS/bmod_ship_good.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_engine_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_engine.ini",
+        "block_name": "[Engine]"
+    },
+    "./build-tools/python/csv_dump/bm_engine_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_engine.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_pplant_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_powerplant.ini",
+        "block_name": "[Power]"
+    },
+    "./build-tools/python/csv_dump/bm_pplant_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_powerplant.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_trac_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_tractor.ini",
+        "block_name": "[Tractor]"
+    },
+    "./build-tools/python/csv_dump/bm_trac_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_tractor.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_scan_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_scanner.ini",
+        "block_name": "[Scanner]",
+        "old_content": "./mod-assets/STATIC/EQUIPMENT/FIXED/static_bmod_equip_scanner.ini"
+    },
+    "./build-tools/python/csv_dump/bm_scan_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_scanner.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_slrgun_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_slrgun_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_slrmssle_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_slrmssle_mot.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Motor]"
+    },
+    "./build-tools/python/csv_dump/bm_slrmssle_expl.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Explosion]"
+    },
+    "./build-tools/python/csv_dump/bm_slrmssle_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/npcships.ini.csv": {
+        "ini": "./mod-assets/DATA/MISSIONS/npcships.ini",
+        "block_name": "[NPCShipArch]",
+        "old_content": "./mod-assets/STATIC/MISSIONS/static_npcships.ini"
+    },
+    "./build-tools/python/csv_dump/npc_shiparch.ini": {
+        "ship_csv": "./build-tools/python/csv_dump/npc_shiparch.ini.csv",
+        "simples_csv": "./build-tools/python/csv_dump/npc_shiparch_simple.ini.csv",
+        "cgroups_csv": "./build-tools/python/csv_dump/npc_shiparch_collisiongroup.ini.csv",
+        "ini": "./mod-assets/DATA/SHIPS/shiparch.ini"
+    },
+    "./build-tools/python/csv_dump/bm_npc_engine_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_engine.ini",
+        "block_name": "[Engine]",
+        "old_content": "./mod-assets/STATIC/EQUIPMENT/FIXED/static_bmod_equip_engine.ini"
+    },
+    "./build-tools/python/csv_dump/bm_npc_engine_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_engine.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_trac_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_tractor.ini",
+        "block_name": "[Tractor]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_trac_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_tractor.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_scan_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_equip_scanner.ini",
+        "block_name": "[Scanner]"
+    },
+    "./build-tools/python/csv_dump/bm_npc_scan_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_scanner.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_npcu_gun_agun_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_npc_only.ini",
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_npcu_gun_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_npc_only.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_npcu_gun_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_npc_only.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_cmdt_gd.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_commodities.ini",
+        "block_name": "[Good]"
+    },
+    "./build-tools/python/csv_dump/bm_cmdt_eq.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_commodities.ini",
+        "block_name": "[Commodity]"
+    }    
+}
