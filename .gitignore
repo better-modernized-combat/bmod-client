@@ -24,6 +24,7 @@
 *.la
 *.a
 *.lib
+!fl.lib
 
 # Executables
 *.out
