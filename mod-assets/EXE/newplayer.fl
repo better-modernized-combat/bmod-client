@@ -1,0 +1,120 @@
+[Player]
+name = Trent
+rank = 0
+Description = NewPlayer
+
+money = 80000
+
+voice = trent_voice
+costume = trent
+com_costume = trent
+
+system = Li03
+base = Li03_01_Base
+
+log = 1553, 0
+
+;----------------------------------------------------------------------------------
+; Debug Ship - gets replaced if missions active
+;----------------------------------------------------------------------------------
+ship_archetype = bm_cv_hf
+equip = bm_cv_hf_engine
+equip = bm_cv_hf_power
+equip = bm_cv_hf_scanner
+equip = bm_cv_hf_tractor
+equip = bm_ac_hea_01, HpWeapon06
+cargo = bm_ac_hea_01_ammo, 120
+equip = bm_gd_civ_g02, HpWeapon01
+equip = bm_gd_civ_g02, HpWeapon02
+equip = bm_gd_civ_g02_x2, HpWeapon03
+equip = bm_gd_civ_g02_x2, HpWeapon05
+equip = bm_mis_srm_01, HpWeapon04
+cargo = bm_mis_srm_01_ammo, 26
+equip = bm_s02_type02_hf, HpShield01
+equip = bm_cm_dropper_01, HpCM01
+cargo = bm_cm_dropper_01_ammo, 98
+equip = bm_thruster_01, HpThruster01
+equip = LargeWhiteSpecial, HpHeadlight
+equip = SlowSmallOrange, HpRunningLight01
+equip = SlowSmallOrange, HpRunningLight02
+equip = SlowSmallOrange, HpRunningLight03
+equip = SlowSmallOrange, HpRunningLight04
+equip = SlowSmallOrange, HpRunningLight05
+equip = SlowSmallOrange, HpRunningLight06
+equip = SlowSmallOrange, HpRunningLight07
+equip = SlowSmallOrange, HpRunningLight08
+equip = contrail01, HpContrail01
+equip = contrail01, HpContrail02
+equip = DockingLightRedSmall, HpDockLight01
+equip = DockingLightRedSmall, HpDockLight02
+
+
+;Default Player Vibes
+house = 0.91, li_n_grp
+house = 0.91, li_lsf_grp
+house = 0.65, li_p_grp
+house = 0, br_n_grp
+house = 0, br_p_grp
+house = 0, ku_n_grp
+house = 0, ku_p_grp
+house = 0, rh_n_grp
+house = 0, rh_p_grp
+house = 0, co_alg_grp
+house = 0, co_be_grp
+house = 0, br_m_grp
+house = 0, co_nws_grp
+house = 0, co_hsp_grp
+house = 0.65, co_ic_grp
+house = -0.3, co_khc_grp
+house = -0.3, co_kt_grp
+house = 0, rh_m_grp
+house = 0.65, co_me_grp
+house = 0.65, co_ni_grp
+house = 0, co_os_grp
+house = -0.3, co_rs_grp
+house = -0.3, co_shi_grp
+house = 0.65, co_ss_grp
+house = 0, co_ti_grp
+house = 0.65, co_vr_grp
+house = -0.3, fc_bd_grp
+house = -0.3, fc_b_grp
+house = -0.65, fc_c_grp
+house = -0.3, fc_fa_grp
+house = -0.3, fc_g_grp
+house = -0.3, fc_gc_grp
+house = -0.3, fc_h_grp
+house = -0.3, fc_j_grp
+house = -0.65, fc_lh_grp
+house = -0.65, fc_lr_grp
+house = -0.3, fc_lwb_grp
+house = -0.65, fc_m_grp
+house = -0.65, fc_ou_grp
+house = -0.65, fc_rh_grp
+house = 0, fc_or_grp
+house = -0.65, fc_u_grp
+house = -0.65, fc_x_grp
+house = 0, gd_gm_grp
+house = 0, fc_uk_grp
+house = -0.65, fc_n_grp
+house = -0.65, fc_ln_grp
+house = -0.65, fc_kn_grp
+house = -0.65, fc_rn_grp
+house = 0, fc_ouk_grp
+house = 0, fc_q_grp
+house = 0, fc_f_grp
+house = 0, gd_im_grp
+house = 0, gd_z_grp
+house = -0.3, gd_bh_grp
+
+[StoryInfo]
+Mission = Mission_01a
+MissionNum = 1
+delta_worth = -1
+
+[mPlayer]
+locked_gate = 2298368769    ;Li03_to_Li01
+locked_gate = 2200697741    ;Li03_to_Li01_hole
+locked_gate = 2966851333    ;Li03_to_Iw05
+locked_gate = 2212038279    ;Li03_to_Iw05_hole
+locked_gate = 2430006021    ;Li03_to_Iw06
+locked_gate = 2211890816    ;Li03_to_Iw06_hole

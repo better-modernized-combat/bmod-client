@@ -1,0 +1,3116 @@
+S 458753 File Starts Here
+S 458754 Scorpion
+S 458755 Scorpion [-]
+S 458756 Scorpion [+]
+S 458757 Scorpion x2
+S 458758 Scorpion x2 [-]
+S 458759 Scorpion x2 [+]
+S 458760 Scorpion x3
+S 458761 Scorpion x3 [-]
+S 458762 Scorpion x3 [+]
+S 458763 Tarantula
+S 458764 Tarantula [-]
+S 458765 Tarantula [+]
+S 458766 Tarantula x2
+S 458767 Tarantula x2 [-]
+S 458768 Tarantula x2 [+]
+S 458769 Tarantula x3
+S 458770 Tarantula x3 [-]
+S 458771 Tarantula x3 [+]
+S 458772 Brave
+S 458773 Brave [-]
+S 458774 Brave x2 [-]
+S 458775 Brave x3 [-]
+S 458776 Brave [+]
+S 458777 Brave x2 [+]
+S 458778 Brave x3 [+]
+S 458779 Brave x2
+S 458780 Brave x3
+S 458781 Gunslinger
+S 458782 Gunslinger [-]
+S 458783 Gunslinger x2 [-]
+S 458784 Gunslinger x3 [-]
+S 458785 Gunslinger [+]
+S 458786 Gunslinger x2 [+]
+S 458787 Gunslinger x3 [+]
+S 458788 Gunslinger x2
+S 458789 Gunslinger x3
+S 458790 Winchester
+S 458791 Winchester [-]
+S 458792 Winchester x2 [-]
+S 458793 Winchester x3 [-]
+S 458794 Winchester [+]
+S 458795 Winchester x2 [+]
+S 458796 Winchester x3 [+]
+S 458797 Winchester x2
+S 458798 Winchester x3
+S 458799 Flashpoint
+S 458800 Flashpoint [-]
+S 458801 Flashpoint x2 [-]
+S 458802 Flashpoint x3 [-]
+S 458803 Flashpoint [+]
+S 458804 Flashpoint x2 [+]
+S 458805 Flashpoint x3 [+]
+S 458806 Flashpoint x2
+S 458807 Flashpoint x3
+S 458808 Starbeam
+S 458809 Starbeam [-]
+S 458810 Starbeam x2 [-]
+S 458811 Starbeam x3 [-]
+S 458812 Starbeam [+]
+S 458813 Starbeam x2 [+]
+S 458814 Starbeam x3 [+]
+S 458815 Starbeam x2
+S 458816 Starbeam x3
+S 458817 Justice
+S 458818 Justice [-]
+S 458819 Justice [+]
+S 458820 Justice x2
+S 458821 Justice x2 [-]
+S 458822 Justicex x2 [+]
+S 458823 Justice x3
+S 458824 Justice x3 [-]
+S 458825 Justice x3 [+]
+S 458826 Lavablade
+S 458827 Lavablade [-]
+S 458828 Lavablade [+]
+S 458829 Lavablade x2
+S 458830 Lavablade x2 [-]
+S 458831 Lavablade x2 [+]
+S 458832 Lavablade x3
+S 458833 Lavablade x3 [-]
+S 458834 Lavablade x3 [+]
+S 458835 Magma Hammer
+S 458836 Magma Hammer [-]
+S 458837 Magma Hammer [+]
+S 458838 Magma Hammer x2
+S 458839 Magma Hammer x2 [-]
+S 458840 Magma Hammer x2 [+]
+S 458841 Magma Hammer x3
+S 458842 Magma Hammer x3 [-]
+S 458843 Magma Hammer x3 [+]
+
+S 460755 3 x Scorpion Turret
+S 460756 3 x Scorpion Turret [-]
+S 460757 3 x Scorpion Turret [+]
+S 460758 3 x Tarantula Turret
+S 460759 3 x Tarantula Turret [-]
+S 460760 3 x Tarantula Turret [+]
+S 460761 3 x Brave Turret [-]
+S 460762 3 x Brave Turret [+]
+S 460763 3 x Brave Turret
+S 460764 3 x Gunslinger Turret [-]
+S 460765 3 x Gunslinger Turret [+]
+S 460766 3 x Gunslinger Turret
+S 460767 3 x Winchester Turret [-]
+S 460768 3 x Winchester Turret [+]
+S 460769 3 x Winchester Turret
+S 460770 3 x Flashpoint Turret [-]
+S 460771 3 x Flashpoint Turret [+]
+S 460772 3 x Flashpoint Turret
+S 460773 3 x Starbeam Turret [-]
+S 460774 3 x Starbeam Turret [+]
+S 460775 3 x Starbeam Turret
+S 460776 3 x Justice Turret [-]
+S 460777 3 x Justice Turret [+]
+S 460778 3 x Justice Turret
+S 460779 3 x Lavablade Turret [-]
+S 460780 3 x Lavablade Turret [+]
+S 460781 3 x Lavablade Turret
+S 460782 3 x Magma Hammer Turret [-]
+S 460783 3 x Magma Hammer Turret [+]
+S 460784 3 x Magma Hammer Turret
+
+S 462257 Heavy AC
+S 462258 Heavy AC [+]
+S 462259 Light AC
+S 462260 Medium AC
+S 462261 MG
+S 462262 RAC-10
+S 462263 Shredder AC
+S 462264 Shotgun
+S 462265 Fleet NAC/L
+S 462266 Fleet PD Turret
+S 462267 Fleet Shredder AC
+S 462268 Fleet L Laser
+S 462269 Fleet PPC
+S 462270 Fleet Repair Gun
+S 462271 L Laser
+S 462272 M Laser
+S 462273 S Laser
+S 462274 PPC
+S 462275 Barrager
+S 462276 Twin Fleet LRM
+S 462277 Twin Fleet SRM
+S 462278 LRM Launcher
+S 462279 LRM Launcher [+]
+S 462280 1 x LRM Pylon
+S 462281 1 x LRM Pylon [+]
+S 462282 Twin LRM Launcher
+S 462283 Rocket Pod
+S 462284 SRM Launcher
+S 462285 SRM Launcher [+]
+S 462286 1 x SRM Pylon
+S 462287 1 x SRM Pylon [+]
+S 462288 Twin SRM Launcher
+S 462289 Sunslayer Torpedo
+S 462290 UGB
+
+S 462756 END AUX NAME
+
+S 461756 Bastion Frigate Shield
+S 461757 Rstr. Brigandine Fr. Shield
+S 461758 Rstr. Brigandine H.F. Shield
+S 461759 Rstr. Brigandine L.F. Shield
+S 461760 Rstr. Brigandine V.H.F. Shield
+S 461761 Brigandine Fr. Shield
+S 461762 Brigandine H.F. Shield
+S 461763 Brigandine HF Shield [+]
+S 461764 Brigandine L.F. Shield
+S 461765 Brigandine V.H.F. Shield
+S 461766 Adv. Brigandine Fr. Shield
+S 461767 Adv. Brigandine H.F. Shield
+S 461768 Adv. Brigandine L.F. Shield
+S 461769 Adv. Brigandine V.H.F. Shield
+
+S 463257 Heavy AC Shell
+S 463259 Light AC Shell
+S 463260 Medium AC Shell
+S 463261 MG Shell
+S 463262 RAC-10 Shell
+S 463263 Shredder AC Shell
+S 463264 Shotgun Shell
+S 463265 Fleet NAC/L Shell
+S 463267 Fleet Shredder AC Shell
+S 463270 Fleet Repair Gun Charge
+S 463276 Fleet LRM
+S 463277 Fleet SRM
+S 463278 LRM
+S 463283 Rocket
+S 463284 SRM
+S 463289 Sunslayer Torpedo
+S 463290 UG Bomb
+
+H 459754
+	\m\bXeno "Scorpion" Particle Cannon\B
+    \l
+    This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+H 459755
+	\m\bXeno "Scorpion" Particle Cannon[-]\B
+	\l
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459756
+	\m\bXeno "Scorpion" Particle Cannon[+]\B
+	\l
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than the average model, at the cost of more power.\n
+
+H 459757
+	\m\bTWIN-LINKED Xeno "Scorpion" Particle Cannon\B
+	\l
+	This twin-linked housing pairs two Scorpion blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy \
+	efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+H 459758
+	\m\bTWIN-LINKED Xeno "Scorpion" Particle Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Scorpion blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459759
+	\m\bTWIN-LINKED Xeno "Scorpion" Particle Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Scorpion blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459760
+	\m\bTRI-LINKED Xeno "Scorpion" Particle Cannon\B
+	\l
+	This tri-linked housing combines three Scorpion blasters into a single fixture, requring a Large Energy	hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+H 459761
+	\m\bTRI-LINKED Xeno "Scorpion" Particle Cannon [-]\B
+	\l
+	This tri-linked housing combines three Scorpion blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459762
+	\m\bTRI-LINKED Xeno "Scorpion" Particle Cannon [+]\B
+	\l
+	This tri-linked housing combines three Scorpion blasters into a single fixture, requring a Large Energy	hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459763
+   	\m\bXeno "Tarantula" Particle Cannon\B
+	\l
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n 
+
+H 459764
+	\m\bXeno "Tarantula" Particle Cannon[-]\B
+	\l
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459765
+    \m\bXeno "Tarantula" Particle Cannon[+]\B
+	\l
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459766
+	\m\bTWIN-LINKED Xeno "Tarantula" Particle Cannon\B
+	\l
+	This twin-linked housing pairs two Tarantula blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+
+H 459767
+	\m\bTWIN-LINKED Xeno "Tarantula" Particle Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Tarantula blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459768
+	\m\bTWIN-LINKED Xeno "Tarantula" Particle Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Tarantula blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459769
+	\m\bTRI-LINKED Xeno "Tarantula" Particle Cannon\B
+	\l
+	This tri-linked housing combines three Tarantula blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+H 459770
+	\m\bTRI-LINKED Xeno "Tarantula" Particle Cannon [-]\B
+	\l
+	This tri-linked housing combines three Tarantula blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459771
+	\m\bTRI-LINKED Xeno "Tarantula" Particle Cannon [+]\B
+	\l
+	This tri-linked housing combines three Tarantula blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459772
+	\m\bPB71 "Brave" Bounty Hunter Particle Cannon\B
+	\l
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident. \n\.
+
+H 459773
+	\m\bPB71 "Brave" Bounty Hunter Particle Cannon [-]\B
+	\l
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459774
+	\m\bTWIN-LINKED PB71 "Brave" Bounty Hunter Particle Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Brave blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459775
+	\m\bTRI-LINKED PB71 "Brave" Bounty Hunter Particle Cannon [-]\B
+	\l
+	This tri-linked housing combines three Brave blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459776
+	\m\bPB71 "Brave" Bounty Hunter Particle Cannon [+]\B
+	\l
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459777
+	\m\bTWIN-LINKED PB71 "Brave" Bounty Hunter Particle Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Brave blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459778
+	\m\bTRI-LINKED PB71 "Brave" Bounty Hunter Particle Cannon [+]\B
+	\l
+	This tri-linked housing combines three Brave blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459779
+	\m\bTWIN-LINKED PB71 "Brave" Bounty Hunter Particle Cannon\B
+	\l
+	This twin-linked housing pairs two Brave blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.\n
+
+H 459780
+	\m\bTRI-LINKED PB71 "Brave" Bounty Hunter Particle Cannon\B
+	\l
+	This tri-linked housing pairs three Brave blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident. \n\.
+
+H 459781
+	\m\bLB21 "Gunslinger" Bounty Hunter Laser Cannon\B
+	\l
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage. \n\.
+
+H 459782
+	\m\bLB21 "Gunslinger" Bounty Hunter Laser Cannon [-]\B
+	\l
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459783
+	\m\bTWIN-LINKED LB21 "Gunslinger" Bounty Hunter Laser Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Gunslinger blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459784
+	\m\bTRI-LINKED LB21 "Gunslinger" Bounty Hunter Laser Cannon [-]\B
+	\l
+	This tri-linked housing combines three Gunslinger blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459785
+	\m\bLB21 "Gunslinger" Bounty Hunter Laser Cannon [+]\B
+	\l
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459786
+	\m\bTWIN-LINKED LB21 "Gunslinger" Bounty Hunter Laser Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Gunslinger blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459787
+	\m\bTRI-LINKED LB21 "Gunslinger" Bounty Hunter Laser Cannon [+]\B
+	\l
+	This tri-linked housing combines three Gunslinger blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459788
+	\m\bTWIN-LINKED LB21 "Gunslinger" Bounty Hunter Laser Cannon\B
+	\l
+	This twin-linked housing pairs two Gunslinger blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.\n
+
+H 459789
+	\m\bTRI-LINKED LB21 "Gunslinger" Bounty Hunter Laser Cannon\B
+	\l
+	This tri-linked housing combines three Gunslinger blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.\n
+
+H 459790
+	\m\bLB31 "Winchester" Bounty Hunter Laser Cannon\B
+	\l
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.\n
+
+H 459791
+	\m\bLB31 "Winchester" Bounty Hunter Laser Cannon [-]\B
+	\l
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459792
+	\m\bTWIN-LINKED LB31 "Winchester" Bounty Hunter Laser Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Winchester blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459793
+	\m\bTRI-LINKED LB31 "Winchester" Bounty Hunter Laser Cannon [-]\B
+	\l
+	This tri-linked housing combines three Winchester blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459794
+	\m\bLB31 "Winchester" Bounty Hunter Laser Cannon [+]\B
+	\l
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459795
+	\m\bTWIN-LINKED LB31 "Winchester" Bounty Hunter Laser Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Winchester blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment is upgraded, using less energy per shot than its base model.\n
+
+H 459796
+	\m\bTRI-LINKED LB31 "Winchester" Bounty Hunter Laser Cannon [+]\B
+	\l	
+	This tri-linked housing pairs three Winchester blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment is upgraded, using less energy per shot than its base model.\n
+
+H 459797
+    \m\bTWIN-LINKED LB31 "Winchester" Bounty Hunter Laser Cannon\B
+	\l
+	This twin-linked housing pairs two Winchester blasters into a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.\n
+H 459798
+	\m\bTRI-LINKED LB31 "Winchester" Bounty Hunter Laser Cannon\B
+	\l
+	This tri-linked housing pairs three Winchester blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.\n
+
+H 459799
+	\m\bCL-d "Flashpoint" Civilian Laser Cannon\B
+	\l
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.\n
+
+H 459800
+	\m\bCL-d "Flashpoint" Civilian Laser Cannon [-]\B
+	\l
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459801
+	\m\bTWIN-LINKED CL-d "Flashpoint" Civilian Laser Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Flashpoint blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+
+H 459802
+	\m\bTRI-LINKED CL-d "Flashpoint" Civilian Laser Cannon [-]\B
+	\l
+	This tri-linked housing combines three Flashpoint blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459803
+	\m\bCL-d "Flashpoint" Civilian Laser Cannon [+]\B
+	\l
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459804
+	\m\bTWIN-LINKED CL-d "Flashpoint" Civilian Laser Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Flashpoint blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+
+H 459805
+	\m\bTRI-LINKED CL-d "Flashpoint" Civilian Laser Cannon [+]\B
+	\l
+	This tri-linked housing combines three Flashpoint blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459806
+	\m\bTWIN-LINKED CL-d "Flashpoint" Civilian Laser Cannon\B
+	\l
+	This twin-linked housing pairs two Flashpoint blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.\n
+
+H 459807
+	\m\bTRI-LINKED CL-d "Flashpoint" Civilian Laser Cannon\B
+	\l
+	This tri-linked housing combines three Flashpoint blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.\n
+
+H 459808
+	\m\bCL-a "Starbeam" Civilian Laser Cannon\B
+	\l
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.\n
+	
+H 459809
+	\m\bCL-a "Starbeam" Civilian Laser Cannon [-]\B
+	\l
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459810
+	\m\bTWIN-LINKED CL-a "Starbeam" Civilian Laser Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Starbeam blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459811
+	\m\bTRI-LINKED CL-a "Starbeam" Civilian Laser Cannon [-]\B
+	\l
+	This tri-linked housing combines three Starbeam blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459812
+	\m\bCL-a "Starbeam" Civilian Laser Cannon [+]\B
+	\l
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459813
+	\m\bTWIN-LINKED CL-a "Starbeam" Civilian Laser Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Starbeam blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459814
+	\m\bTRI-LINKED CL-a "Starbeam" Civilian Laser Cannon [+]\B
+	\l
+	This tri-linked housing combines three Starbeam blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459815
+	\m\bTWIN-LINKED CL-a "Starbeam" Civilian Laser Cannon\B
+	\l
+	This twin-linked housing pairs two Starbeam blasters into a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.\n
+
+H 459816
+	\m\bTRI-LINKED CL-a "Starbeam" Civilian Laser Cannon\B
+	\l
+	This tri-linked housing pairs three Starbeam blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.\n
+
+H 459817
+	\m\bR6-A "Justice" Liberty Laser Cannon\B
+	\l
+	This is a laser-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.\n
+
+H 459818
+	\m\bR6-A "Justice" Liberty Laser Cannon [-]\B
+	\l
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459819
+	\m\bR6-A "Justice" Liberty Laser Cannon [+]\B
+	\l
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459820
+	\m\bTWIN-LINKED R6-A "Justice" Liberty Laser Cannon\B
+	\l
+	This twin-linked housing pairs two Justice blasters into a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a laser-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.\n
+
+H 459821
+	\m\bTWIN-LINKED R6-A "Justice" Liberty Laser Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Justice blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459822
+	\m\bTWIN-LINKED R6-A "Justice" Liberty Laser Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Justice blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459823
+	\m\bTRI-LINKED R6-A "Justice" Liberty Laser Cannon\B
+	\l
+	This tri-linked housing pairs three Justice blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a laser-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.\n
+
+H 459824
+	\m\bTRI-LINKED R6-A "Justice" Liberty Laser Cannon [-]\B
+	\l
+	This tri-linked housing combines three Justice blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459825
+	\m\bTRI-LINKED R6-A "Justice" Liberty Laser Cannon [+]\B
+	\l
+	This tri-linked housing combines three Justice blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459826
+	\m\bN5-A "Lavablade" Liberty Plasma Cannon\B
+	\l
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.\n
+
+H 459827
+	\m\bN5-A "Lavablade" Liberty Plasma Cannon [-]\B
+	\l
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459828
+	\m\bN5-A "Lavablade" Liberty Plasma Cannon [+]\B
+	\l
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459829
+	\m\bTWIN-LINKED N5-A "Lavablade" Liberty Plasma Cannon\B
+	\l
+	This twin-linked housing pairs two Lavablade blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.\n
+
+H 459830
+	\m\bTWIN-LINKED N5-A "Lavablade" Liberty Plasma Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Lavablade blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459831
+	\m\bTWIN-LINKED N5-A "Lavablade" Liberty Plasma Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Lavablade blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459832
+	\m\bTRI-LINKED N5-A "Lavablade" Liberty Plasma Cannon\B
+	\l
+	This tri-linked housing pairs three Lavablade blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a plasma-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.\n
+
+H 459833
+	\m\bTRI-LINKED N5-A "Lavablade" Liberty Plasma Cannon [-]\B
+	\l
+	This tri-linked housing combines three Lavablade blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459834
+	\m\bTRI-LINKED N5-A "Lavablade" Liberty Plasma Cannon [+]\B
+	\l
+	This tri-linked housing combines three Lavablade blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459835
+	\m\bN9-A "Magma Hammer" Liberty Plasma Cannon\B
+	\l
+	This is a plasma-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.\n
+
+H 459836
+	\m\bN9-A "Magma Hammer" Liberty Plasma Cannon [-]\B
+	\l
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459837
+	\m\bN9-A "Magma Hammer" Liberty Plasma Cannon [+]\B
+	\l
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459838
+	\m\bTWIN-LINKED N9-A "Magma Hammer" Liberty Plasma Cannon\B
+	\l
+	This twin-linked housing pairs two Magma Hammer blasters into a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	This is a plasma-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.\n
+
+H 459839
+	\m\bTWIN-LINKED N9-A "Magma Hammer" Liberty Plasma Cannon [-]\B
+	\l
+	This twin-linked housing pairs two Magma Hammer blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459840
+	\m\bTWIN-LINKED N9-A "Magma Hammer" Liberty Plasma Cannon [+]\B
+	\l
+	This twin-linked housing pairs two Magma Hammer blasters in a single fixture, requring a Medium Energy or larger hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their normal versions.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 459841
+	\m\bTRI-LINKED N9-A "Magma Hammer" Liberty Plasma Cannon\B
+	\l
+	This tri-linked housing pairs three Magma Hammer blasters into a single array, requring a Large Energy or larger hardpoint to mount. Tri-linked blasters pack three times the damage into every shot, but lose more energy efficiency and fine precision compared to their twin-linked or single versions.
+	
+	This is a plasma-based weapon produced by the Liberty Navy. Liberty Navy weapons typically have higher velocity projectiles at the cost of energy efficiency and overall range.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.\n
+
+H 459842
+	\m\bTRI-LINKED N9-A "Magma Hammer" Liberty Plasma Cannon [-]\B
+	\l
+	This tri-linked housing combines three Magma Hammer blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 459843
+	\m\bTRI-LINKED N9-A "Magma Hammer" Liberty Plasma Cannon [+]\B
+	\l
+	This tri-linked housing combines three Magma Hammer blasters into a single fixture, requring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are  less energy efficient and accurate than their normal versions.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461255
+	\m\bTRI-LINKED Xeno "Scorpion" Particle Turret\B
+	\l
+	This tri-linked housing pairs three Scorpion blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+H 461256
+	\m\bTRI-LINKED Xeno "Scorpion" Particle Turret [-]\B
+	\l
+	This tri-linked housing pairs three Scorpion blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461257
+	\m\bTRI-LINKED Xeno "Scorpion" Particle Turret [+]\B
+	\l
+	This tri-linked housing pairs three Scorpion blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461258
+	\m\bTRI-LINKED Xeno "Tarantula" Particle Turret\B
+	\l
+	This tri-linked housing pairs three Tarantula blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.\n
+
+H 461259
+	\m\bTRI-LINKED Xeno "Tarantula" Particle Turret [-]\B
+	\l
+	This tri-linked housing pairs three Tarantula blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461260
+	\m\bTRI-LINKED Xeno "Tarantula" Particle Turret [+]\B
+	\l
+	This tri-linked housing pairs three Tarantula blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Xenos. Xeno weapons deliver more damage, but at a shorter range.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461261
+	\m\bTRI-LINKED PB71 "Brave" Bounty Hunter Particle Turret [-]\B
+	\l
+	This tri-linked housing pairs three Brave blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461262
+	\m\bTRI-LINKED PB71 "Brave" Bounty Hunter Particle Turret [+]\B
+	\l
+	This tri-linked housing pairs three Brave blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461263
+	\m\bTRI-LINKED PB71 "Brave" Bounty Hunter Particle Turret\B
+	\l
+	This tri-linked housing pairs three Brave blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a particle-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The PB71 is the Guild's preferred suppression weapon and is based on an entirely original design produced some time before the Texas incident.\n
+
+H 461264
+	\m\bTRI-LINKED LB21 "Gunslinger" Bounty Hunter Laser Turret [-]\B
+	\l
+	This tri-linked housing pairs three Gunslinger blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461265
+	\m\bTRI-LINKED LB21 "Gunslinger" Bounty Hunter Laser Turret [+]\B
+	\l
+	This tri-linked housing pairs three Gunslinger blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461266
+	\m\bTRI-LINKED LB21 "Gunslinger" Bounty Hunter Laser Turret\B
+	\l
+	This tri-linked housing pairs three Gunslinger blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	A veritable workhorse of a weapon, the LB21 Gunslinger is the Guild's weapon of choice for patrol duty across the Sirius Sector. Concentrated fire from the LB21 can easily punch right through a ship, but if properly focused can be used to slag vital systems without dealing too much collateral damage.\n
+
+H 461267
+	\m\bTRI-LINKED LB31 "Winchester" Bounty Hunter Laser Turret [-]\B
+	\l
+	This tri-linked housing pairs three Winchester blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461268
+	\m\bTRI-LINKED LB31 "Winchester" Bounty Hunter Laser Turret [+]\B
+	\l
+	This tri-linked housing pairs three Winchester blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461269
+	\m\bTRI-LINKED LB31 "Winchester" Bounty Hunter Laser Turret\B
+	\l
+	This tri-linked housing pairs three Winchester blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon developed by the Bounty Hunter's guild. Bounty Hunter weapons typically have higher max range, but lower energy efficiency and damage per second.
+	
+	The Guild's answer to other heavy weapons such as the Magma Hammer and the Drail, the LB31 fires bolts of concentrated exotic particles at high velocities using magnetic force. The latest model has significantly increased power requirements and a larger gauge compared it's predecessors as the Guild have begun to adjust their fighter doctrines in response to recent developments in Texas, preferring to avoid furballs in favor of fights that are over quickly.\n
+
+H 461270
+	\m\bTRI-LINKED CL-d "Flashpoint" Civilian Laser Turret [-]\B
+	\l
+	This tri-linked housing pairs three Flashpoint blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461271
+	\m\bTRI-LINKED CL-d "Flashpoint" Civilian Laser Turret [+]\B
+	\l
+	This tri-linked housing pairs three Flashpoint blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461272
+	\m\bTRI-LINKED CL-d "Flashpoint" Civilian Laser Turret\B
+	\l
+	This tri-linked housing pairs three Flashpoint blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	Built upon the frame of the CL-a, the Flashpoint boasts reinforced power conduits and a built-in heatsink. The refraction cavity of the weapon has been expanded, resulting in a much hotter projectile that can punch thhrough shields and armor plating much more effectively at the cost of a significantly longer charge time.\n
+
+H 461273
+	\m\bTRI-LINKED CL-a "Starbeam" Civilian Laser Turret [-]\B
+	\l
+	This tri-linked housing pairs three Starbeam blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461274
+	\m\bTRI-LINKED CL-a "Starbeam" Civilian Laser Turret [+]\B
+	\l
+	This tri-linked housing pairs three Starbeam blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461275
+	\m\bTRI-LINKED CL-a "Starbeam" Civilian Laser Turret\B
+	\l
+	This tri-linked housing pairs three Starbeam blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	This is a laser-based weapon produced by Ageira Technologies. Civilian-grade weapons are typically tuned for balanced performance and are designed to be more energy efficient than most.
+	
+	The CL-a is Ageira's baseline rapid-fire suppression weapon. With a high rate of fire and good range, it's able to keep pressure on shields and act as point defence in a pinch, keeping threats at bay until they can either be dealt with or disengaged from.\n
+
+H 461276
+	\m\bTRI-LINKED R6-A "Justice" Liberty Laser Turret [-]\B
+	\l
+	This tri-linked housing pairs three Justice blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461277
+	\m\bTRI-LINKED R6-A "Justice" Liberty Laser Turret [+]\B
+	\l
+	This tri-linked housing pairs three Justice blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461278
+	\m\bTRI-LINKED R6-A "Justice" Liberty Laser Turret\B
+	\l
+	This tri-linked housing pairs three Justice blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	Produced exclusively by Ageira for the Liberty Navy, the R6-A is built upon the frame of the CL-a Starbeam, but has been retrofitted and reinforced for military use.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461279
+	\m\bTRI-LINKED N5-A "Lavablade" Liberty Plasma Turret [-]\B
+	\l
+	This tri-linked housing pairs three Lavablade blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461280
+	\m\bTRI-LINKED N5-A "Lavablade" Liberty Plasma Turret [+]\B
+	\l
+	This tri-linked housing pairs three Lavablade blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461281
+	\m\bTRI-LINKED N5-A "Lavablade" Liberty Plasma Turret\B
+	\l
+	This tri-linked housing pairs three Lavablade blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	The first in a series of weapons designed by Ageira for the Liberty Navy, the N5-A expels plasma at temperatures hot enough to sublimate ship hull plating and overload shields. Unusually, the N-series of weapons are still manufactured by Ageira, despite the Navy's recent efforts to in-house as much of their supply chain as possible.\n
+
+H 461282
+	\m\bTRI-LINKED N9-A "Magma Hammer" Liberty Plasma Turret [-]\B
+	\l
+	This tri-linked housing pairs three Magma Hammer blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment has degraded performance compared to the average model, but draws less power.\n
+
+H 461283
+	\m\bTRI-LINKED N9-A "Magma Hammer" Liberty Plasma Turret [+]\B
+	\l
+	This tri-linked housing pairs three Magma Hammer blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.
+	
+	This particular piece of equipment performs better than its average model, at the cost of more power.\n
+
+H 461284
+	\m\bTRI-LINKED N9-A "Magma Hammer" Liberty Plasma Turret\B
+	\l
+	This tri-linked housing pairs three Magma Hammer blasters and a gimballed turret mount, requring a specialized PD hardpoint to mount.
+	
+	For all intents and purposes, the N9-A is an overclocked Lavablade with bulked out cooling fins and expanded plasma conduits. Equipping this weapon on smaller ships often requires hard modifications to the power grid, and incautious or inexperienced engineers risk frying ship systems if they don't follow the Ageira-provided installation instructions.\n
+
+H 462757
+	\m\bDS-10 Heavy Autocannon\B
+	\l
+	Autocannons fire heavy slugs at high speed, punching through armor at considerable range. DSE's Heavy Autocannon is one of the more powerful ballistic weapons available for fighters, firing huge hole-punching projectiles at the cost of lower velocity and range.\n
+
+H 462759
+	\m\bDS-2 Light Autocannon\B
+	\l
+	Autocannons fire heavy slugs at high speed, punching through armor at considerable range. DSE's Light AC is one of the smallest autocannons available, making up for its lower damage with a higher velocity and rate of fire.\n
+
+H 462760
+	\m\bDS-5 Medium Autocannon\B
+	\l
+	Autocannons fire heavy slugs at high speed, punching through armor at considerable range. DSE's AC/5 is considered a 'tactical' autocannon, delivering consistent damage at good range.\n
+
+H 462761
+	\m\bMachinegun Placeholder\B
+	\l
+	Machine Gun Placeholder.\n
+
+H 462762
+	\m\bRAC-10\B
+	\l
+	RAC-10 Placeholder.\n
+
+H 462763
+	\m\bDS-20 Shredder Autocannon\B
+	\l
+	Autocannons fire heavy slugs at high speed, punching through armor at considerable range. DSE's Shredder AC is the heaviest fighter-based autocannon on the market, shredding entire ships apart in a couple of blasts with its massive shells.\n
+
+H 462764
+	\m\bShotgun Placeholder\B
+	\l
+	Shotgun Placeholder.\n
+
+H 462765
+	\m\bFleet NAC/L\B
+	\l
+	NAC/L Placeholder\n
+
+H 462766
+	\m\bFleet PD Turret\B
+	\l
+	Placeolder info for Anti-Fighter Close Defense Ballistic Turret.\n
+
+H 462767
+	\m\bFleet Shredder Autocannon\B
+	\l
+	Fleet Shredder AC Placeholder\n
+
+H 462768
+	\m\bFleet Large Laser\B
+	\l
+	Fleet L Laser Placeholder\n
+
+H 462769
+	\m\bFleet PPC\B
+	\l
+	Fleet PPC Placeholder\n
+
+H 462770
+	\m\bMRB-22 Mobile Repair Beam\B
+	\l
+	Placeolder info for a Repair Gun.\n
+
+H 462771
+	\m\bSEQ-6 Large Laser\B
+	\l
+	The L Laser uses an infrared beam from a solid-state laser array to quickly inflict damage against targets at long ranges and is designed to be mounted on a standard large-energy fighter hardpoint, found only on the heaviest of fighters.
+
+	Despite decades of research across Sirius, true directed energy laser weapons are a relatively recent development made possible by significant advances in material science by Ageira.\n
+
+H 462772
+	\m\bSEQ-5 Medium Laser\B
+	\l
+	The M Laser uses an infrared beam from a solid-state laser array to quickly inflict damage against targets at moderate ranges and is designed to be mounted on a standard medium-energy fighter hardpoint.
+	
+	Despite decades of research across Sirius, true directed energy laser weapons are a relatively recent development made possible by significant advances in material science by Ageira.\n
+
+H 462773
+	\m\bSEQ-4 Small Laser\B
+	\l
+	The S Laser uses an infrared beam from a solid-state laser array to quickly inflict damage against targets at short ranges and is designed to be mounted on a standard small-energy fighter hardpoint.
+	
+	Despite decades of research across Sirius, true directed energy laser weapons are a relatively recent development made possible by significant advances in material science by Ageira.\n
+
+H 462774
+	\m\bPPC\B
+	\l
+	PPC Placeholder\n
+
+H 462775
+	\m\bJunker "Barrager" Overclocked Cutting Laser\B
+	\l
+	The Barrager is a large cutting laser commonly used by Junkers to remove valuable scraps of salvage from wrecks. This model has been modified and can also be used as a powerful short range weapon. The beam is fixed, has poor energy economy, and requires immediate venting of coolant after each shot, but the strength of the beam is almost always enough to deter a would-be thief or pirate if used defensively.\n
+
+H 462776
+	\m\bFleet LRM2 Launcher\B
+	\l
+	Fleet LRM2 Launcher Placeholder\n
+
+H 462777
+	\m\bFleet SRM2 Launcher\B
+	\l
+	Fleet SRM2 Launcher Placeholder\n
+
+H 462778
+	\m\bLRM Long Range Missile Launcher\B
+	\l
+	Long Range Missiles or "LRMs" accelerate fast and can track targets at long distances. Their lack of agility makes them easier to dodge in a dogfight, but their increased effectiveness against shields compared to SRMs means they can be used to initiate an attack rather than only follow up on one.
+	
+	This launcher fits in the Medium Missile slot and has an average cooldown between shots. It's useful for putting out a steady number of LRMs throughout a fight, allowing users to support a battle from afar or deal good damage to large targets unable to effectively evade them.\n
+
+H 462779
+	\m\bLRM Long Range Missile Launcher [+]\B
+	\l
+	Long Range Missiles or "LRMs" accelerate fast and can track targets at long distances. Their lack of agility makes them easier to dodge in a dogfight, but their increased effectiveness against shields compared to SRMs means they can be used to initiate an attack rather than only follow up on one.
+	
+	This launcher fits in the Medium Missile slot and has an average cooldown between shots. It's useful for putting out a steady number of LRMs throughout a fight, allowing users to support a battle from afar or deal good damage to large targets unable to effectively evade them.\n
+
+H 462780
+	\m\b1 x Pylon Mounted LRM\B
+	\l
+	A single Long Range Missile pylon, able to be fitted inside a Small Missile slot. Small missiles like these provide additional damage and flexibility to a loadout, but very long reload times mean they can usually only be used once or twice a battle.
+	
+	Long Range Missiles or "LRMs" accelerate fast and can track targets at long distances. Their lack of agility makes them easier to dodge in a dogfight, but their increased effectiveness against shields compared to SRMs means they can be used to initiate an attack rather than only follow up on one.
+	
+	The slow reload time on this single pylon restricts the user from firing its missiles often, but provides a useful accessory for those who want to close in on a new target with bigger initial punch, or shoot down runners trying to escape after the dogfight.\n
+
+H 462781
+	\m\b1 x Pylon Mounted LRM [+]\B
+	\l
+	\b[+] 20% faster refire\B
+	
+	A single Long Range Missile pylon, able to be fitted inside a Small Missile slot. Small missiles like these provide additional damage and flexibility to a loadout, but very long reload times mean they can usually only be used once or twice a battle.
+	
+	Long Range Missiles or "LRMs" accelerate fast and can track targets at long distances. Their lack of agility makes them easier to dodge in a dogfight, but their increased effectiveness against shields compared to SRMs means they can be used to initiate an attack rather than only follow up on one.
+	
+	The slow reload time on this single pylon restricts the user from firing its missiles often, but provides a useful accessory for those who want to close in on a new target with bigger initial punch, or shoot down runners trying to escape after the dogfight.
+	
+	This particular piece of equipment is upgraded, firing more frequently than its base model.\n
+
+
+H 462782
+	\m\bLRM-2 Twin Missile Launcher\B
+	\l
+	Long Range Missiles or "LRMs" accelerate fast and can track targets at long distances. Their lack of agility makes them easier to dodge in a dogfight, but their increased effectiveness against shields compared to SRMs means they can be used to initiate an attack rather than only follow up on one.
+	
+	This launcher fits in the Large Missile slot and fires two missiles per salvo, doubling the potential damage if both missiles hit. It's useful for delivering a deadly punch of LRMs throughout a fight, allowing users to support a battle from afar or deal heavy damage to large targets unable to effectively evade them.\n
+
+H 462783
+	\m\bRocket Pod\B
+	\l
+	Rocket Pod Placeholder\n
+
+H 462784
+	\m\bSRM Short Range Missile Launcher\B
+	\l
+	Short Range Missiles or "SRMs" are fast, agile missiles made to track nimble fighters in close-range dogfights. This launcher is one of the smallest on the market, and its significant refire delay and ineffectiveness against shields makes it best used as a secondary weapon deployed when a target's hull is vulnerable.\n
+
+H 462785
+	\m\bSRM Short Range Missile Launcher [+]\B
+	\l
+	Short Range Missiles or "SRMs" are fast, agile missiles made to track nimble fighters in close-range dogfights. This launcher is one of the smallest on the market, and its significant refire delay and ineffectiveness against shields makes it best used as a secondary weapon deployed when a target's hull is vulnerable.\n
+
+H 462786
+	\m\b1 x Pylon Mounted SRM\B
+	\l
+	A single Short Range Missile pylon, able to be fitted inside a Small Missile slot. Small missiles like these provide additional damage and flexibility to a loadout, but very long reload times mean they can usually only be used once or twice a battle.
+	
+	Short Range Missiles or "SRMs" are agile missiles made to track nimble fighters in close-range dogfights. The SRM's lower effectiveness against shields makes it best used as a secondary weapon deployed when a target's hull is vulnerable.
+	
+	The slow reload time on this single pylon restricts the user from firing its missiles often, but provides an added bit of punch intermittently for pilots who want to line up more numerous salvos at critical moments, further pressure an opponent's countermeasures, or just provide some close range flexibility while their main launcher uses LRMs instead.\n
+
+H 462787
+	\m\b1 x Pylon Mounted SRM [+]\B
+	\l
+	A single Short Range Missile pylon, able to be fitted inside a Small Missile slot. Small missiles like these provide additional damage and flexibility to a loadout, but very long reload times mean they can usually only be used once or twice a battle.
+	
+	Short Range Missiles or "SRMs" are agile missiles made to track nimble fighters in close-range dogfights. The SRM's lower effectiveness against shields makes it best used as a secondary weapon deployed when a target's hull is vulnerable.
+	
+	The slow reload time on this single pylon restricts the user from firing its missiles often, but provides an added bit of punch intermittently for pilots who want to line up more numerous salvos at critical moments, further pressure an opponent's countermeasures, or just provide some close range flexibility while their main launcher uses LRMs instead.
+
+	This particular piece of equipment is upgraded, firing more frequently than its base model.\n
+
+H 462788
+	\m\bSRM-2 Twin Missile Launcher\B
+	\l
+	Short Range Missiles or "SRMs" are fast, agile missiles made to track nimble fighters in close-range dogfights. This launcher fires two SRMs at once, combining for a huge amount of potential burst damage that can deliver a sudden knockout punch in the middle of a dogfight. Its significant refire delay and ineffectiveness against shields still make it best used as a secondary weapon deployed when a target's hull is vulnerable.
+
+	This launcher fits in the Large Missile slot and fires two missiles per salvo, doubling the potential damage if both missiles hit. It's useful for delivering a deadly punch of LRMs throughout a fight, allowing users to support a battle from afar or deal heavy damage to large targets unable to effectively evade them.\n
+
+H 462789
+	\m\bSunslayer Torpedo\B
+	\l
+	Sunslayer Torpedo Placeholder.\n
+
+H 462790
+	\m\bUGB\B
+	\l
+	UGB Placeholder\n
+
+H 462006
+	\m\bSP-Zu4 "Bastion" Frigate Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for frigate class capital ships.\n
+
+H 462007
+	\m\bSP-Fa "Brigandine" Freighter Restrained Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has reduced power draw and is specifically designed for Freighter class ships.\n
+
+H 462008
+	\m\bSP-Ha "Brigandine" Heavy Fighter Restrained Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has reduced power draw and is specifically designed for Heavy Fighter class ships.\n
+
+H 462009
+	\m\bSP-La "Brigandine" Light Fighter Restrained Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has reduced power draw and is specifically designed for Light Fighter class ships.\n
+
+H 462010
+	\m\bSP-Va "Brigandine" Very Heavy Fighter Restrained Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has reduced power draw and is specifically designed for Very Heavy Fighter class ships.\n
+
+H 462011
+	\m\bSP-Fa2 "Brigandine" Freighter Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Freighter class ships.\n
+
+H 462012
+	\m\bSP-Ha2 "Brigandine" Heavy Fighter Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Heavy Fighter class ships.\n
+
+H 462013
+	\m\bSP-Ha2 "Brigandine" Heavy Fighter Positron Shield\B
+	\l
+	\b[+] 15% increased shield regeneration rate\B
+	
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Heavy Fighter class ships.
+	
+	This particular piece of equipment is upgraded, featuring a higher shield regen rate than its base model.\n
+
+H 462014
+	\m\bSP-La2 "Brigandine" Light Fighter Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Light Fighter class ships.\n
+
+H 462015
+	\m\bSP-Va2 "Brigandine" Very Heavy Fighter Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Very Heavy Fighter class ships.\n
+
+H 462016
+	\m\bSP-Fa3 "Brigandine" Freighter Advanced Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been overclocked and draws additional power. It is specifically designed for Freighter class ships.\n
+
+H 462017
+	\m\bSP-Ha3 "Brigandine" Heavy Fighter Advanced Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been overclocked and draws additional power. It is specifically designed for Heavy Fighter class ships.\n
+
+H 462018
+	\m\bSP-La3 "Brigandine" Light Fighter Advanced Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been overclocked and draws additional power. It is specifically designed for Light Fighter class ships.\n
+
+H 462019
+	\m\bSP-Va3 "Brigandine" Very Heavy Fighter Advanced Positron Shield\B
+	\l
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been overclocked and draws additional power. It is specifically designed for Very Heavy Fighter class ships.\n
+
+H 463757
+	\m\bHeavy AC Shell\B
+	\l
+	Shells for a heavy autocannon. These are some of the larger autocannon shells available, removing entire sections of ship hull with their heavy impacts.\n
+
+H 463759
+	\m\bLight AC Shell\B
+	\l
+	Shells for a light autocannon. These shells are some of the smallest available for autocannon-style weapons, but they still pack a considerable punch.\n
+
+H 463760
+	\m\bMedium AC Shell\B
+	\l
+	Shells for a medium autocannon. These aren't the biggest autocannon shells available, but they're still large enough to tear through most ship hulls with ease.\n
+
+H 463761
+	\m\bMachinegun Ammo\B
+	\l
+	Machinegun Ammo Placeholder Text\n
+
+H 463762
+	\m\bRAC-10 Shell\B
+	\l
+	Shells for a rotary autocannon. These shells are tiny, and designed to be belt-fed into a rapidly spinning autocannon, but still pack a considerable punch.\n
+
+H 463763
+	\m\bShredder AC Shell\B
+	\l
+	Shells for a shredder autocannon. These are some of the largest autocannon shells around, destroying anything in their path.\n
+
+H 463764
+	\m\bShotgun Ammo\B
+	\l
+	Shotgun Ammo Placeholder Text\n
+
+H 463765
+	\m\bNAC/L Shell\B
+	\l
+	NAC/L Shell Placeholder Text\n
+
+H 463767
+	\m\bFleet Shredder AC Shell\B
+	\l
+	Fleet Shredder AC Shell Placeholder Text\n
+
+H 463770
+	\m\bMobile Repair Beam Charge\B
+	\l
+	Mobile Repair Beam Charge Placeholder Text\n
+
+H 463776
+	\m\bFleet LRM Ammo\B
+	\l
+	Fleet LRM Ammo Placeholder Text\n
+
+H 463777
+	\m\bFleet SRM Ammo\B
+	\l
+	Fleet SRM Ammo Placeholder Text\n
+
+H 463778
+	\m\bLRM\B
+	\l
+	Long Range Missiles or "LRMs" accelerate fast and can track targets at long distances. Their lack of agility makes them easier to dodge in a dogfight, but their increased effectiveness against shields compared to SRMs means they can be used to initiate an attack rather than only follow up on one.\n
+
+H 463783
+	\m\bRockets\B
+	\l
+	Placeholder Text\n
+
+H 463784
+	\m\bSRM\B
+	\l
+	Short Range Missiles, or "SRMs" are fast, agile missiles made to track nimble fighters in close-range dogfights. SRMs can be fired from a variety of different SRM launchers, each with different specifications and weights.\n
+
+H 463789
+	\m\Torpedo\B
+	\l
+	Placeholder Text\n
+
+H 463790
+	\m\bUGB\B
+	\l
+	Placeholder Text\n
+
+S 468260 Hawk
+S 468261 Falcon
+S 468262 Eagle
+S 468263 Patriot
+S 468264 Defender
+S 468265 Guardian
+S 468266 Rhino
+S 468267 Piranha
+S 468268 Barracuda
+S 468269 Hammerhead
+S 468270 Phantom
+
+S 468760 Civilian L. F. Engine
+S 468761 Civilian H. F. Engine
+S 468762 Civilian V. H. F. Engine
+S 468763 Liberty L. F. Engine
+S 468764 Liberty H. F. Engine
+S 468765 Liberty V. H. F. Engine
+S 468766 Liberty Fr. Engine
+S 468767 Bounty Hunter L. F. Engine
+S 468768 Bounty Hunter H. F. Engine
+S 468769 Bounty Hunter V. H. F. Engine
+S 468770 Liberty H. F. Engine
+
+S 469260 Civilian L. F. Powerplant
+S 469261 Civilian H. F. Powerplant
+S 469262 Civilian V. H. F. Powerplant
+S 469263 Liberty L. F. Powerplant
+S 469264 Liberty H. F. Powerplant
+S 469265 Liberty V. H. F. Powerplant
+S 469266 Liberty Fr. Powerplant
+S 469267 Bounty Hunter L. F. Powerplant
+S 469268 Bounty Hunter H. F. Powerplant
+S 469269 Bounty Hunter V. H. F. Powerplant
+S 469270 Liberty H. F. Powerplant
+
+S 469760 Scanner
+S 469761 Scanner
+S 469762 Scanner
+S 469763 Scanner
+S 469764 Scanner
+S 469765 Scanner
+S 469766 Scanner
+S 469767 Scanner
+S 469768 Scanner
+S 469769 Scanner
+S 469770 Scanner
+
+S 470260 Tractor Beam
+S 470261 Tractor Beam
+S 470262 Tractor Beam
+S 470263 Tractor Beam
+S 470264 Tractor Beam
+S 470265 Tractor Beam
+S 470266 Tractor Beam
+S 470267 Tractor Beam
+S 470268 Tractor Beam
+S 470269 Tractor Beam
+S 470270 Tractor Beam
+
+H 468510
+	\m\bCTE-1500 "Hawk" Civilian Light Fighter\B
+	\l
+	Like an enormous bird of prey, the Hawk can sublimely snatch its targets out of the sky with tremendous grace.Its unmistakable shape casts a shadow of fear on its enemies, while the advanced power and armor ratingsensure that it can deliver the harshest of attacks or repel those foolish enough to challenge it.
+
+H 468511
+	\m\bCTE-3000 "Falcon" Civilian Heavy Fighter\B
+	\l
+	As the name attests, this ship is formidable and is well-deserving of the reputation that it enjoys. With abalanced combination of refined offensive and defensive technologies, the Falcon delivers an astonishingamount of potential firepower to potential adversaries quickly and efficiently.
+
+H 468512
+	\m\bCTE-6000 "Eagle" Civilian Very Heavy Fighter\B
+	\l
+	The Eagle stands vigil over the economic interests and, therefore, the ideological interests of Liberty. Withits maxed-out power rating and reinforced armor plating, it is the most sophisticated and advanced vessel inthe Civilian class. All in all, it delivers the maximum defensive potential and punishing offensive firepowerthat credits can buy.
+
+H 468513
+	\m\bLZF-6364 "Patriot" Liberty Light Fighter\B
+	\l
+	With comparable models in active government and military service, the Patriot delivers state-of-the-art	maneuverability and punishing firepower in one unbeatable package. Impressive extensibility and a generous cargo hold round out the top-notch appointments.
+
+H 468514
+	\m\bBDR-337 "Defender" Liberty Heavy Fighter\B
+	\l
+	The best of the best, this heavily outfitted rig represents the pinnacle of Liberty's technological advances and design savoir faire. With its elevated armor and power rating as standard and the additional mount for	firepower, its no wonder that this ship is the number one choice of the Liberty Armed Forces.
+
+H 468515
+	\b\mBDR-496 "Guardian" Liberty Very Heavy Fighter
+	\B\l
+	A collection of the most cutting-edge fighter technology Liberty has to offer, the Guardian is a serious effort by the Liberty Navy to refine and push the Defender chassis as far as possible. Sporting additional armor, an improved power plant and extra mounts, the Guardian is still not approved for civilian sale.
+
+H 468516
+	\m\bEL-HiL27 "Rhino" Liberty Freighter\B
+	\l
+	With the economic foundation of Sirius firmly built on Libertys commercial interests, the Rhino certainly lives up to its name. The vast cargo hold is the hallmark of this impressive beast, surrounded by doubly reinforced structure and protective armor hull. This and the advanced weapon system make the Rhino a force to be reckoned with.
+
+H 468517
+	\m\bAP-6364 "Piranha" Bounty Hunter Light Fighter\B
+	\l
+	With crime on the rise, there has been a resurgence in the Bounty Hunter trade. To hunt down a criminal one must think like a criminal and be armed like one too. The Piranha delivers expertly on this note, providing every bit of the firepower and armor needed for the job. The added cargo space for transport and delivery of captured escape pods rounds out its generous appointments.
+
+H 468518
+	\m\bAP-7031 "Barracuda" Bounty Hunter Heavy Fighter\B
+	\l
+	When the fire is thick and flack and fallout rip the competition apart, the Barracuda still fights. Because of its strength and survivability in open combat as well as its stealthy, maneuverable handling, this ship distinguishes itself as the best friend of the modern Bounty Hunter. This, coupled with the tricked-out power array, makes it an easy choice.
+
+H 468519
+	\m\bAP-8050 "Hammerhead" Bounty Hunter Very Heavy Fighter\B
+	\l
+	Desperate times call for desperate measures, in this case desperate designs. The Hammerhead is the result of years of work by the Bounty Hunters Guild to improve upon the traditional AP line. Its armor and power ratings have been elevated to peak levels to deliver a greater advantage to Bounty Hunters in the field.
+
+H 468520
+	\m\b"Phantom" Heavy Fighter\B
+	\l
+	Placeholder Text\n
+
+H 469010
+	\m\bModel G "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 469011
+	\m\bModel G "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 469012
+	\m\bModel G "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 469013
+	\m\bY Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 469014
+	\m\bY Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 469015
+	\m\bY Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 469016
+	\m\bY Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 469017
+	\m\b48-RGB-2 "Blackwidow" Deep Space Engine - Neon\B
+	\l
+	This engine looks like it's worth the cost, but it probably isn't. This engine is rated for deep space travel, and offers competitive performance.\n
+
+H 469018
+	\m\b48-RGB-2 "Blackwidow" Deep Space Engine - Neon\B
+	\l
+	This engine looks like it's worth the cost, but it probably isn't. This engine is rated for deep space travel, and offers competitive performance.\n
+
+H 469019
+	\m\b48-RGB-2 "Blackwidow" Deep Space Engine - Neon\B
+	\l
+	This engine looks like it's worth the cost, but it probably isn't. This engine is rated for deep space travel, and offers competitive performance.\n
+
+H 469020
+	\m\bY Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 469510
+	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
+	\l
+	The 48-B Premium edition power supply was developed by Ageira Technologies for the adventurous starfarer. It's superior capacity and liquid-hydrogen cooled cells deliver enough performance to take on the dangers of space. Stay frosty! \n\.
+
+H 469511
+	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
+	\l
+	The 48-B Premium edition power supply was developed by Ageira Technologies for the adventurous starfarer. It's superior capacity and liquid-hydrogen cooled cells deliver enough performance to take on the dangers of space. Stay frosty! \n\.
+
+H 469512
+	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
+	\l
+	The 48-B Premium edition power supply was developed by Ageira Technologies for the adventurous starfarer. It's superior capacity and liquid-hydrogen cooled cells deliver enough performance to take on the dangers of space. Stay frosty! \n\.
+
+H 469513
+	\m\b"Minuteman" Mk V Super-Cooled Liberty Power Supply\B
+	\l
+	Developed by the Liberty Navy, the "Minuteman" power supply is the workhorse of Liberty's law enforcement. Offering superior power output compared when compared to civilian power supplies, the "Minuteman" was developed with a focus on performance over cost effectiveness, and its development and manufacturing was subsidized by a significant increase in military budget.\n
+
+H 469514
+	\m\b"Minuteman" Mk V Super-Cooled Liberty Power Supply\B
+	\l
+	Developed by the Liberty Navy, the "Minuteman" power supply is the workhorse of Liberty's law enforcement. Offering superior power output compared when compared to civilian power supplies, the "Minuteman" was developed with a focus on performance over cost effectiveness, and its development and manufacturing was subsidized by a significant increase in military budget.\n
+
+H 469515
+	\m\b"Minuteman" Mk V Super-Cooled Liberty Power Supply\B
+	\l
+	Developed by the Liberty Navy, the "Minuteman" power supply is the workhorse of Liberty's law enforcement. Offering superior power output compared when compared to civilian power supplies, the "Minuteman" was developed with a focus on performance over cost effectiveness, and its development and manufacturing was subsidized by a significant increase in military budget.\n
+
+H 469516
+	\m\b"Minuteman" Mk V Super-Cooled Liberty Power Supply\B
+	\l
+	Developed by the Liberty Navy, the "Minuteman" power supply is the workhorse of Liberty's law enforcement. Offering superior power output compared when compared to civilian power supplies, the "Minuteman" was developed with a focus on performance over cost effectiveness, and its development and manufacturing was subsidized by a significant increase in military budget.\n
+
+H 469517
+	\m\bHC-147 "Hydra" BHG Liquid Hydrogen Power Supply\B
+	\l
+	The HC-147 "Hydra" is a simple and effective design commissioned by Interspace Commerce and developed by Ageira Technologies. The Hydra offers comparable performance to competitors at a significantly reduced cost.\n
+
+H 469518
+	\m\bHC-147 "Hydra" BHG Liquid Hydrogen Power Supply\B
+	\l
+	The HC-147 "Hydra" is a simple and effective design commissioned by Interspace Commerce and developed by Ageira Technologies. The Hydra offers comparable performance to competitors at a significantly reduced cost.\n
+
+H 469519
+	\m\bHC-147 "Hydra" BHG Liquid Hydrogen Power Supply\B
+	\l
+	The HC-147 "Hydra" is a simple and effective design commissioned by Interspace Commerce and developed by Ageira Technologies. The Hydra offers comparable performance to competitors at a significantly reduced cost.\n
+
+H 469520
+	\m\b"Minuteman" Mk V Super-Cooled Liberty Power Supply\B
+	\l
+	Developed by the Liberty Navy, the "Minuteman" power supply is the workhorse of Liberty's law enforcement. Offering superior power output compared when compared to civilian power supplies, the "Minuteman" was developed with a focus on performance over cost effectiveness, and its development and manufacturing was subsidized by a significant increase in military budget.\n
+
+H 470010
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470011
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470012
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470013
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470014
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470015
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470016
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470017
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470018
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470019
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470020
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470510
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470511
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470512
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470513
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470514
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470515
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470516
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470517
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470518
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470519
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470520
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+S 471510 This is an equipment hard point.
+S 471511 Small Energy/Ballistic Weapon
+S 471512 Medium Energy/Ballistic Weapon
+S 471513 Large Energy/Ballistic Weapon
+S 471514 Small Energy/Ballistic Turret
+S 471515 Medium Energy/Ballistic Turret
+S 471516 Large Energy/Ballistic Turret
+S 471517 hp_hybrid_gun_7 Placeholder
+S 471518 hp_hybrid_gun_8 Placeholder
+S 471519 hp_hybrid_gun_9 Placeholder
+S 471520 hp_hybrid_gun_10 Placeholder
+S 471521 This is a kinetic weapon hard point that accepts missile and ballistic type weapons.
+S 471522 Small Missile/Ballistic Weapon
+S 471523 Medium Missile/Ballistic Weapon
+S 471524 Large Missile/Ballistic Weapon
+S 471525 Small Missile/Ballistic Turret
+S 471526 Medium Missile/Ballistic Turret
+S 471527 Large Missile/Ballistic Turret
+S 471528 hp_kinetic_gun_7 Placeholder
+S 471529 hp_kinetic_gun_8 Placeholder
+S 471530 hp_kinetic_gun_9 Placeholder
+S 471531 hp_kinetic_gun_10 Placeholder
+S 471532 This is a reactive weapon hard point that accepts energy and missile type weapons.
+S 471533 Small Missile/Energy Weapon
+S 471534 Medium Missile/Energy Weapon
+S 471535 Large Missile/Energy Weapon
+S 471536 Small Missile/Energy Turret
+S 471537 Medium Missile/Energy Turret
+S 471538 Large Missile/Energy Turret
+S 471539 hp_reactive_gun_7 Placeholder
+S 471540 hp_reactive_gun_8 Placeholder
+S 471541 hp_reactive_gun_9 Placeholder
+S 471542 hp_reactive_gun_10 Placeholder
+S 471543 This is a cruise disruptor hard point.
+S 471544 Cruise Disruptor
+S 471545 hp_dummy_cruise_disruptor_2 Placeholder
+S 471546 hp_dummy_cruise_disruptor_3 Placeholder
+S 471547 hp_dummy_cruise_disruptor_4 Placeholder
+S 471548 hp_dummy_cruise_disruptor_5 Placeholder
+S 471549 hp_dummy_cruise_disruptor_6 Placeholder
+S 471550 hp_dummy_cruise_disruptor_7 Placeholder
+S 471551 hp_dummy_cruise_disruptor_8 Placeholder
+S 471552 hp_dummy_cruise_disruptor_9 Placeholder
+S 471553 hp_dummy_cruise_disruptor_10 Placeholder
+S 471554 This is a mine dropper hard point.
+S 471555 Mine
+S 471556 hp_dummy_minedropper_2 Placeholder
+S 471557 hp_dummy_minedropper_3 Placeholder
+S 471558 hp_dummy_minedropper_4 Placeholder
+S 471559 hp_dummy_minedropper_5 Placeholder
+S 471560 hp_dummy_minedropper_6 Placeholder
+S 471561 hp_dummy_minedropper_7 Placeholder
+S 471562 hp_dummy_minedropper_8 Placeholder
+S 471563 hp_dummy_minedropper_9 Placeholder
+S 471564 hp_dummy_minedropper_10 Placeholder
+S 471565 This is a countermeasure hard point.
+S 471566 Countermeasure
+S 471567 hp_dummy_countermeasure_2 Placeholder
+S 471568 hp_dummy_countermeasure_3 Placeholder
+S 471569 hp_dummy_countermeasure_4 Placeholder
+S 471570 hp_dummy_countermeasure_5 Placeholder
+S 471571 hp_dummy_countermeasure_6 Placeholder
+S 471572 hp_dummy_countermeasure_7 Placeholder
+S 471573 hp_dummy_countermeasure_8 Placeholder
+S 471574 hp_dummy_countermeasure_9 Placeholder
+S 471575 hp_dummy_countermeasure_10 Placeholder
+ 
+S 471577 ids_info
+S 471578 ids_info2
+S 471579 ids_info_3
+S 471580 BMOD VER. %d.%d "Goose"
+
+S 471581 Energy Capacity:
+S 471582 Regeneration Rate:
+S 471583 Top Speed:
+S 471584 Reverse Speed:
+S 471585 Cruise Charge Time:
+S 471586 Cruise Energy Drain:
+S 471587 Range:
+S 471588 Cargo Scan Range:
+S 471589 Extend Speed:
+S 471590 Armor Improvement:
+S 471591 Shield Capacity:
+S 471592 Regeneration Rate:
+S 471593 Rebuild Time:
+S 471594 Rebuild Energy Drain:
+S 471595 Constant Energy Drain:
+S 471596 Hull Damage:
+S 471597 Hull Repair:
+S 471598 Shield Damage:
+S 471599 Shield Repair:
+S 471600 Energy Usage:
+S 471601 Refire Rate:
+S 471602 Projectile Speed:
+S 471603 Top Speed:
+S 471604 Range:
+S 471605 Spread:
+S 471606 Projectile Turn Rate:
+S 471607 Explosion Radius:
+S 471608 Lifetime:
+S 471609 Seek Distance:
+S 471610 u
+S 471611 u/s
+
+S 471612 Mine Lifetime:
+S 471613 Refire Rate:
+S 471614 Arming Delay:
+S 471615 Seek Distance:
+S 471616 Decoy Lifetime:
+S 471617 Rebuild Power Drain:
+S 471618 Constant Power Drain:
+S 471619 Rebuild Time:
+
+S 471620 /s
+S 471621 \x00B0
+S 471622 \x00B0/s
+S 471623 Detonation Distance:
+S 471624 Maximum Range:
+
+S 472011 Countermeasure Dropper
+S 472012 Countermeasure Dropper [+]
+S 472013 Thruster
+S 472014 Wasp Cruise Disruptor
+S 472015 Wasp Cruise Disruptor [+]
+S 472016 M-EX1 Drone Mine
+S 472017 M-EX2 Cutter Mine
+S 472018 M-EM1 Razor EMP Mine
+S 472019 M-EM2 Wardog EMP Mine
+S 472020 M-ER7 Nanite Burster
+S 472021 M-ER7 Nanite Burster [+]
+S 472022 ZP-1000M
+S 472023 ZP-1600M
+
+H 472512
+	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper\B
+	\l
+	The CM-1 Countermeasure Dropper dispenses an expendable "package" of light, heat and electromagnetic radiation that attracts the attention of incoming ordinance and draws it away from the ship. This one has been tuned for maximum duration, at the expense of direct effectiveness.
+	
+	* Requires "Firewall" Long-Life Countermeasure Flare.\n
+
+H 472513
+	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper [+]\B
+	\l
+	The CM-1 Countermeasure Dropper dispenses an expendable "package" of light, heat and electromagnetic radiation that attracts the attention of incoming ordinance and draws it away from the ship. This one has been tuned for maximum duration, at the expense of direct effectiveness.
+
+	This unit has been modified for increased flare effectiveness.
+	
+	* Requires "Firewall" Long-Life Countermeasure Flare.\n
+
+H 472514
+	Designed to be subordinate to the standard engine powerstream, this thruster delivers a brief but significant jolt of speed, crucial when strafing in combat.\n
+
+
+H 472515
+	\m\bCD88a "Wasp" Cruise Disruptor Missile Launcher\B
+	\l
+	Originally designed to help local law enforcement stop fleeing pirates, the Wasp uses a complex guidance and deployment system to effectively disrupt a target's ability to maintain cruise velocity.
+	
+	* Requires Wasp Cruise Disruptor Missile.\n
+
+H 472516
+	\m\bCD88a "Wasp" Cruise Disruptor Missile Launcher [+]\B
+	\l
+	\b[+] 20% faster refire\B
+	
+	Originally designed to help local law enforcement stop fleeing pirates, the Wasp uses a complex guidance and deployment system to effectively disrupt a target's ability to maintain cruise velocity.
+	
+	This particular piece of equipment is upgraded, firing more frequently than its base model.
+	
+	* Requires Wasp Cruise Disruptor Missile.\n
+
+H 472517
+	\m\bM-EX1 "Drone" Static Explosive Mine Dropper\B
+	\l
+	The Drone is simple and effective, detonating and eviscerating its targets within a respectable kill radius. Given its relatively low cost and availability throughout Sirius, this mine dropper is by and large considered to be an old and faithful standby weapon.
+	
+	* Requires Drone Static Explosive Mine.\n
+
+H 472518
+	\m\bM-EX2 "Cutter" Seeking Explosive Mine Dropper\B
+	\l
+	Based on an entirely new formula, the destructive capacity of the Cutter rivals that of any other standard mine. In addition to this, the \x201cseeking technology\x201d behind the Cutter has been entirely re-engineered, enabling it to now deliver a larger, more accurate and deadlier blow to its target.
+	
+	* Requires Cutter Seeking Explosive Mine.\n
+
+H 472519
+	\m\bM-EM1 "Razor" Static EMP Mine Dropper\B
+	\l
+	Lacking any real guidance systems or seeking technology, the M-EM1 carries a maximized EMP payload. It is generally considered to be a reliable and non-lethal option for deterring attacks on freighters carrying valuable cargo.
+	
+	* Requires Razor Static EMP Mine.\n
+
+H 472520
+	\m\bM-EM2 "Wardog" Seeking EMP Mine Dropper\B
+	\l
+	Utilizing the high-quality seeking technology of the M-EX2 Cutter Mine, the Wardog has had it's payload stripped out and replaced with a sophisticated EMP system designed to cripple any ship unfortunate enough to run into it.
+	
+	* Requires Wardog Seeking EMP Mine.\n
+
+H 472521
+	\m\bM-ER7 Basic Repair Burst Launcher\B
+	\l
+	The M-ER7 Nanite Burster deploys short-lived nanites in an area to repair basic material damage of a ship's hull or internal systems. These nanometer-scale artificial organisms are programmed to synthesize and apply the molecular building blocks as necessary.
+	
+	* Requires M-ER7 Basic Repair Burst Charge.\n
+
+H 472522
+	\m\bM-ER7 Basic Repair Burst Launcher\B
+	\l
+	\b[+] 20% faster refire\B
+	
+	The M-ER7 Nanite Burster deploys short-lived nanites in an area to repair basic material damage of a ship's hull or internal systems. These nanometer-scale artificial organisms are programmed to synthesize and apply the molecular building blocks as necessary.
+	
+	This particular piece of equipment is upgraded, capable of dispensing repair charges more frequently than its base model.
+	
+	* Requires M-ER7 Basic Repair Burst Charge.\n
+
+H 472523
+	\m\bZP-1000M Zero Pointer Targeting Module\B
+	\l
+	Zero Pointers are not weapons, but special tools used to adjust the amount of lead your targeting crosshair displays by adding them to a weapon group with your other guns. This model simulates a weapon with a projectile speed of 1000m, and will add a significant amount of lead to your weapon group.
+	
+	When factors like aging targeting software or ionic interference reduce the accuracy of a pilot's lead indicator, it's necessary to adjust the aim point, or zeroing, of the ship's computer manually.  Unfortunately, clunky interfaces and a loss of knowledge in how to adjust certain hardcoded systems means many pilots were unable to perform this important function without significant downtime.
+	
+	Zero Pointers are a simple but effective solution. Sold as an aftermarket modification, they are cheap and easy to install 'ghost' weapons that fool the ship's computer into thinking they're another gun, usually slower than the others already installed. By adding these slower fake weapons into the same weapon group, they bring down the average that the targeting computer uses to compute a unified aim point for all the grouped weapons, resulting in more lead on the target when added to a group of faster weapons or less lead if added to a group of slower weapons.
+	
+	Using a Zero Pointer is easy. Just install it, then add it to any weapon group to modify that group's lead pip as desired, and toggle the weapon off when the leading modification is no longer desired. If your shots always seem to be too slow to catch the target, proper use of a Zero Pointer or multiple in combination can improve your accuracy tremendously.
+	
+	Thanks to the tool's spreading popularity amongst pilots, most ships now have special Class 10 hardpoints that allow their installation without giving up space for any real weapons.\n
+
+H 472524
+	\m\bZP-1600M Zero Pointer Targeting Module\B
+	\l
+	Zero Pointers are not weapons, but special tools used to adjust the amount of lead your targeting crosshair displays by adding them to a weapon group with your other guns. This model simulates a weapon with a projectile speed of 1600m, and will add a moderate amount of lead to your weapon group.
+	
+	When factors like aging targeting software or ionic interference reduce the accuracy of a pilot's lead indicator, it's necessary to adjust the aim point, or zeroing, of the ship's computer manually.  Unfortunately, clunky interfaces and a loss of knowledge in how to adjust certain hardcoded systems means many pilots were unable to perform this important function without significant downtime.
+	
+	Zero Pointers are a simple but effective solution. Sold as an aftermarket modification, they are cheap and easy to install 'ghost' weapons that fool the ship's computer into thinking they're another gun, usually slower than the others already installed. By adding these slower fake weapons into the same weapon group, they bring down the average that the targeting computer uses to compute a unified aim point for all the grouped weapons, resulting in more lead on the target when added to a group of faster weapons or less lead if added to a group of slower weapons.
+	
+	Using a Zero Pointer is easy. Just install it, then add it to any weapon group to modify that group's lead pip as desired, and toggle the weapon off when the leading modification is no longer desired. If your shots always seem to be too slow to catch the target, proper use of a Zero Pointer or multiple in combination can improve your accuracy tremendously.
+	
+	Thanks to the tool's spreading popularity amongst pilots, most ships now have special Class 10 hardpoints that allow their installation without giving up space for any real weapons.\n
+
+S 473013 CM-1 Countermeasure Flare
+S 473014 CM-1 Countermeasure Flare [+]
+S 473016 Wasp Cruise Disruptor Missile
+S 473018 M-EX1 Drone Mine
+S 473019 M-EX2 Cutter Mine
+S 473020 M-EM1 Razor EMP Mine
+S 473021 M-EM2 Wardog EMP Mine
+S 473022 M-ER7 Nanite Repair Burst Charge
+
+H 473514
+	\m\b"Firewall" CM-1 Long-Life Countermeasure Flare\B
+	\l
+	The CM-1 Countermeasure Flare is an expendable "package" of light, heat and electromagnetic radiation that attracts the attention of incoming ordinance and draws it away from the ship. This one has been tuned for maximum duration, at the expense of direct effectiveness.
+	
+	* Fired by "Firewall" Long-Life Countermeasure Dropper.\n
+
+H 473515
+	\m\b"Firewall" CM-1 Long-Life Countermeasure Flare [+]\B
+	\l
+	\b[+] +10% countermeasure effectiveness\B
+	
+	The CM-1 Countermeasure Flare is an expendable "package" of light, heat and electromagnetic radiation that attracts the attention of incoming ordinance and draws it away from the ship. This one has been tuned for maximum duration, at the expense of direct effectiveness.
+	
+	This particular piece of equipment is upgraded, and is more effective at distracting missiles than its base model.
+	
+	* Fired by "Firewall" Long-Life Countermeasure Dropper [+].\n
+
+H 473517  
+	\m\bCD88a "Wasp" Cruise Disruptor Missile\B
+	\l
+	The Wasp uses a complex guidance and deployment system to effectively disrupt a target's cruise engines.
+	
+	* Fired by Wasp Cruise Disruptor.\n
+
+H 473519 
+	\m\bM-EX1 "Drone" Static Explosive Mine\B
+	\l
+	The Drone is simple and effective, detonating and eviscerating its targets within a respectable kill radius.
+	
+	* Fired by Drone Static Explosive Mine Dropper.\n
+ 
+H 473520 
+	\m\bM-EX2 "Cutter" Seeking Explosive Mine\B
+	\l
+	With its reformulated explosive charge and its re-engineered \x201cseeking technology\x201d, the Cutter is an uncompromisingly lethal ordinance.
+	
+	* Fired by Cutter Seeking Explosive Mine Dropper.\n
+ 
+H 473521 
+	\m\bM-EM1 "Razor" Static EMP Mine\B
+	\l
+	Lacking any real guidance systems or seeking technology, the M-EM1 carries a maximized EMP payload. It is generally considered to be a reliable and non-lethal option for deterring attacks on freighters carrying valuable cargo.
+	
+	* Fired by Razor Static EMP Mine Dropper.\n
+ 
+H 473522 
+	\m\bM-EM2 "Wardog" Seeking EMP Mine\B
+	\l
+	Utilizing the high-quality seeking technology of the M-EX2 Cutter Mine, the Wardog has had it's payload stripped out and replaced with a sophisticated EMP system designed to cripple any ship unfortunate enough to run into it.
+	
+	* Fired by Wardog Seeking EMP Mine Dropper.\n
+ 
+H 473523 
+	\m\bM-ER7 Basic Repair Burst Charge\B
+	\l
+	The M-ER7 Repair Charge deploys short-lived nanites in an area to repair basic material damage of a ship's hull or internal systems. These nanometer-scale artificial organisms are programmed to synthesize and apply the molecular building blocks as necessary.
+	
+	* Requires M-ER7 Nanite Repair Burst Launcher.\n
+ 
+S 474015 The Maw
+S 474016 Houston Planetary Debris Field
+S 474017 Unstable Jump Hole
+S 474018 The Texas Singularity
+S 474019 Kundschafter 32
+S 474020 Escort of the RNC Saarbrücken
+S 474021 Lancer
+S 474022 Escort of the RNC Schönebeck
+S 474023 Batfish
+S 474024 Escort of the LNS Harmony
+S 474025 Patrol 14
+S 474026 Escort of the RNC Schiller
+S 474027 Liberty Heavy Fighter Wreck
+S 474028 Liberty Light Fighter Wreck
+S 474029 Rheinland Heavy Fighter Wreck
+S 474030 Rheinland Light Fighter Wreck
+S 474031 Seeker
+S 474032 Ouray Base
+S 474033 Prison Liner Tamms
+S 474034 LPI Alcatraz
+S 474035 Aurora Salvage Yards
+S 474036 Denver Orbital Security Perimeter
+S 474037 Pueblo Security Exclusion Zone
+S 474038 Durango Orbital Security Perimeter
+S 474039 Kepler Gate Debris Field
+S 474040 "Big Yen" Asteroid Cluster
+S 474041 Unknown Planet
+S 474042 Unknown Planet
+S 474043 Maverick Station
+
+
+H 476016
+	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
+	
+	This particular gate appears to have suffered severe internal damage and is inoperative.
+
+H 476017
+	The remains of the Texas-Hudson Jump Gate. In addition to the internal burnout that all active gates appear to have suffered at the time of the Houston Catastrophe, this gate appears to have serious structural damage present as well.
+
+H 476018
+	\b\cr>>>WARNING: NAVIGATIONAL HAZARD<<<\B\C
+	
+	Previously home to a large contingent of Junkers, the North Dallas Debris Field has seen very little rogue activity in the wake of the Houston Catastrophe. The gravitational waves from the event shifted the debris field quite dramatically towards the New York Jump Gate, so the area has seen a substantial increase in Liberty Navy activity and is largely shunned by outlaws.
+
+H 476019
+	\b\cr>>>WARNING: NAVIGATIONAL HAZARD<<<\B\C
+	
+	A pocket of debris housing the remains of LPI \iSugarland\I. The Prison station was captured during Rheinland's initial invasion of the system, then subsequently abandoned in the wake of the Houston Catastrophe. The field is gradually falling into the gravity well of Brazos, and Junkers can often be found in the field searching for anything of value before it's gone forever.
+
+H 476020
+	\b\cr>>>WARNING: NAVIGATIONAL HAZARD<<<\B\C
+	
+	The South Dallas Debris Field consists of remnants of the Dallas Research complex, destroyed in the Texas incident in 500 AS, as well as parts of the LPI \iSugarland\I complex and what's left of the Hudson Gate.
+	
+	Despite the lack of an operational Jump Gate, Rheinland scouts have occasionally been sighted patrolling the field, suggesting the presence of a stable jump hole somewhere nearby.
+
+H 476021
+	\b\cr>>>WARNING: EXTREME HAZARD<<<\B\C
+	
+	In the immediate aftermath of the Houston Catastrophe, the incredible force of the gravitational waves rippling through the Texas system collapsed the dark matter clouds of the Grande Negra and Pequena Negra into a single large formation now known as the Maw.
+	
+	Fed by a seething singularity at it's heart, the cloud's dark exterior hides some of the most dangerous dangerous natural phenomena in Sirius, from powerful, constantly shifting gravity fields to intense radiation and - as some rumors say - hallucinations and other monsters of the mind.
+
+H 476022
+	\b\cr>>>WARNING: NAVIGATIONAL HAZARD<<<\B\C
+	
+	A roiling mass of molten rock and brittle obsidian, the Houston Planetary Debris field is all that remains of Houston's crust and mantle. The field is littered with pockets of ship debris and intense radiation. It is heavily patrolled by the Liberty Navy, who have been working hard to deter would-be salvagers.
+
+H 476023
+	DIAMETER: 11,282 km
+	MASS: 3.72 x 10\f09²\4\F kg
+	TERRAIN: N/A
+	TEMPERATURE: N/A
+	ESCAPE VELOCITY: 9.67 km/s
+	
+	A relatively small gas planet with no useful resources. Brazos previously hosted the prison station LPI \i\
+	Sugarland\I, but now only acts as an anchor for the remains of the station and the East Dallas Debris Field. Junkers can often be found in the area.
+
+H 476024
+	DIAMETER: 8,201 km
+	MASS: 3.08 x 10\x00B2\x2074 kg
+	TERRAIN: Molten
+	TEMPERATURE: 608\x00B0C to 1340\x00B0C
+	ESCAPE VELOCITY: 9.02 km/s
+	
+	By the third quarter of 801 AS the Rheinland-Liberty conflict had reached a critical point. After months of effort, the Rheinland Navy took a series of key locations in Hudson, securing important logistics routes and giving them a solid platform from which to launch a large-scale invasion of Liberty space. Alarmed by consistent Rheinland victories in the Independent Worlds, the Liberty Navy deployed the bulk of its fleet to Texas, hoping to prevent the RNC from making further progress into Liberty space. Undeterred, Rheinland capital ships arrived in the system two weeks later.
+	
+	Shortly after their arrival, the RNC swept across Texas, securing the southern half of the system and pushing into the orbit of Houston. The Liberty Navy responded in kind, deploying five dreadnoughts, many cruisers and countless fighters to meet the invading force. After several hours of intense fighting, it appeared the Rheinland Navy were close to victory, having completely eliminated the bulk of Liberty's cruiser complement and severely damaged three of the five defending battleships.
+
+	The exact cause of what occurred next isn't entirely clear. Official Liberty sources claim that Rheinland deployed an untested experimental weapon, but given their tactical and strategic situation at the time it seems unlikely that they had any reason to do so. Anyone caught spreading rumours that conflict with the official narrative are investigated and charged with sedition by the LSF.
+	
+	The resulting blast sent out massive gravitational waves that overloaded the Texas Jump Gates, propagating through the network and burning out the most of Liberty's functional gates. Many jump holes were also destabilized by this massive cataclysm. As for Houston, the incredible fluctuations in gravity have torn the crust off the planet in massive chunks, ejecting unprecedented amounts of rock and cooling lava into orbit and scarring the surface permanently. Both orbiting fleets were obliterated almost instantly, putting a swift end to the conflict.
+	
+	The surface of Houston is now a molten hellscape. The atmosphere has been stripped away and the planet itself gives off a nightmarish red glow as it cools. While the Liberty government has begun investigating the possibility of mining the exposed core of the planet, any prospects of recovery or terraforming the planet back to what it once was are impossible.
+
+H 476025
+	\b\cr***GRAVITATIONAL ANOMALY DETECTED***\B\C
+	
+	Magnetic and gravimetric readings are consistent with a Jump Hole — a natural phenomenon that functions similar to a Jump Gate, though the hazards associated with traveling through a Jump Hole remain largely unknown. Ageira Technologies recommends avoiding all contact with Jump Holes.
+	
+	Sensor readings indicate that this jump hole is unstable. It would be particularly unwise to attempt passage at this time.
+
+H 476026
+	\b\cr>>>WARNING: EXTREME HAZARD<<<\B\C
+	
+	The boiling heart of the Maw, the Texas Singularity has defied all attempts at study. In addition to the hostile conditions of the Maw, the singularity releases huge quantities of exotic particles that are poorly understood and rapidly break down into hard radiation.
+	
+	The singularity also creates unpredictable gravitational tides in and around the Maw, drawing debris, and anyone unfortunate enough to be too close, into it's embrace.
+
+H 476027
+	A wing of Rheinland Navy scouts that appear to have blundered into one of the field's many radiation pockets. There may still be salvageable equipment onboard.
+
+H 476028
+	The Cruiser RNC \iSaarbrücken\I had been tasked with securing the south-eastern quadrant of the system during the Rheinland Invasion. Quite why its wreckage is on this side of the debris field is unclear.
+
+H 476029
+	The wreckage of the \iLancer\I, piloted by Bounty Hunter Ace Mía Barrueco.
+
+H 476030
+	During the Houston Catastrophe, the RNC \iSchönebeck\I was part of the fleet assigned to secure Abilene and ensure that any Navy weapons platforms there were effectively neutralized for the duration of the engagement.
+
+H 476031
+	The wreck of the Junker vessel \iBatfish\I. It was identified and destroyed by LSF operatives several weeks ago as it tried to push into the debris field on an illegal salvage operation.
+
+H 476032
+	The LNS \iHarmony\I and it's escort were in transit to support forces in orbit when the Houston Catastrophe took place. Mississippi Control have tagged the wreck for salvage and recovery but have not yet found the resources to secure the area for such an operation.
+
+H 476033
+	Liberty Navy Patrol 14 flew into the Houston Planetary Debris Field two weeks ago on a routine patrol and then disappeared without a trace. An extensive search by authorities has not turned up anything so far. The LSF speculate that they may have blundered into one of the many intense radiation pockets spread throughout the field.
+
+H 476034
+	The Battleship RNC \iSchiller\I was Rheinland's primary forward base of operations in the Texas system during the initial invasion. Initially it was deployed in orbit around the Hudson gate but during the RNC's push on Houston, Navy command decided that it would be impractical to coordinate the battle from such a distance and moved it closer to the planet just before the Houston Catastrophe occurred.
+
+H 476035
+	One of many Liberty fighter wrecks in this battlefield. Most of them are picked clean, but some yield weapons and equipment.
+
+H 476036
+	One of many Rheinland fighter wrecks in this battlefield. Most of them are picked clean, but some yield weapons and equipment.
+
+H 476037
+	The wreck of the \iSeeker\I, piloted by LSF operative Alan Davies. Davies has been missing for 3 weeks, and was last seen entering the South Dallas Debris Field to confirm sightings of Rheinland Military scouts.
+
+H 476038
+	Where there's junk, there are the Junkers. They've been around since the earliest days of the Trade Lanes. Descended from the working classes, they developed within the House systems as a sort of necessary evil, handling the dirty work that no one else would. They do well salvaging valuable materials from the ever-increasing debris fields throughout Sirius, with the notable exception of Kusari. To this day they remain held at bay by the Hogosha.
+
+	The Junkers make their official money from salvaging debris within the fields, but also have a good deal going with various criminals, who like their \x201cno questions asked\x201d policy. Tolerated by the governments, Junkers sometimes deal in contraband, but they are extremely hard to catch red-handed. They are frequently patronized by the criminal element for the refuge they offer within the often hostile territory of House capital systems.
+
+	Ever since the Houston Catastrophe, the Junkers have been shifting more and more of their Liberty operations out of New York and into Beaumont, which has seen a relocation of the station into the orbit of Planet Chisos and significant storage and defensive expansion over the last few months.
+
+H 476039
+	The \iBattleship Mississippi\I, constructed in 745 AS, is the oldest ship still serving in the Liberty Navy and the only capital-class ship to survive the Houston Catastrophe. The ship had been stationed at the New York Jump Gate for resupply at the time of the incident, and sustained severe external damage from the shock-wave. Following partial repairs, it now serves as a deterrent to any would-be salvagers looking to loot what remains of Houston. The \iMississippi\I  is under the command of Captain Dane Caruthers.
+
+H 476040
+	CLASS: Unknown
+	GRAVITY: Partial
+	DOCKING: Yes
+	AMENITIES: Unknown
+	POPULATION: Unknown
+
+H 476041
+	CLASS: Phlegyas
+	GRAVITY: Partial
+	DOCKING: Yes
+	AMENITIES: Limited
+	POPULATION: 4K
+
+H 476042
+	The Aurora Salvage Yards were quickly assembled in the aftermath of the Texas catastrophe in an effort to try and resolve the Liberty Navy's ship and equipment deficits. Several hulks have already been moved in from Houston and DSE have quickly begun stripping them down for parts that can be used to repair and maintain existing ships.
+
+H 476043
+	A field of twisted scrap and charred metal. It's still unclear why the Kepler gate fragmented when the Texas catastrophe occurred. Xenos patrols have been sighted in the area.
+
+H 476044
+	A large rock asteroid field. Although initial surveys indicated no ore or other resources worth mining, recent investigations have revealed a cluster of copper-rich asteroids in the southern end of the field. The field is heavily patrolled by the Liberty Navy, but remains a favourite haunt for Xenos looking for easy targets along the Denver-Galileo trade lane.
+
+H 476045
+	A dense field of rock and dust, Xenos use the Alamosa field as cover to cross the Colorado system and raid the Galileo gate. The Liberty Navy conduct regular sorties into the field, but has had little effect on piracy in the area.
+
+H 476046
+	Once the major source of Silver for all of Liberty, the Silverton Field has been mined to rubble and dust. Within the field is the former site of an Ageira Technologies manufacturing facility, abandoned over a century ago in favour of Pueblo Station. Xenos and rogues regularly use the field as cover to attack traffic moving to and from Pueblo. Only trace amounts of silver remain.
+
+H 476047
+	CLASS: Tantalus
+	GRAVITY: Complete
+	DOCKING: Restricted
+	AMENITIES: Limited
+	POPULATION: 800
+
+H 476048
+	Denver was originally the home of miners, smelters, and shipyard workers, but these industries eventually collapsed in 600 AS. With the declining long-term water situation in the California System, however, the wealthy elite of Los Angeles began to look elsewhere for a vacation spot and found Denver's rough, beautiful vistas to be ideal. Emigration from Los Angeles and Manhattan injected new life into the Denver economy, reviving the planet even as the new upper-class assumed control of the local government. Today Cryer Pharmaceuticals maintains a major research lab on Denver, while Ageira Technologies has a planetside headquarters to oversee its interests in the system. Liberty Police, Inc. (LPI) is well paid by Colorado's new elite to handle security.
+
+H 476049
+	Constructed in 777 AS, the Battleship \iRio Grande\I  became famous in the 792 AS campaign against the Xenos in the Hudson System.
+	
+	One of the few intact battleships remaining after the Texas catastrophe, the \iRio Grande\I was stationed in orbit around Denver to ensure that the Xenos were unable to seriously interfere with the construction of the Aurora Salvage Yards. The battleship is currently commanded by Captain John Palmer.
+
+H 476050
+	A Xenos base. Xenos are a radical political faction that seeks to drive all foreign elements from their territory.
+	
+H 476051
+	Ageira Technologies manufacturing facility. Notice: All ships should be aware that Ageira Technologies facilities are protected by private security authorized to use deadly force against any deviation from standard flight procedures.
+
+H 476052
+	Following the loss of both the LPI \iHuntsville\I and the LPI \iSugarland \I in the wake of the Houston Catastrophe, the Liberty authorities were forced to halt the mothballing of several ageing prison liners and rapidly bring them into service across New York and Colorado.
+	
+	The \iTamms\I sits in orbit around Durango, housing Denver's domestic criminals and any Xenos unlucky enough to be captured alive by the Liberty Navy. Lacking a sizeable professional workforce, the LPI regularly put inmates to work on the nearby skeleton of LPI \iAlcatraz\I, which is set to replace the prison liner next year.
+
+H 476053
+	A Zoner base. Zoners are a diverse group of individuals who, for various reasons, have decided to live in the wild and unregulated systems outside of colonial control.
+
+H 476054
+	CLASS: Unknown
+	GRAVITY: Partial
+	DOCKING: Yes
+	AMENITIES: Limited
+	POPULATION: Unknown
+
+H 476055
+	DIAMETER: 5,228 km
+	MASS: 2.77 x 10\x00B2\x2074 kg
+	TERRAIN: Ice
+	TEMPERATURE: -88\x00B0C to -46\x00B0C
+	ESCAPE VELOCITY: 4.11 km/s
+
+	No information available.
+
+H 476056
+	DIAMETER: 6,485 km
+	MASS: 4.73 x 10\x00B2\x2074 kg
+	TERRAIN: Desert
+	TEMPERATURE: -38\x00B0C to 69\x00B0C
+	ESCAPE VELOCITY: 9.04 km/s
+
+	No information available.
+
+H 476057
+	\bLIBERTY\B
+	
+	Following the events of the Houston Catastrophe, the Texas system is now a shattered, radioactive wasteland, haunted by Junkers looking for valuable salvage and zealously patrolled by the Liberty Navy keeping watch for any sign of activity around the remains of the Bering and Hudson jumpgates.
+	
+	\u\bSettled Planets\B\U
+	None
+	
+	\b\uBases\B\U
+	Battleship \iMississippi\I
+	
+	\b\uCorporations\B\U
+	Liberty Navy
+	Liberty Security Force
+	Bounty Hunters Guild
+	
+	\b\uCriminals\B\U
+	Liberty Rogues
+	Junkers
+	
+	\b\uProduces\B\U
+	Scrap Metal
+	Toxic Waste
+
+H 476058
+	\bLIBERTY\B
+	
+	Colorado was the first system to reconnect itself to the Liberty Gate network following the Houston Catastrophe. Despite frequent Xenos incursions and the loss of several trade lanes, the system has thrived, becoming a major exporter for reforged superconductors and alloys.
+	
+	\u\bSettled Planets\B\U
+	Denver
+	
+	\b\uBases\B\U
+	Pueblo Station
+	Battleship \iRio Grande\I
+	Prison Liner Tamms
+
+	\b\uCorporations\B\U
+	Liberty Navy
+	Liberty Security Force
+	Bounty Hunters Guild
+	
+	\b\uCriminals\B\U
+	Liberty Rogues
+	Xenos
+	
+	\b\uProduces\B\U
+	Gate/Lane Parts
+	Luxury Consumer Goods
+	Pharmaceuticals
+	Super Alloys
+	Superconductors
+
+H 476059
+	\bLIBERTY\B
+
+	\u\bSettled Planets\B\U
+	Los Angeles
+	California Minor
+
+	\u\bBases\B\U
+	Battleship Yukon
+	San Diego Border Station
+
+	\u\bCorporations\B\U
+	Synth Foods
+	Ageira Technologies
+	Planetform, Inc.
+
+	\u\bCriminals\B\U
+	Liberty Rogues
+	Outcasts
+	Lane Hackers
+
+	\u\bProduces\B\U
+	Food
+	Optical Chips
+	Oxygen
+
+H 476060
+	\bLIBERTY\B
+
+	\u\bSettled Planets\B\U
+	Manhattan
+	Pittsburgh
+
+	\u\bBases\B\U
+	Ft. Bush
+	Newark Station
+	Trenton Outpost
+	Detroit Munitions
+	West Point Academy
+	Norfolk Shipyard
+	Baltimore Shipyard
+	Battleship Missouri
+
+	\u\bCorporations\B\U
+	Ageira Technologies
+	Interspace Commerce
+	Universal Shipping
+	Deep Space Engineering
+	Liberty Police, Inc.
+
+	\u\bCriminals\B\U
+	Liberty Rogues
+	Outcasts
+	Xenos
+	Junkers
+
+	\u\bProduces\B\U
+	Boron
+	Side Arms
+	Luxury Consumer Goods
+	Toxic Waste
+
+
+S 478017 Liberty Police
+         Tamms Bartender
+         Chester Robertson
+
+S 478018 Liberty Police
+         Tamms Commodity Trader
+         Travis Guerrero
+
+S 478019 Liberty Police
+         Tamms Equipment Dealer
+         Gilbert Wheeler
+
+S 478020 Liberty Police
+         Tamms Ship Dealer
+         Ant\x00F4nio Pinto Cardoso
+
+S 478021 Xenos
+         Ouray Bartender
+         Richard York
+
+S 478022 Xenos
+         Ouray Commodity Trader
+         Kevin Wake
+
+S 478023 Xenos
+         Ouray Equipment Dealer
+         Nathan Swindell
+
+S 478024 Xenos
+         Ouray Ship Dealer
+         William Brown
+
+S 478025 Zoners
+         Maverick Ship Dealer
+         Pete Mitchell
+
+S 478026 Zoners
+         Maverick Commodity Trader
+         Mike Metcalf
+
+S 478027 Zoners
+         Maverick Equipment Dealer
+         Sam Wells
+
+S 478028 Zoners
+         Maverick Bartender
+         Tom Kazansky
+
+S 478029 Ageira Technologies
+         Pueblo Ship Dealer
+         Bill Smith
+
+S 478518 Navy Confirms Leaked Footage of RNF Scouts
+
+S 478519 MISSISSIPPI - A Navy intelligence spokesperson has confirmed that documents leaked on the neural net last week \x201cappear to contain sensitive and highly classified material\x201d, but the defence department has skirted categorical claims over the authenticity of the documents while repeatedly stressing that at least some have been doctored. Several of the documents appear to confirm sightings of what appear to be ships belonging to the Rheinland Naval Forces in Texas. The system has been off-limits to the public since the Houston catastrophe last year.
+
+S 478520 New Digital Identity Scheme Announced
+
+S 478521 MANHATTAN - President Bill Baldwin today announced the introduction of a revolutionary new digital identity scheme aimed at stopping crime in its tracks across Liberty. In a rare statement, Baldwin praised the scheme and laid out a timeline for its implementation across the sector. Political opponents of the scheme have described it as \x201cunacceptable\x201d, citing concerns about the disenfranchisement of citizens living in unregistered stations and the previous use of existing ID schemes in citizen bounty programs.
+
+S 478522 General Gate Travel to Resume
+
+S 478523 DENVER - In an interview on Monday the governor of Denver Sean Byrne announced that jump gate travel between Colorado and the rest of Liberty would resume soon. Gate travel has been unavailable to the general public since the beginning of last year, when events in Texas took the gate network offline. Efforts by Deep Space Engineering saw the New York gate bought back online quite quickly, but access has been restricted for non-essential travel.
+
+S 478524 Union Leader Issues Strike Threat
+
+S 478525 AURORA - A union leader has said the station could face a general strike this year as workers voted for fresh action to intensify a recent period of industrial unrest. In a statement, the Denver Workers Union described conditions on the station as \x201cfrankly unacceptable\x201d and described production and scrapping targets set by the station authorities as \x201cunrealistic\x201d. The LSF have confirmed that they will act to prevent any serious disruption of production onboard the station.
+
+S 478526 Squatters Appeal to Government
+
+S 478527 DENVER - A coalition of impoverished Colorado residents made an appeal to the Liberty government today, presenting a message entitled: \x201cBeing poor is not illegal.\x201d The prepared statement was addressed to the legislature in Manhattan and summarised a list of the grievances that many longtime Colorado residents held. They cited numerous examples of revised zoning laws that forced them to abandon their homes for temporary encampments scattered in the hills. There they faced harassment by LPI \x201csquatter\x201d patrols. There's been no official acknowledgement from New York.
+
+S 478528 Budget Boost for Local Forces
+
+S 478529 RIO GRANDE - Good news for Navy pilots in Colorado: Local headquarters have announced that next year's budget for patrols and general equipment will be almost doubled! The announcement comes after calls from Manhattan for the Navy to eliminate the Xenos threat in Colorado once and for all. Manpower and equipment stock in the system have been stretched thin and this announcement is welcome news for the regular patrols here that try their best to keep us all safe.
+
+S 478530 Multiple Navy Patrols Missing
+
+S 478531 RIO GRANDE - According to insider sources, multiple Navy patrol wings have gone missing during routine excursions into Alamosa and Copperton. Senior Bounty Hunter Greg Alvarez has given an unofficial statement that offers an explanation. Apparently, one of the Navy patrol routes, drawn up by pencil pushers on Manhattan and heavily protested by the lieutenants leading the recently downsized patrol wings, leads the patrol not only through Alamosa and Copperton, which are already hotly contested areas, but also through the debris field near the derelict Kepler gate. There, according to Alvarez, infrequent encounters with ace pilots, occasionally accompanied by one or two elites being tutored by said aces, have lead to the losses of multiple entire wings, with no survivors or wrecks to show for it. Navy officials have thus far refused to offer public comment on the matter.
+
+S 478532 LSF Handover to Happen Soon
+
+S 478533 MISSOURI - Navy forces have confirmed they will be taking a step back from problems caused by Liberty Rogue activity in New York, leaving the Liberty Security Force and LPI to deal with piracy in the system. The Navy has had to divert more and more forces to Colorado, Texas and California in recent months to deal with outside threats. An insider at the LPI has described shareholders as \x201cdelighted\x201d with the announcement.
+
+S 478534 Jumpgate Readings Prompt Alarm
+
+S 478535 DENVER - Colorado-based scientists this morning have expressed concern at unusual p-wave readings detected around the Colorado to New York Jumpgate. All three gates in Colorado were disabled during the Houston catastrophe, with the Kepler gate breaking up completely in the aftermath. However, there has been hope in the last few months that the New York gate would be opened for general use in the near future. The authorities have declined to comment on these newest observations around the gate.
+
+S 478536 Alcatraz Delayed Again
+
+S 478537 TAMMS - Overworked prison staff and cramped prisoners will have to wait even longer before space is available on the newly constructed LPI Alcatraz in orbit around Durango. In a statement made yesterday, Liberty Police Incorporated have expressed their apologies that the opening of the orbital prison would have to be put back another 6 months, citing a lack of available manpower to finalise the station. Construction on LPI Alcatraz began last year after both the LPI Huntsville and LPI Sugarland were lost during the Houston Catastrophe. It was originally due to be completed 3 months ago.
+
+S 478538 Union Leader Issues Strike Threat
+
+S 478539 AURORA - Workers are finally taking a stand on the Aurora Salvage Yards! Following brutal treatment by their Navy taskmasters, it seems that the station unions have finally had enough and are thinking about general strike action. Of course the LPI have said they'll escalate the situation, so we'll make sure we're ready to do whatever's necessary to prevent the replacement of hard-working and honest Liberty citizens.
+
+S 478540 New Manifesto Published
+
+S 478541 OURAY - Jean Jefferson released his new 35,000 word manifesto this week to great acclaim aboard the station. The essay, titled \x201cCitizenship is Sacrifice\x201d, lays out how the authoritarian regime of Liberty is secretly bringing foreign labour into the sector in order to replace honest and hard working citizens who are much more resistant to oppression than their counterparts. The manifesto even addresses the so-called free thinkers who don't believe it's even possible for foreigners to access the sector after Houston by revealing a secret series of jump holes in California that the Navy have been using for decades for human trafficking.
+
+S 478542 Cutting-Edge Gear Goes Commercial
+
+S 478543 PUEBLO - The first batch of Ageira’s brand new solid state ‘SEQ’ laser cannons came off the production line at Pueblo and onto the open market this week. In a press-release executives announced that they were delighted to be able to finally release the SEQ range for general purchase, and promised many exciting developments yet to come. Shares in the company have jumped by 8 percent as of this morning.
+
+S 479019 Sentinel E-PDC
+S 479020 Tower Kinetic PDC
+S 479021 Modified Cutting Beam
+S 479022 Core PPC
+S 479023 Core Shredder AC
+S 479024 Sentinel L Laser
+S 479025 Sentinel M Laser
+S 479026 Core Kinetic PDC
+S 479027 Sentinel LRM2
+S 479028 Core Flak Battery
+S 479029 Core SRM6
+S 479030 Core LRM6
+S 479031 Sentinel LRM2
+S 479032 Core Flak Shell
+S 479033 Core SRM6
+S 479034 Core LRM6
+
+S 480020 Repair Ship
+S 480021 Heavy Lifter
+S 480022 Armored Transport
+S 480023 Transport
+S 480024 Lazrius
+S 480025 Independence
+
+H 480270
+	\m\bCTH-5600 Repair Ship\B
+	\l
+	With the hazards of business, commerce, expansion, and exploration, ships sustain damage. These units are part of the damage control team.
+
+H 480271
+	\m\bCTHL-9700 Heavy Lifter\B
+	\l
+	The workers of the corporate matrix. These ships are generally employed in the moving of cargo of all types between transports, trains, and bases.
+
+H 480272
+	\m\bCTAT-300 Armored Transport\B
+	\l
+	Generally used to safely deliver goods and personnel (usually VIPs), to corporate and military bases.
+
+H 480273
+	\m\bCTT-4100 Transport Ship\B
+	\l
+	In the economy of the Sirius Sector, all of the Houses benefit from the everyday service of this craft. It was the first class of ship to be built.
+
+H 480274
+	\m\bBDD-972 "Lazrius" Liberty Frigate\B
+	\l
+	Once a workhorse of the Liberty Navy, the BDD-972 is now only deployed in a handful of systems across Liberty and the Independent Worlds. Several have been bought out of storage following the Houston Catastrophe in order to deal with a sharp increase in pirate activity across Colorado and New York.
+
+H 480275
+	\m\bEL-HiL-M2 "Independence" Liberty Freighter\B
+	\l
+	The M2-Independence is a heavily modified Rhino freighter used by the Xenos as a makeshift frigate. The cargo holds have been torn out and replaced with missile racks, additional armor plating has been bolted onto the hull, and the engines have had their saftey overrides removed.
+
+S 480520 Civilian Fr. Engine
+S 480521 Civilian Utility Engine
+S 480522 Civilian Transport Engine
+S 480523 Civilian Transport Engine
+S 480524 Liberty Frigate Engine
+S 480525 Liberty Fr. Engine
+
+H 480770
+	\m\bModel G "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 480771
+	\m\bModel H "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 480772
+	\m\bModel I "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 480773
+	\m\bModel I "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 480774
+	\m\bZ Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 480775
+	\m\bY Series "Galaxy" Hybrid Engine\B
+	\l
+	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before. This model has had the safeties disabled.\n
+
+S 482020 Tractor Beam
+S 482021 Tractor Beam
+S 482022 Tractor Beam
+S 482023 Tractor Beam
+S 482024 Tractor Beam
+S 482025 Tractor Beam
+
+H 482270
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482271
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482272
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482273
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482274
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482275
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+S 481520 Scanner
+S 481521 Scanner
+S 481522 Scanner
+S 481523 Scanner
+S 481524 Scanner
+S 481525 Scanner
+
+H 481770
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481771
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481772
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481773
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481774
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481775
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+S 464259 Watchdog Turret
+
+H 464759
+	\m\bLQZ "Watchdog" Standard Transport Turret\B
+	\l
+	The watchdog is a low-cost, low-power turret typically mounted on civilian transports as a deterrent against petty thieves and pirates.\n
+
+H 479522
+	Core PPC Placeholder
+
+H 479526
+	Core Kinetic PDC Placeholder
+
+H 479523
+	Core  Shredder AC Placeholder
+
+S 482520 Pilot: Xenos Ace
+S 482521 Pilot: Xenos Elite
+S 482522 Pilot: Xenos Rookie
+S 482523 Pilot: Xenos Veteran
+S 482524 Armor Plates
+S 482525 Melted Capacitor Console
+S 482526 Conductive Polymer
+S 482527 Fried Interface Circuit
+S 482528 Burned Logic Circuit
+S 482529 Charred Micro Circuit
+S 482530 Contaminated Nanite Compound
+S 482531 Damaged Artificial Neural Network
+S 482532 Broken Radio Transceivers
+S 482533 Malfunctioning Shield Emitter
+S 482534 Tangled Power Conduit
+S 482535 Scorched Telemetry Processor
+S 482536 Thruster Console
+S 482537 Smashed Trigger Unit
+S 482538 Tripped Power Circuit
+S 482539 Ward Console
+S 482540 Bounty: Xenos Ace
+S 482541 Bounty: Xenos Elite
+S 482542 Bounty: Xenos Freighter
+S 482543 Bounty: Xenos Rookie
+S 482544 Bounty: Xenos Veteran
+
+H 483520
+	\m\bPILOT: XENOS ACE\B
+	\l
+	An ace pilot, who survived the disintegration of their ship. This pilot is a member of the Xenos, and their comrades will pay a handsome reward for the safe return of this valuable expert to a friendly base. The Liberty Police will also pay a commission if they're delivered to the nearest prison to be interred as a new worker, but they'll pay the same for them as any other prisoner, uninterested in the additional skill this pilot might have. The Liberty Navy may pay more at the nearest military base to interrogate this elite enemy instead.
+	\l
+	Miners and labourers who took up arms for their xenophobic ideals, Xenos pilots attack foreign shipping as well as the jumpgates that allow other nations to come to Liberty space, battling them and the government in a war of underfunded insurrection. Xenos supporters accuse foreign companies and workers of stealing their jobs and their livelihoods; to a Xenos, anyone who aids or supports external trade is just as much their enemy as the foreigners they so deeply despise.
+	\l
+	With several dozen successful missions under their belt, ace pilots are household names and have enough fighter takedowns that both the Navy and the Xenos have actively kept track. Ace pilots are a force of nature, moving like lightning and striking like the thunderclap. It is highly recommended to engage them only with a significant advantage in numbers and firepower or else avoid them at all costs. Those who emerge victorious in a fight against one of these famous pilots, particularly by themselves, never emerge unchanged from the experience, and may rightly call themselves aces in turn.
+	\l
+	Aces are known to be proud individuals, who rarely pursue a beaten opponent, but who will even more rarely back down from a fight themselves. Despite generally fighting on their own or in wings of two, they often pick whatever fight they are given, and then fight on until the bitter end, with most of their number refusing to eject on principle. Having captured such a uniquely skilled and knowledgeable individual presents you with an opportunity to reap a massive reward from the Navy. 
+
+H 483521
+	\m\bPILOT: XENOS ELITE\B
+	\l
+	An elite pilot, who ejected out in the last moment before their ship was destroyed. This pilot is a member of the Xenos, and their comrades will pay a handsome reward for the safe return of this valuable expert to a friendly base. The Liberty Police will also pay a commission if they're delivered to the nearest prison to be interred as a new worker, but they'll pay the same for them as any other prisoner, uninterested in the additional skill this pilot might have. The Liberty Navy may pay more at the nearest military base to interrogate this elite enemy instead.
+	\l
+	Miners and labourers who took up arms for their xenophobic ideals, Xenos pilots attack foreign shipping as well as the jumpgates that allow other nations to come to Liberty space, battling them and the government in a war of underfunded insurrection. Xenos supporters accuse foreign companies and workers of stealing their jobs and their livelihoods; to a Xenos, anyone who aids or supports external trade is just as much their enemy as the foreigners they so deeply despise.
+	\l
+	Elite Xenos are the top combatants of their spaceborne operations, with at least a dozen successful raids and freighter interdictions to their names. As the most experienced and well-equipped pilots in their whole organisation, they pose a serious threat even to seasoned fighter pilots, and Navy wings are instructed to double up on them before they can score more kills to etch onto their well-marked hulls.
+
+H 483522
+	\m\bPILOT: XENOS ROOKIE\B
+	\l
+	A rookie pilot, ejected from their ship. This pilot is a member of the Xenos, and their comrades will pay a small reward for their recruit's safe return to a friendly base, as will the Liberty Police if they're delivered to the nearest prison to be interred as a new worker in their correctional factories.
+	\l
+	Miners and labourers who took up arms for their xenophobic ideals, Xenos pilots attack foreign shipping as well as the jumpgates that allow other nations to come to Liberty space, battling them and the government in a war of underfunded insurrection. Xenos supporters accuse foreign companies and workers of stealing their jobs and their livelihoods; to a Xenos, anyone who aids or supports external trade is just as much their enemy as the foreigners they so deeply despise.
+	\l
+	Rookie Xenos have usually never touched the controls of a fighter until their first week of sorties. A lack of proper simulators or training means that like their lives of hard labour beforehand, most must learn their skills through experience on the job. Survival rates for Xenos rookies are horrifically low as a result, with more than half of them being killed within their first three operations.
+
+H 483523
+	\m\bPILOT: XENOS VETERAN\B
+	\l
+	A veteran pilot, who managed to eject from their ship before destruction. This pilot is a member of the Xenos, and their comrades will pay a reward for their safe return to a friendly base. So will the Liberty Police if they're delivered to the nearest prison factory to be held there as a new worker, though their disinterest in the exploits of the person delivered means they'll buy them for the same price as a fresh-faced recruit.
+	\l
+	Miners and labourers who took up arms for their xenophobic ideals, Xenos pilots attack foreign shipping as well as the jumpgates that allow other nations to come to Liberty space, battling them and the government in a war of underfunded insurrection. Xenos supporters accuse foreign companies and workers of stealing their jobs and their livelihoods; to a Xenos, anyone who aids or supports external trade is just as much their enemy as the foreigners they so deeply despise.
+	\l
+	Veteran Xenos have survived the deadly gauntlet of their first few missions, usually against vulnerable freighters and the escort fighters who defend them. Some have even tangled with the Liberty Navy and survived, though the better training and equipment of their government enemies means few of them have scored kills against experienced military pilots.
+
+H 483524
+	\m\bARMOR PLATES\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	An assortment of damaged ship hull panels. These combine a Polymer and Hydrocarbon base along with Basic and Super Alloys to create a substance that is light and flexible, while providing insulation from hard vacuum and all but the most intense radiation. Boron fibers are infused into the panels to endow them with structural rigidity, protecting ships against kinetic impact and high-energy weapons fire.
+
+H 483525
+	\m\bMELTED CAPACITOR CONSOLE\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Capacitor consoles are used to regulate power flux in shipboard batteries.
+
+H 483526
+	\m\bCONDUCTIVE POLYMER\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Conductive polymers are are common component of electrical conduits in ships and stations.
+
+H 483527
+	\m\bFRIED INTERFACE CIRCUIT\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Interface circuits are printed boards used to connect two or more ship subsystems.
+
+H 483528
+	\m\bBURNED LOGIC CIRCUIT\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Ships computers make use of many different types of logic circuits of varying complexity. These can be responsible for power management, shield attenuation and even piloting.
+
+H 483529
+	\m\bCHARRED MICRO CIRCUIT\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Ships computers make use of many different types of logic circuits of varying complexity. These can be responsible for power management, shield attenuation and even piloting. Micro circuits are a variant of these, and can be found in many auxiliary subsystems.
+
+H 483530
+	\m\bCONTAMINATED NANITE COMPOUND\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Nanite compounds are used in active damage control systems. These release short-lived repair nanites to seal hull breaches quickly. This compound needs to go through purification before it's of use again.
+
+H 483531
+	\m\bDAMAGED ARTIFICIAL NEURAL NETWORK\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	ANNs preside over a ship's various electronics subsystems and keep everything in working order, rerouting power and processing when systems are damaged or go offline. This ANN is damaged but doesn't seem to be a total loss.
+
+H 483532
+	\m\bBROKEN RADIO TRANSCEIVERS\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Ship sensor packages typically use a range of transceivers tuned to different EM wavelengths. While these fragile components rarely survive any serious damage, spare parts can usually be salvaged from ship wreckage.
+
+H 483533
+	\m\bMALFUNCTIONING SHIELD EMITTER\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Fighter shields make use of eight to sixteen magnetic emitters depending on size and model.
+
+H 483534
+	\m\bTANGLED POWER CONDUIT\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Ship power conduits are typically made from conductive polymer, but often incorporate, silver, copper and beryllium as well.
+
+H 483535
+	\m\bSCORCHED TELEMETRY PROCESSOR\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Telemetry processors handle large amounts of data fed in from the variety of EM and radio transceivers used in ship sensor packages.
+
+H 483536
+	\m\bTHRUSTER CONSOLE\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	These consoles are used to regulate engine and thruster impulse.
+
+H 483537
+	\m\bSMASHED TRIGGER UNIT\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	Trigger units are found on ship hardpoints and typically lock into mounted weapons. Very rarely, a weapon will have it's own built in trigger unit, which requires some work to interface with a standard ship hardpoint.
+
+H 483538
+	\m\bTRIPPED POWER CIRCUIT\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	A closed loop electrical network with redundant autonomous switchgear. This unit has all of its breakers tripped but isn't beyond repair.
+
+H 483539
+	\m\bWARD CONSOLE\B
+	\l
+	Salvage components, taken from a destroyed or derelict ship. These can be turned in at certain locations for additional credits.
+	\l
+	A control unit for ship shield systems.
+
+H 483540
+	\m\bVOUCHER: XENOS ACE\B
+	\l
+	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+
+H 483541
+	\m\b VOUCHER: XENOS ELITE\B
+	\l
+	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+
+H 483542
+	\m\bVOUCHER: XENOS FREIGHTER\B
+	\l
+	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+
+H 483543
+	\m\bVOUCHER: XENOS ROOKIE\B
+	\l
+	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+
+H 483544
+	\m\bVOUCHER: XENOS VETERAN\B
+	\l
+	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
