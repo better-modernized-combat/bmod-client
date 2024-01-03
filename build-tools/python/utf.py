@@ -5,7 +5,7 @@ import subprocess
 
 from utils import *
 
-utf_types = (".3db", ".ale", ".cmp", ".mat", ".sph", ".txm", ".utf")
+utf_types = (".3db", ".ale", ".cmp", ".mat", ".sph", ".txm", ".utf", ".vms")
 utf_path = f"{root_copy_path}\\mod-assets\\DATA\\"
 xml_path = f"{root_copy_path}\\mod-assets\\XML\\"
     
@@ -39,7 +39,7 @@ def xml_to_utf_thread():
 
     for file in glob.glob(f"{xml_path}\\**\\*.xml", recursive=True):
         filename = os.path.basename(file)
-        if filename.endswith(".vms.xml") or filename.endswith("vwd.xml") or filename =="Animation.xml":
+        if (filename.endswith(".vms.xml") and filename != "interface.generic.vms.xml") or filename.endswith("vwd.xml") or filename =="Animation.xml":
             continue
         output_path = file.replace(xml_path, utf_path).replace(filename, "")
         executor.submit(convert_file_xml_utf, file, output_path)
