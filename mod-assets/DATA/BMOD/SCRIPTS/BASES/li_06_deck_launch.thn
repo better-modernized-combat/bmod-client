@@ -1,0 +1,617 @@
+duration = 3.000;
+
+entities = {
+
+    {
+        entity_name = "Layer_li_06_Deck_Launch",
+        type = SCENE,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {0, 0, 0},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        up = Y_AXIS,
+        front = Z_AXIS,
+        ambient = {0, 0, 0}
+    }, {
+        entity_name = "Monitor_1",
+        type = MONITOR,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0
+    }, {
+        entity_name = "Camera_0",
+        type = CAMERA,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-5.550691, 1021.17671, -36.82553},
+            orient = {
+                {-0.998837, 0.000000, 0.048210}, {0.019744, 0.912294, 0.409059},
+                {-0.043982, 0.409535, -0.911234}
+            }
+        },
+        cameraprops = {
+            fovh = 35,
+            hvaspect = 1.333333,
+            nearplane = 1,
+            farplane = 200
+        }
+    }, {
+        entity_name = "SET_li_06_deck2",
+        type = COMPOUND,
+        template_name = "li_06_deck",
+        lt_grp = 90,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {0, 1000, 0},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        userprops = {category = "Room"}
+    }, {
+        entity_name = "PlayerShip",
+        type = COMPOUND,
+        template_name = "PlayerShip",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC + LIT_AMBIENT,
+        spatialprops = {
+            pos = {-0.191149, 1001, 2.164011},
+            orient = {
+                {0.863839, 0.000000, 0.503768}, {0.000000, 1.000000, 0.000000},
+                {-0.503768, 0.000000, 0.863839}
+            }
+        },
+        userprops = {category = "Spaceship", running_lights = "true"}
+    }, {
+        entity_name = "Cart_li_booth01",
+        type = COMPOUND,
+        template_name = "li_booth",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-8.428595, 1000.9, -6.67581},
+            orient = {
+                {0.713650, 0.000000, 0.700502}, {0.000000, 1.000000, 0.000000},
+                {-0.700502, 0.000000, 0.713650}
+            }
+        },
+        userprops = {category = "Equipment Cart", Priority = "Equip_2"}
+    }, {
+        entity_name = "Cart_li_booth02",
+        type = COMPOUND,
+        template_name = "li_booth",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {13.31897, 1000.9, -0.425908},
+            orient = {
+                {0.611348, 0.000000, -0.791362}, {0.000000, 1.000000, 0.000000},
+                {0.791362, 0.000000, 0.611348}
+            }
+        },
+        userprops = {category = "Equipment Cart", Priority = "Equip_2"}
+    }, {
+        entity_name = "Equip_g_heavytractorbeam",
+        type = COMPOUND,
+        template_name = "rtcprop_hardware_ge_heavy_tractor_beam",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {14.26179, 1001.765193, 0.074066},
+            orient = {
+                {0.785207, 0.000000, 0.619233}, {0.000000, 1.000000, 0.000000},
+                {-0.619233, 0.000000, 0.785207}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Equip_g_missile01",
+        type = COMPOUND,
+        template_name = "rtcprop_weapons_li_rad_launcher",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-9.281295, 1001.252744, -5.056626},
+            orient = {
+                {0.683842, 0.000000, -0.729630}, {0.000000, 1.000000, 0.000000},
+                {0.729630, 0.000000, 0.683842}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Equip_g_shield_gen01",
+        type = COMPOUND,
+        template_name = "rtcprop_st_li_refractor_shield",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-8.809646, 1001.322527, -6.241374},
+            orient = {
+                {0.659407, 0.000000, -0.751787}, {0.000000, 1.000000, 0.000000},
+                {0.751787, 0.000000, 0.659407}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Equip_g_torp01",
+        type = COMPOUND,
+        template_name = "rtcprop_weapons_li_plasma_blaster",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-7.757231, 1001.257274, -6.813556},
+            orient = {
+                {0.710205, 0.000000, -0.703995}, {0.000000, 1.000000, 0.000000},
+                {0.703995, 0.000000, 0.710205}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Equip_g_tractorbeam",
+        type = COMPOUND,
+        template_name = "rtcprop_hardware_ge_tractor_beam",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-7.191399, 1001.670226, -8.001168},
+            orient = {
+                {0.682375, 0.000000, -0.731002}, {0.000000, 1.000000, 0.000000},
+                {0.731002, 0.000000, 0.682375}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Equip_l_missile01_tough",
+        type = COMPOUND,
+        template_name = "rtcprop_weapons_li_rad_launcher",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {12.64252, 1001.253888, -0.285252},
+            orient = {
+                {0.734004, 0.000000, 0.679145}, {0.000000, 1.000000, 0.000000},
+                {-0.679145, 0.000000, 0.734004}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Equip_l_shield_gen01",
+        type = COMPOUND,
+        template_name = "rtcprop_st_li_refractor_shield",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {11.93002, 1001.326985, -1.507951},
+            orient = {
+                {0.611348, 0.000000, -0.791362}, {0.000000, 1.000000, 0.000000},
+                {0.791362, 0.000000, 0.611348}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Equip_1"}
+    }, {
+        entity_name = "Bin_artifacts_3",
+        type = COMPOUND,
+        template_name = "StackGreen_Refgoods",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-2.18063, 1001.47156, -24.0504},
+            orient = {
+                {-0.936303, 0.000000, 0.351194}, {0.000000, 1.000000, 0.000000},
+                {-0.351194, 0.000000, -0.936303}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Bin_1"}
+    }, {
+        entity_name = "Bin_contraband_2",
+        type = COMPOUND,
+        template_name = "Stackred_lightgoods",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-2.520976, 1001.476938, -20.84925},
+            orient = {
+                {-0.868012, 0.000000, 0.496544}, {0.000000, 1.000000, 0.000000},
+                {-0.496544, 0.000000, -0.868012}
+            }
+        },
+        userprops = {category = "Equipment", Priority = "Bin_1"}
+    }, {
+        entity_name = "ShipCentreMarker",
+        type = MARKER,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-0.191149, 1001, 2.164011},
+            orient = {
+                {0.863839, 0.000000, 0.503768}, {0.000000, 1.000000, 0.000000},
+                {-0.503768, 0.000000, 0.863839}
+            }
+        }
+    }, {
+        entity_name = "ambi_LtG09_SET_Amb_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 90,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {0, 1000, 0},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0, 0, 0},
+            specular = {0, 0, 0},
+            ambient = {0.72549, 0.72549, 0.72549},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_DIRECT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG03_Blu_1oc_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-25.16647, 1018.35546, 16.93692},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0.74902, 0.847059, 1},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_POINT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG03_Blu_11oc_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {22.36221, 1018.35546, 16.93692},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0.784314, 0.858824, 0.968628},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_POINT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG00_Blu_11oc_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {22.36221, 1018.35546, 16.93692},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0.811765, 0.862745, 0.937255},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_POINT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG00_Blu_1oc_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-25.16647, 1018.35546, 16.93692},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0.74902, 0.847059, 1},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_POINT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG03_YlwGlow_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-0.344856, 1001.58553, -21.35253},
+            orient = {
+                {1.000000, 0.000000, 0.000000}, {0.000000, 0.444206, -0.895925},
+                {0.000000, 0.895925, 0.444206}
+            }
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0.137255, 0.137255, 0.070588},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_DIRECT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG00_YlwGlow_top",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 100,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-0.344856, 1001.58553, -21.35253},
+            orient = {
+                {1.000000, 0.000000, 0.000000}, {0.000000, 0.506460, -0.862263},
+                {0.000000, 0.862263, 0.506460}
+            }
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0.47451, 0.47451, 0.282353},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_DIRECT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG03_RedGlow_top_90",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 90,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-0.344856, 1005.58553, -21.35253},
+            orient = {
+                {1.000000, 0.000000, 0.000000}, {0.000000, 0.444206, -0.895925},
+                {0.000000, 0.895925, 0.444206}
+            }
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0, 0, 0},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_DIRECT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "ambi_LtG03_RedGlow_top_30",
+        type = LIGHT,
+        template_name = "",
+        lt_grp = 30,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {-0.344856, 1005.58553, -21.35253},
+            orient = {
+                {1.000000, 0.000000, 0.000000}, {0.000000, 0.444206, -0.895925},
+                {0.000000, 0.895925, 0.444206}
+            }
+        },
+        lightprops = {
+            on = Y,
+            color = {255, 255, 255},
+            diffuse = {0, 0, 0},
+            specular = {0, 0, 0},
+            ambient = {0, 0, 0},
+            direction = {0, 0, 1},
+            range = 2000,
+            cutoff = 98.99998,
+            type = L_DIRECT,
+            theta = 90,
+            atten = {1, 0, 0}
+        }
+    }, {
+        entity_name = "hanger_doors_opening",
+        type = SOUND,
+        template_name = "hanger_doors_opening",
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = SPATIAL,
+        spatialprops = {
+            pos = {0.36514, 1000.117867, 0.11638},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        audioprops = {
+            attenuation = 0,
+            pan = 0,
+            dmin = 2000,
+            dmax = 20000,
+            ain = 360,
+            aout = 360,
+            atout = 0,
+            rmix = 0
+        },
+        userprops = {category = "Audio"}
+    }
+
+};
+
+events = {
+    {
+        0.000, START_MOTION, {"SET_li_06_deck2"}, {
+            animation = "Sc_no loop",
+            duration = 5,
+            time_scale = 0.3,
+            weight = 1,
+            trans_scale = 1
+        }
+    }, {
+        0.000, START_MOTION, {"SET_li_06_deck2"}, {
+            animation = "Sc_loop",
+            duration = 5,
+            time_scale = 1,
+            weight = 1,
+            trans_scale = 1
+        }
+    }, {0, START_SOUND, {"hanger_doors_opening"}, {duration = 5}}, {
+        0, START_LIGHT_PROP_ANIM, {"ambi_LtG03_RedGlow_top_90"}, {
+            duration = 1,
+            lightprops = {diffuse = {0.737255, 0.037255, 0.070588}},
+            param_curve = {
+                CLSID = "FreeFormPCurve",
+                points = {
+                    {0, 0, 0, 0}, {1.000000, 1.000000, 1.000000, 1.000000},
+                    {0, 0, 0, 0}, {1.000000, 1.000000, 1.000000, 1.000000},
+                    {0, 0, 0, 0}, {1.000000, 1.000000, 1.000000, 1.000000}
+                }
+            },
+            pcurve_period = -1000
+        }
+    }, {
+        0, START_LIGHT_PROP_ANIM, {"ambi_LtG03_RedGlow_top_30"}, {
+            duration = 1,
+            lightprops = {diffuse = {0.737255, 0.037255, 0.070588}},
+            param_curve = {
+                CLSID = "FreeFormPCurve",
+                points = {
+                    {0, 0, 0, 0}, {1.000000, 1.000000, 1.000000, 1.000000},
+                    {0, 0, 0, 0}, {1.000000, 1.000000, 1.000000, 1.000000},
+                    {0, 0, 0, 0}, {1.000000, 1.000000, 1.000000, 1.000000}
+                }
+            },
+            pcurve_period = -1000
+        }
+    }, {
+        0, START_AUDIO_PROP_ANIM, {"hanger_doors_opening"}, {
+            duration = 3.000,
+            audioprops = {attenuation = -50},
+            param_curve = {
+                CLSID = "FreeFormPCurve",
+                points = {
+                    {0.000000, 0.000000, 0.000000, 0.000000},
+                    {1.000000, 1.000000, 0.000000, 0.000000}
+                }
+            },
+            pcurve_period = -1000
+        }
+    }, {
+        0.000, ATTACH_ENTITY, {"PlayerShip", "ShipCentreMarker"}, {
+            duration = 15,
+            offset = {0, 0, 0},
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            target_part = "HpMount",
+            target_type = HARDPOINT,
+            flags = POSITION + ORIENTATION
+        }
+    }, {
+        0.000, START_LIGHT_PROP_ANIM,
+        {"ambi_LtG03_Blu_1oc_top", "ambi_LtG03_Blu_11oc_top"}, {
+            duration = 0.000,
+            lightprops = {
+                on = Y,
+                diffuse = {0.74902, 0.847059, 1},
+                direction = {0, 0, 1},
+                range = 2000,
+                cutoff = 98.99998,
+                theta = 90,
+                atten = {1, 0, 0}
+            }
+        }
+    }, {
+        0.000, START_LIGHT_PROP_ANIM,
+        {"ambi_LtG00_Blu_1oc_top", "ambi_LtG00_Blu_11oc_top"}, {
+            duration = 0.000,
+            lightprops = {
+                on = Y,
+                diffuse = {0.74902, 0.847059, 1},
+                direction = {0, 0, 1},
+                range = 2000,
+                cutoff = 98.99998,
+                theta = 90,
+                atten = {1, 0, 0}
+            }
+        }
+    }
+};
