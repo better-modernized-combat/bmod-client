@@ -473,7 +473,8 @@ FLHook.json
 
 # OS Desktop Config Files
 .DS_Store
-*.~lock
+mod-assets\*.~lock
+*.ods#
 
 # UTF Files (These should be compiled from XML on client build)
 *.3db
