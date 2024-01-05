@@ -11,6 +11,9 @@
         "**/*.dfm": true,
         "**/.thorn-cache": true,
         "**/.bini-cache": true,
+        "**/__pycache__":true,
+        "**/__init__.py":true,
+        "**/csv_dump":true,
         "**/*.~lock*": true
     },
     "editor.wordWrap": "off",
