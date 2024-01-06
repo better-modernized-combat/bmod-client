@@ -1,6 +1,6 @@
 setglobal('time', date("%H%M"))
 
-if getglobal('time') >= '1930' then
+if getglobal('time') >= '1930' or getglobal('time') <= '0730' then
 
     duration = 1500.000;
 
