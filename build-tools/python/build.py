@@ -4,6 +4,7 @@ import time
 from bini import *
 from checks import *
 from copy_assets import *
+from crc import *
 from freelancer import *
 from generate_inis import generate_inis
 from infocards import *
@@ -22,6 +23,7 @@ parser.add_argument("--lua_to_thorn", help="Encodes lua to thorn format before c
 parser.add_argument("--ini_to_bini", help="Encodes ini to bini format before copying.", action="store_true")
 parser.add_argument("--csv_to_ini", help="Build selected INI files from CSV.", action="store_true")
 parser.add_argument("--master_sheet", help="This is the master sheet INI files will be generated from. Accepts both a URL or a file path from your machine.")
+parser.add_argument("--no_crc", help="Prevents the script generating a hashmap after copying files.")
 
 args = parser.parse_args()
 
@@ -69,6 +71,8 @@ if args.lua_to_thorn:
 
 if not args.no_copy:
     copy_files()
+if not args.no_crc:    
+    generate_hashes()
 
 if args.lua_to_thorn and not args.no_copy:
      copy_thorn_cleanup_cache()
