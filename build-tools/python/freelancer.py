@@ -6,11 +6,11 @@ import urllib.request, json
 import win32evtlog
 from subprocess import Popen
 import pythoncom, wmi
+import re
 
 from utils import *
 
 flspew_log_path = f"{os.getenv('LOCALAPPDATA')}\\Freelancer"
-
 def follow(file):
     # Seek the end of the file
     file.seek(0)
@@ -27,6 +27,13 @@ def follow(file):
             continue
 
         if "C:\\work\\builds\\dalibs\\dalibs-build\\build\\Src\\RenderPipeline\\DX8\\dx8_shader_inl.h(84) : WARNING:General:flush_stream_source: D3DERR_INVALIDCALL" in line:
+            continue
+
+        if "for item (0x81837304)" in line:
+            linetime = time.strftime("%Y%m%d-%H:%M:%S")
+            regexp = re.compile(r'\{.*?\}')
+            line = regexp.findall(line)
+            print(bcolors.OKCYAN + f"[{linetime}] C:\\build-tools\\python\\freelancer.py(32) : *** DEBUG: Created object {line[0].strip(r'{}')}" + bcolors.ENDC)
             continue
 
         if "ERROR: ArchDB::Get(0) failed" in line:
