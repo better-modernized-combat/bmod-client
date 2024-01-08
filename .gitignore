@@ -474,6 +474,7 @@ FLHook.json
 
 # OS Desktop Config Files
 .DS_Store
+desktop.ini
 mod-assets\*.~lock
 *.ods#
 
