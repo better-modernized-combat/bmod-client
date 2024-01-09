@@ -1,5 +1,5 @@
 {
-    "DeathPenaltyFraction": 0.0,
+    "DeathPenaltyFraction": 0.25,
     "DeathPenaltyFractionKiller": 0.0,
     "ExcludedSystems": [],
     "FractionOverridesByShip": {}
