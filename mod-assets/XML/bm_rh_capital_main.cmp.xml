@@ -3,100 +3,139 @@
 <UTFXML filename="bm_rh_capital_main.cmp" path="BMOD\EQUIPMENT\MODELS\TURRETS">
    <UTF_ROOT>
       <VMeshLibrary>
+         <bm_rh_capital_main.lod0-212.vms include="bm_rh_capital_main_cmp\lod0-212.vms.xml"/>
          <bm_rh_capital_main.lod0-112.vms include="bm_rh_capital_main_cmp\lod0-112.vms.xml"/>
       </VMeshLibrary>
+      <Animation include="bm_rh_capital_main_cmp\Animation.xml"/>
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <Cmpnd>
          <Cons>
             <Rev type="Rev" count="1">
                <part>
                   <!-- parent      --> "Root",
-                  <!-- child       --> "barrel",
-                  <!-- position    --> -0.013790441, -0.68638092, 8.1654558,
-                  <!-- offset      --> 0, 0, -0,
-                  <!-- orientation -->   1.0000000000,  1.1961286e-15,  2.5272945e-15,
-                                       -1.1961286e-15,   1.0000000000,  3.3408125e-15,
-                                       -2.5272945e-15, -3.3408125e-15,   1.0000000000,
-                  <!-- axis        -->   1.0000000000,   0.0000000000,  -0.0000000000,
-                  <!-- min, max    --> 0, 1.5707799
+                  <!-- child       --> "XGUN",
+                  <!-- position    --> -0.017281592, 4.2218318, 0.94512779,
+                  <!-- offset      --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000, -124.83157e-09,  58.212592e-09,
+                                        124.83157e-09,   1.0000000000,  97.636395e-09,
+                                       -58.212603e-09, -97.636388e-09,   1.0000000000,
+                  <!-- axis        -->   1.0000000000,   0.0000000000,   0.0000000000,
+                  <!-- min, max    --> 0, 0.17452
                </part>
             </Rev>
+            <Pris type="Rev" count="1">
+               <part>
+                  <!-- parent      --> "XGUN",
+                  <!-- child       --> "XBARREL",
+                  <!-- position    --> -8.4433041, -4.8399963, -8.7614365,
+                  <!-- offset      --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000, -220.05388e-09, -75.658193e-09,
+                                        220.05388e-09,   1.0000000000,  29.624923e-09,
+                                        75.658185e-09, -29.624722e-09,   1.0000000000,
+                  <!-- axis        -->  192.47616e-09, -107.60017e-09,   1.0000000000,
+                  <!-- min, max    --> -0.018206768, 3.4075089
+               </part>
+            </Pris>
          </Cons>
-         <Part_barrel>
-            <Object_name name="Object name" type="text">barrel</Object_name>
+         <Part_XGUN>
+            <Object_name name="Object name" type="text">XGUN</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">barrel240111215538.3db</File_name>
-         </Part_barrel>
+            <File_name name="File name" type="text">XGUN240112222657.3db</File_name>
+         </Part_XGUN>
+         <Part_XBARREL>
+            <Object_name name="Object name" type="text">XBARREL</Object_name>
+            <Index type="int">0</Index>
+            <File_name name="File name" type="text">XBARREL240112222657.3db</File_name>
+         </Part_XBARREL>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_rh_capital_main240111215538.3db</File_name>
+            <File_name name="File name" type="text">bm_rh_capital_main240112222657.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_rh_capital_main240111215538.3db>
+      <bm_rh_capital_main240112222657.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> bm_rh_capital_main.lod0-112.vms,
+               <!-- vmesh lib    --> bm_rh_capital_main.lod0-212.vms,
                <!-- start vert   --> 0,
-               <!-- num verts    --> 195,
+               <!-- num verts    --> 129,
                <!-- start index  --> 0,
-               <!-- num indices  --> 306,
+               <!-- num indices  --> 222,
                <!-- start mesh   --> 0,
                <!-- num meshes   --> 1,
-               <!-- bounding box -->  6.7914028,   0.56032455,  9.4465189,
-                                     -6.7252307,  -4.1444349,  -6.8082728,
-               <!-- center       -->  0.28783369, -1.9770933,   0.95282716,
-               <!-- radius       --> 9.3178835
+               <!-- bounding box -->  5.6278119,    4.4441252,   5.7369447,
+                                     -5.6278152,   -0.84669173, -5.7369399,
+               <!-- center       --> -0.095457934,  1.7056884,   0.29224515,
+               <!-- radius       --> 7.0023723
             </VMeshRef>
          </VMeshPart>
          <VMeshWire include="bm_rh_capital_main_cmp\bm_rh_capital_main.vwd.xml"/>
          <Hardpoints>
             <Revolute>
                <HpConnect>
-                  <Position type="Vector">0.0057156538, -4.1456718, 0.0052813492</Position>
+                  <Position type="Vector">0.0040609878, -0.74045044, 0.11699548</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,  23.092634e-15,  119.20928e-09,
-                       0.0000000000,   1.0000000000, -193.71508e-09,
-                     -119.20928e-09,  193.71508e-09,   1.0000000000
+                       1.0000000000,  3.8857797e-15,  37.252896e-09,
+                       0.0000000000,   1.0000000000, -104.30813e-09,
+                     -37.252896e-09,  104.30813e-09,   1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, -0</Axis>
-                  <Min type="float">-6.2831855</Min>
-                  <Max type="float">6.2831855</Max>
+                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Min type="float">-0.08727</Min>
+                  <Max type="float">0.08726</Max>
                </HpConnect>
             </Revolute>
          </Hardpoints>
-      </bm_rh_capital_main240111215538.3db>
-      <barrel240111215538.3db>
+      </bm_rh_capital_main240112222657.3db>
+      <XGUN240112222657.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_rh_capital_main.lod0-112.vms,
-               <!-- start vert   --> 195,
-               <!-- num verts    --> 321,
-               <!-- start index  --> 306,
-               <!-- num indices  --> 522,
-               <!-- start mesh   --> 1,
-               <!-- num meshes   --> 1,
-               <!-- bounding box -->  6.0934143,   5.5420384,   2.3283482,
-                                     -5.914341,   -1.0661693, -19.597845,
-               <!-- center       --> -0.31781584,  1.9281993,  -8.8309393,
-               <!-- radius       --> 12.554423
+               <!-- start vert   --> 0,
+               <!-- num verts    --> 42,
+               <!-- start index  --> 0,
+               <!-- num indices  --> 108,
+               <!-- start mesh   --> 0,
+               <!-- num meshes   --> 2,
+               <!-- bounding box -->  2.0799537,     1.801291,     10.931945,
+                                     -2.079952,     -1.8012948,   -10.931951,
+               <!-- center       --> -0.0049024988, -0.015912533,  -0.064055741,
+               <!-- radius       --> 11.063021
             </VMeshRef>
          </VMeshPart>
-         <VMeshWire include="bm_rh_capital_main_cmp\barrel.vwd.xml"/>
+         <VMeshWire include="bm_rh_capital_main_cmp\XGUN.vwd.xml"/>
+      </XGUN240112222657.3db>
+      <XBARREL240112222657.3db>
+         <VMeshPart>
+            <VMeshRef type="VMeshRef">
+               <!-- header size  --> 60,
+               <!-- vmesh lib    --> bm_rh_capital_main.lod0-112.vms,
+               <!-- start vert   --> 42,
+               <!-- num verts    --> 123,
+               <!-- start index  --> 108,
+               <!-- num indices  --> 216,
+               <!-- start mesh   --> 2,
+               <!-- num meshes   --> 1,
+               <!-- bounding box --> 10.464574,  9.3287935,   2.7899342,
+                                      6.4202204, 3.0851994, -19.23477,
+               <!-- center       -->  8.4124823, 6.1099391,  -8.2827034,
+               <!-- radius       --> 11.409667
+            </VMeshRef>
+         </VMeshPart>
+         <VMeshWire include="bm_rh_capital_main_cmp\XBARREL.vwd.xml"/>
          <Hardpoints>
             <Fixed>
                <HpFire01>
-                  <Position type="Vector">0.061455961, 2.6938608, -18.72039</Position>
+                  <Position type="Vector">8.4550791, 4.7772026, -17.13903</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,  17.611648e-15,  109.35500e-09,
-                       0.0000000000,   1.0000000000, -161.05022e-09,
-                     -109.35500e-09,  161.05022e-09,   1.0000000000
+                       1.0000000000,  476.83722e-09,  195.57825e-09,
+                     -476.83713e-09,   1.0000000000, -354.24114e-09,
+                     -195.57839e-09,  354.24105e-09,   1.0000000000
                   </Orientation>
                </HpFire01>
             </Fixed>
          </Hardpoints>
-      </barrel240111215538.3db>
+      </XBARREL240112222657.3db>
    </UTF_ROOT>
 </UTFXML>
