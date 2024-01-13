@@ -3,7 +3,7 @@
 <UTFXML filename="bmod_rh_capital_weapons.ale" path="BMOD\FX\WEAPONS">
    <UTF_ROOT>
       <ALEffectLib>
-         <ALEffectLib type="ALEffectLib" version="1.1" count="5">
+         <ALEffectLib type="ALEffectLib" version="1.1" count="7">
             <effect name="rh_battleship_plasma_proj">
                <unused>0, 0, 0; 0</unused>
                <fx count="13">
@@ -96,10 +96,35 @@
                    2,  3
                </pairs>
             </effect>
+            <effect name="rh_battleship_laser_lance_flash">
+               <unused>0, 0, 0; 0</unused>
+               <fx count="7">
+                   1, 32768, 1, 0xEE223B51
+                   2,     1, 0, rh_battleship_laser_lance_flash_core.emt
+                   4,     1, 0, rh_battleship_laser_lance_flash_flare.emt
+                   6,     1, 0, rh_battleship_laser_lance_flash_flare_sparks.emt
+                   3,     1, 0, rh_battleship_laser_lance_flash_core.app
+                   5,     1, 0, rh_battleship_laser_lance_flash_flare.app
+                   7,     1, 0, rh_battleship_laser_lance_flash_flare_sparks.app
+               </fx>
+               <pairs count="3">
+                   2,  3
+                   4,  5
+                   6,  7
+               </pairs>
+            </effect>
+            <effect name="rh_battleship_laser_lance_expl">
+               <unused>0, 0, 0; 0</unused>
+               <fx count="1">
+                   1, 32768, 1, 0xEE223B51
+               </fx>
+               <pairs count="0">
+               </pairs>
+            </effect>
          </ALEffectLib>
       </ALEffectLib>
       <AlchemyNodeLibrary>
-         <AlchemyNodeLibrary type="AlchemyNodeLibrary" version="1.1" count="31">
+         <AlchemyNodeLibrary type="AlchemyNodeLibrary" version="1.1" count="37">
             <node name="FxBasicAppearance">
                <effect type="name"  name="Node_Name">rh_battleship_plasma_proj_core.app</effect>
                <effect type="float" name="Node_LifeSpan">0</effect>
@@ -3370,6 +3395,656 @@
                   <single type="4" count="1">
                      0: 1
                   </single>
+               </effect>
+            </node>
+            <node name="FxConeEmitter">
+               <effect type="name"  name="Node_Name">rh_battleship_laser_lance_flash_core.emt</effect>
+               <effect type="float" name="Node_LifeSpan">5</effect>
+               <effect type="xform" name="Node_Transform">0x435
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                        <loop count="1">
+                           0: -90, 0, 0
+                        </loop>
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+               <effect type="fanim" name="Emitter_LODCurve">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="int"   name="Emitter_InitialParticles">0</effect>
+               <effect type="vanim" name="Emitter_Frequency">
+                  <single type="4" count="1">
+                     0: 100
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_MaxParticles">
+                  <single type="4" count="1">
+                     0: 10000
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_EmitCount">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_InitLifeSpan">
+                  <single type="4" count="1">
+                     0: 0.5
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_Pressure">
+                  <single type="4" count="1">
+                     0: 10000
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_VelocityApproach">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MinRadius">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MaxRadius">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MinSpread">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MaxSpread">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+            </node>
+            <node name="FLBeamAppearance">
+               <effect type="name"  name="Node_Name">rh_battleship_laser_lance_flash_core.app</effect>
+               <effect type="float" name="Node_LifeSpan">0</effect>
+               <effect type="xform" name="Node_Transform">0x435
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+               <effect type="fanim" name="Appearance_LODCurve">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="bool"  name="BasicApp_TriTexture">false</effect>
+               <effect type="bool"  name="BasicApp_QuadTexture">true</effect>
+               <effect type="bool"  name="BasicApp_MotionBlur">false</effect>
+               <effect type="canim" name="BasicApp_Color">
+                  <rgb_header type="4" count="1">
+                     0:
+                        <rgb type="4" count="3">
+                             0.0000000000: 1, 1, 1
+                             0.2000000000: 0.82352942, 0.80392158, 0.39215687
+                             1.0000000000: 0.81176472, 0.89411765, 0.33725491
+                        </rgb>
+                  </rgb_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Alpha">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="4">
+                             0.0000000000: 0
+                             0.0100000000: 1
+                             0.8000000000: 1
+                             1.0000000000: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Size">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_HToVAspect">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Rotate">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="name"  name="BasicApp_TexName">beam_5</effect>
+               <effect type="ipair" name="BasicApp_BlendInfo">5, 2</effect>
+               <effect type="bool"  name="BasicApp_UseCommonTexFrame">false</effect>
+               <effect type="fanim" name="BasicApp_TexFrame">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="vanim" name="BasicApp_CommonTexFrame">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="bool"  name="BasicApp_FlipTexU">false</effect>
+               <effect type="bool"  name="BasicApp_FlipTexV">false</effect>
+               <effect type="bool"  name="RectApp_CenterOnPos">false</effect>
+               <effect type="bool"  name="RectApp_ViewingAngleFade">false</effect>
+               <effect type="fanim" name="RectApp_Scale">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="RectApp_Length">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="RectApp_Width">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 50
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="bool"  name="BeamApp_DisablePlaceHolder">false</effect>
+               <effect type="bool"  name="BeamApp_DupeFirstParticle">false</effect>
+               <effect type="bool"  name="BeamApp_LineAppearance">false</effect>
+            </node>
+            <node name="FxBasicAppearance">
+               <effect type="name"  name="Node_Name">rh_battleship_laser_lance_flash_flare.app</effect>
+               <effect type="float" name="Node_LifeSpan">0</effect>
+               <effect type="xform" name="Node_Transform">0x435
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+               <effect type="fanim" name="Appearance_LODCurve">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="bool"  name="BasicApp_TriTexture">false</effect>
+               <effect type="bool"  name="BasicApp_QuadTexture">true</effect>
+               <effect type="bool"  name="BasicApp_MotionBlur">false</effect>
+               <effect type="canim" name="BasicApp_Color">
+                  <rgb_header type="4" count="1">
+                     0:
+                        <rgb type="4" count="3">
+                             0.0000000000: 1, 1, 1
+                             0.1000000000: 0.82352942, 0.80392158, 0.39215687
+                             1.0000000000: 0.81176472, 0.89411765, 0.33725491
+                        </rgb>
+                  </rgb_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Alpha">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="3">
+                             0.0000000000: 0
+                             0.8000000000: 1
+                             1.0000000000: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Size">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="2">
+                             0.0000000000: 35
+                             1.0000000000: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_HToVAspect">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Rotate">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="name"  name="BasicApp_TexName">small-flare</effect>
+               <effect type="ipair" name="BasicApp_BlendInfo">5, 2</effect>
+               <effect type="bool"  name="BasicApp_UseCommonTexFrame">false</effect>
+               <effect type="fanim" name="BasicApp_TexFrame">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="vanim" name="BasicApp_CommonTexFrame">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="bool"  name="BasicApp_FlipTexU">false</effect>
+               <effect type="bool"  name="BasicApp_FlipTexV">false</effect>
+            </node>
+            <node name="FxSphereEmitter">
+               <effect type="name"  name="Node_Name">rh_battleship_laser_lance_flash_flare.emt</effect>
+               <effect type="float" name="Node_LifeSpan">5</effect>
+               <effect type="xform" name="Node_Transform">0x435
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+               <effect type="fanim" name="Emitter_LODCurve">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="int"   name="Emitter_InitialParticles">10</effect>
+               <effect type="vanim" name="Emitter_Frequency">
+                  <single type="4" count="1">
+                     0: 10
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_MaxParticles">
+                  <single type="4" count="1">
+                     0: 10000
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_EmitCount">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_InitLifeSpan">
+                  <single type="4" count="1">
+                     0: 2
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_Pressure">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_VelocityApproach">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="SphereEmitter_MinRadius">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="SphereEmitter_MaxRadius">
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+            </node>
+            <node name="FxConeEmitter">
+               <effect type="name"  name="Node_Name">rh_battleship_laser_lance_flash_flare_sparks.emt</effect>
+               <effect type="float" name="Node_LifeSpan">5</effect>
+               <effect type="xform" name="Node_Transform">0x435
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                        <loop count="1">
+                           0: -90, 0, 0
+                        </loop>
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+               <effect type="fanim" name="Emitter_LODCurve">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="int"   name="Emitter_InitialParticles">0</effect>
+               <effect type="vanim" name="Emitter_Frequency">
+                  <single type="4" count="1">
+                     0: 100
+                        <loop count="4">
+                             0.0000000000: 0, 0, 0
+                             0.2000000000: 200, 0, 0
+                             0.8000000000: 200, 0, 0
+                             5.0000000000: 0, 0, 0
+                        </loop>
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_MaxParticles">
+                  <single type="4" count="1">
+                     0: 10000
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_EmitCount">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_InitLifeSpan">
+                  <single type="4" count="1">
+                     0: 0.2
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_Pressure">
+                  <single type="4" count="1">
+                     0: 500
+                  </single>
+               </effect>
+               <effect type="vanim" name="Emitter_VelocityApproach">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MinRadius">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MaxRadius">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MinSpread">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="vanim" name="ConeEmitter_MaxSpread">
+                  <single type="4" count="1">
+                     0: 15
+                  </single>
+               </effect>
+            </node>
+            <node name="FxRectAppearance">
+               <effect type="name"  name="Node_Name">rh_battleship_laser_lance_flash_flare_sparks.app</effect>
+               <effect type="float" name="Node_LifeSpan">0</effect>
+               <effect type="xform" name="Node_Transform">0x435
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+                  <single type="4" count="1">
+                     0: 1
+                  </single>
+               </effect>
+               <effect type="fanim" name="Appearance_LODCurve">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="bool"  name="BasicApp_TriTexture">false</effect>
+               <effect type="bool"  name="BasicApp_QuadTexture">true</effect>
+               <effect type="bool"  name="BasicApp_MotionBlur">false</effect>
+               <effect type="canim" name="BasicApp_Color">
+                  <rgb_header type="4" count="1">
+                     0:
+                        <rgb type="4" count="1">
+                           0: 1, 1, 1
+                        </rgb>
+                  </rgb_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Alpha">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="2">
+                             0.0000000000: 1
+                             1.0000000000: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Size">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_HToVAspect">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="BasicApp_Rotate">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="name"  name="BasicApp_TexName">small-flare</effect>
+               <effect type="ipair" name="BasicApp_BlendInfo">5, 2</effect>
+               <effect type="bool"  name="BasicApp_UseCommonTexFrame">false</effect>
+               <effect type="fanim" name="BasicApp_TexFrame">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 0
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="vanim" name="BasicApp_CommonTexFrame">
+                  <single type="4" count="1">
+                     0: 0
+                  </single>
+               </effect>
+               <effect type="bool"  name="BasicApp_FlipTexU">false</effect>
+               <effect type="bool"  name="BasicApp_FlipTexV">false</effect>
+               <effect type="bool"  name="RectApp_CenterOnPos">false</effect>
+               <effect type="bool"  name="RectApp_ViewingAngleFade">false</effect>
+               <effect type="fanim" name="RectApp_Scale">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 1
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="RectApp_Length">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 8
+                        </float>
+                  </float_header>
+               </effect>
+               <effect type="fanim" name="RectApp_Width">
+                  <float_header type="4" count="1">
+                     0:
+                        <float type="4" count="1">
+                           0: 2
+                        </float>
+                  </float_header>
                </effect>
             </node>
          </AlchemyNodeLibrary>
