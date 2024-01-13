@@ -1,0 +1,293 @@
+duration = 60;
+
+entities =
+{
+
+	{
+		entity_name = "Scene_Houston_Opening",
+		type = SCENE,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		up = Y_AXIS,
+		front = Z_AXIS,
+		ambient = { 128, 128, 128 }
+	},
+
+	{
+		entity_name = "Monitor_Scene",
+		type = MONITOR,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0
+	},
+
+	{
+		entity_name = "aa_main_object",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		userprops =
+		{
+			main_object = "main_object",
+		}
+	},
+    {
+		entity_name = "Camera_0",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 13116.9253011628, 560.661428072198, -89953.7857545984},
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		cameraprops =
+		{
+			fovh = 55,
+			hvaspect = 1.333333,
+			nearplane = 0.1,
+			farplane = 100000
+		}
+	},
+	{
+		entity_name = "Camera_1",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 38064.329831407, 1179.42916865665, -14624.1252794536 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		cameraprops =
+		{
+			fovh = 55,
+			hvaspect = 1.333333,
+			nearplane = 0.1,
+			farplane = 100000
+		}
+	},
+    {
+		entity_name = "Camera_2",
+		type = CAMERA,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 38064.329831407, 1179.42916865665, -14624.1252794536 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		cameraprops =
+		{
+			fovh = 55,
+			hvaspect = 1.333333,
+			nearplane = 0.1,
+			farplane = 100000
+		}
+	},
+    {
+		entity_name = "camera_marker_0",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 45697, 0, -18496 },
+			orient = { { -0.888660,  0.000000, -0.458567 },
+					   { -0.143528,  0.949755,  0.278145 },
+					   {  0.435526,  0.312994, -0.844010 } }
+		}
+	},
+	{
+		entity_name = "camera_marker_1",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 8.306173, 6.215615, -16.09157 },
+			orient = { { -0.888660,  0.000000, -0.458567 },
+					   { -0.143528,  0.949755,  0.278145 },
+					   {  0.435526,  0.312994, -0.844010 } }
+		}
+	},
+    {
+		entity_name = "camera_marker_2",
+		type = MARKER,
+		template_name = "",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		spatialprops =
+		{
+			pos = { 8.306173, 6.215615, -16.09157 },
+			orient = { { -0.888660,  0.000000, -0.458567 },
+					   { -0.143528,  0.949755,  0.278145 },
+					   {  0.435526,  0.312994, -0.844010 } }
+		}
+	},
+    {
+        entity_name = "path_camera_marker_1",
+        type = MOTION_PATH,
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = HIDDEN,
+        pathprops = {
+            path_type = "CV_CROrientationSplinePath",
+            path_data = "OPEN, {41250.6795139859, 0, -16921.9387918025}, {1.000000,0.000000,0.000000,0.000000}, {41117.5512081594, 381.144913413248, -15321.7381633263}, {1.000000,0.000000,0.000000,0.000000},"
+        }
+    },
+    {
+        entity_name = "path_camera_rail_0",
+        type = MOTION_PATH,
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = HIDDEN,
+        pathprops = {
+            path_type = "CV_CROrientationSplinePath",
+            path_data = "OPEN, {13001.4653673561, 300.661428072198, -90216.0996432603}, {1.000000,0.000000,0.000000,0.000000}, {12180.5427646208, 300.661428072198, -89854.7628118185},"
+        }
+    },
+    {
+        entity_name = "path_camera_rail_1",
+        type = MOTION_PATH,
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = HIDDEN,
+        pathprops = {
+            path_type = "CV_CROrientationSplinePath",
+            path_data = "OPEN, {38064.329831407, 1179.42916865665, -14624.1252794536}, {1.000000,0.000000,0.000000,0.000000}, {39029.7336219117, 746.48002003826, -17276.3886059223},"
+        }
+    },
+    {
+        entity_name = "path_camera_zoom_2",
+        type = MOTION_PATH,
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = HIDDEN,
+        pathprops = {
+            path_type = "CV_CROrientationSplinePath",
+            path_data = "OPEN, {40163.9, -85.2043, -17550.75}, {1.000000,0.000000,0.000000,0.000000}, {41310.8, 568.88, -15314.6},"
+        }
+    },
+};
+
+events =
+{
+	{
+		0.000, SET_CAMERA, { "Monitor_Scene", "Camera_0" }
+	},
+	{
+		0.000, ATTACH_ENTITY, { "Camera_0", "camera_marker_0" },
+		{
+			duration = 14.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = LOOK_AT
+		}
+	},
+    {
+        0, START_PATH_ANIMATION,
+        {"Camera_0", "path_camera_rail_0"}, {
+            duration = 15,
+            start_percent = 0,
+            stop_percent = 1,
+            offset = {0, 0, 0},
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            flags = POSITION
+        }
+    },
+    {
+		14.000, SET_CAMERA, { "Monitor_Scene", "Camera_1" }
+	},
+    {
+		14.000, ATTACH_ENTITY, { "Camera_1", "camera_marker_1" },
+		{
+			duration = 30.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = LOOK_AT
+		}
+	},
+	{
+        14.000, START_PATH_ANIMATION,
+        {"camera_marker_1", "path_camera_marker_1"}, {
+            duration = 30,
+            start_percent = 0,
+            stop_percent = 1,
+            offset = {0, 0, 0},
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            flags = POSITION
+        }
+    },
+    {
+        14.000, START_PATH_ANIMATION,
+        {"Camera_1", "path_camera_rail_1"}, {
+            duration = 30,
+            start_percent = 0,
+            stop_percent = 1,
+            offset = {0, 0, 0},
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            flags = POSITION
+        }
+    },
+    {
+		27.000, SET_CAMERA, { "Monitor_Scene", "Camera_2" }
+	},
+    {
+        26.500, START_PATH_ANIMATION,
+        {"Camera_2", "path_camera_zoom_2"}, {
+            duration = 20,
+            start_percent = 0,
+            stop_percent = 1,
+            offset = {0, 0, 0},
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            flags = POSITION
+        }
+    },
+    {
+        26.500, START_PATH_ANIMATION,
+        {"camera_marker_2", "path_camera_zoom_2"}, {
+            duration = 20,
+            start_percent = 0,
+            stop_percent = 1,
+            offset = {0, 0, 25},
+            up = Y_AXIS,
+            front = NEG_Z_AXIS,
+            flags = POSITION
+        }
+    },
+    {
+		26.500, ATTACH_ENTITY, { "Camera_2", "camera_marker_2" },
+		{
+			duration = 30.000,
+			offset = { 0, 0, 0 },
+			up = Y_AXIS,
+			front = NEG_Z_AXIS,
+			target_part = "",
+			target_type = ROOT,
+			flags = LOOK_AT
+		}
+	},
+};
