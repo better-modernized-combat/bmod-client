@@ -1749,58 +1749,58 @@
                </HpTurret_R1_01>
                <HpTurret_R1_04>
                   <Orientation type="Matrix">
-                      -1.0000000000,  110.76666e-09,  150.99585e-09,
-                     -110.76671e-09,  -1.0000000000, -389.41437e-09,
-                      150.99580e-09, -389.41437e-09,   1.0000000000
+                      -1.0000000000,  389.41431e-09,  150.99596e-09,
+                     -389.41437e-09,  -1.0000000000, -389.41428e-09,
+                      150.99580e-09, -389.41434e-09,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0.052442495, -100.01269, -79.652527</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
-                  <Min type="float">-1.65807</Min>
-                  <Max type="float">1.6580499</Max>
+                  <Min type="float">-2.1816616</Min>
+                  <Max type="float">2.1816616</Max>
                </HpTurret_R1_04>
                <HpTurret_R2_01>
                   <Orientation type="Matrix">
-                     -162.92068e-09,  150.99582e-09,   1.0000000000,
-                     -59.604709e-09,  -1.0000000000,  150.99580e-09,
-                       1.0000000000, -59.604687e-09,  162.92070e-09
+                     -294.80637e-09,  268.22090e-09,   1.0000000000,
+                     -107.85526e-09,  -1.0000000000,  268.22090e-09,
+                       1.0000000000, -107.85518e-09,  294.80640e-09
                   </Orientation>
                   <Position type="Vector">-40.726597, -85.064369, -257.1897</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
-                  <Min type="float">-1.22175</Min>
-                  <Max type="float">1.0471799</Max>
+                  <Min type="float">-2.0943952</Min>
+                  <Max type="float">2.0943952</Max>
                </HpTurret_R2_01>
                <HpTurret_R2_02>
                   <Orientation type="Matrix">
-                     -43.711388e-09,  150.99580e-09,  -1.0000000000,
-                     -59.604659e-09,  -1.0000000000, -150.99580e-09,
-                      -1.0000000000,  59.604659e-09,  43.711399e-09
+                     -115.14495e-09,  417.23251e-09,  -1.0000000000,
+                     -157.01123e-09,  -1.0000000000, -417.23251e-09,
+                      -1.0000000000,  157.01119e-09,  115.14502e-09
                   </Orientation>
                   <Position type="Vector">40.894043, -85.064354, -257.18973</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
-                  <Min type="float">-1.0472</Min>
-                  <Max type="float">1.22172</Max>
+                  <Min type="float">-2.0943952</Min>
+                  <Max type="float">2.0943952</Max>
                </HpTurret_R2_02>
                <HpTurret_R2_03>
                   <Orientation type="Matrix">
-                     -162.92068e-09, -110.76661e-09,  -1.0000000000,
-                     -21.316282e-15,   1.0000000000, -110.76661e-09,
-                       1.0000000000,   0.0000000000, -162.92068e-09
+                     -313.91647e-09, -476.83716e-09,  -1.0000000000,
+                     -122.24358e-15,   1.0000000000, -476.83716e-09,
+                       1.0000000000, -27.443449e-15, -313.91647e-09
                   </Orientation>
                   <Position type="Vector">45.655434, 21.503355, -202.37723</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
-                  <Min type="float">-1.22175</Min>
-                  <Max type="float">1.6580499</Max>
+                  <Min type="float">-2.1816616</Min>
+                  <Max type="float">2.1816616</Max>
                </HpTurret_R2_03>
                <HpTurret_R2_04>
                   <Orientation type="Matrix">
-                      75.497901e-09,   0.0000000000,   1.0000000000,
+                      194.70718e-09,   0.0000000000,   1.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
-                      -1.0000000000,   0.0000000000,  75.497901e-09
+                      -1.0000000000,   0.0000000000,  194.70718e-09
                   </Orientation>
                   <Position type="Vector">-45.728634, 21.503361, -202.37724</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
-                  <Min type="float">-1.65807</Min>
-                  <Max type="float">1.22172</Max>
+                  <Min type="float">-2.1816616</Min>
+                  <Max type="float">2.1816616</Max>
                </HpTurret_R2_04>
                <HpTurret_R3_01>
                   <Orientation type="Matrix">
