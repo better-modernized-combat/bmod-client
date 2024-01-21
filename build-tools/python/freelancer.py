@@ -72,7 +72,7 @@ def start_freelancer():
     
     # Start FL
     print(bcolors.OKBLUE + f"Starting Freelancer in windowed mode..." + bcolors.ENDC)
-    fl_proc = Popen([f"{fl_path}\\Freelancer.exe", "-w"])
+    fl_proc = Popen([f"{fl_path}\\Freelancer.exe", "-w"], shell=True)
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
     global freelancer_pid 
