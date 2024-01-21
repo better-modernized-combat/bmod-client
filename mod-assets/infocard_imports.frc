@@ -2307,7 +2307,7 @@ S 474040 "Big Yen" Asteroid Cluster
 S 474041 Unknown Planet
 S 474042 Unknown Planet
 S 474043 Maverick Station
-
+S 474044 Communications Satellite
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -2628,6 +2628,8 @@ H 476060
 	Luxury Consumer Goods
 	Toxic Waste
 
+H 476061
+	Commsat Placeholder
 
 S 478017 Liberty Police
          Tamms Bartender
