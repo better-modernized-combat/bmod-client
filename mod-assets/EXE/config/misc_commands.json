@@ -1,8 +1,0 @@
-{
-    "coinMessage": "%player tosses %result",
-    "diceMessage": "%player rolled %number of %max",
-    "enableDropRep": true,
-    "repDropCost": 0,
-    "smiteMusicId": "music_danger",
-    "stuckMessage": "Attention! Stand Clear. Towing %player"
-}
