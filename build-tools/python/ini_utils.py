@@ -8,28 +8,29 @@ def parse_to_list(listable_string: str):
     return [item.strip() for item in str(listable_string).split("\n")]
 
 def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
-        # Clean out Unnamed cols, if any, those shouldn't be in the sheet
-        frame = frame.loc[:, ~frame.columns.str.contains("^Unnamed")]
-        
-        # TODO: Clean out rows where WIP? is any kind of true
-        # TODO: Clean out the WIP? col, if any
-        if "WIP" in frame.columns:
-            frame = frame[frame["WIP"] in ["TRUE", "true", "True", True]]
-            frame = frame.loc[:, ~frame.columns.str.contains("WIP")]
-        
-        # TODO: Clean out rows where the nickname is missing, as presumably they are unused as of yet
+    # Clean out Unnamed cols, if any, those shouldn't be in the sheet
+    frame = frame.loc[:, ~frame.columns.str.contains("^Unnamed")]
+    
+    # TODO: Clean out rows where WIP? is any kind of true
+    # TODO: Clean out the WIP? col, if any
+    if "WIP" in frame.columns:
         l0 = len(frame)
-        if "nickname" in frame.columns:
-            frame = frame.dropna(subset = ["nickname"])
-        elif "obj" in frame.columns:
-            frame = frame.dropna(subset = ["obj"])
-        else:
-            pass
+        frame = frame[frame["WIP"] != "TRUE"]
+        frame = frame.loc[:, ~frame.columns.str.contains("WIP")]
         l1 = len(frame)
         if l1 != l0:
-            print(f"DEBUG: Dropped {l0-l1} empty rows from frame {name}.")
-        
-        return frame
+            print(f"DEBUG: Dropped {l0-l1} WIP rows from frame {name}.")
+    
+    # TODO: Clean out rows where the nickname is missing, as presumably they are unused as of yet
+    l0 = len(frame)
+    for priv_col in ["nickname", "obj", "Weapon Name"]:
+        if priv_col in frame.columns:
+            frame = frame.dropna(subset = [priv_col])
+    l1 = len(frame)
+    if l1 != l0:
+        print(f"DEBUG: Dropped {l0-l1} empty rows from frame {name}.")
+    
+    return frame
 
 def write_block(block: pd.Series, block_name: str, cols: List, out: ContextManager):
     
