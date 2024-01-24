@@ -8,6 +8,10 @@ def parse_to_list(listable_string: str):
     return [item.strip() for item in str(listable_string).split("\n")]
 
 def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
+    
+    # These column names, if they exist, are used to determine whether rows can be discarded
+    privileged_column_names = ["nickname", "obj", "Weapon Name"]
+    
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
     frame = frame.loc[:, ~frame.columns.str.contains("^Unnamed")]
     
@@ -23,9 +27,10 @@ def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
     
     # TODO: Clean out rows where the nickname is missing, as presumably they are unused as of yet
     l0 = len(frame)
-    for priv_col in ["nickname", "obj", "Weapon Name"]:
-        if priv_col in frame.columns:
-            frame = frame.dropna(subset = [priv_col])
+    for pcn in privileged_column_names:
+        if pcn in frame.columns:
+            frame = frame.dropna(subset = [pcn])
+            frame = frame[frame[pcn] != ""]
     l1 = len(frame)
     if l1 != l0:
         print(f"DEBUG: Dropped {l0-l1} empty rows from frame {name}.")

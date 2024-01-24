@@ -7,9 +7,9 @@ from argparse import ArgumentParser
 from ini_utils import CSVError, clean_unnamed_wip_empty, write_block
 
 HP_Types = {
-    "S Energy": "hp_gun_special_01",
-    "M Energy": "hp_gun_special_02",
-    "L Energy": "hp_gun_special_03",
+    "S Energy": "hp_gun_special_1",
+    "M Energy": "hp_gun_special_2",
+    "L Energy": "hp_gun_special_3",
 }
 
 def dfloat(s: str):
@@ -102,7 +102,7 @@ def create_equip_blocks(blaster, variant, multiplicity, scaling_rules):
         "projectile_archetype": f"bm_{blaster['Family Shorthand']}_{blaster['Identifier']}_{multiplicity}x_{variant['Variant Shorthand']}_ammo",
         "separation_explosion": "sever_debris",
         "auto_turret": "false",
-        "turn_rate": 90,
+        "turn_rate": blaster["Turn Rate"],
         "lootable": "false",
         "LODranges": "0, 20, 60, 100",
     })
@@ -211,6 +211,8 @@ def create_blasters(
     # TODO: Make infocards (calculate DPS, EPS, IDS Name, IDS Info, NPC/PC)
     # TODO: Make goods entries
     # TODO: Edit template so that only non-variant inis are treated regularly, while PC/NPC Blasters (and Aux Weapons?) get variants
+    # TODO: generate the following fields and the corresponding files based on the name of the gun:
+    ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
     
 if __name__ == "__main__":
     
