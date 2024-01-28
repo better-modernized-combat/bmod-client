@@ -1,6 +1,8 @@
 import pandas as pd
 from collections import OrderedDict
 from copy import deepcopy
+from itertools import combinations
+from tqdm.auto import tqdm
 
 from argparse import ArgumentParser
 
@@ -10,6 +12,12 @@ HP_Types = {
     "S Energy": "hp_gun_special_1",
     "M Energy": "hp_gun_special_2",
     "L Energy": "hp_gun_special_3",
+}
+
+HP_Size = {
+    "hp_gun_special_1": 1,
+    "hp_gun_special_2": 2,
+    "hp_gun_special_3": 3
 }
 
 def dfloat(s: str):
@@ -28,16 +36,15 @@ def make_scaling_rules(raw_csv: pd.DataFrame):
     rules_dict = dict(zip(updated_rules["Rule"], updated_rules["Entry"]))
     return rules_dict
 
-def create_equip_blocks(blaster, variant, multiplicity, scaling_rules):
+def create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is_override = False):
+    
+    # Get nickname from override or construct it
+    if not is_override or isinstance(blaster["Overrides"], float):
+        nickname = f"bm_{blaster['Family Shorthand']}_{blaster['Identifier']}_{multiplicity}x_{variant['Variant Shorthand']}"    
+    else:
+        nickname = blaster["Overrides"]
     
     # Hash out calculated values
-    if blaster["Overrides"] == "" or pd.isna(blaster["Overrides"]):
-        is_override = False
-        nickname = f"bm_{blaster['Family Shorthand']}_{blaster['Identifier']}_{multiplicity}x_{variant['Variant Shorthand']}"
-    else:
-        is_override = True
-        nickname = blaster["Overrides"]
-        
     if "\n" in blaster["Damage / rd"]:
         hull_damage, energy_damage = tuple(dfloat(d) for d in blaster["Damage / rd"].split("\n"))
     else:
@@ -56,6 +63,8 @@ def create_equip_blocks(blaster, variant, multiplicity, scaling_rules):
     effective_range = dfloat(blaster["Range"]) * (1 + 0.01*dfloat(variant["Variant Range +%"]))
     refire_rate = dfloat(blaster["Refire (rds / s)"]) * (1 + 0.01*dfloat(variant["Variant Refire Rate +%"])) # /s
     lifetime = effective_range / muzzle_velocity
+    
+    cost = dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])
     
     # Create ammunition block
     munition_block = OrderedDict({
@@ -89,7 +98,7 @@ def create_equip_blocks(blaster, variant, multiplicity, scaling_rules):
         "child_impulse": 80,
         "volume": 0 * multiplicity,
         "mass": 10 * multiplicity,
-        "hp_gun_type": (HP_Types[blaster["HP_Type"]] if is_override else HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]),
+        "hp_gun_type": (HP_Types[blaster["HP Type"]] if is_override else HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]),
         "damage_per_fire": 0,
         "power_usage": power_usage,
         "refire_delay": 1. / refire_rate,
@@ -105,6 +114,7 @@ def create_equip_blocks(blaster, variant, multiplicity, scaling_rules):
         "turn_rate": blaster["Turn Rate"],
         "lootable": "false",
         "LODranges": "0, 20, 60, 100",
+        "; cost": cost,
     })
     
     # Create NPC blocks
@@ -140,6 +150,119 @@ def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict):
                 out.write(f"{key} = {str(value)}\n")
             out.write("\n")
 
+def sanity_check(
+    blasters: dict, 
+    munitions: dict,
+    balance_notification: str = "raise",
+    check_multiplicity: bool = True,
+    check_variants: bool = False,
+    check_zeros: bool = True,
+    include_cost: bool = False,
+    include_hardpoint_size: bool = True,
+    ):
+    """
+    If a gun has stats that are better or equal across the board, compared to a gun of the same multiplicity,
+    either print a warning or raise a ValueError.
+    
+    balance_notification - Must be 'raise' or 'warn'. If 'raise', raises a ValueError after printing all balance problems to the console. If 'warn', only print.
+    check_multiplicity - If True, extend the pairings by also comparing each multiplicity. Default is True.
+    check_variants - If True, check for all variant pairings whether they are balanced as well. This will usually produce lots of warnings and is thus turned off by default.
+    check_zeros - If True, also test if any 0 shows up in a gun stat. If so, count it as unbalanced. Default is True.
+    include_cost - If True, a weapon is still balanced iff it costs more than its inferior counterpart. Default is False, because we like sidegrades more than straight upgrades.
+    include_hardpoint_size - If True, a weapon is still balanced iff it uses a larger hardpoint than its inferior counterpart. Default is True.
+    """
+    
+    assert balance_notification in ["raise", "warn"]
+    
+    balancing_sane = True
+    
+    # Iterate over all weapon pairings
+    print("INFO: Weapon Balance Sanity Check in progress ...")
+    for b1, b2 in tqdm(combinations(blasters, r = 2), total = int(len(blasters)*(len(blasters)-1)/2)):
+        
+        n1, n2 = blasters[b1]["nickname"], blasters[b2]["nickname"]
+        
+        # Skip variants?
+        if check_variants is False and ("x_x" in n1 or "x_x" in n2):
+            continue
+        
+        # Skip weapon pairings that have different multiplicity?
+        for m in [1, 2, 3]:
+            if check_multiplicity is False and f"_{m}x" in n1 and not f"_{m}x" in n2:
+                continue
+        
+        hd1, hd2 = munitions[b1+"_ammo"]["hull_damage"], munitions[b2+"_ammo"]["hull_damage"]
+        ed1, ed2 = munitions[b1+"_ammo"]["energy_damage"], munitions[b2+"_ammo"]["energy_damage"]
+        mv1, mv2 = blasters[b1]["muzzle_velocity"], blasters[b2]["muzzle_velocity"]
+        er1, er2 = mv1 * munitions[b1+"_ammo"]["lifetime"], mv2 * munitions[b2+"_ammo"]["lifetime"]
+        rr1, rr2 = 1. / blasters[b1]["refire_delay"], 1. / blasters[b2]["refire_delay"]
+        pu1, pu2 = blasters[b1]["power_usage"] / rr1, blasters[b2]["power_usage"] / rr2
+        c1, c2 = blasters[b1]["; cost"], blasters[b2]["; cost"]
+        hp1, hp2 = HP_Size[blasters[b1]["hp_gun_type"]], HP_Size[blasters[b2]["hp_gun_type"]]
+        
+        # Compare stats. If a stat is not required, set it to one of the other stats, so the result doesn't change.
+        b1_eq_b2 = all([
+            hd1 == hd2, 
+            ed1 == ed2, 
+            pu1 == pu2, 
+            mv1 == mv2, 
+            er1 == er2, 
+            rr1 == rr2, 
+            (hd1 == hd2 if include_cost is False else c1 == c2),
+            (hd1 == hd2 if include_hardpoint_size is False else hp1 == hp2),
+        ])
+        if b1_eq_b2 is True:
+            balancing_sane = False
+            print(f"WARNING: Balance problem detected. Weapon {n1} is precisely equal to weapon {n2}.")
+            continue
+        b1_gt_b2 = all([
+            hd1 >= hd2,
+            ed1 >= ed2,
+            pu1 <= pu2,
+            mv1 >= mv2,
+            er1 >= er2,
+            rr1 >= rr2,
+            (hd1 >= hd2 if include_cost is False else c1 <= c2),
+            (hd1 >= hd2 if include_hardpoint_size is False else hp1 <= hp2),
+        ])
+        if b1_gt_b2 is True:
+            balancing_sane = False
+            print(f"WARNING: Balance problem detected. Weapon {n1} is strictly better than weapon {n2}.")
+            print(f"{blasters[b1]['hp_gun_type']}, {blasters[b2]['hp_gun_type']}")
+            continue
+        b2_gt_b1 = all([
+            hd2 >= hd1,
+            ed2 >= ed1,
+            pu2 <= pu1,
+            mv2 >= mv1,
+            er2 >= er1,
+            rr2 >= rr1,
+            (hd2 >= hd1 if include_cost is False else c2 <= c1),
+            (hd2 >= hd1 if include_hardpoint_size is False else hp2 <= hp1),
+        ])
+        if b2_gt_b1 is True:
+            balancing_sane = False
+            print(f"WARNING: Balance problem detected. Weapon {n2} is strictly better than weapon {n1}.")
+            print(f"{blasters[b1]['hp_gun_type']}, {blasters[b2]['hp_gun_type']}")
+            continue
+        if check_zeros is True:
+            for stat in [hd1, ed1, pu1, mv1, er1, rr1]:
+                if stat in [0, "0"]:
+                    balancing_sane = False
+                    print(f"WARNING: Balance problem detected. Weapon {n1} has a zero stat.")
+            for stat in [hd2, ed2, pu2, mv2, er2, rr2]:
+                if stat in [0, "0"]:
+                    balancing_sane = False
+                    print(f"WARNING: Balance problem detected. Weapon {n2} has a zero stat.")
+        
+    if balancing_sane is False:
+        if balance_notification == "raise":
+            raise ValueError("ERROR: Weapons are unbalanced. Raising error to prevent build.")
+        else:
+            print("WARNING: Weapons are unbalanced, see build logs.")
+    else:
+        print("INFO: All weapons have passed sanity check.")
+
 def create_blasters(
     blaster_csv: str, 
     variant_csv: str, 
@@ -169,10 +292,10 @@ def create_blasters(
     scaling_rules = make_scaling_rules(scaling_rules_raw)
     
     # Split off override entries
-    #blasters["Overrides"] = blasters["Overrides"].strip("\n").strip("\r")
-    is_base = (blasters["Overrides"].apply(lambda x: True if x == "" or pd.isna(x) else False))
-    base_blasters = blasters[is_base]
-    override_blasters = blasters[~is_base]
+    auto_override_exceptions = ["S Energy"] # <- variants are created for these
+    is_override = blasters["Overrides"].apply(lambda x: False if pd.isna(x) or x == "" else True) + blasters["HP Type"].apply(lambda x: x not in auto_override_exceptions)
+    base_blasters = blasters[~is_override]
+    override_blasters = blasters[is_override]
     
     writable_munition_blocks = OrderedDict()
     writable_gun_blocks = OrderedDict()
@@ -180,14 +303,21 @@ def create_blasters(
     writable_npc_gun_blocks = OrderedDict()
     
     # Iterate over all blasters and variants
+    bd = base_blasters.to_dict(orient = "index").items()
+    od = override_blasters.to_dict(orient = "index").items()
+    vd = variants.to_dict(orient = "index").items()
     
-    for _, blaster in base_blasters.to_dict(orient = "index").items():
+    for b, blaster in bd:
         
-        for _, variant in variants.to_dict(orient = "index").items():
+        for v, variant in vd:
+            
+            # Save the base variant settings to use for overrides
+            if v == 0:
+                base_variant = variant
             
             for multiplicity in ([1, 2, 3] if blaster["HP Type"] == "S Energy" else [1]):
                 
-                munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_equip_blocks(blaster, variant, multiplicity, scaling_rules)
+                munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is_override = False)
                 writable_munition_blocks[munition_name] = munition_block
                 writable_gun_blocks[gun_name] = gun_block
                 writable_npc_munition_blocks[munition_name] = npc_munition_block
@@ -195,9 +325,9 @@ def create_blasters(
                 
                 # TODO: Infocard?
                 
-    for _, override_blaster in override_blasters.to_dict(orient = "index").items():
+    for o, override_blaster in od:
         
-        munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_equip_blocks(override_blaster, variant, multiplicity, scaling_rules)
+        munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(override_blaster, base_variant, 1, scaling_rules, is_override = True)
         writable_munition_blocks[munition_name] = munition_block
         writable_gun_blocks[gun_name] = gun_block
         writable_npc_munition_blocks[munition_name] = npc_munition_block
@@ -205,6 +335,10 @@ def create_blasters(
         
                 # TODO: Infocard?
     
+    # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
+    sanity_check(writable_gun_blocks, writable_munition_blocks)
+    
+    # Write to ini.
     write_ammo_and_guns(pc_blasters_out, writable_munition_blocks, writable_gun_blocks)
     write_ammo_and_guns(npc_blasters_out, writable_npc_munition_blocks, writable_npc_gun_blocks)
     
@@ -213,6 +347,7 @@ def create_blasters(
     # TODO: Edit template so that only non-variant inis are treated regularly, while PC/NPC Blasters (and Aux Weapons?) get variants
     # TODO: generate the following fields and the corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
+    # TODO: Sanity checker
     
 if __name__ == "__main__":
     
