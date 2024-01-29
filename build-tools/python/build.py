@@ -23,6 +23,7 @@ parser.add_argument("--lua_to_thorn", help="Encodes lua to thorn format before c
 parser.add_argument("--ini_to_bini", help="Encodes ini to bini format before copying.", action="store_true")
 parser.add_argument("--csv_to_ini", help="Build selected INI files from CSV.", action="store_true")
 parser.add_argument("--master_sheet", help="This is the master sheet INI files will be generated from. Accepts both a URL or a file path from your machine.")
+parser.add_argument("--ignore_weapon_balance", help="If True, disables the sanity checker when building weapons", action="store_true", default=False)
 parser.add_argument("--no_crc", help="Prevents the script generating a hashmap after copying files.")
 
 args = parser.parse_args()
@@ -41,7 +42,7 @@ if not args.ignore_infocards:
     compile_infocards()
 
 if args.csv_to_ini:
-    generate_inis(master_sheet = args.master_sheet)
+    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance))
 
 if not args.ignore_utf:
     utf_xml_start_time = time.perf_counter() 
@@ -75,7 +76,7 @@ if not args.no_crc:
     generate_hashes()
 
 if args.lua_to_thorn and not args.no_copy:
-     copy_thorn_cleanup_cache()
+    copy_thorn_cleanup_cache()
 
 if args.ini_to_bini:
     ini_bini_start_time = time.perf_counter() 
@@ -85,7 +86,7 @@ if args.ini_to_bini:
     print(f"INI files encoded to BINI in {ini_bini_end_time - ini_bini_start_time:0.4f} seconds")
 
 if args.ini_to_bini and not args.no_copy:
-     copy_bini_cleanup_cache()
+    copy_bini_cleanup_cache()
 
 build_script_end_time = time.perf_counter() 
 print(bcolors.HEADER + f"Build script completed in {build_script_end_time - build_script_start_time:0.4f} seconds" + bcolors.ENDC)

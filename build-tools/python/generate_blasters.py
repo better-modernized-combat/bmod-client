@@ -153,7 +153,7 @@ def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict):
 def sanity_check(
     blasters: dict, 
     munitions: dict,
-    balance_notification: str = "raise",
+    balance_notification: str = "warn",
     check_multiplicity: bool = True,
     check_variants: bool = False,
     check_zeros: bool = True,
@@ -164,7 +164,7 @@ def sanity_check(
     If a gun has stats that are better or equal across the board, compared to a gun of the same multiplicity,
     either print a warning or raise a ValueError.
     
-    balance_notification - Must be 'raise' or 'warn'. If 'raise', raises a ValueError after printing all balance problems to the console. If 'warn', only print.
+    balance_notification - Must be 'raise' or 'warn'. If 'raise', raises a ValueError after printing all balance problems to the console. If 'warn', only print. Detault is 'warn'.
     check_multiplicity - If True, extend the pairings by also comparing each multiplicity. Default is True.
     check_variants - If True, check for all variant pairings whether they are balanced as well. This will usually produce lots of warnings and is thus turned off by default.
     check_zeros - If True, also test if any 0 shows up in a gun stat. If so, count it as unbalanced. Default is True.
@@ -268,7 +268,8 @@ def create_blasters(
     variant_csv: str, 
     scaling_rules_csv: str,
     pc_blasters_out: str,
-    npc_blasters_out: str
+    npc_blasters_out: str,
+    weapon_sanity_check: bool,
     ):
     
     # Get CSVs
@@ -336,7 +337,8 @@ def create_blasters(
                 # TODO: Infocard?
     
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
-    sanity_check(writable_gun_blocks, writable_munition_blocks)
+    if weapon_sanity_check is True:
+        sanity_check(writable_gun_blocks, writable_munition_blocks)
     
     # Write to ini.
     write_ammo_and_guns(pc_blasters_out, writable_munition_blocks, writable_gun_blocks)

@@ -113,7 +113,7 @@ def init_inis(template: dict):
                 for line in sep:
                     out.write(line.strip()+"\n")
 
-def generate_inis(master_sheet: str):
+def generate_inis(master_sheet: str, weapon_sanity_check: bool):
 
     pp = pathlib.Path(__file__).parent
     os.makedirs(pp / "csv_dump", exist_ok = True)
@@ -156,9 +156,12 @@ def generate_inis(master_sheet: str):
             )
         #elif csv.endswith("blasters.ini"): # TODO correct name?
         #    create_blasters(
-        #        blaster_csv = template[csv]["blaster_csv"],
-        #        variant_csv = template[csv]["variant_csv"],
-        #        ini_out_file = template[csv]["ini"],
+        #        blaster_csv = template[csv]["blaster_csv"], 
+        #        variant_csv = template[csv]["variant_csv"], 
+        #        scaling_rules_csv = template[csv]["scaling_rules_csv"],
+        #        pc_blasters_out = template[csv]["pc_blasters_out"],
+        #        npc_blasters_out = template[csv]["npc_blasters_out"],
+        #        weapon_sanity_check = weapon_sanity_check,
         #    )
         else:
             raise NotImplementedError("Stop messing around with the template, please.")
