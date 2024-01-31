@@ -12,19 +12,30 @@ HP_Types = {
     "S Energy": "hp_gun_special_1",
     "M Energy": "hp_gun_special_2",
     "L Energy": "hp_gun_special_3",
+    "L Energy Turret": "hp_turret_special_9" 
 }
 
 HP_Size = {
     "hp_gun_special_1": 1,
     "hp_gun_special_2": 2,
-    "hp_gun_special_3": 3
+    "hp_gun_special_3": 3,
+    "hp_turret_special_9": 3
+}
+
+Infocard_Boilerplate = {
+    "Turret": "This tri-linked housing pairs three <BLASTER_NAME> blasters and a gimballed turret mount, requiring a specialized PD hardpoint to mount.\n",
+    "1x Blaster": "",
+    "2x Blaster": "This twin-linked housing combines two <BLASTER_NAME> blasters into a single fixture, requiring a Medium Energy hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their smaller cousins.\n",
+    "3x Blaster": "This tri-linked housing combines three <BLASTER_NAME> blasters into a single fixture, requiring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are somewhat less energy efficient and accurate than their smaller cousins.\n"
 }
 
 def dfloat(s: str):
-    if isinstance(s, str) and "," in s:
+    if isinstance(s, str):
         return float(s.replace(",", "."))
-    else:
+    elif isinstance(s, int) or isinstance(s, float):
         return float(s)
+    else:
+        raise TypeError(f"dfloat can't be called on type {type(s)}, only float (noop), int, or str.")
 
 def make_scaling_rules(raw_csv: pd.DataFrame):
     one_x_rules = pd.DataFrame({
@@ -36,13 +47,11 @@ def make_scaling_rules(raw_csv: pd.DataFrame):
     rules_dict = dict(zip(updated_rules["Rule"], updated_rules["Entry"]))
     return rules_dict
 
-def create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is_override = False):
+def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, scaling_rules: dict, is_turret: bool, is_override: bool = False):
     
-    # Get nickname from override or construct it
-    if not is_override or isinstance(blaster["Overrides"], float):
-        nickname = f"bm_{blaster['Family Shorthand']}_{blaster['Identifier']}_{multiplicity}x_{variant['Variant Shorthand']}"    
-    else:
-        nickname = blaster["Overrides"]
+    # Turrets are all multiplicity 3, if this ever changes, reminder to FIXME turrets
+    if is_turret and multiplicity != 3:
+        raise NotImplementedError("Time to think about how to do turrets properly.")
     
     # Hash out calculated values
     if "\n" in blaster["Damage / rd"]:
@@ -66,6 +75,20 @@ def create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is
     
     cost = dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])
     
+    # HP Type guessing
+    if is_turret:
+        hp_type_guess = HP_Types["L Energy Turret"] # FIXME turrets
+        mt_name = "3xT"
+    else:
+        hp_type_guess = HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]
+        mt_name = f"{multiplicity}x"
+        
+    # Get nickname from override or construct it
+    if not is_override or isinstance(blaster["Overrides"], float):
+        nickname = f"bm_{blaster['Family Shorthand']}_{blaster['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"    
+    else:
+        nickname = blaster["Overrides"]
+    
     # Create ammunition block
     munition_block = OrderedDict({
         "nickname": f"{nickname}_ammo",
@@ -88,8 +111,8 @@ def create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is
         "nickname": nickname,
         "ids_name": blaster["IDS Name"],      #TODO: Find/make the appropriate infocard/name on the fly
         "ids_info": str(int(blaster["IDS Name"])+1000),
-        "DA_archetype": blaster["Gun Archetype"],
-        "material_library": blaster["Material Library"],
+        "DA_archetype": (blaster["Gun Archetype"] if not is_turret else "BMOD\EQUIPMENT\MODELS\TURRETS\bm_f_fleet_turret_twin.cmp"), # FIXME turrets
+        "material_library": (blaster["Material Library"] if not is_turret else "material_library = equipment\models\li_turret.mat"), # FIXME turrets
         "HP_child": "HPConnect",
         "hit_pts": blaster["Gun HP"],
         "explosion_resistance": 0,
@@ -98,7 +121,7 @@ def create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is
         "child_impulse": 80,
         "volume": 0 * multiplicity,
         "mass": 10 * multiplicity,
-        "hp_gun_type": (HP_Types[blaster["HP Type"]] if is_override else HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]),
+        "hp_gun_type": (HP_Types[blaster["HP Type"]] if is_override else hp_type_guess),
         "damage_per_fire": 0,
         "power_usage": power_usage,
         "refire_delay": 1. / refire_rate,
@@ -116,6 +139,8 @@ def create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is
         "LODranges": "0, 20, 60, 100",
         "; cost": cost,
     })
+    if not pd.isna(blaster["Dispersion Angle"]) and not blaster["Dispersion Angle"] == "":
+        gun_block["dispersion_angle"] = dfloat(blaster["Dispersion Angle"])
     
     # Create NPC blocks
     npc_ammo_nickname = nickname[:3]+"npc_"+nickname[3:]+"_ammo"
@@ -183,13 +208,24 @@ def sanity_check(
         n1, n2 = blasters[b1]["nickname"], blasters[b2]["nickname"]
         
         # Skip variants?
-        if check_variants is False and ("x_x" in n1 or "x_x" in n2):
+        if check_variants is False and ("x_x" in n1 or "xT_x" in n1 or "x_x" in n2 or "xT_x" in n2):
             continue
         
-        # Skip weapon pairings that have different multiplicity?
-        for m in [1, 2, 3]:
-            if check_multiplicity is False and f"_{m}x" in n1 and not f"_{m}x" in n2:
-                continue
+        # Skip weapon pairings that have ...
+        for m in ["3xT", "1x", "2x", "3x"]: # FIXME turrets
+            if m in n1:
+                m1 = m
+                break
+        for m in ["3xT", "1x", "2x", "3x"]: # FIXME turrets
+            if m in n2:
+                m2 = m
+                break
+        # different multiplicity?
+        if check_multiplicity is False and (m in n1 and not m in n2):
+            continue
+        # the same base weapon, and are just 3x and turret, as those are naturally equal
+        if ((m1 == "3x" and m2 == "3xT") or (m1 == "3xT" and m1 == "3x")) and n1.split(m1)[0] == n2.split(m2)[0]:
+            continue
         
         hd1, hd2 = munitions[b1+"_ammo"]["hull_damage"], munitions[b2+"_ammo"]["hull_damage"]
         ed1, ed2 = munitions[b1+"_ammo"]["energy_damage"], munitions[b2+"_ammo"]["energy_damage"]
@@ -316,9 +352,16 @@ def create_blasters(
             if v == 0:
                 base_variant = variant
             
-            for multiplicity in ([1, 2, 3] if blaster["HP Type"] == "S Energy" else [1]):
+            for multiplicity, is_turret in ([(1, False), (2, False), (3, False), (3, True)] if blaster["HP Type"] == "S Energy" else [(1, False)]):
                 
-                munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(blaster, variant, multiplicity, scaling_rules, is_override = False)
+                munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(
+                    blaster = blaster, 
+                    variant = variant, 
+                    multiplicity = multiplicity, 
+                    scaling_rules = scaling_rules, 
+                    is_turret = is_turret,
+                    is_override = False
+                    )
                 writable_munition_blocks[munition_name] = munition_block
                 writable_gun_blocks[gun_name] = gun_block
                 writable_npc_munition_blocks[munition_name] = npc_munition_block
@@ -328,7 +371,14 @@ def create_blasters(
                 
     for o, override_blaster in od:
         
-        munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(override_blaster, base_variant, 1, scaling_rules, is_override = True)
+        munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(
+            blaster = override_blaster, 
+            variant = base_variant,
+            multiplicity = 1,
+            scaling_rules = scaling_rules,
+            is_turret = ("Turret" in blaster["HP TYPE"]), # FIXME turrets
+            is_override = True
+            )
         writable_munition_blocks[munition_name] = munition_block
         writable_gun_blocks[gun_name] = gun_block
         writable_npc_munition_blocks[munition_name] = npc_munition_block
@@ -359,6 +409,7 @@ if __name__ == "__main__":
     parser.add_argument("--scaling_rules_csv", dest = "scaling_rules_csv", type = str)
     parser.add_argument("--pc_blasters_out", dest = "pc_blasters_out", type = str)
     parser.add_argument("--npc_blasters_out", dest = "npc_blasters_out", type = str)
+    parser.add_argument("--weapon_sanity_check", dest = "weapon_sanity_check", action = "store_true", default = False)
     
     args = parser.parse_args()
     
@@ -367,5 +418,6 @@ if __name__ == "__main__":
         variant_csv = args.variant_csv,
         scaling_rules_csv = args.scaling_rules_csv,
         pc_blasters_out = args.pc_blasters_out,
-        npc_blasters_out = args.npc_blasters_out
+        npc_blasters_out = args.npc_blasters_out,
+        weapon_sanity_check = args.weapon_sanity_check,
         )
