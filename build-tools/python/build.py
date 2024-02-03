@@ -40,6 +40,7 @@ else:
 
 if not args.ignore_infocards:
     compile_infocards()
+    compile_infocards2()
 
 if args.csv_to_ini:
     generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance))
