@@ -6,28 +6,13 @@ from tqdm.auto import tqdm
 
 from argparse import ArgumentParser
 
+from boilerplate_text import *
 from ini_utils import CSVError, clean_unnamed_wip_empty, write_block
+from generate_infocards import FRC_Entry, generate_infocard_entry, write_infocards_to_frc
 
-HP_Types = {
-    "S Energy": "hp_gun_special_1",
-    "M Energy": "hp_gun_special_2",
-    "L Energy": "hp_gun_special_3",
-    "L Energy Turret": "hp_turret_special_9" 
-}
-
-HP_Size = {
-    "hp_gun_special_1": 1,
-    "hp_gun_special_2": 2,
-    "hp_gun_special_3": 3,
-    "hp_turret_special_9": 3
-}
-
-Infocard_Boilerplate = {
-    "Turret": "This tri-linked housing pairs three <BLASTER_NAME> blasters and a gimballed turret mount, requiring a specialized PD hardpoint to mount.\n",
-    "1x Blaster": "",
-    "2x Blaster": "This twin-linked housing combines two <BLASTER_NAME> blasters into a single fixture, requiring a Medium Energy hardpoint to mount. Twin-linked blasters pack double the power into every shot, but are slightly less energy efficient and accurate than their smaller cousins.\n",
-    "3x Blaster": "This tri-linked housing combines three <BLASTER_NAME> blasters into a single fixture, requiring a Large Energy hardpoint to mount. Tri-linked blasters pack triple the power into every shot, but are somewhat less energy efficient and accurate than their smaller cousins.\n"
-}
+# FIXME turrets
+# Currently supported multiplicities
+supported_multiplicities = [(1, False), (2, False), (3, False), (3, True)]
 
 def dfloat(s: str):
     if isinstance(s, str):
@@ -47,7 +32,7 @@ def make_scaling_rules(raw_csv: pd.DataFrame):
     rules_dict = dict(zip(updated_rules["Rule"], updated_rules["Entry"]))
     return rules_dict
 
-def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, scaling_rules: dict, is_turret: bool, is_override: bool = False):
+def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, scaling_rules: dict, idx: int, is_turret: bool, is_override: bool = False):
     
     # Turrets are all multiplicity 3, if this ever changes, reminder to FIXME turrets
     if is_turret and multiplicity != 3:
@@ -109,8 +94,8 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
     # Create gun block
     gun_block = OrderedDict({
         "nickname": nickname,
-        "ids_name": blaster["IDS Name"],      #TODO: Find/make the appropriate infocard/name on the fly
-        "ids_info": str(int(blaster["IDS Name"])+1000),
+        "ids_name": idx,      #TODO: Find/make the appropriate infocard/name on the fly
+        "ids_info": idx+1,
         "DA_archetype": (blaster["Gun Archetype"] if not is_turret else "BMOD\EQUIPMENT\MODELS\TURRETS\bm_f_fleet_turret_twin.cmp"), # FIXME turrets
         "material_library": (blaster["Material Library"] if not is_turret else "material_library = equipment\models\li_turret.mat"), # FIXME turrets
         "HP_child": "HPConnect",
@@ -305,6 +290,7 @@ def create_blasters(
     scaling_rules_csv: str,
     pc_blasters_out: str,
     npc_blasters_out: str,
+    blaster_infocards_out: str,
     weapon_sanity_check: bool,
     ):
     
@@ -338,6 +324,7 @@ def create_blasters(
     writable_gun_blocks = OrderedDict()
     writable_npc_munition_blocks = OrderedDict()
     writable_npc_gun_blocks = OrderedDict()
+    writable_infocards = OrderedDict()
     
     # Iterate over all blasters and variants
     bd = base_blasters.to_dict(orient = "index").items()
@@ -350,32 +337,54 @@ def create_blasters(
             
             # Save the base variant settings to use for overrides
             if v == 0:
-                base_variant = variant
+                base_variant = deepcopy(variant)
             
-            for multiplicity, is_turret in ([(1, False), (2, False), (3, False), (3, True)] if blaster["HP Type"] == "S Energy" else [(1, False)]):
+            for n, (multiplicity, is_turret) in enumerate(supported_multiplicities if blaster["HP Type"] == "S Energy" else [(1, False)]):
+                
+                i_counter = int(blaster["IDS Name"]) + 4 * (v*len(supported_multiplicities) + n)
                 
                 munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(
                     blaster = blaster, 
                     variant = variant, 
                     multiplicity = multiplicity, 
-                    scaling_rules = scaling_rules, 
+                    scaling_rules = scaling_rules,
+                    idx = i_counter,
                     is_turret = is_turret,
-                    is_override = False
+                    is_override = False,
                     )
                 writable_munition_blocks[munition_name] = munition_block
                 writable_gun_blocks[gun_name] = gun_block
                 writable_npc_munition_blocks[munition_name] = npc_munition_block
                 writable_npc_gun_blocks[gun_name] = npc_gun_block
                 
-                # TODO: Infocard?
+                # Generate Infocard FRC entries
+                display_name, formatted_infocard_content = generate_infocard_entry(
+                    name = blaster["Weapon Name"],
+                    long_name = blaster["Long Name"],
+                    info = blaster["Base Infocard"],
+                    is_turret = is_turret,
+                    mp = multiplicity,
+                    mp_info = infocard_boilerplate[(multiplicity, is_turret)],
+                    variant_sh = variant["Variant Shorthand"],
+                    variant_desc = variant["Variant Description"],
+                    variant_info = variant["Variant Infocard Paragraph"],
+                    variant_display = variant["Display Name Suffix"],
+                )
+                writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
+                writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
+                writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
+                writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
                 
     for o, override_blaster in od:
+        
+        i_counter = int(blaster["IDS Name"]) + 4 * o
         
         munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(
             blaster = override_blaster, 
             variant = base_variant,
             multiplicity = 1,
             scaling_rules = scaling_rules,
+            idx = i_counter,
             is_turret = ("Turret" in blaster["HP TYPE"]), # FIXME turrets
             is_override = True
             )
@@ -384,22 +393,38 @@ def create_blasters(
         writable_npc_munition_blocks[munition_name] = npc_munition_block
         writable_npc_gun_blocks[gun_name] = npc_gun_block
         
-                # TODO: Infocard?
+        # Generate Infocard FRC entries
+        display_name, formatted_infocard_content = generate_infocard_entry(
+            name = blaster["Weapon Name"],
+            long_name = blaster["Long Name"],
+            info = blaster["Base Infocard"],
+            is_turret = is_turret,
+            mp = multiplicity,
+            mp_info = infocard_boilerplate[(multiplicity, is_turret)],
+            variant_sh = variant["Variant Shorthand"],
+            variant_desc = variant["Variant Description"],
+            variant_info = variant["Variant Infocard Paragraph"],
+            variant_display = variant["Display Name Suffix"],
+        )
+        writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
+        writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
+        writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
+        writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
     
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
         sanity_check(writable_gun_blocks, writable_munition_blocks)
     
-    # Write to ini.
+    # Write to inis/frc.
     write_ammo_and_guns(pc_blasters_out, writable_munition_blocks, writable_gun_blocks)
     write_ammo_and_guns(npc_blasters_out, writable_npc_munition_blocks, writable_npc_gun_blocks)
+    write_infocards_to_frc(writable_infocards, blaster_infocards_out)
     
-    # TODO: Make infocards (calculate DPS, EPS, IDS Name, IDS Info, NPC/PC)
     # TODO: Make goods entries
-    # TODO: Edit template so that only non-variant inis are treated regularly, while PC/NPC Blasters (and Aux Weapons?) get variants
-    # TODO: generate the following fields and the corresponding files based on the name of the gun:
+    # TODO: Edit template to separate variant-able gear and non-variantable gear
+    # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
-    # TODO: Sanity checker
+    # TODO: Add every generated variant to a specifiable store, presumably Detroit/Manhattan by default
     
 if __name__ == "__main__":
     
@@ -409,6 +434,7 @@ if __name__ == "__main__":
     parser.add_argument("--scaling_rules_csv", dest = "scaling_rules_csv", type = str)
     parser.add_argument("--pc_blasters_out", dest = "pc_blasters_out", type = str)
     parser.add_argument("--npc_blasters_out", dest = "npc_blasters_out", type = str)
+    parser.add_argument("--blaster_infocards_out", dest = "blaster_infocards_out", type = str)
     parser.add_argument("--weapon_sanity_check", dest = "weapon_sanity_check", action = "store_true", default = False)
     
     args = parser.parse_args()
@@ -419,5 +445,6 @@ if __name__ == "__main__":
         scaling_rules_csv = args.scaling_rules_csv,
         pc_blasters_out = args.pc_blasters_out,
         npc_blasters_out = args.npc_blasters_out,
+        blaster_infocards_out = args.blaster_infocards_out,
         weapon_sanity_check = args.weapon_sanity_check,
         )
