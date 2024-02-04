@@ -3,6 +3,7 @@ from collections import OrderedDict
 from copy import deepcopy
 from itertools import combinations
 from tqdm.auto import tqdm
+import re
 
 from argparse import ArgumentParser
 
@@ -210,9 +211,21 @@ def write_blaster_goods(
             out.write("\n\n")
 
 def fill_admin_store(
-    admin_store_location: str
+    admin_store_location: str,
+    admin_store_items: dict,
 ):
-    pass # TODO
+    
+    with open(admin_store_location, "r") as file:
+        
+        content = file.read()
+        store_pattern = "(?<=;;; ADMIN STORE ;;;\n)((.|\n)*?)(?=;;; ADMIN STORE ;;;\n)"
+        store = [f"MarketGood = {nickname}, 0, -1, 10, 10, 0, 1" for nickname in admin_store_items]
+        replacement = "\n".join(store)+"\n"
+        new_content = re.sub(store_pattern, replacement, content)
+        
+    with open(admin_store_location, "w") as file:
+        
+        file.write(new_content)
 
 def sanity_check(
     blasters: dict, 
@@ -485,10 +498,12 @@ def create_blasters(
     write_infocards_to_frc(blaster_infocards_out, writable_infocards)
     write_blaster_goods(blaster_goods_out, writable_goods)
     
+    # Fill admin store with goodies (for testing)
+    fill_admin_store("mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini", writable_gun_blocks)
+    
     # TODO: Edit template to separate variant-able gear and non-variantable gear
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
-    # TODO: Add every generated variant to a specifiable store, presumably Detroit/Manhattan by default
     
 if __name__ == "__main__":
     
