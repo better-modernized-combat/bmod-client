@@ -58,11 +58,11 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
     refire_rate = dfloat(blaster["Refire (rds / s)"]) * (1 + 0.01*dfloat(variant["Variant Refire Rate +%"])) # /s
     lifetime = effective_range / muzzle_velocity
     
-    cost = dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])
+    cost = int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"]))
     
     # HP Type guessing
     if is_turret:
-        hp_type_guess = HP_Types["L Energy Turret"] # FIXME turrets
+        hp_type_guess = HP_Types["PD Turret"] # FIXME turrets
         mt_name = "3xT"
     else:
         hp_type_guess = HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]
@@ -159,6 +159,60 @@ def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict):
             for key, value in gun_block.items():
                 out.write(f"{key} = {str(value)}\n")
             out.write("\n")
+
+def create_good(
+    blaster: dict,
+    variant: dict,
+    internal_name: str,
+    ids_name: int,
+    mp: int,
+    is_turret: bool
+):
+    
+    # Guess item icon, if necessary
+    if pd.isna(blaster["Item Icon"]) or blaster["Item Icon"] == "":
+        if any(x in variant["Display Name Suffix"] for x in ["[+]", "[♠]"]):
+            pnm = "-plus"
+        elif "[-]" in variant["Display Name Suffix"]:
+            pnm = "-minus"
+        else:
+            pnm = ""
+        size = {1: "s", 2: "m", 3: "l"}[mp]
+        item_icon = f"BMOD\\EQUIPMENT\\ICONS\\WEAPONS\\BLASTERS\\blaster-{'fleet-' if is_turret else ''}{size}{pnm}.3db"
+    else:
+        item_icon = blaster["Item Icon"]
+    
+    good = OrderedDict({
+        "nickname": internal_name,
+        "equipment": internal_name,
+        "category": "equipment",
+        "price": int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])),
+        "item_icon": item_icon,
+        "combinable": False,
+        "ids_name": ids_name,
+        "shop_archetype": blaster["Gun Archetype"],
+        "material_library": blaster["Material Library"]
+    })
+    
+    return good
+
+def write_blaster_goods(
+    goods_out: str,
+    goods: dict,
+):
+    with open(goods_out, "w") as out:
+        for line in autogen_comment:
+            out.write(line+"\n")
+        out.write("\n")
+        for idx, good in goods.items():
+            out.write("[Good]\n")
+            out.writelines([f"{key} = {val}\n" for key, val in good.items()])
+            out.write("\n\n")
+
+def fill_admin_store(
+    admin_store_location: str
+):
+    pass # TODO
 
 def sanity_check(
     blasters: dict, 
@@ -291,6 +345,7 @@ def create_blasters(
     pc_blasters_out: str,
     npc_blasters_out: str,
     blaster_infocards_out: str,
+    blaster_goods_out: str,
     weapon_sanity_check: bool,
     ):
     
@@ -325,6 +380,7 @@ def create_blasters(
     writable_npc_munition_blocks = OrderedDict()
     writable_npc_gun_blocks = OrderedDict()
     writable_infocards = OrderedDict()
+    writable_goods = OrderedDict()
     
     # Iterate over all blasters and variants
     bd = base_blasters.to_dict(orient = "index").items()
@@ -372,8 +428,12 @@ def create_blasters(
                 )
                 writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
                 writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
-                writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
-                writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
+                writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)                 # NPC version
+                writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)   # NPC version
+                
+                # Generate blaster goods entries
+                writable_goods[i_counter] = create_good(blaster = blaster, variant = variant, internal_name = gun_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
+                writable_goods[i_counter+2] = create_good(blaster = blaster, variant = variant, internal_name = npc_gun_block["nickname"], ids_name = i_counter+2, mp = multiplicity, is_turret = is_turret) # NPC version
                 
     for o, override_blaster in od:
         
@@ -410,7 +470,11 @@ def create_blasters(
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
         writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = blaster["IDS Name"], content = display_name)
         writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = blaster["IDS Name"], content = formatted_infocard_content)
-    
+        
+        # Generate blaster goods entries
+        writable_goods[i_counter] = create_good(blaster = blaster, variant = variant, internal_name = gun_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
+        writable_goods[i_counter] = create_good(blaster = blaster, variant = variant, internal_name = npc_gun_block["nickname"], ids_name = i_counter + 2, mp = multiplicity, is_turret = is_turret) # NPC version
+                
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
         sanity_check(writable_gun_blocks, writable_munition_blocks)
@@ -418,9 +482,9 @@ def create_blasters(
     # Write to inis/frc.
     write_ammo_and_guns(pc_blasters_out, writable_munition_blocks, writable_gun_blocks)
     write_ammo_and_guns(npc_blasters_out, writable_npc_munition_blocks, writable_npc_gun_blocks)
-    write_infocards_to_frc(writable_infocards, blaster_infocards_out)
+    write_infocards_to_frc(blaster_infocards_out, writable_infocards)
+    write_blaster_goods(blaster_goods_out, writable_goods)
     
-    # TODO: Make goods entries
     # TODO: Edit template to separate variant-able gear and non-variantable gear
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
@@ -435,6 +499,7 @@ if __name__ == "__main__":
     parser.add_argument("--pc_blasters_out", dest = "pc_blasters_out", type = str)
     parser.add_argument("--npc_blasters_out", dest = "npc_blasters_out", type = str)
     parser.add_argument("--blaster_infocards_out", dest = "blaster_infocards_out", type = str)
+    parser.add_argument("--blaster_goods_out", dest = "blaster_goods_out", type = str)
     parser.add_argument("--weapon_sanity_check", dest = "weapon_sanity_check", action = "store_true", default = False)
     
     args = parser.parse_args()
@@ -446,5 +511,6 @@ if __name__ == "__main__":
         pc_blasters_out = args.pc_blasters_out,
         npc_blasters_out = args.npc_blasters_out,
         blaster_infocards_out = args.blaster_infocards_out,
+        blaster_goods_out = args.blaster_goods_out,
         weapon_sanity_check = args.weapon_sanity_check,
         )

@@ -18,11 +18,11 @@ class FRC_Entry:
         self.content = content
 
 def write_infocards_to_frc(
+    infocards_out: str,
     infocards: dict,
-    file: str
 ):
     
-    with open(file, "w", encoding = "utf-16") as out:
+    with open(infocards_out, "w", encoding = "utf-16") as out:
         
         #out.write("S 524291 File Starts Here")
         out.write("S 600000 File Starts Here\n")
