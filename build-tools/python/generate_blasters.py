@@ -65,6 +65,9 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
     if is_turret:
         hp_type_guess = HP_Types["PD Turret"] # FIXME turrets
         mt_name = "3xT"
+    elif blaster["HP Type"] != "S Energy":
+        hp_type_guess = HP_Types[blaster["HP Type"]]
+        mt_name = "1x"
     else:
         hp_type_guess = HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]
         mt_name = f"{multiplicity}x"
@@ -146,9 +149,8 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, gun_block, npc_gun_block
 
 def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict):
-        
-    # Assume file exists already, append to file
-    with open(ini_out_file, "a", encoding = "utf-8") as out:
+    
+    with open(ini_out_file, "w", encoding = "utf-8") as out:
         for munition_name, munition_block in ammo_dict.items():
             out.write(f"[Munition]\n")
             for key, value in munition_block.items():
@@ -384,7 +386,7 @@ def create_blasters(
     
     # Split off override entries
     auto_override_exceptions = ["S Energy"] # <- variants are created for these
-    is_override = blasters["Overrides"].apply(lambda x: False if pd.isna(x) or x == "" else True) + blasters["HP Type"].apply(lambda x: x not in auto_override_exceptions)
+    is_override = blasters["Overrides"].apply(lambda x: False if pd.isna(x) or x == "" else True)
     base_blasters = blasters[~is_override]
     override_blasters = blasters[is_override]
     
@@ -408,9 +410,10 @@ def create_blasters(
             if v == 0:
                 base_variant = deepcopy(variant)
             
-            for n, (multiplicity, is_turret) in enumerate(supported_multiplicities if blaster["HP Type"] == "S Energy" else [(1, False)]):
+            for n, (multiplicity, is_turret) in enumerate(supported_multiplicities if blaster["HP Type"] == "S Energy" else [(1, blaster["HP Type"] == "PD Turret")]): # FIXME Turrets
                 
                 i_counter = int(blaster["IDS Name"]) + 4 * (v*len(supported_multiplicities) + n)
+                print(i_counter)
                 
                 munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(
                     blaster = blaster, 
@@ -458,7 +461,7 @@ def create_blasters(
             multiplicity = 1,
             scaling_rules = scaling_rules,
             idx = i_counter,
-            is_turret = ("Turret" in blaster["HP TYPE"]), # FIXME turrets
+            is_turret = (override_blaster["HP Type"] == "PD Turret"), # FIXME turrets
             is_override = True
             )
         writable_munition_blocks[munition_name] = munition_block
