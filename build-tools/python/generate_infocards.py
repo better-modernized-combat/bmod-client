@@ -24,8 +24,8 @@ def write_infocards_to_frc(
     
     with open(infocards_out, "w", encoding = "utf-16") as out:
         
-        #out.write("S 524291 File Starts Here")
-        out.write("S 600000 File Starts Here\n")
+        out.write("S 534464 File Starts Here")
+        #out.write("S 600000 File Starts Here\n")
         
         for idx, entry in infocards.items():
             if entry.typus == "S":

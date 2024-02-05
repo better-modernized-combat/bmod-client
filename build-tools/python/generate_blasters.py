@@ -148,7 +148,7 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, gun_block, npc_gun_block
 
-def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict):
+def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict, npc_ammo_dict, npc_gun_dict):
     
     with open(ini_out_file, "w", encoding = "utf-8") as out:
         for munition_name, munition_block in ammo_dict.items():
@@ -158,6 +158,18 @@ def write_ammo_and_guns(ini_out_file, ammo_dict, gun_dict):
                 out.write(f"{key} = {str(value)}\n")
             out.write("\n")
         for gun_name, gun_block in gun_dict.items():
+            out.write(f"[Gun]\n")
+            for key, value in gun_block.items():
+                out.write(f"{key} = {str(value)}\n")
+            out.write("\n")
+            
+        for munition_name, munition_block in npc_ammo_dict.items():
+            out.write(f"[Munition]\n")
+            for key, value in munition_block.items():
+                #print(f"{key} = {str(value)}\n")
+                out.write(f"{key} = {str(value)}\n")
+            out.write("\n")
+        for gun_name, gun_block in npc_gun_dict.items():
             out.write(f"[Gun]\n")
             for key, value in gun_block.items():
                 out.write(f"{key} = {str(value)}\n")
@@ -358,7 +370,6 @@ def create_blasters(
     variant_csv: str, 
     scaling_rules_csv: str,
     pc_blasters_out: str,
-    npc_blasters_out: str,
     blaster_goods_out: str,
     blaster_infocards_out: str,
     weapon_sanity_check: bool,
@@ -497,8 +508,7 @@ def create_blasters(
         sanity_check(writable_gun_blocks, writable_munition_blocks)
     
     # Write to inis/frc.
-    write_ammo_and_guns(pc_blasters_out, writable_munition_blocks, writable_gun_blocks)
-    write_ammo_and_guns(npc_blasters_out, writable_npc_munition_blocks, writable_npc_gun_blocks)
+    write_ammo_and_guns(pc_blasters_out, writable_munition_blocks, writable_gun_blocks, writable_npc_munition_blocks, writable_npc_gun_blocks)
     write_infocards_to_frc(blaster_infocards_out, writable_infocards)
     write_blaster_goods(blaster_goods_out, writable_goods)
     
@@ -516,7 +526,6 @@ if __name__ == "__main__":
     parser.add_argument("--variant_csv", dest = "variant_csv", type = str)
     parser.add_argument("--scaling_rules_csv", dest = "scaling_rules_csv", type = str)
     parser.add_argument("--pc_blasters_out", dest = "pc_blasters_out", type = str)
-    parser.add_argument("--npc_blasters_out", dest = "npc_blasters_out", type = str)
     parser.add_argument("--blaster_goods_out", dest = "blaster_goods_out", type = str)
     parser.add_argument("--blaster_infocards_out", dest = "blaster_infocards_out", type = str)
     parser.add_argument("--weapon_sanity_check", dest = "weapon_sanity_check", action = "store_true", default = False)
@@ -528,7 +537,6 @@ if __name__ == "__main__":
         variant_csv = args.variant_csv,
         scaling_rules_csv = args.scaling_rules_csv,
         pc_blasters_out = args.pc_blasters_out,
-        npc_blasters_out = args.npc_blasters_out,
         blaster_goods_out = args.blaster_goods_out,
         blaster_infocards_out = args.blaster_infocards_out,
         weapon_sanity_check = args.weapon_sanity_check,

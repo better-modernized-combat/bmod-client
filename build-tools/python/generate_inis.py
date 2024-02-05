@@ -141,7 +141,6 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 variant_csv = template[csv]["variants_in"], 
                 scaling_rules_csv = template[csv]["scalings_in"],
                 pc_blasters_out = template[csv]["pc_blasters_out"],
-                npc_blasters_out = template[csv]["npc_blasters_out"],
                 blaster_goods_out = template[csv]["blaster_goods_out"],
                 blaster_infocards_out = template[csv]["blaster_infocards_out"],
                 weapon_sanity_check = weapon_sanity_check,

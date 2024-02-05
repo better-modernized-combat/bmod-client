@@ -15,14 +15,6 @@
         ]
     },
     {
-        "sheetName": "BMOD Player Fleet Blasters",
-        "sheetContents": [
-            "bm_f_blst_gn.ini",
-            "bm_f_blst_mn.ini",
-            "bm_f_blst_gd.ini"
-        ]
-    },
-    {
         "sheetName": "Player Aux Weapons (Guns)",
         "sheetContents": [
             "bm_agun_gn.ini",
@@ -98,9 +90,6 @@
             "npc_shiparch.ini",
             "npc_shiparch_simple.ini",
             "npc_shiparch_collisiongroup.ini",
-            "bm_npc_blst_mn.ini",
-            "bm_npc_blst_gn.ini",
-            "bm_npc_blst_gd.ini",
             "bm_cmdt_gd.ini",
             "bm_cmdt_eq.ini"
         ]

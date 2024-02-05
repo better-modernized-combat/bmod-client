@@ -4,7 +4,6 @@
         "variants_in": "./build-tools/python/csv_dump/Blaster Variant Rules.csv",
         "scalings_in": "./build-tools/python/csv_dump/Blaster Scaling Rules.csv",
         "pc_blasters_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
-        "npc_blasters_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster_npc.ini",
         "blaster_goods_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
         "blaster_infocards_out": "./mod-assets/blaster_infocard_imports.frc"
     },
