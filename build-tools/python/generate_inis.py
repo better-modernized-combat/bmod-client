@@ -164,7 +164,7 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
             raise NotImplementedError("Stop messing around with the template, please.")
 
     print("Deleting temporary CSV dump...")
-    #shutil.rmtree(pp / "csv_dump")
+    shutil.rmtree(pp / "csv_dump")
     print("Done.")
 
 if __name__ == "__main__":
