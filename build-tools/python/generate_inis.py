@@ -56,13 +56,18 @@ def get_sheet_tab_names(pp: pathlib.Path):
 def init_inis(template: dict):
 
     ini_files = [
-        (template[csv]["ini"], 
-        template[csv].get("static_ini_content", []),
-        template[csv].get("old_content", None))
+        (
+            template[csv].get("ini", None), 
+            template[csv].get("static_ini_content", []),
+            template[csv].get("old_content", None)
+        )
         for csv in template
-        ]
+    ]
 
     for file, *_ in ini_files:
+        # If file is None, its a special template entry, ignore
+        if file is None:
+            continue
         # Delete files
         if os.path.exists(file):
             os.remove(file)
@@ -75,12 +80,18 @@ def init_inis(template: dict):
                 out.write(line+"\n")
             out.write("\n")
     for file, static_ini_content, _ in ini_files:
+        # If file is None, its a special template entry, ignore
+        if file is None:
+            continue
         # First, make one pass to write static ini content
         with open(file, "a") as out:
             for line in static_ini_content:
                 out.write(line.strip()+"\n")
             out.write("\n")
     for file, _, old_content in ini_files:
+        # If file is None, its a special template entry, ignore
+        if file is None:
+            continue
         # Second, make one pass to write old content from separately kept files (such as vanilla ships)
         if old_content:
             with open(file, "a") as out, open(old_content, "r") as old:
@@ -123,33 +134,38 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
 
     print("Populating inis ...")
     for csv in template:
-        if csv.endswith(".csv"):
-            csv_to_ini(
-                csv_file = csv,
-                ini_out_file = template[csv]["ini"],
-                block_name = template[csv]["block_name"]
-                )
-        elif csv.endswith("shiparch.ini"):
+        # Special ini
+        if csv == "BLASTERS":
+            create_blasters(
+                blaster_csv = template[csv]["blasters_in"], 
+                variant_csv = template[csv]["variants_in"], 
+                scaling_rules_csv = template[csv]["scalings_in"],
+                pc_blasters_out = template[csv]["pc_blasters_out"],
+                npc_blasters_out = template[csv]["npc_blasters_out"],
+                blaster_goods_out = template[csv]["blaster_goods_out"],
+                blaster_infocards_out = template[csv]["blaster_infocards_out"],
+                weapon_sanity_check = weapon_sanity_check,
+            )
+        # Special ini
+        elif csv.endswith("SHIPARCH"):
             may_shiparch_perish_under_my_wrathful_gaze(
                 ship_csv = template[csv]["ship_csv"],
                 simples_csv = template[csv]["simples_csv"],
                 cgroups_csv = template[csv]["cgroups_csv"],
                 ini_out_file = template[csv]["ini"],
             )
-        #elif csv.endswith("blasters.ini"): # TODO correct name?
-        #    create_blasters(
-        #        blaster_csv = template[csv]["blaster_csv"], 
-        #        variant_csv = template[csv]["variant_csv"], 
-        #        scaling_rules_csv = template[csv]["scaling_rules_csv"],
-        #        pc_blasters_out = template[csv]["pc_blasters_out"],
-        #        npc_blasters_out = template[csv]["npc_blasters_out"],
-        #        weapon_sanity_check = weapon_sanity_check,
-        #    )
+        # All regular inis
+        elif csv.endswith(".csv"):
+            csv_to_ini(
+                csv_file = csv,
+                ini_out_file = template[csv]["ini"],
+                block_name = template[csv]["block_name"]
+                )
         else:
             raise NotImplementedError("Stop messing around with the template, please.")
 
     print("Deleting temporary CSV dump...")
-    shutil.rmtree(pp / "csv_dump")
+    #shutil.rmtree(pp / "csv_dump")
     print("Done.")
 
 if __name__ == "__main__":

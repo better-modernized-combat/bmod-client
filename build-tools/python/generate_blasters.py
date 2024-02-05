@@ -87,9 +87,9 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
         "hull_damage": hull_damage,
         "energy_damage": energy_damage,
         "weapon_type": blaster["Weapon Type"],
-        "one_shot_sound": f"{blaster['Fire Sound']}{variant['Variant Audio Shorthand']}",
+        "one_shot_sound": f"{blaster['Fire Sound']}", # TODO: generate and use {variant['Variant Audio Shorthand']}
         "munition_hit_effect": blaster["Hit Effect"],
-        "const_effect": f"{blaster['Projectile Effect']}{variant['Variant Visual Shorthand']}",
+        "const_effect": f"{blaster['Projectile Effect']}", # TODO: generate and use {variant['Variant Visual Shorthand']}
         "lifetime": lifetime,
         "force_gun_ori": "false",
         "mass": 1
@@ -359,8 +359,8 @@ def create_blasters(
     scaling_rules_csv: str,
     pc_blasters_out: str,
     npc_blasters_out: str,
-    blaster_infocards_out: str,
     blaster_goods_out: str,
+    blaster_infocards_out: str,
     weapon_sanity_check: bool,
     ):
     
@@ -385,7 +385,6 @@ def create_blasters(
     scaling_rules = make_scaling_rules(scaling_rules_raw)
     
     # Split off override entries
-    auto_override_exceptions = ["S Energy"] # <- variants are created for these
     is_override = blasters["Overrides"].apply(lambda x: False if pd.isna(x) or x == "" else True)
     base_blasters = blasters[~is_override]
     override_blasters = blasters[is_override]
@@ -402,6 +401,9 @@ def create_blasters(
     od = override_blasters.to_dict(orient = "index").items()
     vd = variants.to_dict(orient = "index").items()
     
+    #print("IDS GO BRR")
+    #print(blasters[["Weapon Name", "IDS Name", "Overrides"]])
+    
     for b, blaster in bd:
         
         for v, variant in vd:
@@ -413,7 +415,6 @@ def create_blasters(
             for n, (multiplicity, is_turret) in enumerate(supported_multiplicities if blaster["HP Type"] == "S Energy" else [(1, blaster["HP Type"] == "PD Turret")]): # FIXME Turrets
                 
                 i_counter = int(blaster["IDS Name"]) + 4 * (v*len(supported_multiplicities) + n)
-                print(i_counter)
                 
                 munition_name, munition_block, npc_munition_block, gun_name, gun_block, npc_gun_block = create_blaster_ammo_blocks(
                     blaster = blaster, 
@@ -516,8 +517,8 @@ if __name__ == "__main__":
     parser.add_argument("--scaling_rules_csv", dest = "scaling_rules_csv", type = str)
     parser.add_argument("--pc_blasters_out", dest = "pc_blasters_out", type = str)
     parser.add_argument("--npc_blasters_out", dest = "npc_blasters_out", type = str)
-    parser.add_argument("--blaster_infocards_out", dest = "blaster_infocards_out", type = str)
     parser.add_argument("--blaster_goods_out", dest = "blaster_goods_out", type = str)
+    parser.add_argument("--blaster_infocards_out", dest = "blaster_infocards_out", type = str)
     parser.add_argument("--weapon_sanity_check", dest = "weapon_sanity_check", action = "store_true", default = False)
     
     args = parser.parse_args()
@@ -528,7 +529,7 @@ if __name__ == "__main__":
         scaling_rules_csv = args.scaling_rules_csv,
         pc_blasters_out = args.pc_blasters_out,
         npc_blasters_out = args.npc_blasters_out,
-        blaster_infocards_out = args.blaster_infocards_out,
         blaster_goods_out = args.blaster_goods_out,
+        blaster_infocards_out = args.blaster_infocards_out,
         weapon_sanity_check = args.weapon_sanity_check,
         )

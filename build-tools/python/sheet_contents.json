@@ -2,9 +2,9 @@
     {
         "sheetName": "BMOD Player Blasters",
         "sheetContents": [
-            "bm_blst_gn.ini",
-            "bm_blst_mn.ini",
-            "bm_blst_gd.ini"
+            "PC Blasters",
+            "Blaster Variant Rules",
+            "Blaster Scaling Rules"
         ]
     },
     {

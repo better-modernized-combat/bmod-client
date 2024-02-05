@@ -63,7 +63,7 @@ def generate_infocard_entry(
             new_info.append(variant_info)
         if len(info_paragraphs) > 1:
             new_info.extend(info_paragraphs[1:])
-        new_info = "\n\n".join(new_info)
+        new_info = "\n\t\n\t".join(new_info)
             
         long_name_split = long_name.split(" ")
         long_name_num = long_name_split[0]
@@ -71,7 +71,7 @@ def generate_infocard_entry(
         vsh = "-"+variant_sh.upper() if variant_sh not in ["b", "xpq"] else ""
         infocard_header = f'\\m\\b{infocard_multiplicity[(mp, is_turret)]}{s1}{long_name_num}{vsh} {" ".join(long_name_split[1:])}{variant_desc}\\B'
         
-        new_infocard = f'{infocard_header}\n\\l\n{new_info}\\n'
+        new_infocard = f'\t{infocard_header}\n\t\\l\n\t{new_info}\\n\n\t'
         
         return display_name, new_infocard
     

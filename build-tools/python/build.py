@@ -38,12 +38,12 @@ if not args.skip_checks:
 else:
     print(bcolors.WARNING + "Warning, checks have been disabled. You may experience errors if the the FL_PATH environment variable has not been set" + bcolors.ENDC)
 
+if args.csv_to_ini:
+    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance))
+
 if not args.ignore_infocards:
     compile_infocards()
     compile_infocards2()
-
-if args.csv_to_ini:
-    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance))
 
 if not args.ignore_utf:
     utf_xml_start_time = time.perf_counter() 

@@ -1,39 +1,12 @@
 {
-    "./build-tools/python/csv_dump/bm_blst_mn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
-        "block_name": "[Munition]"
-    },
-    "./build-tools/python/csv_dump/bm_blst_gn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
-        "block_name": "[Gun]"
-    },
-    "./build-tools/python/csv_dump/bm_blst_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
-        "block_name": "[Good]"
-    },
-    "./build-tools/python/csv_dump/bm_npc_blst_mn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
-        "block_name": "[Munition]"
-    },
-    "./build-tools/python/csv_dump/bm_npc_blst_gn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
-        "block_name": "[Gun]"
-    },
-    "./build-tools/python/csv_dump/bm_npc_blst_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
-        "block_name": "[Good]"
-    },
-    "./build-tools/python/csv_dump/bm_f_blst_mn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_fleet_blaster.ini",
-        "block_name": "[Munition]"
-    },
-    "./build-tools/python/csv_dump/bm_f_blst_gn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_fleet_blaster.ini",
-        "block_name": "[Gun]"
-    },
-    "./build-tools/python/csv_dump/bm_f_blst_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_fleet_blaster.ini",
-        "block_name": "[Good]"
+    "BLASTERS": {
+        "blasters_in": "./build-tools/python/csv_dump/PC Blasters.csv",
+        "variants_in": "./build-tools/python/csv_dump/Blaster Variant Rules.csv",
+        "scalings_in": "./build-tools/python/csv_dump/Blaster Scaling Rules.csv",
+        "pc_blasters_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
+        "npc_blasters_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster_npc.ini",
+        "blaster_goods_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
+        "blaster_infocards_out": "./mod-assets/blaster_infocard_imports.frc"
     },
     "./build-tools/python/csv_dump/bm_agun_gn.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
@@ -83,7 +56,7 @@
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_shield.ini",
         "block_name": "[Good]"
     },
-    "./build-tools/python/csv_dump/shiparch.ini": {
+    "SHIPARCH": {
         "ship_csv": "./build-tools/python/csv_dump/shiparch.ini.csv",
         "simples_csv": "./build-tools/python/csv_dump/shiparch_simple.ini.csv",
         "cgroups_csv": "./build-tools/python/csv_dump/shiparch_collisiongroup.ini.csv",
@@ -168,7 +141,7 @@
         "block_name": "[NPCShipArch]",
         "old_content": "./mod-assets/STATIC/MISSIONS/static_npcships.ini"
     },
-    "./build-tools/python/csv_dump/npc_shiparch.ini": {
+    "NPC SHIPARCH": {
         "ship_csv": "./build-tools/python/csv_dump/npc_shiparch.ini.csv",
         "simples_csv": "./build-tools/python/csv_dump/npc_shiparch_simple.ini.csv",
         "cgroups_csv": "./build-tools/python/csv_dump/npc_shiparch_collisiongroup.ini.csv",

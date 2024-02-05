@@ -15,17 +15,16 @@ def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
     frame = frame.loc[:, ~frame.columns.str.contains("^Unnamed")]
     
-    # TODO: Clean out rows where WIP? is any kind of true
-    # TODO: Clean out the WIP? col, if any
+    # Clean out rows where WIP is any kind of true
     if "WIP" in frame.columns:
         l0 = len(frame)
-        frame = frame[frame["WIP"] != "TRUE"]
+        frame = frame[frame["WIP"].apply(pd.isna)] # If its empty, its not WIP.
         frame = frame.loc[:, ~frame.columns.str.contains("WIP")]
         l1 = len(frame)
         if l1 != l0:
             print(f"DEBUG: Dropped {l0-l1} WIP rows from frame {name}.")
     
-    # TODO: Clean out rows where the nickname is missing, as presumably they are unused as of yet
+    # Clean out rows where the nickname is missing, as presumably they are unused as of yet
     l0 = len(frame)
     for pcn in privileged_column_names:
         if pcn in frame.columns:
