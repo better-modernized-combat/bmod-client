@@ -8,7 +8,7 @@ import re
 from argparse import ArgumentParser
 
 from boilerplate_text import *
-from ini_utils import CSVError, clean_unnamed_wip_empty, write_block
+from ini_utils import CSVError, clean_unnamed_wip_empty
 from generate_infocards import FRC_Entry, generate_infocard_entry, write_infocards_to_frc
 
 # FIXME turrets
@@ -412,9 +412,6 @@ def create_blasters(
     od = override_blasters.to_dict(orient = "index").items()
     vd = variants.to_dict(orient = "index").items()
     
-    #print("IDS GO BRR")
-    #print(blasters[["Weapon Name", "IDS Name", "Overrides"]])
-    
     for b, blaster in bd:
         
         for v, variant in vd:
@@ -423,7 +420,10 @@ def create_blasters(
             if v == 0:
                 base_variant = deepcopy(variant)
             
-            for n, (multiplicity, is_turret) in enumerate(supported_multiplicities if blaster["HP Type"] == "S Energy" else [(1, blaster["HP Type"] == "PD Turret")]): # FIXME Turrets
+            for n, (multiplicity, is_turret) in enumerate(
+                supported_multiplicities if blaster["HP Type"] == "S Energy" and blaster["Family Shorthand"] not in ["aux, f_aux"] # ugly band-aid fix for S Lasers
+                else [(1, blaster["HP Type"] == "PD Turret")] # FIXME Turrets
+                ):
                 
                 i_counter = int(blaster["IDS Name"]) + 4 * (v*len(supported_multiplicities) + n)
                 
