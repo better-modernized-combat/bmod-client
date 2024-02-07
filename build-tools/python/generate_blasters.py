@@ -7,7 +7,7 @@ import re
 
 from argparse import ArgumentParser
 
-from boilerplate_text import *
+from defaults import *
 from ini_utils import CSVError, clean_unnamed_wip_empty
 from generate_infocards import FRC_Entry, generate_infocard_entry, write_infocards_to_frc
 
@@ -40,10 +40,7 @@ def create_blaster_ammo_blocks(blaster: dict, variant: dict, multiplicity: int, 
         raise NotImplementedError("Time to think about how to do turrets properly.")
     
     # Hash out calculated values
-    if "\n" in blaster["Damage / rd"]:
-        hull_damage, energy_damage = tuple(dfloat(d) for d in blaster["Damage / rd"].split("\n"))
-    else:
-        hull_damage, energy_damage = float(blaster["Damage / rd"]), dfloat(blaster["Damage / rd"])
+    hull_damage, energy_damage = dfloat(blaster["Hull DMG / rd"]), dfloat(blaster["Energy DMG / rd"])
         
     hull_damage = hull_damage * (1 + 0.01*dfloat(variant["Variant Damage +%"])) * multiplicity     # /rd
     energy_damage = energy_damage * (1 + 0.01*dfloat(variant["Variant Damage +%"])) * multiplicity # /rd
@@ -421,7 +418,7 @@ def create_blasters(
                 base_variant = deepcopy(variant)
             
             for n, (multiplicity, is_turret) in enumerate(
-                supported_multiplicities if blaster["HP Type"] == "S Energy" and blaster["Family Shorthand"] not in ["aux, f_aux"] # ugly band-aid fix for S Lasers
+                supported_multiplicities if blaster["HP Type"] == "S Energy" and blaster["Family Shorthand"] not in ["aux", "auxf"] # ugly band-aid fix for S Lasers
                 else [(1, blaster["HP Type"] == "PD Turret")] # FIXME Turrets
                 ):
                 

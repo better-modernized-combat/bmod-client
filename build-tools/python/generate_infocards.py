@@ -1,4 +1,4 @@
-from boilerplate_text import *
+from defaults import *
 
 """
 Infocard numbers for variant weapons are/should be generated as follows:

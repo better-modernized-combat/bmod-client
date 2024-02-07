@@ -21,14 +21,24 @@ HP_Types = {
     "S Energy": "hp_gun_special_1",
     "M Energy": "hp_gun_special_2",
     "L Energy": "hp_gun_special_3",
-    "PD Turret": "hp_turret_special_9" 
+    "S Ballistic": "hp_gun_special_7",
+    "M Ballistic": "hp_gun_special_8",
+    "L Ballistic": "hp_gun_special_9",
+    "FL Ballistic": "hp_turret_special_7",
+    "PD Turret": "hp_turret_special_9",
+    "ST Support": "hp_freighter_shield_special_10"
 }
 
 HP_Size = {
     "hp_gun_special_1": 1,
     "hp_gun_special_2": 2,
     "hp_gun_special_3": 3,
-    "hp_turret_special_9": 3
+    "hp_gun_special_7": 1,
+    "hp_gun_special_8": 1,
+    "hp_gun_special_9": 1,
+    "hp_turret_special_7": 1,
+    "hp_turret_special_9": 3,
+    "hp_freighter_shield_special_10": 1
 }
 
 infocard_boilerplate = {

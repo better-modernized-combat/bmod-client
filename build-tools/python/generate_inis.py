@@ -14,7 +14,7 @@ import pathlib
 import sys
 sys.path.append("./")
 
-from boilerplate_text import *
+from defaults import *
 from ini_utils import *
 from generate_blasters import create_blasters
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
