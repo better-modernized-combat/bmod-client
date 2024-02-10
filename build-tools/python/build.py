@@ -12,7 +12,6 @@ from crc import generate_hashes as generate_hashes
 from freelancer import start_freelancer_main as start_freelancer_main
 from generate_inis import generate_inis as generate_inis
 from infocards import compile_infocards as compile_infocards
-from infocards import compile_infocards2 as compile_infocards2
 from thorn import lua_path
 from thorn import lua_to_thorn_thread as lua_to_thorn_thread
 from utf import utf_path
@@ -20,6 +19,7 @@ from utf import utf_to_xml_thread as utf_to_xml_thread
 from utf import xml_path
 from utf import xml_to_utf_thread as xml_to_utf_thread
 from utils import bcolors
+from utils import root_copy_path
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--no_start", help="Runs the script but does not start Freelancer.exe on finish.", action="store_true")
@@ -51,8 +51,8 @@ if args.csv_to_ini:
     generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance))
 
 if not args.ignore_infocards:
-    compile_infocards()
-    compile_infocards2()
+    compile_infocards(f"{root_copy_path}\\mod-assets\\infocard_imports.frc", f"{root_copy_path}\\mod-assets\\EXE\\BmodInfocards.dll")
+    compile_infocards(f"{root_copy_path}\\mod-assets\\weapon_infocard_imports.frc", f"{root_copy_path}\\mod-assets\\EXE\\BmodWeaponInfocards.dll")
 
 if not args.ignore_utf:
     utf_xml_start_time = time.perf_counter() 
