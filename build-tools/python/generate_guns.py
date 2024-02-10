@@ -870,23 +870,23 @@ def create_guns(
             variant_info = variant["Variant Infocard Paragraph"],
             variant_display = variant["Display Name Suffix"],
         )
-        if aux["Uses Ammo?"] == "TRUE" or aux["Uses Ammo?"] is True:
+        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit::
             ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
                 name = aux["Ammo Name"],
                 info = aux["Ammo Infocard"],
             )
         writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-        if aux["Uses Ammo?"] == "TRUE" or aux["Uses Ammo?"] is True:
+        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
             writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = display_name)
             writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)
             
         # Generate blaster goods entries
-        writable_goods[i_counter] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
+        writable_goods[i_counter] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
         
         # Generate ammo goods entries if weapon requires ammo
-        if aux["Uses Ammo?"] == "TRUE" or aux["Uses Ammo?"] is True:
-            writable_goods[i_counter+2] = create_aux_ammo_good(aux = override_aux, internal_name = weapon_block["nickname"], ids_name = i_counter+2)
+        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
+            writable_goods[i_counter+2] = create_aux_ammo_good(auxgun = override_aux, internal_name = weapon_block["nickname"], ids_name = i_counter+2, is_override = True)
         
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
