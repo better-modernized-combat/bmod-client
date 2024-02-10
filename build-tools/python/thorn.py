@@ -4,7 +4,9 @@ import shutil
 
 from concurrent.futures import ThreadPoolExecutor
 
-from utils import *
+from utils import root_copy_path
+from utils import bcolors
+from utils import create_dirtree_without_files
 
 lua_path = f"{root_copy_path}\\mod-assets\\DATA\\"
 thorn_cache = f"{root_copy_path}\\.thorn-cache\\"

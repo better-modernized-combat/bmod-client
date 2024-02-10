@@ -3,9 +3,11 @@ import distutils.dir_util
 import shutil
 import time
 
-from bini import *
-from thorn import *
-from utils import *
+from bini import bini_cache
+from thorn import thorn_cache
+from utils import root_copy_path
+from utils import bcolors
+from utils import os
 
 fl_path = os.environ["FL_PATH"] 
 
@@ -25,8 +27,9 @@ def copy_thorn_cleanup_cache():
     try:
         shutil.rmtree(thorn_cache)
         print("Removed the Thorn cache, cleanup complete.")
-    except:
+    except SystemExit  as exit:
         print(bcolors.FAIL + "Unable to remove the Thorn cache. Please check the folder permissions and try again, or cleanup manually." + bcolors.ENDC)
+        raise exit
 
 def copy_bini_cleanup_cache():
     print(bcolors.OKBLUE + f'Copying encoded BINI files from the cache to {fl_path}' + bcolors.ENDC)
@@ -35,5 +38,6 @@ def copy_bini_cleanup_cache():
     try:
         shutil.rmtree(bini_cache)
         print("Removed the BINI cache, cleanup complete.")
-    except:
+    except SystemExit as exit:
         print(bcolors.FAIL + "Unable to remove the BINI cache. Please check the folder permissions and try again, or cleanup manually." + bcolors.ENDC)
+        raise exit

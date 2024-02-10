@@ -8,7 +8,14 @@ from subprocess import Popen
 import pythoncom, wmi
 import re
 
-from utils import *
+from utils import bcolors
+from utils import freelancer_name
+from utils import fl_path
+from utils import tail_flspew
+from utils import stop_threads
+from utils import fl_running_start_time
+from utils import freelancer_pid
+from utils import trailing_references
 
 flspew_log_path = f"{os.getenv('LOCALAPPDATA')}\\Freelancer"
 def follow(file):
@@ -64,14 +71,15 @@ def follow(file):
 
 def start_freelancer():    
     # Shelve last log file
+    flspew_full_path = flspew_log_path+"\\FLSpew.txt"
     try:
-        last_log_timestamp = os.path.getmtime(flspew_log_path+"\\FLSpew.txt")
-        os.rename(src = flspew_log_path+"\\FLSpew.txt", dst = flspew_log_path+"\\FLSpew_"+str(datetime.datetime.fromtimestamp(last_log_timestamp).isoformat()).replace(":", "_")+".txt")
+        last_log_timestamp = os.path.getmtime(flspew_full_path)
+        os.rename(src = flspew_full_path, dst = flspew_log_path+"\\FLSpew_"+str(datetime.datetime.fromtimestamp(last_log_timestamp).isoformat()).replace(":", "_")+".txt")
     except FileNotFoundError:
         raise
     
     # Start FL
-    print(bcolors.OKBLUE + f"Starting Freelancer in windowed mode..." + bcolors.ENDC)
+    print(bcolors.OKBLUE + "Starting Freelancer in windowed mode..." + bcolors.ENDC)
     fl_proc = Popen([f"{fl_path}\\Freelancer.exe", "-w"], shell=True)
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
@@ -79,15 +87,15 @@ def start_freelancer():
     freelancer_pid = fl_proc.pid
     global fl_running_start_time
     fl_running_start_time = time.perf_counter()
-    print(bcolors.OKGREEN + f"Started freelancer.exe with PID {freelancer_pid} at {current_time}" + bcolors.ENDC)
+    print(bcolors.OKGREEN + "Started freelancer.exe with PID {} at {}".format(freelancer_pid, current_time) + bcolors.ENDC)
 
     if tail_flspew == True:
         # Wait until file creation
-        while not os.path.exists(flspew_log_path+"\\FLSpew.txt"):
+        while not os.path.exists(flspew_full_path):
             print(bcolors.OKBLUE + "Waiting for FLSpew creation ..." + bcolors.ENDC)
             time.sleep(0.5)
         # Follow, iterating over the generator
-        log_file = open(flspew_log_path+"\\FLSpew.txt")
+        log_file = open(flspew_full_path)
         log_lines = follow(log_file)
         for line in log_lines:
             print(line, end="")

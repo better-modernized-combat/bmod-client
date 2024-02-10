@@ -1,16 +1,25 @@
 import argparse
 import time
 
-from bini import *
-from checks import *
-from copy_assets import *
-from crc import *
-from freelancer import *
-from generate_inis import generate_inis
-from infocards import *
-from thorn import *
-from utf import *
-from utils import *
+from bini import ini_path
+from bini import ini_to_bini_thread as ini_to_bini_thread
+from checks import validate_path as validate_path
+from checks import validate_process_stopped as validate_process_stopped
+from copy_assets import copy_files as copy_files
+from copy_assets import copy_thorn_cleanup_cache as copy_thorn_cleanup_cache
+from copy_assets import copy_bini_cleanup_cache as copy_bini_cleanup_cache
+from crc import generate_hashes as generate_hashes
+from freelancer import start_freelancer_main as start_freelancer_main
+from generate_inis import generate_inis as generate_inis
+from infocards import compile_infocards as compile_infocards
+from infocards import compile_infocards2 as compile_infocards2
+from thorn import lua_path
+from thorn import lua_to_thorn_thread as lua_to_thorn_thread
+from utf import utf_path
+from utf import utf_to_xml_thread as utf_to_xml_thread
+from utf import xml_path
+from utf import xml_to_utf_thread as xml_to_utf_thread
+from utils import bcolors
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--no_start", help="Runs the script but does not start Freelancer.exe on finish.", action="store_true")

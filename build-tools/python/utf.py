@@ -2,8 +2,8 @@
 import glob
 import os
 import subprocess
-
-from utils import *
+from utils import root_copy_path
+from utils import bcolors
 
 utf_types = (".3db", ".ale", ".cmp", ".mat", ".sph", ".txm", ".utf", ".vms")
 utf_path = f"{root_copy_path}\\mod-assets\\DATA\\"
@@ -23,7 +23,6 @@ def utf_to_xml_thread():
 
     for file in glob.glob(f"{utf_path}\\**\\*", recursive=True):
         if file.endswith(utf_types):
-            filename = os.path.basename(file)
             executor.submit(convert_file_utf_xml, file, xml_path)
 
     executor.shutdown()
