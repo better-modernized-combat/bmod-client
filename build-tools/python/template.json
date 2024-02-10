@@ -1,50 +1,37 @@
 {
-    "BLASTERS": {
+    "WEAPONS": {
         "blasters_in": "./build-tools/python/csv_dump/PC Blasters.csv",
-        "variants_in": "./build-tools/python/csv_dump/Blaster Variant Rules.csv",
-        "scalings_in": "./build-tools/python/csv_dump/Blaster Scaling Rules.csv",
-        "pc_blasters_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_blaster.ini",
-        "blaster_goods_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_blaster.ini",
-        "blaster_infocards_out": "./mod-assets/blaster_infocard_imports.frc"
-    },
-    "./build-tools/python/csv_dump/bm_agun_gn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
-        "block_name": "[Gun]"
-    },
-    "./build-tools/python/csv_dump/bm_agun_mn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
-        "block_name": "[Munition]"
-    },
-    "./build-tools/python/csv_dump/bm_agun_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
-        "block_name": "[Good]"
-    },
-    "./build-tools/python/csv_dump/bm_agun_ammo_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
-        "block_name": "[Good]"
+        "blaster_variants_in": "./build-tools/python/csv_dump/Blaster Variant Rules.csv",
+        "blaster_scalings_in": "./build-tools/python/csv_dump/Blaster Scaling Rules.csv",
+        "aux_in": "./build-tools/python/csv_dump/PC Aux Guns.csv",
+        "aux_variants_in": "./build-tools/python/csv_dump/Aux Variant Rules.csv",
+        "aux_scalings_in": "./build-tools/python/csv_dump/Aux Scaling Rules.csv",
+        "weapon_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_guns.ini",
+        "weapon_goods_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_guns.ini",
+        "weapon_infocards_out": "./mod-assets/weapon_infocard_imports.frc"
     },
     "./build-tools/python/csv_dump/bm_amssle_expl.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_amssle.ini",
         "block_name": "[Explosion]"
     },
     "./build-tools/python/csv_dump/bm_amssle_mot.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_amssle.ini",
         "block_name": "[Motor]"
     },
     "./build-tools/python/csv_dump/bm_amssle_mn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_amssle.ini",
         "block_name": "[Munition]"
     },
     "./build-tools/python/csv_dump/bm_amssle_gn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_aux.ini",
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_amssle.ini",
         "block_name": "[Gun]"
     },
     "./build-tools/python/csv_dump/bm_amssle_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_amssle.ini",
         "block_name": "[Good]"
     },
     "./build-tools/python/csv_dump/bm_amssle_ammo_gd.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_aux.ini",
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_amssle.ini",
         "block_name": "[Good]"
     },
     "./build-tools/python/csv_dump/bm_sh_eq.ini.csv": {

@@ -7,8 +7,8 @@ from utils import *
 frc_input_path = f"{root_copy_path}\\mod-assets\\infocard_imports.frc"
 frc_output_path = f"{root_copy_path}\\mod-assets\\EXE\\BmodInfocards.dll"
 
-frc2_input_path = f"{root_copy_path}\\mod-assets\\blaster_infocard_imports.frc"
-frc2_output_path = f"{root_copy_path}\\mod-assets\\EXE\\BmodBlasterInfocards.dll"
+frc2_input_path = f"{root_copy_path}\\mod-assets\\weapon_infocard_imports.frc"
+frc2_output_path = f"{root_copy_path}\\mod-assets\\EXE\\BmodWeaponInfocards.dll"
 
 def compile_infocards():
     print(bcolors.OKBLUE + f"Compiling infocards from {frc_input_path} to {frc_output_path}..." + bcolors.ENDC)

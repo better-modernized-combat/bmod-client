@@ -24,7 +24,7 @@ def write_infocards_to_frc(
     
     with open(infocards_out, "w", encoding = "utf-16") as out:
         
-        out.write("S 534464 File Starts Here")
+        out.write(f"S {ID_start-1} File Starts Here\n")
         #out.write("S 600000 File Starts Here\n")
         
         for idx, entry in infocards.items():
@@ -35,7 +35,7 @@ def write_infocards_to_frc(
             else:
                 raise NotImplementedError(f"Unknown FRC entry type {entry.typus} for entry {entry.idx}. Known types are 'S', 'H'.")
 
-def generate_infocard_entry(
+def generate_weapon_infocard_entry(
     name: str,              # Display name of the gun (i.e. "Scorpion")
     long_name: str,         # Long name of the gun (i.e. M1-D "Scorpion" Xenos Particle Cannon)
     info: str,              # Infocard text, without header
@@ -78,5 +78,14 @@ def generate_infocard_entry(
     except:
         
         print(f"ERROR: Could not generate variant Infocard entry for {name}. Maybe the format is different from the regular format for this type of weapon?")
-        raise ### DEBUG
         return display_name, info
+
+def generate_ammo_infocard_entry(
+    name: str,              # Display name of the gun (i.e. "Scorpion")
+    info: str,              # Infocard text, without header
+    ):
+    
+    infocard_header = f'\\m\\b{name}\\B'
+    infocard = f'\t{infocard_header}\n\t\\l\n\t{info}\\n\n\t'
+    
+    return name, infocard

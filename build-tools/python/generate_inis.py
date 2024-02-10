@@ -16,7 +16,7 @@ sys.path.append("./")
 
 from defaults import *
 from ini_utils import *
-from generate_blasters import create_blasters
+from generate_blasters import create_weapons
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
 
 def create_dirtree_without_files(src, dst):
@@ -135,14 +135,17 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
     print("Populating inis ...")
     for csv in template:
         # Special ini
-        if csv == "BLASTERS":
-            create_blasters(
+        if csv == "WEAPONS":
+            create_weapons(
                 blaster_csv = template[csv]["blasters_in"], 
-                variant_csv = template[csv]["variants_in"], 
-                scaling_rules_csv = template[csv]["scalings_in"],
-                pc_blasters_out = template[csv]["pc_blasters_out"],
-                blaster_goods_out = template[csv]["blaster_goods_out"],
-                blaster_infocards_out = template[csv]["blaster_infocards_out"],
+                blaster_variant_csv = template[csv]["blaster_variants_in"], 
+                blaster_scaling_rules_csv = template[csv]["blaster_scalings_in"],
+                aux_csv = template[csv]["aux_in"], 
+                aux_variant_csv = template[csv]["aux_variants_in"], 
+                aux_scaling_rules_csv = template[csv]["aux_scalings_in"],
+                weapon_out = template[csv]["weapon_out"],
+                weapon_goods_out = template[csv]["weapon_goods_out"],
+                weapon_infocards_out = template[csv]["weapon_infocards_out"],
                 weapon_sanity_check = weapon_sanity_check,
             )
         # Special ini
@@ -173,9 +176,16 @@ if __name__ == "__main__":
     parser.add_argument(
         "--master_sheet", 
         dest = "master_sheet",
-        help = "Takes a valid online URL or a path on the local machine",
+        help = "Takes a valid online URL or a path on the local machine.",
         default = "https://docs.google.com/spreadsheets/d/1Uks5GD61Ikrk8VgWPDexOUCoilhhxQ7RmgnhQk9WXS8/"
         )
+    parser.add_argument(
+        "--weapon_sanity_check",
+        dest = "weapon_sanity_check",
+        help = "Whether to run a weapon sanity check that tests for hard imbalances in weapons.",
+        default = False,
+        action = "store_true"
+    )
     args = parser.parse_args()
 
-    generate_inis(master_sheet = args.master_sheet)
+    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = args.weapon_sanity_check)
