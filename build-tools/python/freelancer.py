@@ -25,7 +25,7 @@ def follow(file):
     while True:
         global stop_threads
         if stop_threads is True:
-            raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+            raise SystemExit(0)
         # Read the whole file
         line = file.readline()
         # Sleep if file hasn't been updated
@@ -66,7 +66,7 @@ def follow(file):
             # If the process has somehow stuck around, kill it. If not, don't throw a confusing error.
             os.system(f"taskkill /F /PID {freelancer_pid} 2>NUL")
             stop_threads = True
-            raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+            raise SystemExit(0)
         yield line
 
 def start_freelancer():    
@@ -75,12 +75,13 @@ def start_freelancer():
     try:
         last_log_timestamp = os.path.getmtime(flspew_full_path)
         os.rename(src = flspew_full_path, dst = flspew_log_path+"\\FLSpew_"+str(datetime.datetime.fromtimestamp(last_log_timestamp).isoformat()).replace(":", "_")+".txt")
-    except FileNotFoundError:
-        raise
+    except FileNotFoundError as exit:
+        raise exit
     
     # Start FL
     print(bcolors.OKBLUE + "Starting Freelancer in windowed mode..." + bcolors.ENDC)
-    fl_proc = Popen([f"{fl_path}\\Freelancer.exe", "-w"], shell=True)
+    #Using shell = true will unfortunately break the crash catcher here.
+    fl_proc = Popen([f"{fl_path}\\Freelancer.exe", "-w"])
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
     global freelancer_pid 
@@ -151,19 +152,19 @@ def fetch_crash_offset():
                 print(bcolors.OKBLUE + f"Date Added: {datetime.fromtimestamp(r['dateAdded'])}" + bcolors.ENDC)
                 print(bcolors.FAIL + "For further debugging, please reference the fault offset and faulting module name against https://wiki.the-starport.net/wiki/fl-binaries/crash-offsets" + bcolors.ENDC)
                 stop_threads = True 
-                raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+                raise SystemExit(0)
             
         print(bcolors.FAIL + f"No crash offset at {full_offset} in {faulting_module} has been documented previously. Please determine the cause of the crash and submit an update to the Starport KnowledgeBase" + bcolors.ENDC)
         stop_threads = True    
-        raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
-        
+        raise SystemExit(0)
+    
     else:
         print(bcolors.FAIL + f"No crash offset corresponding to PID {freelancer_pid} was found. It\'s likely the Freelancer process was killed manually, or something else unusual has happened. Please check your Windows Application logs if it's not clear what killed the process in this instance." + bcolors.ENDC)
         stop_threads = True    
-        raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+        raise SystemExit
 
-def alive_check(wmiC, pid):        
-    for process in wmiC.Win32_Process():
+def alive_check(wmic, pid):        
+    for process in wmic.Win32_Process():
         if process.ProcessId == pid:
             return True
     return False
@@ -171,23 +172,23 @@ def alive_check(wmiC, pid):
 def crash_check():
     global stop_threads
     pythoncom.CoInitialize()
-    wmiC = wmi.WMI()
+    wmic = wmi.WMI()
     while True:
         time.sleep(1)
         global trailing_references
-        if trailing_references != True and alive_check(wmiC, freelancer_pid) is False:
+        if trailing_references != True and alive_check(wmic, freelancer_pid) is False:
             t = time.localtime()
             current_time = time.strftime("%H:%M:%S", t)
             fl_running_end_time = time.perf_counter() 
             print(bcolors.FAIL + f"{freelancer_name}, PID {freelancer_pid} has stopped unexpectedly at {current_time} after running for {fl_running_end_time - fl_running_start_time:0.4f} seconds. Fetching crash event from Application logs... " + bcolors.ENDC)
             fetch_crash_offset()
             stop_threads = True
-            raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+            raise SystemExit(0)
         if trailing_references is True:
             stop_threads = True
-            raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+            raise SystemExit(0)
         if stop_threads is True:
-            raise SystemExit # TODO: Maybe call exit(exitcode_integer) here?
+            raise SystemExit(0)
 
 def start_freelancer_main():
     fl_tailed_process = threading.Thread(target=start_freelancer)

@@ -25,7 +25,7 @@ def validate_process_stopped():
                 raise exit
 
     if not found_freelancer:
-        print(bcolors.OKGREEN + f"No running instances of Freelancer found, proceeding" + bcolors.ENDC)
+        print(bcolors.OKGREEN + "No running instances of Freelancer found, proceeding" + bcolors.ENDC)
 
 
 def validate_path():
