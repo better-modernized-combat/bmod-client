@@ -19,6 +19,9 @@ from ini_utils import *
 from generate_guns import create_guns
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
 
+from utils import bcolors
+# TODO: use bcolors for DEBUG/INFO/WARN/ERROR distinction
+
 def create_dirtree_without_files(src, dst):
     src = os.path.abspath(src)
     src_prefix = len(src) + len(os.path.sep)

@@ -13,6 +13,9 @@ from defaults import *
 from ini_utils import CSVError, clean_unnamed_wip_empty
 from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, generate_ammo_infocard_entry, write_infocards_to_frc
 
+from utils import bcolors
+# TODO: use bcolors for DEBUG/INFO/WARN/ERROR distinction
+
 # FIXME turrets
 # Currently supported multiplicities
 supported_multiplicities = [(1, False), (2, False), (3, False), (3, True)]
@@ -165,18 +168,30 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
 def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, idx: int, is_override: bool = False, make_ammo = False):
     
     # Hash out calculated values
-    hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
+    if not is_override or isinstance(weapon["Overrides"], float):
+        hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
+            
+        power_usage = (
+                dfloat(weapon["Energy Usage / rd"]) *
+                (1 + 0.01*dfloat(variant["Variant Energy Usage +%"]))
+                )
+        muzzle_velocity = dfloat(weapon["Muzzle Velocity"]) * (1 + 0.01*dfloat(variant["Variant Muzzle Velocity +%"]))
+        effective_range = dfloat(weapon["Range"]) * (1 + 0.01*dfloat(variant["Variant Range +%"]))
+        refire_rate = dfloat(weapon["Refire (rds / s)"]) * (1 + 0.01*dfloat(variant["Variant Refire Rate +%"])) # /s
+        lifetime = dfloat(weapon["Range"]) / muzzle_velocity
         
-    power_usage = (
-            dfloat(weapon["Energy Usage / rd"]) *
-            (1 + 0.01*dfloat(variant["Variant Energy Usage +%"]))
-            )
-    muzzle_velocity = dfloat(weapon["Muzzle Velocity"]) * (1 + 0.01*dfloat(variant["Variant Muzzle Velocity +%"]))
-    effective_range = dfloat(weapon["Range"]) * (1 + 0.01*dfloat(variant["Variant Range +%"]))
-    refire_rate = dfloat(weapon["Refire (rds / s)"]) * (1 + 0.01*dfloat(variant["Variant Refire Rate +%"])) # /s
-    lifetime = dfloat(weapon["Range"]) / muzzle_velocity
-    
-    cost = int(dfloat(weapon["Cost"]) * dfloat(variant["Cost Modifier"]))
+        toughness = dfloat(weapon["Toughness Index"]) * dfloat(variant["Toughness Modifier"])
+        cost = int(dfloat(weapon["Cost"]) * dfloat(variant["Cost Modifier"]))
+    else:
+        hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
+        power_usage = dfloat(weapon["Energy Usage / rd"])
+        muzzle_velocity = dfloat(weapon["Muzzle Velocity"])
+        effective_range = dfloat(weapon["Range"])
+        refire_rate = dfloat(weapon["Refire (rds / s)"])
+        lifetime = effective_range / muzzle_velocity
+        
+        toughness = dfloat(weapon["Toughness Index"])
+        cost = int(dfloat(weapon["Cost"]))
     
     # HP Type won't be guessed for aux
     hp_type = HP_Types[weapon["HP Type"]] # FIXME turrets
@@ -233,7 +248,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         "refire_delay": 1. / refire_rate,
         "muzzle_velocity": muzzle_velocity,
         "use_animation": "Sc_fire",
-        "toughness": float(weapon["Toughness Index"]) * dfloat(variant["Toughness Modifier"]),
+        "toughness": toughness,
         "flash_particle_name": weapon["Flash Particle Name"],
         "flash_radius": 1,
         "light_anim": weapon["Light Animation"],
@@ -327,7 +342,7 @@ def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict
                         out.writelines([f"{key} = {str(val)}\n"])
             out.write("\n")
 
-def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool):
+def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool, is_override: bool = False):
     
     # Guess item icon, if necessary
     if pd.isna(blaster["Item Icon"]) or blaster["Item Icon"] == "":
@@ -346,7 +361,7 @@ def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_na
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])),
+        "price": (int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])) if is_override else int(dfloat(blaster["Cost"]))),
         "item_icon": item_icon,
         "combinable": False,
         "ids_name": ids_name,
@@ -358,13 +373,13 @@ def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_na
     
     return good
 
-def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: int):
+def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: int, is_override: bool = False):
     
     good = OrderedDict({
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": int(dfloat(auxgun["Cost"]) * dfloat(variant["Cost Modifier"])),
+        "price": (int(dfloat(auxgun["Cost"]) * dfloat(variant["Cost Modifier"])) if is_override else int(dfloat(auxgun["Cost"]))),
         "item_icon": auxgun["Item Icon"],
         "combinable": False,
         "ids_name": ids_name,
@@ -379,13 +394,13 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
     
     return good
 
-def create_aux_ammo_good(auxgun: dict, internal_name: str, ids_name: int):
+def create_aux_ammo_good(auxgun: dict, internal_name: str, ids_name: int, is_override: bool = False):
     
     good = OrderedDict({
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": int(dfloat(auxgun["Ammo Cost"])),
+        "price": int(dfloat(auxgun["Ammo Cost"])), # FIXME: AUX Variants with Variant Ammo should have scaled costs, maybe
         "item_icon": auxgun["Ammo Icon"],
         "combinable": True,
         "ids_name": ids_name,
@@ -695,8 +710,6 @@ def create_guns(
                 
     for o, override_blaster in obd:
         
-        # TODO: fix override blasters
-        
         # Figure out what the override weapon should be doing
         nickname = override_blaster["Overrides"]
         split = nickname.split("_")
@@ -714,7 +727,7 @@ def create_guns(
         
         munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_blaster_ammo_blocks(
             weapon = override_blaster, 
-            variant = base_variant,
+            variant = variant,
             multiplicity = multiplicity,
             scaling_rules = blaster_scaling_rules,
             idx = i_counter,
@@ -816,18 +829,24 @@ def create_guns(
         
     for o, override_aux in oad:
         
-        continue
+        # Figure out what the override weapon should be doing
+        nickname = override_blaster["Overrides"]
+        
+        # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun
+        if nickname in writable_weapon_blocks:
+            _, variant = next(iter(blaster_variants[blaster_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
+        else:
+            variant = base_variant
+        multiplicity = 1
+        is_turret = False
         
         i_counter += 4 # weapon name, weapon info, ammo name, ammo info
         
-        # TODO: fix override auxguns
-        
         munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_auxgun_ammo_blocks(
             weapon = override_aux, 
-            variant = base_variant,
-            scaling_rules = blaster_scaling_rules,
+            variant = variant,
+            scaling_rules = aux_scaling_rules,
             idx = i_counter,
-            is_turret = (override_aux["HP Type"] == "PD Turret"), # FIXME turrets
             is_override = True,
             make_ammo = True
             )
@@ -863,7 +882,7 @@ def create_guns(
             writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)
             
         # Generate blaster goods entries
-        writable_goods[i_counter] = create_aux_good(aux = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
+        writable_goods[i_counter] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
         
         # Generate ammo goods entries if weapon requires ammo
         if aux["Uses Ammo?"] == "TRUE" or aux["Uses Ammo?"] is True:
@@ -890,6 +909,9 @@ def create_guns(
     
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
+    # TODO: fix variant and override weapon costs
+    # TODO: fix aux override ammo
+    # TODO: fix variant free ammo
 
 if __name__ == "__main__":
     
