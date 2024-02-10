@@ -1,5 +1,5 @@
 {
-    "WEAPONS": {
+    "GUNS": {
         "blasters_in": "./build-tools/python/csv_dump/PC Blasters.csv",
         "blaster_variants_in": "./build-tools/python/csv_dump/Blaster Variant Rules.csv",
         "blaster_scalings_in": "./build-tools/python/csv_dump/Blaster Scaling Rules.csv",

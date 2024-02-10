@@ -41,36 +41,52 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     if is_turret and multiplicity != 3:
         raise NotImplementedError("Time to think about how to do turrets properly.")
     
-    # Hash out calculated values
-    hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
+    # Hash out calculated values, or get them from the override
+    if not is_override or isinstance(weapon["Overrides"], float):
+        hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
+            
+        hull_damage = hull_damage * (1 + 0.01*dfloat(variant["Variant Damage +%"])) * multiplicity     # /rd
+        energy_damage = energy_damage * (1 + 0.01*dfloat(variant["Variant Damage +%"])) * multiplicity # /rd
+        power_usage = (
+                dfloat(weapon["Energy Usage / rd"]) *
+                (1 + 0.01*dfloat(variant["Variant Energy Usage +%"])) * 
+                multiplicity * 
+                dfloat(scaling_rules[f"{multiplicity}x Energy Factor"])
+                )
+        muzzle_velocity = dfloat(weapon["Muzzle Velocity"]) * (1 + 0.01*dfloat(variant["Variant Muzzle Velocity +%"]))
+        effective_range = dfloat(weapon["Range"]) * (1 + 0.01*dfloat(variant["Variant Range +%"]))
+        refire_rate = dfloat(weapon["Refire (rds / s)"]) * (1 + 0.01*dfloat(variant["Variant Refire Rate +%"])) # /s
+        lifetime = effective_range / muzzle_velocity
         
-    hull_damage = hull_damage * (1 + 0.01*dfloat(variant["Variant Damage +%"])) * multiplicity     # /rd
-    energy_damage = energy_damage * (1 + 0.01*dfloat(variant["Variant Damage +%"])) * multiplicity # /rd
-    power_usage = (
-            dfloat(weapon["Energy Usage / rd"]) *
-            (1 + 0.01*dfloat(variant["Variant Energy Usage +%"])) * 
-            multiplicity * 
-            dfloat(scaling_rules[f"{multiplicity}x Energy Factor"])
-            )
-    muzzle_velocity = dfloat(weapon["Muzzle Velocity"]) * (1 + 0.01*dfloat(variant["Variant Muzzle Velocity +%"]))
-    effective_range = dfloat(weapon["Range"]) * (1 + 0.01*dfloat(variant["Variant Range +%"]))
-    refire_rate = dfloat(weapon["Refire (rds / s)"]) * (1 + 0.01*dfloat(variant["Variant Refire Rate +%"])) # /s
-    lifetime = effective_range / muzzle_velocity
-    
-    cost = int(dfloat(weapon["Cost"]) * dfloat(variant["Cost Modifier"]))
-    
-    # HP Type guessing
-    if is_turret:
-        hp_type_guess = HP_Types["PD Turret"] # FIXME turrets
-        mt_name = "3xT"
-    elif weapon["HP Type"] != "S Energy":
-        hp_type_guess = HP_Types[weapon["HP Type"]]
-        mt_name = "1x"
+        toughness = dfloat(weapon["Toughness Index"]) * multiplicity * dfloat(variant["Toughness Modifier"])
+        cost = int(dfloat(weapon["Cost"]) * dfloat(variant["Cost Modifier"]))
     else:
-        hp_type_guess = HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]
+        hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
+        power_usage = dfloat(weapon["Energy Usage / rd"])
+        muzzle_velocity = dfloat(weapon["Muzzle Velocity"])
+        effective_range = dfloat(weapon["Range"])
+        refire_rate = dfloat(weapon["Refire (rds / s)"])
+        lifetime = effective_range / muzzle_velocity
+        
+        toughness = dfloat(weapon["Toughness Index"])
+        cost = int(dfloat(weapon["Cost"]))
+    
+    # HP Type guessing or get from override
+    if not is_override or isinstance(weapon["Overrides"], float):
+        if is_turret:
+            hp_type_guess = HP_Types["PD Turret"] # FIXME turrets
+            mt_name = "3xT"
+        elif weapon["HP Type"] != "S Energy":
+            hp_type_guess = HP_Types[weapon["HP Type"]]
+            mt_name = "1x"
+        else:
+            hp_type_guess = HP_Types[{1: "S Energy", 2: "M Energy", 3: "L Energy"}[multiplicity]]
+            mt_name = f"{multiplicity}x"
+    else:
+        hp_type_guess = HP_Types[weapon["HP Type"]]
         mt_name = f"{multiplicity}x"
         
-    # Get nickname from override or construct it
+    # Construct nickname or get from override
     if not is_override or isinstance(weapon["Overrides"], float):
         nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"    
     else:
@@ -108,13 +124,13 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "child_impulse": 80,
         "volume": 0 * multiplicity,
         "mass": 10 * multiplicity,
-        "hp_gun_type": (HP_Types[weapon["HP Type"]] if is_override else hp_type_guess),
+        "hp_gun_type": hp_type_guess,
         "damage_per_fire": 0,
         "power_usage": power_usage,
         "refire_delay": 1. / refire_rate,
         "muzzle_velocity": muzzle_velocity,
         "use_animation": "Sc_fire",
-        "toughness": float(weapon["Toughness Index"]) * multiplicity * dfloat(variant["Toughness Modifier"]),
+        "toughness": toughness,
         "flash_particle_name": weapon["Flash Particle Name"],
         "flash_radius": 15,
         "light_anim": "l_gun01_flash", #TODO: Is this right?
@@ -544,7 +560,7 @@ def sanity_check(
     else:
         print("INFO: All weapons have passed sanity check.")
 
-def create_weapons(
+def create_guns(
     blaster_csv: str, 
     blaster_variant_csv: str, 
     blaster_scaling_rules_csv: str,
@@ -679,19 +695,30 @@ def create_weapons(
                 
     for o, override_blaster in obd:
         
-        continue
-        
         # TODO: fix override blasters
+        
+        # Figure out what the override weapon should be doing
+        nickname = override_blaster["Overrides"]
+        split = nickname.split("_")
+        mt_name = split[-2]
+        
+        # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun
+        if nickname in writable_weapon_blocks:
+            _, variant = next(iter(blaster_variants[blaster_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
+        else:
+            variant = base_variant
+        multiplicity = int(mt_name[0])
+        is_turret = (override_blaster["HP Type"] == "PD Turret" or mt_name[-1] == "T")
         
         i_counter += 2 # weapon name, weapon info
         
         munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_blaster_ammo_blocks(
             weapon = override_blaster, 
             variant = base_variant,
-            multiplicity = 1,
+            multiplicity = multiplicity,
             scaling_rules = blaster_scaling_rules,
             idx = i_counter,
-            is_turret = (override_blaster["HP Type"] == "PD Turret"), # FIXME turrets
+            is_turret = is_turret, # FIXME turrets
             is_override = True
             )
         if "_npc_" in override_blaster["Overrides"]:
@@ -719,7 +746,7 @@ def create_weapons(
         
         # Generate blaster goods entries
         writable_goods[i_counter] = create_blaster_good(blaster = override_blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
-        
+
     for a, aux, in ad:
         
         for v, variant in avd:
@@ -863,7 +890,7 @@ def create_weapons(
     
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
-    
+
 if __name__ == "__main__":
     
     parser = ArgumentParser()
@@ -880,7 +907,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    create_weapons(
+    create_guns(
         blaster_csv = args.blaster_csv,
         blaster_variant_csv = args.blaster_variant_csv,
         blaster_scaling_rules_csv = args.blaster_scaling_rules_csv,

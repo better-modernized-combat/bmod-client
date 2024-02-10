@@ -16,7 +16,7 @@ sys.path.append("./")
 
 from defaults import *
 from ini_utils import *
-from generate_blasters import create_weapons
+from generate_guns import create_guns
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
 
 def create_dirtree_without_files(src, dst):
@@ -134,9 +134,10 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
 
     print("Populating inis ...")
     for csv in template:
+        
         # Special ini
-        if csv == "WEAPONS":
-            create_weapons(
+        if csv == "GUNS":
+            create_guns(
                 blaster_csv = template[csv]["blasters_in"], 
                 blaster_variant_csv = template[csv]["blaster_variants_in"], 
                 blaster_scaling_rules_csv = template[csv]["blaster_scalings_in"],
@@ -148,6 +149,7 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 weapon_infocards_out = template[csv]["weapon_infocards_out"],
                 weapon_sanity_check = weapon_sanity_check,
             )
+            
         # Special ini
         elif csv.endswith("SHIPARCH"):
             may_shiparch_perish_under_my_wrathful_gaze(
@@ -156,6 +158,7 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 cgroups_csv = template[csv]["cgroups_csv"],
                 ini_out_file = template[csv]["ini"],
             )
+            
         # All regular inis
         elif csv.endswith(".csv"):
             csv_to_ini(
@@ -163,6 +166,8 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 ini_out_file = template[csv]["ini"],
                 block_name = template[csv]["block_name"]
                 )
+            
+        # This shouldn't exist
         else:
             raise NotImplementedError("Stop messing around with the template, please.")
 
