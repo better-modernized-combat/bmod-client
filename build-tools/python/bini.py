@@ -4,7 +4,9 @@ import shutil
 
 from concurrent.futures import ThreadPoolExecutor
 
-from utils import *
+from utils import root_copy_path
+from utils import bcolors
+from utils import create_dirtree_without_files
 
 ini_path = f"{root_copy_path}\\mod-assets\\DATA\\"
 bini_cache = f"{root_copy_path}\\.bini-cache\\"

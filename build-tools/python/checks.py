@@ -1,23 +1,28 @@
 # Looks for Freelancer.exe and terminates the process if it exists.
 import wmi
+import time
 
-from utils import *
+from utils import bcolors
+from utils import os
 
 def validate_process_stopped():
-    wmiC = wmi.WMI()
-    print(bcolors.OKBLUE + f"Searching for instances of Freelancer.exe..." + bcolors.ENDC)
+    wmic = wmi.WMI()
+    print(bcolors.OKBLUE + "Searching for instances of Freelancer.exe..." + bcolors.ENDC)
     found_freelancer = False
-    for process in wmiC.Win32_Process():
+    for process in wmic.Win32_Process():
         if "freelancer" in process.Name.lower():
             found_freelancer = True
-            print(bcolors.WARNING + f"Found {process.Name}, PID {process.ProcessId}." + bcolors.ENDC)
-            print(bcolors.OKBLUE + f"Stopping {process.Name}, PID {process.ProcessId}..." + bcolors.ENDC)
+            process_name = process.Name
+            process_id = process.ProcessId
+            print(bcolors.WARNING + "Found {}, PID {}.".format(process_name, process_id) + bcolors.ENDC)
+            print(bcolors.OKBLUE + "Stopping {}, PID {}...".format(process_name, process_id) + bcolors.ENDC)
             try:
                 process.Terminate()
-                print(bcolors.OKGREEN + f"{process.Name}, PID {process.ProcessId} stopped, proceeding" + bcolors.ENDC)
-            except:
-                print(bcolors.FAIL + f"Unable to stop {process.Name}, PID {process.ProcessId}, halting the build script." + bcolors.ENDC)
-                raise SystemExit
+                time.sleep(3)
+                print(bcolors.OKGREEN + "{}, PID {} stopped, proceeding".format(process_name, process_id) + bcolors.ENDC)
+            except SystemExit as exit:
+                print(bcolors.FAIL + "Unable to stop {}, PID {}, halting the build script.".format(process_name, process_id) + bcolors.ENDC)
+                raise exit
 
     if not found_freelancer:
         print(bcolors.OKGREEN + f"No running instances of Freelancer found, proceeding" + bcolors.ENDC)
@@ -25,11 +30,11 @@ def validate_process_stopped():
 
 def validate_path():
     if os.getenv("FL_PATH") is None:
-        print(bcolors.WARNING + f"No FL_PATH environment variable has been found. Please enter the full path for the EXE folder of the Freelancer instance you wish to work with. This environment variable will only persist for the duration of this session and should be set permanently using the System.Environment class." + bcolors.ENDC)
+        print(bcolors.WARNING + "No FL_PATH environment variable has been found. Please enter the full path for the EXE folder of the Freelancer instance you wish to work with. This environment variable will only persist for the duration of this session and should be set permanently using the System.Environment class." + bcolors.ENDC)
         fl_path = input()
         os.environ["FL_PATH"] = fl_path
-        print(bcolors.OKGREEN + f"The FL_PATH environment variable has been set to '{fl_path}'" + bcolors.ENDC)
+        print(bcolors.OKGREEN + "The FL_PATH environment variable has been set to '{}'".format(fl_path) + bcolors.ENDC)
 
     else:
         fl_path = os.environ["FL_PATH"] 
-        print(bcolors.BOLD + f"The FL_PATH environment variable is set to '{fl_path}'" + bcolors.ENDC)
+        print(bcolors.BOLD + "The FL_PATH environment variable is set to '{}'".format(fl_path) + bcolors.ENDC)
