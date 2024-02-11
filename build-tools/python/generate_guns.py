@@ -149,7 +149,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         weapon_block["dispersion_angle"] = dfloat(weapon["Dispersion Angle"])
     
     # Create NPC blocks
-    npc_ammo_nickname = nickname[:3]+"npc_"+nickname[3:]+"_ammo"
+    npc_ammo_nickname = weapon_block["projectile_archetype"][:3]+"npc_"+weapon_block["projectile_archetype"][3:]
     npc_weapon_nickname = nickname[:3]+"npc_"+nickname[3:]
     npc_hull_damage = hull_damage * dfloat(scaling_rules["NPC Damage Factor"])
     npc_energy_damage = energy_damage * dfloat(scaling_rules["NPC Damage Factor"])
@@ -161,7 +161,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     npc_munition_block = deepcopy(munition_block)
     npc_munition_block.update({"nickname": npc_ammo_nickname, "hull_damage": npc_hull_damage, "energy_damage": npc_energy_damage, "lifetime": npc_lifetime})
     npc_weapon_block = deepcopy(weapon_block)
-    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity})
+    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "projectile_archetype": npc_ammo_nickname})
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
 
@@ -273,7 +273,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         weapon_block["; free_ammo"] = dfloat(weapon["Free Ammo"])
     
     # Create NPC blocks
-    npc_ammo_nickname = nickname[:3]+"npc_"+nickname[3:]+"_ammo"
+    npc_ammo_nickname = weapon_block["projectile_archetype"][:3]+"npc_"+weapon_block["projectile_archetype"][3:]
     npc_weapon_nickname = nickname[:3]+"npc_"+nickname[3:]
     npc_hull_damage = hull_damage * dfloat(scaling_rules["NPC Damage Factor"])
     npc_energy_damage = energy_damage * dfloat(scaling_rules["NPC Damage Factor"])
@@ -288,7 +288,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         if str(weapon["Uses Ammo?"]).lower() == "true": #:vomit:
             npc_munition_block.update({"ids_name": idx+6, "ids_info": idx+7})
     npc_weapon_block = deepcopy(weapon_block)
-    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "auto_turret": "true"}) # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
+    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "projectile_archetype": npc_ammo_nickname, "auto_turret": "true"}) # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
 
