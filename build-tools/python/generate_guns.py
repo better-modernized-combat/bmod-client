@@ -288,7 +288,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         if str(weapon["Uses Ammo?"]).lower() == "true": #:vomit:
             npc_munition_block.update({"ids_name": idx+6, "ids_info": idx+7})
     npc_weapon_block = deepcopy(weapon_block)
-    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity})
+    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "auto_turret": "true"}) # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
 

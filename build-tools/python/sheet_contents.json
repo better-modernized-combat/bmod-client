@@ -18,15 +18,6 @@
         ]
     },
     {
-        "sheetName": "Player Aux Weapons (Guns)",
-        "sheetContents": [
-            "bm_agun_gn.ini",
-            "bm_agun_mn.ini",
-            "bm_agun_gd.ini",
-            "bm_agun_ammo_gd.ini"
-        ]
-    },
-    {
         "sheetName": "Solar Guns",
         "sheetContents": [
             "bm_slrgun_gn.ini",
