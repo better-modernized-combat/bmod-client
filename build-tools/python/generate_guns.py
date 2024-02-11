@@ -361,7 +361,7 @@ def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_na
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": (int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])) if is_override else int(dfloat(blaster["Cost"]))),
+        "price": (int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])) if not is_override else int(dfloat(blaster["Cost"]))),
         "item_icon": item_icon,
         "combinable": False,
         "ids_name": ids_name,
@@ -379,7 +379,7 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": (int(dfloat(auxgun["Cost"]) * dfloat(variant["Cost Modifier"])) if is_override else int(dfloat(auxgun["Cost"]))),
+        "price": (int(dfloat(auxgun["Cost"]) * dfloat(variant["Cost Modifier"])) if not is_override else int(dfloat(auxgun["Cost"]))),
         "item_icon": auxgun["Item Icon"],
         "combinable": False,
         "ids_name": ids_name,
@@ -389,8 +389,11 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
         "DA_archetype": auxgun["Gun Archetype"],
     })
     
-    if "; free_ammo" in auxgun:
-        good["free_ammo"] = f"{internal_name+'_ammo'}, {auxgun['; free_ammo']}"
+    if not(pd.isna(auxgun["Free Ammo"]) or auxgun["Free Ammo"] == ""):
+        if is_override:
+            print("WARNING: Guessing name of base variant for override aux gun that requires ammunition. If there is a crash right after this, its probably because your override aux gun didn't conform to the common naming scheme. If there is a crash when trying to buy this weapon, its for the same reason, as it can't find the ammo you're given for free.")
+        base_variant_guess = "_".join(internal_name.split("_")[:-1]+["b"]) # FIXME: AUX Variants with Variant Ammo
+        good["free_ammo"] = f"{base_variant_guess+'_ammo'}, {auxgun['Free Ammo']}"
     
     return good
 
@@ -705,8 +708,8 @@ def create_guns(
                 writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)   # NPC version
                 
                 # Generate blaster goods entries
-                writable_goods[i_counter] = create_blaster_good(blaster = blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
-                writable_goods[i_counter+2] = create_blaster_good(blaster = blaster, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+2, mp = multiplicity, is_turret = is_turret) # NPC version
+                writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
+                writable_goods[npc_weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+2, mp = multiplicity, is_turret = is_turret) # NPC version
                 
     for o, override_blaster in obd:
         
@@ -758,7 +761,7 @@ def create_guns(
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
         
         # Generate blaster goods entries
-        writable_goods[i_counter] = create_blaster_good(blaster = override_blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
+        writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = override_blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
 
     for a, aux, in ad:
         
@@ -819,13 +822,13 @@ def create_guns(
                 writable_infocards[i_counter+7] = FRC_Entry(typus = "H", idx = i_counter+7, content = ammo_infocard_content)    # NPC version
                 
             # Generate auxgun goods entries
-            writable_goods[i_counter] = create_aux_good(auxgun = aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
-            writable_goods[i_counter+4] = create_aux_good(auxgun = aux, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+4) # NPC version
+            writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
+            writable_goods[npc_weapon_block["nickname"]] = create_aux_good(auxgun = aux, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+4) # NPC version
             
             # Generate ammo goods entries if weapon requires ammo
             if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-                writable_goods[i_counter+2] = create_aux_ammo_good(auxgun = aux, internal_name = base_munition_name, ids_name = i_counter+2)
-                writable_goods[i_counter+6] = create_aux_ammo_good(auxgun = aux, internal_name = base_npc_munition_name, ids_name = i_counter+6) # NPC version
+                writable_goods[base_munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = base_munition_name, ids_name = i_counter+2)
+                writable_goods[base_npc_munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = base_npc_munition_name, ids_name = i_counter+6) # NPC version
         
     for o, override_aux in oad:
         
@@ -881,12 +884,12 @@ def create_guns(
             writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = display_name)
             writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)
             
-        # Generate blaster goods entries
-        writable_goods[i_counter] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
+        # Generate auxgun goods entries
+        writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
         
-        # Generate ammo goods entries if weapon requires ammo
-        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-            writable_goods[i_counter+2] = create_aux_ammo_good(auxgun = override_aux, internal_name = weapon_block["nickname"], ids_name = i_counter+2, is_override = True)
+        # Do not generate ammo goods entries if weapon requires ammo - we STILL use the base variant here
+        #if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
+        #    writable_goods[weapon_block["nickname"]] = create_aux_ammo_good(auxgun = override_aux, internal_name = ????, ids_name = i_counter+2, is_override = True)
         
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
@@ -910,8 +913,6 @@ def create_guns(
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
     # TODO: fix variant and override weapon costs
-    # TODO: fix aux override ammo
-    # TODO: fix variant free ammo
 
 if __name__ == "__main__":
     
