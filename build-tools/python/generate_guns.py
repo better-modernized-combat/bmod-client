@@ -136,7 +136,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "toughness": toughness,
         "flash_particle_name": weapon["Flash Particle Name"],
         "flash_radius": 15,
-        "light_anim": "l_gun01_flash", #TODO: Is this right?
+        "light_anim": weapon["Light Animation"],
         "projectile_archetype": f"{nickname}_ammo",
         "separation_explosion": "sever_debris",
         "auto_turret": "false",
