@@ -492,3 +492,4 @@ mod-assets\*.~lock
 # Specific DLL Files
 mod-assets/EXE/BmodInfocards.dll
 mod-assets/EXE/BmodBlasterInfocards.dll
+mod-assets/EXE/BmodWeaponInfocards.dll
