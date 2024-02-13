@@ -833,7 +833,7 @@ def create_guns(
     for o, override_aux in oad:
         
         # Figure out what the override weapon should be doing
-        nickname = override_blaster["Overrides"]
+        nickname = override_aux["Overrides"]
         
         # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun
         if nickname in writable_weapon_blocks:
@@ -853,7 +853,7 @@ def create_guns(
             is_override = True,
             make_ammo = True
             )
-        if "_npc_" in override_blaster["Overrides"]:
+        if "_npc_" in override_aux["Overrides"]:
             writable_npc_munition_blocks[munition_name] = npc_munition_block
             writable_npc_weapon_blocks[weapon_name] = npc_weapon_block
         else:
