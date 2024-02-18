@@ -53,7 +53,6 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         power_usage = (
                 dfloat(weapon["Energy Usage / rd"]) *
                 (1 + 0.01*dfloat(variant["Variant Energy Usage +%"])) * 
-                multiplicity * 
                 dfloat(scaling_rules[f"{multiplicity}x Energy Factor"])
                 )
         muzzle_velocity = dfloat(weapon["Muzzle Velocity"]) * (1 + 0.01*dfloat(variant["Variant Muzzle Velocity +%"]))
