@@ -907,7 +907,7 @@ def create_guns(
             [munition_name for munition_name, munition in writable_munition_blocks.items() if "aux" in munition_name and str(munition["requires_ammo"]).lower() == "true"], 
             writable_weapon_blocks
             ],
-        filter = ["1x_b", "3xT_b", "1x_xlt", "3xT_xlt"]
+        filter = ["1x_b", "3x_b", "2x_b"]
         )
     
     # TODO: generate the following corresponding files based on the name of the gun:
