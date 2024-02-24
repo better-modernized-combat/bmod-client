@@ -16,6 +16,14 @@ jobs:
             Expand-Archive ${{ github.workspace }}\frc.zip
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
 
+        - name: Download the Freelancer XML Project and Compile XML files to UTF
+          run: |
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${{ github.workspace }}\xmlproject.zip
+            Expand-Archive ${{ github.workspace }}\xmlproject.zip
+            .\staging\build-tools\workflow-build.ps1
+
+
+
 
         - name: Add mod zip
           run: |
