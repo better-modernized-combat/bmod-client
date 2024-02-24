@@ -19,7 +19,7 @@ jobs:
         - name: Download the Freelancer XML Project and Compile XML files to UTF
           #run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
           run: |
-            Start-Process -Wait ${{ github.workspace }}\xmlproject\XMLUTF.exe, -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
+            Start-Process -Wait ${{ github.workspace }}\xmlproject\XMLUTF.exe -ArgumentList "-o, ${{ github.workspace }}/staging/mod-assets/DATA/, ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
    
         - name: Create the mod zip
           run: |
