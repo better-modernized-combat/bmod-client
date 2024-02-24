@@ -17,9 +17,9 @@ jobs:
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
 
         - name: Download the Freelancer XML Project and Compile XML files to UTF
-          run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
+          #run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
+          run: ${{ github.workspace }}\xmlproject\XMLUTF.exe", "-o ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml
    
         - name: Create the mod zip
           run: |
             7z a -t7z -mx=9 ${{ github.workspace }}/staging/freelancerbmod.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-            
