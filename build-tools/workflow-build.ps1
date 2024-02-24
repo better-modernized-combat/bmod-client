@@ -23,8 +23,8 @@ Function Get-TopChildItem($Path, $Filter) {
 
 Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
 Expand-Archive ${github.workspace}\xmlproject.zip
-$destination = "${github.workspace}\staging\mod-assets\DATA"
-$files = Get-TopChildItem -Path "${github.workspace}\staging\mod-assets\XML" -Filter '.xml'
+$destination = "staging\mod-assets\DATA"
+$files = Get-TopChildItem -Path "staging\mod-assets\XML" -Filter '.xml'
 
 $func = {
 param(     
@@ -37,7 +37,7 @@ Start-Process -FilePath "$proc" -Wait -ArgumentList $params
 }
 
 foreach($file in $files){
-  Start-Job -ScriptBlock $func -Arg @("${github.workspace}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+  Start-Job -ScriptBlock $func -Arg @("staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
   Write-Host $destination
   Write-Host $file.FullName
 }
