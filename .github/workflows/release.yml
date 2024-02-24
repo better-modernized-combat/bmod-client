@@ -22,14 +22,4 @@ jobs:
         - name: Create the mod zip
           run: |
             7z a -t7z -mx=9 ${{ github.workspace }}/staging/freelancerbmod.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-              
-
-
-        - name: Add mod zip
-          run: |
-            type NUL > ${{ github.workspace }}\Assets\Mod\freelancerhd.7z
-          shell: cmd
             
-        - name: Compile script
-          run: |
-            "%programfiles(x86)%\Inno Setup 6\iscc.exe" "se
