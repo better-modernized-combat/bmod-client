@@ -24,7 +24,7 @@ Function Get-TopChildItem($Path, $Filter) {
 Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
 Expand-Archive ${github.workspace}\xmlproject.zip
 $destination = "${github.workspace}\staging\mod-assets\DATA"
-$files = Get-TopChildItem -Path "staging\mod-assets\XML" -Filter '.xml'
+$files = Get-TopChildItem -Path "${github.workspace}\staging\mod-assets\XML" -Filter '.xml'
 
 $func = {
 param(     
