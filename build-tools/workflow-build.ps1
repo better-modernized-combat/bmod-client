@@ -1,6 +1,6 @@
 Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
 Expand-Archive ${github.workspace}\xmlproject.zip
-$destination = "staging\mod-assets\DATA"
+$destination = "${github.workspace}\staging\mod-assets\DATA"
 $files = Get-ChildItem -Path "staging\mod-assets\XML" -Filter '*.xml'
 
 $func = {
@@ -17,4 +17,5 @@ foreach($file in $files){
   Start-Job -ScriptBlock $func -Arg @("${github.workspace}\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
   Write-Host $destination
   Write-Host $file.FullName
+  Write-Host $func
 }
