@@ -18,7 +18,7 @@ $groups = $files | Group-Object -Property { [math]::Floor($counter.Value++ / $gr
     
 foreach ($group in $groups) {
     $jobs = foreach ($file in $group.Group) {
-        Start-Job -ScriptBlock $func -Arg @("staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+        Start-Job -ScriptBlock $func -Arg @("${github.workspace}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
         Write-Host "Converting $($file) and writing it to $destination $($file.FullName)"
     }
     Receive-Job $jobs -Wait -AutoRemoveJob
