@@ -1,0 +1,26 @@
+name: Build
+on: push
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+        - name: Check out repository code
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+            path: staging
+        
+        - name: Download frc and build infocards
+          run: |
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.exe
+            Start-Process -Wait ${{ github.workspace }}\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
+
+
+        - name: Add mod zip
+          run: |
+            type NUL > ${{ github.workspace }}\Assets\Mod\freelancerhd.7z
+          shell: cmd
+            
+        - name: Compile script
+          run: |
+            "%programfiles(x86)%\Inno Setup 6\iscc.exe" "se
