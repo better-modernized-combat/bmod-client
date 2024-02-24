@@ -20,9 +20,9 @@ jobs:
           run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
    
         - name: Create the mod zip
-          uses: edgarrc/action-7z@v1
-          with:
-            args: 7z a -t7z -mx=9 freelancerbmod.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
+          run: |
+            choco install 7zip.install--pre
+            7z a -t7z -mx=9 freelancerbmod.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
               
 
 
