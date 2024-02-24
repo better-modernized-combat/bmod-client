@@ -1,7 +1,7 @@
 
 
 $destination = "$PSScriptRoot\staging\mod-assets\DATA"
-$files = Get-ChildItem "$PSScriptRoot\staging\mod-assets\XML" -exclude *.vms.xml*, *vwd.xml*, *Animation.xml*, 
+$files = Get-ChildItem "$PSScriptRoot\staging\mod-assets\XML"
 
 $counter = [pscustomobject] @{ Value = 0 }
 $groupSize = 100
