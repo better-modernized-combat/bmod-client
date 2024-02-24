@@ -21,7 +21,10 @@ jobs:
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${{ github.workspace }}\xmlproject.zip
             Expand-Archive ${{ github.workspace }}\xmlproject.zip
             $folders =  Get-ChildItem "staging\mod-assets\XML"
-            foreach ($file in $folders){Start-Process "${{ github.workspace }}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)");Write-Host "Converting $($file) and writing it to $destination $($file.FullName)"}
+            foreach ($file in $folders){
+              Start-Process "${{ github.workspace }}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+              Write-Host "Converting $($file) and writing it to $destination $($file.FullName)"
+            }
           
 
 
