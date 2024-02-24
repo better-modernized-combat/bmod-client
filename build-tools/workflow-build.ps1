@@ -14,7 +14,7 @@ Start-Process -FilePath "$proc" -Wait -ArgumentList $params
 }
 
 foreach($file in $files){
-  Start-Job -ScriptBlock $func -Arg @("${github.workspace}\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+Start-Process -FilePath "${github.workspace}\xmlproject\XMLUTF.exe", -ArgumentList "-o", "$destination", "$($file.FullName)"
   Write-Host $destination
   Write-Host $file.FullName
   Write-Host $func
