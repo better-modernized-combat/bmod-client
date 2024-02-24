@@ -1,4 +1,12 @@
-
+$func = {
+    param(     
+        [Parameter(Mandatory)]   
+        [string]$proc,
+        [Parameter(Mandatory)]
+        [string]$params
+    )
+    Start-Process -FilePath "$proc" -Wait -ArgumentList $params
+}
 
 $destination = "staging\mod-assets\DATA"
 $files = Get-ChildItem "staging\mod-assets\XML"
