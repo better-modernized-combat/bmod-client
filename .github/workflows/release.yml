@@ -17,13 +17,37 @@ jobs:
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
 
         - name: Download the Freelancer XML Project and Compile XML files to UTF
-          run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${{ github.workspace }}\xmlproject.zip
-            Expand-Archive ${{ github.workspace }}\xmlproject.zip
-            .\staging\build-tools\workflow-build.ps1
+          uses: Amadevus/pwsh-script@v2
+          id: script
+          with:  
+            script: |
+                Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${{ github.workspace }}\xmlproject.zip
+                Expand-Archive ${{ github.workspace }}\xmlproject.zip
+                
+                $func = {
+                    param(
+                        [Parameter(Mandatory)]     
+                        [string]$proc,  
+                        [Parameter(Mandatory)]
+                        [string]$params
+                    )
+                Start-Process -FilePath "$proc" -Wait -ArgumentList $params
+                
+                $destination = "staging\mod-assets\DATA"
+                $files = Get-ChildItem "staging\mod-assets\XML"
 
+                $counter = [pscustomobject] @{ Value = 0 }
+                $groupSize = 100
 
-
+                $groups = $files | Group-Object -Property { [math]::Floor($counter.Value++ / $groupSize) }
+                    
+                foreach ($group in $groups) {
+                    $jobs = foreach ($file in $group.Group) {
+                        Start-Job -ScriptBlock $func -Arg @("staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+                        Write-Host "Converting $($file) and writing it to $destination $($file.FullName)"
+                    }
+                    Receive-Job $jobs -Wait -AutoRemoveJob
+                }
 
         - name: Add mod zip
           run: |
