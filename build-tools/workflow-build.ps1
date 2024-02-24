@@ -1,25 +1,19 @@
-$func = {
-    param(     
-        [Parameter(Mandatory)]   
-        [string]$proc,
-        [Parameter(Mandatory)]
-        [string]$params
-    )
-    Start-Process -FilePath "$proc" -Wait -ArgumentList $params
-}
-
-$destination = "staging\mod-assets\DATA"
+Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
+Expand-Archive ${github.workspace}\xmlproject.zip
+$destination = "${github.workspace}\staging\mod-assets\DATA\"
 $files = Get-ChildItem "staging\mod-assets\XML"
 
-$counter = [pscustomobject] @{ Value = 0 }
-$groupSize = 100
+$func = {
+param(     
+    [Parameter(Mandatory)]   
+    [string]$proc,
+    [Parameter(Mandatory)]
+    [string]$params
+)
+Start-Process -FilePath "$proc" -Wait -ArgumentList $params
+}
 
-$groups = $files | Group-Object -Property { [math]::Floor($counter.Value++ / $groupSize) }
-    
-foreach ($group in $groups) {
-    $jobs = foreach ($file in $group.Group) {
-        Start-Job -ScriptBlock $func -Arg @("${github.workspace}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
-        Write-Host "Converting $($file) and writing it to $destination $($file.FullName)"
-    }
-    Receive-Job $jobs -Wait -AutoRemoveJob
+foreach($file in $files){
+  Start-Job -ScriptBlock $func -Arg @("${github.workspace}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+  Write-Host "Converting$($file.FullName) and writing it to $destination "        
 }
