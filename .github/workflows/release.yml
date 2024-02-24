@@ -29,7 +29,7 @@ jobs:
               
 
               foreach($file in $files){
-                Start-Job -ScriptBlock "${{ github.workspace }}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")
+                Start-Job -ScriptBlock {"${{ github.workspace }}\staging\xmlproject\XMLUTF.exe", "-o $destination $($file.FullName)")}
                 Write-Host "Converting $($file.FullName) and writing it to $destination "        
               }
               
