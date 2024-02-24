@@ -12,8 +12,9 @@ jobs:
         
         - name: Download frc and build infocards
           run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.exe
-            Start-Process -Wait ${{ github.workspace }}\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.zip
+            Expand-Archive ${{ github.workspace }}\frc.zip
+            Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
 
 
         - name: Add mod zip
