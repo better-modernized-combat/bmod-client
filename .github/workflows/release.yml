@@ -17,11 +17,20 @@ jobs:
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
 
         - name: Download the Freelancer XML Project and Compile XML files to UTF
-          run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
-          #run: |
-            #Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
-            #Expand-Archive ${github.workspace}\xmlproject.zip
-            #Start-Process -Wait ${{ github.workspace }}\xmlproject\XMLUTF.exe -ArgumentList "-o, ${{ github.workspace }}/staging/mod-assets/DATA/, ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
+          #run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
+          run: |
+            $path = 'HKLM\SOFTWARE\Microsoft\Microsoft Games\Freelancer\1.0'
+            $key = try {
+              Get-Item -Path $path -ErrorAction Stop
+            }
+            catch {
+                New-Item -Path $path -Force
+            }
+            
+            New-ItemProperty -Path $key.PSPath -Name fDenyTSConnections -Value 1
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
+            Expand-Archive ${github.workspace}\xmlproject.zip
+            Start-Process -Wait ${{ github.workspace }}\xmlproject\XMLUTF.exe -ArgumentList "-o, ${{ github.workspace }}/staging/mod-assets/DATA/, ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
    
         - name: Create the mod zip
           run: |
