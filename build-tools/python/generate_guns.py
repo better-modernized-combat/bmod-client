@@ -210,7 +210,6 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
             "nickname": f"{nickname}_ammo",
             "hp_type": "hp_gun", #TODO: Is this right?
             "requires_ammo": weapon["Uses Ammo?"],
-            "ammo_limit": weapon["Ammo Limit"],
             "hit_pts": 2,
             "hull_damage": hull_damage,
             "energy_damage": energy_damage,
@@ -222,6 +221,8 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
             "force_gun_ori": weapon["Force Gun Orientation"],
             "mass": 1
         })
+        if not (pd.isna(weapon["Ammo Limit"]) or weapon["Ammo Limit"] == ""):
+            munition_block["ammo_limit"] = weapon["Ammo Limit"]
         if str(weapon["Uses Ammo?"]).lower() == "true": #:vomit:
             munition_block["ids_name"] = idx+2
             munition_block["ids_info"] = idx+3
