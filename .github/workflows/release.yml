@@ -24,9 +24,8 @@ jobs:
             
             New-ItemProperty -Path $key.PSPath -Name AppPath -Value ${{ github.workspace }}/staging/mod-assets/
 
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=xmlproject" -OutFile ${github.workspace}\xmlproject.zip
-            Expand-Archive ${github.workspace}\xmlproject.zip
-            Start-Process -Wait ${{ github.workspace }}\xmlproject\XMLUTF.exe -ArgumentList "-o, ${{ github.workspace }}/staging/mod-assets/DATA/, ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${github.workspace}\xml2utf.exe
+            Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o, ${{ github.workspace }}/staging/mod-assets/DATA/, ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
    
         - name: Create the mod zip
           run: |
