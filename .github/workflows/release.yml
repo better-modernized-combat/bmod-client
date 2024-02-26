@@ -62,7 +62,7 @@ jobs:
 
         - name: Create the mod zip
           run: |
-            7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/output.txt 
+            7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z output.txt 
 
         - name: Create Release
           id: create_release
