@@ -14,7 +14,7 @@ Start-Process -FilePath "$proc" -Wait -ArgumentList $params
 }
 
 foreach($file in $files){
-Start-Process -FilePath "${github.workspace}\xml2utf.exe", -ArgumentList "-o", "$destination", "$($file.FullName)"
+Start-Process -Wait ${github.workspace}\xml2utf.exe -ArgumentList "-o, $destination, $($file.FullName)"
   Write-Host $destination
   Write-Host $file.FullName
   Write-Host $func
