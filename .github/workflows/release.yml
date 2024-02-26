@@ -43,15 +43,15 @@ jobs:
             Expand-Archive ${{ github.workspace }}\frc.zip
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
 
-        - name: Test UTF
-          run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-            Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
+        #- name: Test UTF
+        #  run: |
+         #   Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
+        #    Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
 
   
         
-        # - name: Download the Freelancer XML Project and Compile XML files to UTF
-        #  run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
+        - name: Download the Freelancer XML Project and Compile XML files to UTF
+          run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
 
           
         - name: Test Print
