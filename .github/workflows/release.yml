@@ -74,6 +74,7 @@ jobs:
             release_name: "${{ steps.extract_changelog.outputs.version }} | ${{ steps.date.outputs.date }}"
             body: |
               ${{ steps.extract_changelog.outputs.body }}
+              This is not an installer for the mod, and only contains the client files. If you want an all-in-one installer, please check out the latest releases for [BMOD Installer](https://github.com/better-modernized-combat/bmod-installer).
             draft: false
             prerelease: false
 
