@@ -57,11 +57,11 @@ jobs:
         - name: Test Print
           shell: bash  
           run: |
-            find .
+            find . > ${{ github.workspace }}/output.txt
 
         - name: Create the mod zip
           run: |
-            7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/BMOD/FX/WEAPONS/bmod_aux_energy_weapons.ale 
+            7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/output.txt 
 
         - name: Create Release
           id: create_release
