@@ -1,4 +1,4 @@
-name: Build
+name: Release
 on: push
 jobs:
   build:
@@ -10,6 +10,32 @@ jobs:
             fetch-depth: 0
             path: staging
         
+        - name: Get current date
+          id: date
+          run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
+
+        - name: Extract information from CHANGELOG.md
+          id: extract_changelog
+          shell: bash
+          run: |
+            res=$''
+            changelog="$(cat CHANGELOG.md)"
+            while read -r line; do    
+              if [[ "$line" =~ ^##[[:space:]][[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+ ]]; then
+                if [ -z "$version" ]; then
+                  version=${line:2}
+                else
+                  break
+                fi
+              else
+                if [ ! -z "$version" ]; then
+                  res+="${line//\r@Q}\n"
+                fi
+              fi
+            done < CHANGELOG.md
+            echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
+            echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
+    
         - name: Download frc and build infocards
           run: |
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.zip
@@ -18,15 +44,32 @@ jobs:
 
         - name: Download the Freelancer XML Project and Compile XML files to UTF
           run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
-          # run: |
-          #   $path = 'HKLM:\SOFTWARE\Microsoft\Microsoft Games\Freelancer\1.0'
-          #   $key = New-Item -Path $path -Force
-            
-          #   New-ItemProperty -Path $key.PSPath -Name AppPath -Value ${{ github.workspace }}/staging/mod-assets/
-
-          #   Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-          #   Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o, ${{ github.workspace }}/staging/mod-assets/DATA/, ${{ github.workspace }}/staging/mod-assets/XML/bmod_aux_energy_weapons.ale.xml"
    
         - name: Create the mod zip
           run: |
-            7z a -t7z -mx=9 ${{ github.workspace }}/staging/freelancerbmod.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
+            7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
+
+        - name: Create Release
+          id: create_release
+          uses: actions/create-release@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            tag_name: ${{ steps.date.outputs.date }}
+            release_name: "${{ steps.extract_changelog.outputs.version }} | ${{ steps.date.outputs.date }}"
+            body: |
+              ${{ steps.extract_changelog.outputs.body }}
+            draft: false
+            prerelease: false
+
+        - name: Upload Release Asset
+          id: upload-release-asset 
+          uses: actions/upload-release-asset@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }} 
+            asset_path: ${{ github.workspace }}/staging/Release.7z
+            asset_name: Release.7z
+            asset_content_type: application/zip
+    
