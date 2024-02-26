@@ -1,4 +1,4 @@
-name: Build
+name: scan-python
 on:
   push:
     branches:
