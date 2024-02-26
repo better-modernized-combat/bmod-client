@@ -54,7 +54,11 @@ jobs:
         #  run: ${{ github.workspace }}\staging\build-tools\workflow-build.ps1
 
           
-   
+        - name: Test Print
+          shell: bash  
+          run: |
+            find .
+
         - name: Create the mod zip
           run: |
             7z a -t7z -mx=9 Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/BMOD/FX/WEAPONS/bmod_aux_energy_weapons.ale 
