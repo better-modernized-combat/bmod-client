@@ -57,6 +57,7 @@ jobs:
         - name: Test Print
           shell: bash  
           run: |
+            touch ${{ github.workspace }}/output.txt
             find . > ${{ github.workspace }}/output.txt
 
         - name: Create the mod zip
