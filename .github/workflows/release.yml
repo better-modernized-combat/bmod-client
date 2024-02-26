@@ -18,7 +18,7 @@ jobs:
           id: extract_changelog
           shell: bash
           run: |
-            Get-Location
+            pwd
             res=$''
             changelog="$(cat CHANGELOG.md)"
             while read -r line; do    
