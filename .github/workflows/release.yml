@@ -1,6 +1,6 @@
 name: create-release
 on:
-  pull_request:
+  push:
     branches:
       - main
     paths:
