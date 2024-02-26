@@ -47,9 +47,9 @@ jobs:
         - name: Compile UTF files
           run: |
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-            $files = Get-ChildItem -Path "staging\mod-assets\XML" -Filter "*.xml" -Exclude *.vms.xml, *.vwd.xml
+            $items = Get-ChildItem -Path "staging\mod-assets\XML" -Exclude *interface.generic.vms.xml, *.vwd.xml, *vms.xml
+            $files = Get-ChildItem $items -Filter '*.xml'
             Set-Location "${{ github.workspace }}/staging"
-            Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA mod-assets\XML\interface.generic.vms.xml"
             foreach($file in $files){
             Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA $($file.FullName)"
               Write-Host "Compiling $($file.FullName) to UTF"
