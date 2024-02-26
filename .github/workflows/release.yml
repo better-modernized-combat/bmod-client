@@ -1,7 +1,7 @@
 name: Release
 on: push
 jobs:
-  build:
+  release:
     runs-on: windows-latest
     steps:
         - name: Check out repository code
@@ -37,29 +37,24 @@ jobs:
             echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
             echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
     
-        - name: Download frc and build infocards
+        - name: Compile infocards
           run: |
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.zip
             Expand-Archive ${{ github.workspace }}\frc.zip
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
+            Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
 
-        - name: Download the Freelancer XML Project and Compile XML files to UTF
+        - name: Compile UTF files
           run: |
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-            $files = Get-ChildItem -Path "staging\mod-assets\XML" -Filter '*.xml'
+            $files = Get-ChildItem -Path "staging\mod-assets\XML" -Exclude interface.generic.vms.xml, *.vwd.xml | Get-ChildItem -Path "staging\mod-assets\XML" -Filter '*.xml'
             Set-Location "${{ github.workspace }}/staging"
             foreach($file in $files){
             Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA $($file.FullName)"
               Write-Host "Compiling $($file.FullName) to UTF"
             }
 
-        - name: Test Print
-          shell: bash  
-          run: |
-            touch output.txt
-            find . > output.txt
-
-        - name: Create the mod zip
+        - name: Create the Release .7z
           run: |
             7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
 
