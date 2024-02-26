@@ -1,4 +1,4 @@
 # Changelog
 
-## 0.1.0
-- Test Changelog for CI/CD
+## 0.0.1
+- Alpha pre-release for v0.1 "Goose".
