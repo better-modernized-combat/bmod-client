@@ -44,7 +44,7 @@ jobs:
     
         - name: Compile infocards
           run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.zip
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
             Expand-Archive ${{ github.workspace }}\frc.zip
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
@@ -89,3 +89,24 @@ jobs:
             asset_name: Release.7z
             asset_content_type: application/zip
     
+  trigger:
+      needs: release
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Trigger Workflow in Another Repository
+          run: |
+            # Set the required variables
+            repo_owner="better-modernized-combat" 
+            repo_name="bmod-installer"  
+            event_type="trigger-workflow" 
+            service=${{ github.event.inputs.target_service }}"
+            version="${{ github.event.inputs.target_version }}"
+    
+            curl -L \
+              -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${{ secrets.PAT }}" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              https://api.github.com/repos/$repo_owner/$repo_name/dispatches \
+              -d "{\"event_type\": \"$event_type\", \"client_payload\": {\"service\": \"$service\", \"version\": \"$version\", \"unit\": false, \"integration\": true}}"
