@@ -92,12 +92,13 @@ jobs:
   trigger:
       needs: release
       runs-on: ubuntu-latest
-
+      name: Trigger Workflow in Another Repository
       steps:
-        - name: Trigger Workflow in Another Repository
-          run: |
-      
-            curl -X POST https://api.github.com/repos/:github-actions/:better-modernized-combat/bmod-installer/dispatches \
-            -H 'Accept: application/vnd.github.everest-preview+json' \
-            -u ${{ secrets.PAT }} \
-            --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
+      - uses: passeidireto/trigger-external-workflow-action@main
+        env: 
+          PAYLOAD_AUTHOR: ${{ github.author }}
+        with:
+            repository: better-modernized-combat/bmod-client
+            event: trigger-workflow
+            github_pat: ${{ secrets.PAT }}
+    
