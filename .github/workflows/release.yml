@@ -98,7 +98,7 @@ jobs:
         env: 
           PAYLOAD_AUTHOR: ${{ github.author }}
         with:
-            repository: better-modernized-combat/bmod-client
+            repository: better-modernized-combat/bmod-installer
             event: trigger-workflow
             github_pat: ${{ secrets.PAT }}
     
