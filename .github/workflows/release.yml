@@ -1,10 +1,10 @@
 name: create-release
-on: push
- # push:
- #   branches:
- #     - main
- #   paths:
- #     - 'mod-assets/**'
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - 'mod-assets/**'
 jobs:
   release:
     runs-on: windows-latest
