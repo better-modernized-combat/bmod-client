@@ -89,10 +89,10 @@ jobs:
             asset_name: Release.7z
             asset_content_type: application/zip
     
-  trigger:
+  installer:
       needs: release
       runs-on: ubuntu-latest
-      name: Trigger Workflow in Another Repository
+      name: Trigger Installer Workflow 
       steps:
       - uses: passeidireto/trigger-external-workflow-action@main
         env: 
