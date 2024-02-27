@@ -44,7 +44,7 @@ jobs:
     
         - name: Compile infocards
           run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/dlt.php?f=frc" -OutFile ${{ github.workspace }}\frc.zip
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
             Expand-Archive ${{ github.workspace }}\frc.zip
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
             Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
