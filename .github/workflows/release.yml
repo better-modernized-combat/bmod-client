@@ -96,17 +96,8 @@ jobs:
       steps:
         - name: Trigger Workflow in Another Repository
           run: |
-            # Set the required variables
-            repo_owner="better-modernized-combat" 
-            repo_name="bmod-installer"  
-            event_type="trigger-workflow" 
-            service=${{ github.event.inputs.target_service }}"
-            version="${{ github.event.inputs.target_version }}"
-    
-            curl -L 
-              -X POST 
-              -H "Accept: application/vnd.github+json" 
-              -H "Authorization: Bearer ${{ secrets.PAT }}" 
-              -H "X-GitHub-Api-Version: 2022-11-28" 
-              https://api.github.com/repos/$repo_owner/$repo_name/dispatches 
-              -d "{"event_type": "$event_type", "client_payload": {"service": "$service", "version": "$version", "unit": false, "integration": true}}"
+      
+            curl -X POST https://api.github.com/repos/:github-actions/:better-modernized-comba/bmod-installer/dispatches \
+            -H 'Accept: application/vnd.github.everest-preview+json' \
+            -u ${{ secrets.PAT }} \
+            --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
