@@ -10,11 +10,9 @@ from typing import List
 from argparse import ArgumentParser
 
 from defaults import *
-from ini_utils import CSVError, clean_unnamed_wip_empty
 from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, generate_ammo_infocard_entry, write_infocards_to_frc
-
+from ini_utils import CSVError, clean_unnamed_wip_empty
 from utils import bcolors
-# TODO: use bcolors for DEBUG/INFO/WARN/ERROR distinction
 
 # FIXME turrets
 # Currently supported multiplicities
@@ -391,7 +389,7 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
     
     if not(pd.isna(auxgun["Free Ammo"]) or auxgun["Free Ammo"] == ""):
         if is_override:
-            print("WARNING: Guessing name of base variant for override aux gun that requires ammunition. If there is a crash right after this, its probably because your override aux gun didn't conform to the common naming scheme. If there is a crash when trying to buy this weapon, its for the same reason, as it can't find the ammo you're given for free.")
+            print(f"{bcolors.WARNING}WARNING: Guessing name of base variant for override aux gun that requires ammunition. If there is a crash right after this, its probably because your override aux gun didn't conform to the common naming scheme. If there is a crash when trying to buy this weapon, its for the same reason, as it can't find the ammo you're given for free.{bcolors.ENDC}")
         base_variant_guess = "_".join(internal_name.split("_")[:-1]+["b"]) # FIXME: AUX Variants with Variant Ammo
         good["free_ammo"] = f"{base_variant_guess+'_ammo'}, {auxgun['Free Ammo']}"
     
@@ -477,7 +475,7 @@ def sanity_check(
     balancing_sane = True
     
     # Iterate over all weapon pairings
-    print("INFO: Weapon Balance Sanity Check in progress ...")
+    print(f"INFO: Weapon Balance Sanity Check in progress ...")
     for w1, w2 in tqdm(combinations(weapons, r = 2), total = int(len(weapons)*(len(weapons)-1)/2)):
         
         n1, n2 = weapons[w1]["nickname"], weapons[w2]["nickname"]
@@ -528,7 +526,7 @@ def sanity_check(
         ])
         if w1_eq_w2 is True:
             balancing_sane = False
-            print(f"WARNING: Balance problem detected. Weapon {n1} is precisely equal to weapon {n2}.")
+            print(f"{bcolors.WARNING}WARNING: Balance problem detected. Weapon {n1} is precisely equal to weapon {n2}.{bcolors.ENDC}")
             continue
         w1_gt_w2 = all([
             hd1 >= hd2,
@@ -542,7 +540,7 @@ def sanity_check(
         ])
         if w1_gt_w2 is True:
             balancing_sane = False
-            print(f"WARNING: Balance problem detected. Weapon {n1} is strictly better than weapon {n2}.")
+            print(f"{bcolors.WARNING}WARNING: Balance problem detected. Weapon {n1} is strictly better than weapon {n2}.{bcolors.ENDC}")
             print(f"{weapons[w1]['hp_gun_type']}, {weapons[w2]['hp_gun_type']}")
             continue
         w2_gt_w1 = all([
@@ -557,26 +555,26 @@ def sanity_check(
         ])
         if w2_gt_w1 is True:
             balancing_sane = False
-            print(f"WARNING: Balance problem detected. Weapon {n2} is strictly better than weapon {n1}.")
+            print(f"{bcolors.WARNING}WARNING: Balance problem detected. Weapon {n2} is strictly better than weapon {n1}.{bcolors.ENDC}")
             print(f"{weapons[w1]['hp_gun_type']}, {weapons[w2]['hp_gun_type']}")
             continue
         if check_zeros is True:
             for stat in [hd1, ed1, pu1, mv1, er1, rr1]:
                 if stat in [0, "0"]:
                     balancing_sane = False
-                    print(f"WARNING: Balance problem detected. Weapon {n1} has a zero stat.")
+                    print(f"{bcolors.WARNING}WARNING: Balance problem detected. Weapon {n1} has a zero stat.{bcolors.ENDC}")
             for stat in [hd2, ed2, pu2, mv2, er2, rr2]:
                 if stat in [0, "0"]:
                     balancing_sane = False
-                    print(f"WARNING: Balance problem detected. Weapon {n2} has a zero stat.")
+                    print(f"{bcolors.WARNING}WARNING: Balance problem detected. Weapon {n2} has a zero stat.{bcolors.ENDC}")
         
     if balancing_sane is False:
         if balance_notification == "raise":
-            raise ValueError("ERROR: Weapons are unbalanced. Raising error to prevent build.")
+            raise ValueError(f"{bcolors.FAIL}ERROR: Weapons are unbalanced. Raising error to prevent build.{bcolors.ENDC}")
         else:
-            print("WARNING: Weapons are unbalanced, see build logs.")
+            print(f"{bcolors.WARNING}WARNING: Weapons are unbalanced, see build logs.{bcolors.ENDC}")
     else:
-        print("INFO: All weapons have passed sanity check.")
+        print(f"{bcolors.OKGREEN}INFO: All weapons have passed sanity check.{bcolors.ENDC}")
 
 def create_guns(
     blaster_csv: str, 

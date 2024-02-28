@@ -3,15 +3,15 @@ from tqdm.auto import tqdm
 from typing import List
 
 # Find all freelancer inis
-def recursive_walk(top: str, level: int = 0):
-    
+def recursive_find(top: str, ftype: str = ".ini", level: int = 0):
+
     out = []
-    for dirpath, dirnames, filenames in os.walk(top):
-        for fname in filenames:
-            if fname.endswith(".ini"):
-                out.append(os.path.join(dirpath, fname))
-        for dname in dirnames:
-            out.extend(recursive_walk(top = os.path.join(top, dname), level = level+1))
+    ld = [os.path.join(os.path.abspath(top), item) for item in os.listdir(top)]
+    filenames = [f for f in ld if os.path.isfile(f) and f.endswith(ftype)]
+    dirnames = [d for d in ld if os.path.isdir(d)]
+    out.extend(filenames)
+    for dirname in dirnames:
+        out.extend(recursive_find(top = dirname, ftype = ftype, level = level+1))
     return out
 
 # Replace across file
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     print("Remember that blindly replacing strings with other strings can have unintended consequences and that I hope you suffer them :v)")
     
     fl_install_path = input("Enter your FL path (mod build area, not FL install): ")
-    inis = recursive_walk(fl_install_path)
+    inis = recursive_find(fl_install_path)
     old = input("String to replace: ")
     new = input("Replacement string: ")
     
