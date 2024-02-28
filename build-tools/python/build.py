@@ -1,4 +1,5 @@
 import argparse
+import os
 import time
 
 from bini import ini_path
@@ -20,7 +21,7 @@ from utf import xml_path
 from utf import xml_to_utf_thread as xml_to_utf_thread
 from utils import bcolors
 from utils import root_copy_path
-from validation import validate_file_paths
+from validation import validate_all_inis
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--no_start", help="Runs the script but does not start Freelancer.exe on finish.", action="store_true")
@@ -103,8 +104,7 @@ build_script_end_time = time.perf_counter()
 print(bcolors.HEADER + f"Build script completed in {build_script_end_time - build_script_start_time:0.4f} seconds" + bcolors.ENDC)
 
 if not args.skip_checks:
-    # TODO: Validate everything else in the inis
-    validate_file_paths()
+    validate_all_inis(mod_build_dir = root_copy_path)
 
 if not args.no_start:
     start_freelancer_main()
