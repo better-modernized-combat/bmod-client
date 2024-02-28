@@ -2308,6 +2308,7 @@ S 474041 Unknown Planet
 S 474042 Unknown Planet
 S 474043 Maverick Station
 S 474044 Communications Satellite
+S 474045 Galileo Gate Construction Site
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -2549,6 +2550,7 @@ H 476058
 	Pueblo Station
 	Battleship \iRio Grande\I
 	Prison Liner Tamms
+	Galileo Gate Construction Site
 
 	\b\uCorporations\B\U
 	Liberty Navy
@@ -2631,6 +2633,16 @@ H 476060
 H 476061
 	Commsat Placeholder
 
+H 476062
+	CLASS: Aetos
+	GRAVITY: Partial
+	DOCKING: Restricted
+	AMENITIES: Limited
+	POPULATION: 200
+
+H 476063
+	Hastily assembled in the aftermath of the Houston Catastrophe, the Galileo gate repair project has been plagued by setbacks and delays, in part due to frequent Xenos attacks on the trade lane that connects the site to Planet Denver. The gate suffered severe internal damage during the Catastrophe, and has been a focus for DSE since they bought the New York connection back on line successfully.
+
 S 478017 Liberty Police
          Tamms Bartender
          Chester Robertson
@@ -2698,6 +2710,17 @@ S 478033 Liberty Security Force
 S 478034 Bounty Hunter
 		 Oscar Kennedy
 
+S 478035 Deep Space Engineering
+         Galileo Gate Bartender
+         Ollie Grant
+
+S 478036 Deep Space Engineering
+         Galileo Gate Commodity Trader
+         Zane Mcneil
+
+S 478037 Deep Space Engineering
+         Galileo Gate Equipment Dealer
+         Gilbert Wheeler
 S 478518 Navy Confirms Leaked Footage of RNF Scouts
 
 S 478519 MISSISSIPPI - A Navy intelligence spokesperson has confirmed that documents leaked on the neural net last week \x201cappear to contain sensitive and highly classified material\x201d, but the defence department has skirted categorical claims over the authenticity of the documents while repeatedly stressing that at least some have been doctored. Several of the documents appear to confirm sightings of what appear to be ships belonging to the Rheinland Naval Forces in Texas. The system has been off-limits to the public since the Houston catastrophe last year.
