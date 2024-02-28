@@ -139,6 +139,18 @@ class INIError(Exception):
     pass
 
 
+def validate_all_inis(mod_build_dir: str):
+    mod_build_dir = os.path.abspath(mod_build_dir)
+    print("Validating INI files ...")
+    validate_file_paths(mod_build_dir, actively_fix_casing = True, blocking = True)
+    validate_ammo(mod_build_dir, blocking = True)
+    validate_encounters(mod_build_dir, blocking = True)
+    validate_faction_prop(mod_build_dir, blocking = True)
+    validate_goods(mod_build_dir, blocking = True)
+    validate_market_goods(mod_build_dir, blocking = True)
+    validate_npcships(mod_build_dir, blocking = True)
+
+
 def validate_ammo(mod_build_dir: str, blocking: bool = False):
     # Any referenced ammunition points to a valid ammunition block.
     validate_entries(
@@ -198,7 +210,7 @@ def validate_file_paths(mod_build_dir: str, actively_fix_casing: bool = False, b
     
     mod_data_dir = os.path.join(os.path.abspath(mod_build_dir), "mod-assets", "DATA")
     vanilla_data_dir = os.path.join(os.environ["FL_PATH"].replace("\\EXE", "\\DATA").replace("/EXE", "/DATA"))
-    inis = recursive_find(os.path.abspath(mod_build_dir))
+    inis = recursive_find(mod_data_dir)
     no_of_matches = 0
     no_of_problems = 0
     no_of_files_w_problems = 0
@@ -273,13 +285,13 @@ def validate_file_paths(mod_build_dir: str, actively_fix_casing: bool = False, b
                         # Fix paths by replacing our match with the correctly cased version provided by path resolve (get cut by splitting around the match, giving the path we dont need and "")
                         if must_fix_path is True:
                             if (os.path.isfile(vanilla_path) or os.path.isdir(vanilla_path)):
-                                cut = [x for x in str(vanilla_path).split(match) if x != ""][0]
+                                cut = str(vanilla_path).replace(match, "")
                                 fixed = str(res_vanilla_path).replace(cut, "")
                             elif os.path.isfile(mod_path) or os.path.isdir(mod_path):
-                                cut = [x for x in str(mod_path).split(match) if x != ""][0]
+                                cut = str(mod_path).replace(match, "")
                                 fixed = str(res_mod_path).replace(cut, "")
                             else:
-                                cut = [x for x in str(bmod_path).split(match) if x != ""][0]
+                                cut = str(bmod_path).replace(match, "")
                                 fixed = str(res_bmod_path).replace(cut, "")
                             line = line.replace(match, fixed)
                             fixed_casings += 1
@@ -288,13 +300,19 @@ def validate_file_paths(mod_build_dir: str, actively_fix_casing: bool = False, b
                     else:
                         no_of_local_problems += 1
                         no_of_problems += 1
+                        #print(os.path.isfile(vanilla_path))
+                        #print(os.path.isdir(vanilla_path))
+                        #print(os.path.isfile(mod_path))
+                        #print(os.path.isdir(mod_path))
+                        #print(os.path.isfile(bmod_path))
+                        #print(os.path.isdir(bmod_path))
                         #print(vanilla_path)
                         #print(mod_path)
                         #print(bmod_path)
                         #print(res_vanilla_path)
                         #print(res_mod_path)
                         #print(res_bmod_path)
-                        print(f"{bcolors.WARNING}WARNING: {ini} references {match} in line {n}, which does not seem to resolve to a valid path.{bcolors.ENDC}")
+                        #print(f"{bcolors.WARNING}WARNING: {ini} references {match} in line {n}, which does not seem to resolve to a valid path.{bcolors.ENDC}")
                 # After going over all matches add the line back for potential overwriting
                 new_lines.append(line)
             # no matches
@@ -307,7 +325,7 @@ def validate_file_paths(mod_build_dir: str, actively_fix_casing: bool = False, b
         
         # Fix casing, but only if no other problems are present (else we might mangle bad file paths beyond recognition and erase hours of work).
         # Let the user fix their paths first, the we'll worry about casing.
-        if actively_fix_casing is True and no_of_problems == 0:
+        if actively_fix_casing is True and no_of_local_problems == 0:
             with open(ini, "w") as out:
                 for line in new_lines:
                     out.write(line)
@@ -402,12 +420,5 @@ def validate_npcships(mod_build_dir: str, blocking: bool = False):
 
 if __name__ == "__main__":
 
-    mod_build_dir = os.path.abspath("./")
     print("Validating INI files ...")
-    validate_file_paths(mod_build_dir = "./", actively_fix_casing = True, blocking = True)
-    validate_ammo(mod_build_dir, blocking = True)
-    validate_encounters(mod_build_dir, blocking = True)
-    validate_faction_prop(mod_build_dir, blocking = True)
-    validate_goods(mod_build_dir, blocking = True)
-    validate_market_goods(mod_build_dir, blocking = True)
-    validate_npcships(mod_build_dir, blocking = True)
+    validate_all_inis(mod_build_dir = "./")
