@@ -43,15 +43,6 @@ jobs:
             echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
             echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
         
-        - if: ${{ steps.cache-tools.outputs.cache-hit != 'true' }}
-          name: Download tools
-          id: download-tools
-          run: | 
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
-            Expand-Archive ${{ github.workspace }}\frc.zip -Force
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-
-
         - name: Cache tools
           id: cache-tools
           uses: actions/cache@v3
@@ -62,6 +53,15 @@ jobs:
               ${{ github.workspace }}\xml2utf.exe
             restore-keys: |
               ${{ secrets.CACHE }}
+
+        - if: ${{ steps.cache-tools.outputs.cache-hit != 'true' }}
+          name: Download tools
+          id: download-tools
+          run: | 
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
+            Expand-Archive ${{ github.workspace }}\frc.zip -Force
+            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
+
 
   compile-release:
     needs: setup-environment
