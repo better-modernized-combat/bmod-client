@@ -11,7 +11,7 @@ jobs:
     steps:
         - name: Cache tools
           id: cache-tools
-          uses: actions/cache@v3
+          uses: actions/cache@v4
           with:
             key: ${{ secrets.CACHE }}
             path: |
@@ -81,7 +81,7 @@ jobs:
       id: create-release-archive
       run: |
         7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-        ${{env.newHash}} = Get-FileHash ${{ github.workspace }}/staging/Release.7z
+        Get-FileHash ${{ github.workspace }}/staging/Release.7z >> $env:newHash
 
     - name: Get current date
       id: date
@@ -124,7 +124,7 @@ jobs:
     - name: Check Release.7z SHA-256
       id: check-sha256
       run: |
-        ${{ env.oldHash }} = Get-FileHash ${{ github.workspace }}/old/Release.7z
+        Get-FileHash ${{ github.workspace }}/old/Release.7z >> $env:oldHash
         echo ${{ env.oldHash }}
         echo ${{ env.newHash }}
 
