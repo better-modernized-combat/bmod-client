@@ -28,13 +28,13 @@ jobs:
             Expand-Archive ${{ github.workspace }}\frc.zip -Force
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
 
-        - name: Upload Freelancer Resource Compiler
+        - name: Upload Freelancer Resource Compiler artefact
           uses: actions/upload-artifact@v4
           with:
             name: frc
             path: ${{ github.workspace }}\frc\frc.exe
         
-        - name: Upload XML2UTF
+        - name: Upload XML2UTF artefact
           uses: actions/upload-artifact@v4
           with:
             name: xml2utf
@@ -45,15 +45,15 @@ jobs:
     runs-on: windows-latest
     steps:
 
-    - name: Download math result for job 2
+    - name: Download Freelancer Resource Compiler artefact
       uses: actions/download-artifact@v4
       with:
         name: xml2utf
 
-    - name: Download math result for job 2
+    - name: Download XML2UTF artefact
       uses: actions/download-artifact@v4
       with:
-        name: homework_final
+        name: frc
 
     - name: Check out repository code
       id: checkout-repository
