@@ -100,11 +100,6 @@ jobs:
       shell: bash
       run: echo "::set-output name=newHash::$(sha256sum '${{ github.workspace }}\staging\Release.7z')"
         
-
-    - name: Check new Release.7z SHA-256
-      run: echo
-
-
     - name: Get current date
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
