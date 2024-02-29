@@ -50,25 +50,10 @@ jobs:
             latest: true
             extract: false
 
-        - name: Check Release.7z SHA-256
-          id: check-sha256
+        - name: Check old Release.7z SHA-256
+          id: check-sha256-old
           shell: bash
           run: echo "::set-output name=oldHash::$(sha256sum '${{ github.workspace }}\old\Release.7z')"
-
-        - name: echohash
-          run: echo ${{ steps.check-sha256.outputs.oldHash }}
-
-
-
-        - name: Set color
-          id: random-color-generator
-          run: echo "SELECTED_COLOR=green" >> $GITHUB_OUTPUT
-          env:
-            SELECTED_COLOR:
-        - name: Get color
-          run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
-
-
 
 
   compile-release:
@@ -93,7 +78,7 @@ jobs:
       run: |
         Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
         Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
-        echo ${{ env.OLDHASH }}
+
     - name: Compile UTF files
       id: compile-utf
       run: |
@@ -109,9 +94,15 @@ jobs:
       id: create-release-archive
       run: |
         7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-        $hash = Get-FileHash ${{ github.workspace }}/staging/Release.7z
-        Add-Content -Path $env:NEWHASH -Value "name=$hash.Hash"
 
+    - name: Check new Release.7z SHA-256
+      id: check-sha256-new
+      shell: bash
+      run: echo "::set-output name=newHash::$(sha256sum '${{ github.workspace }}\staging\Release.7z')"
+        
+
+    - name: Check new Release.7z SHA-256
+      run: echo
 
 
     - name: Get current date
@@ -145,7 +136,7 @@ jobs:
 
 
 
-      if: ${{env.NEWHASH != env.OLDHASH}}
+      if: ${{ steps.check-sha256-old.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Create release
       id: create-release
       uses: actions/create-release@v1
@@ -160,7 +151,7 @@ jobs:
         draft: false
         prerelease: false
 
-      if: ${{ env.newHash.Hash != env.oldHash.Hash }}  
+      if: ${{ steps.check-sha256-old.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Upload release asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
