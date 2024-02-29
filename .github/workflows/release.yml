@@ -1,9 +1,5 @@
 name: create-release
 on: push
-env:
-   OLDHASH:
-   NEWHASH:
-   SELECTED_COLOR:
   # push:
   #   branches:
   #     - main
@@ -63,6 +59,8 @@ jobs:
         - name: Set color
           id: random-color-generator
           run: echo "SELECTED_COLOR=green" >> $GITHUB_OUTPUT
+          env:
+            SELECTED_COLOR:
         - name: Get color
           run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
 
