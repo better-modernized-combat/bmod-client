@@ -3,6 +3,7 @@ on: push
 env:
    OLDHASH:
    NEWHASH:
+   SELECTED_COLOR:
   # push:
   #   branches:
   #     - main
