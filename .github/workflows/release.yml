@@ -57,7 +57,8 @@ jobs:
           id: check-sha256
           run: |
             $hash = Get-FileHash ${{ github.workspace }}\old\Release.7z
-            $env.OLDHASH = $hash.Hash
+            echo $hash | Out-File -FilePath $env:OLDHASH -Encoding utf8 -Append
+
 
             echo $hash.Hash
             echo ${{ env.OLDHASH }}
