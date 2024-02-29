@@ -48,12 +48,9 @@ jobs:
     - name: Download Freelancer Resource Compiler artefact
       uses: actions/download-artifact@v4
       with:
-        name: xml2utf
-
-    - name: Download XML2UTF artefact
-      uses: actions/download-artifact@v4
-      with:
-        name: frc
+        path: ${{ github.workspace }}\tooling
+    - name: Display structure of downloaded files
+      run: ls -R ${{ github.workspace }}\tooling
 
     - name: Check out repository code
       id: checkout-repository
