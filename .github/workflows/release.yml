@@ -43,7 +43,7 @@ jobs:
             echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
             echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
         
-        - if: ${{ steps.cache-tools.outputs.cache-hit == 'false' }}
+        - if: ${{ steps.cache-tools.outputs.cache-hit != 'true' }}
           name: Download tools
           id: download-tools
           run: | 
