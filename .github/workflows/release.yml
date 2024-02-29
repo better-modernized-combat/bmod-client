@@ -47,12 +47,12 @@ jobs:
           id: cache-tools
           uses: actions/cache@v3
           with:
-            key: ${{ github.workflow }}-freelancer-tools
+            key: ${{ secrets.CACHE }}
             path: |
               ${{ github.workspace }}\frc\frc.exe
               ${{ github.workspace }}\xml2utf.exe
             restore-keys: |
-              ${{ github.workflow }}-freelancer-tools
+              ${{ secrets.CACHE }}
 
         - if: ${{ steps.cache-tools.outputs.cache-hit == 'false' }}
           name: Download tools
