@@ -1,8 +1,8 @@
 name: create-release
 on: push
-# env:
-#   OLDHASH: 0
-#   NEWHASH: 0
+env:
+  OLDHASH: "a"
+  NEWHASH: "b"
   # push:
   #   branches:
   #     - main
@@ -57,7 +57,7 @@ jobs:
           id: check-sha256
           run: |
             $hash = Get-FileHash ${{ github.workspace }}\old\Release.7z
-            echo "::set-output $hash::${ { env.OLDHASH } }"
+            Add-Content -Path $env:OLDHASH -Value "name=$hash.Hash"
             echo $hash.Hash
             echo ${{env.OLDHASH}}
 
