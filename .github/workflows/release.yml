@@ -1,8 +1,6 @@
 name: create-release
 on: push
-env:
-   OLDHASH: "0"
-   NEWHASH: "0"
+
   # push:
   #   branches:
   #     - main
@@ -63,6 +61,7 @@ jobs:
 
             echo $hash.Hash
             echo ${{ env.OLDHASH }}
+            echo ${{ env.GITHUB_ENV }}
 
 
 
