@@ -62,6 +62,7 @@ jobs:
 
 
             echo $hash.Hash
+            echo $GITHUB_ENV
             echo ${{ env.OLDHASH }}
             echo $GITHUB_ENV
 
