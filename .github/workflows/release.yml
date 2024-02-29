@@ -43,19 +43,19 @@ jobs:
             echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
             echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
         
-        - name: Cache tools
-          id: cache-tools
-          uses: actions/cache@v3
-          with:
-            key: ${{ secrets.CACHE }}
-            path: |
-              ${{ github.workspace }}\frc\frc.exe
-              ${{ github.workspace }}\xml2utf.exe
-            restore-keys: |
-              ${{ secrets.CACHE }}
+        # - name: Cache tools
+        #   id: cache-tools
+        #   uses: actions/cache@v3
+        #   with:
+        #     key: ${{ secrets.CACHE }}
+        #     path: |
+        #       ${{ github.workspace }}\frc\frc.exe
+        #       ${{ github.workspace }}\xml2utf.exe
+        #     restore-keys: |
+        #       ${{ secrets.CACHE }}
 
-        - if: ${{ steps.cache-tools.outputs.cache-hit != 'true' }}
-          name: Download tools
+
+        - name: Download tools
           id: download-tools
           run: | 
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
