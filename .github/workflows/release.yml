@@ -43,6 +43,24 @@ jobs:
             name: xml2utf
             path: ${{ github.workspace }}\xml2utf.exe  
 
+        - name: Download latest BMOD Client release
+          id: download-release
+          uses: robinraju/release-downloader@v1.8
+          with:
+            repository: "better-modernized-combat/bmod-client"
+            fileName: "Release.7z"
+            out-file-path: "old"
+            latest: true
+            extract: false
+
+        - name: Check Release.7z SHA-256
+          id: check-sha256
+          run: |
+            Add-Content -Path $env:OLDHASH -Value "name=$hash.Hash"
+            echo $hash.Hash
+            echo ${{env.OLDHASH}}
+
+
   compile-release:
     needs: setup-environment
     runs-on: windows-latest
@@ -114,20 +132,6 @@ jobs:
         echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
         echo 
 
-    - name: Download latest BMOD Client release
-      id: download-release
-      uses: robinraju/release-downloader@v1.8
-      with:
-        repository: "better-modernized-combat/bmod-client"
-        fileName: "Release.7z"
-        out-file-path: "old"
-        latest: true
-        extract: false
-
-    - name: Check Release.7z SHA-256
-      id: check-sha256
-      run: |
-        Add-Content -Path $env:OLDHASH -Value "name=$hash.Hash"
 
 
 
