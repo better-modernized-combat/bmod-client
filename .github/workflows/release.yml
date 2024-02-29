@@ -44,8 +44,8 @@ jobs:
     needs: setup-environment
     runs-on: windows-latest
     env:
-      oldHash: 0
-      newHash: 0
+      oldHash:
+      newHash:
     steps:
 
     - name: Download tooling artefacts
@@ -82,6 +82,7 @@ jobs:
       run: |
         7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
         Get-FileHash ${{ github.workspace }}/staging/Release.7z >> $env:newHash
+        echo $env:newHash
 
     - name: Get current date
       id: date
@@ -126,7 +127,6 @@ jobs:
       run: |
         Get-FileHash ${{ github.workspace }}/old/Release.7z >> $env:oldHash
         echo ${{ env.oldHash }}
-        echo ${{ env.newHash }}
 
 
       if: ${{ env.newHash.Hash != env.oldHash.Hash }}
