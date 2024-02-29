@@ -52,9 +52,13 @@ jobs:
 
         - name: Check Release.7z SHA-256
           id: check-sha256
-          run: |
-            $hash = Get-FileHash ${{ github.workspace }}\old\Release.7z
-            echo "{env.OLDHASH}={$hash.Hash}" >> "$GITHUB_ENV"
+          shell: bash
+          run: echo "::set-output name=oldHash::$(sha256sum '${{ github.workspace }}\old\Release.7z')"
+
+        - name: echohash
+          run: echo ${{ steps.check-sha256.outputs.oldHash }}
+
+
 
         - name: Set color
           id: random-color-generator
