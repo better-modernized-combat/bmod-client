@@ -1,5 +1,8 @@
 name: create-release
 on: push
+env:
+  OLDHASH:
+  NEWHASH:
   # push:
   #   branches:
   #     - main
@@ -43,9 +46,6 @@ jobs:
   compile-release:
     needs: setup-environment
     runs-on: windows-latest
-    env:
-      OLDHASH:
-      NEWHASH:
     steps:
 
     - name: Download tooling artefacts
@@ -81,9 +81,10 @@ jobs:
       id: create-release-archive
       run: |
         7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-        $hash = Get-FileHash ${{ github.workspace }}/staging/Release.7z > ${{env.newHash}}
-        $hash.Hash >> $env:NEWHASH
-        echo ${{env.newHash}}
+        $hash = Get-FileHash ${{ github.workspace }}/staging/Release.7z
+        Add-Content -Path $env:NEWHASH -Value "name=$hash.Hash"
+
+
 
     - name: Get current date
       id: date
@@ -126,12 +127,11 @@ jobs:
     - name: Check Release.7z SHA-256
       id: check-sha256
       run: |
-        $hash = Get-FileHash ${{ github.workspace }}/old/Release.7z > ${{env.oldHash}}
-        $hash.Hash >> $env:OLDHASH
-        echo ${{env.oldHash}}
+        Add-Content -Path $env:OLDHASH -Value "name=$hash.Hash"
 
 
-      if: ${{ env.newHash.Hash != env.oldHash.Hash }}
+
+      if: ${{env.NEWHASH != env.OLDHASH}}
     - name: Create release
       id: create-release
       uses: actions/create-release@v1
