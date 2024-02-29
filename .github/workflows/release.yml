@@ -55,17 +55,13 @@ jobs:
 
         - name: Check Release.7z SHA-256
           id: check-sha256
-          shell: bash
           run: |
-            hash = sha256sum ${{ github.workspace }}/old/Release.7z
-            echo hash
-            echo "OLDHASH=$(echo hash | cut -c 1-6)" >> $GITHUB_ENV
+            $hash = Get-FileHash ${{ github.workspace }}\old\Release.7z
+            ${{ env.OLDHASH }} = $hash.Hash
 
+            echo $hash.Hash
+            echo ${{ env.OLDHASH }}
 
-
-           # Add-Content -Path $env:OLDHASH -Value "name=$hash.Hash"
-            # echo $hash.Hash
-            # echo ${{env.OLDHASH}}
 
 
   compile-release:
