@@ -43,6 +43,9 @@ jobs:
   compile-release:
     needs: setup-environment
     runs-on: windows-latest
+    env:
+      oldHash: 0
+      newHash: 0
     steps:
 
     - name: Download tooling artefacts
@@ -78,13 +81,7 @@ jobs:
       id: create-release-archive
       run: |
         7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-        Get-FileHash ${{ github.workspace }}/staging/Release.7z > hash.txt
-
-    - name: Upload Release.7z SHA-256 artefact
-      uses: actions/upload-artifact@v4
-      with:
-        name: release-sha256
-        path: hash.txt
+        ${{env.newHash}} = Get-FileHash ${{ github.workspace }}/staging/Release.7z
 
     - name: Get current date
       id: date
@@ -114,6 +111,25 @@ jobs:
         echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
         echo 
 
+    - name: Download latest BMOD Client release
+      id: download-release
+      uses: robinraju/release-downloader@v1.8
+      with:
+        repository: "better-modernized-combat/bmod-client"
+        fileName: "Release.7z"
+        out-file-path: "old"
+        latest: true
+        extract: false
+
+    - name: Check Release.7z SHA-256
+      id: check-sha256
+      run: |
+        ${{ env.oldHash }} = Get-FileHash ${{ github.workspace }}/old/Release.7z
+        echo ${{ env.oldHash }}
+        echo ${{ env.newHash }}
+
+
+      if: ${{ env.newHash.Hash != env.oldHash.Hash }}
     - name: Create release
       id: create-release
       uses: actions/create-release@v1
@@ -128,6 +144,7 @@ jobs:
         draft: false
         prerelease: false
 
+      if: ${{ env.newHash.Hash != env.oldHash.Hash }}  
     - name: Upload release asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
