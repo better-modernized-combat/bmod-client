@@ -52,14 +52,14 @@ jobs:
               ${{ github.workspace }}\frc\frc.exe
               ${{ github.workspace }}\xml2utf.exe
             restore-keys: |
-              ${{ secrets.CACHE }}
+              ${{ github.workflow }}-freelancer-tools
 
         - if: ${{ steps.cache-tools.outputs.cache-hit == 'false' }}
           name: Download tools
           id: download-tools
           run: | 
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
-            Expand-Archive ${{ github.workspace }}\frc.zip
+            Expand-Archive ${{ github.workspace }}\frc.zip -Force
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
 
   compile-release:
