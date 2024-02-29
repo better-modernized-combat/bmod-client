@@ -88,7 +88,7 @@ jobs:
           id: create-release-archive
           run: |
             7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-
+ 
   # publish-release:
   #   needs: compile-release
   #   runs-on: windows-latest
