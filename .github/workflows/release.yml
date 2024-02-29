@@ -129,7 +129,10 @@ jobs:
         echo 
 
 
-
+    - name: echo vars
+      run: |
+        echo ${{ steps.check-sha256-old.outputs.oldHash }} 
+        echo ${{ steps.check-sha256-new.outputs.newHash }}
 
       if: ${{ steps.check-sha256-old.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Create release
