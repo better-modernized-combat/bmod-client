@@ -57,14 +57,12 @@ jobs:
           id: check-sha256
           run: |
             $hash = Get-FileHash ${{ github.workspace }}\old\Release.7z
-            echo "{OLDHASH}={$hash.Hash}" >> "$GITHUB_ENV"
+            echo "{env.OLDHASH}={$hash.Hash}" >> "$GITHUB_ENV"
 
 
 
             echo $hash.Hash
-            echo $GITHUB_ENV
-            echo ${{ env.OLDHASH }}
-            echo $GITHUB_ENV
+
 
 
 
