@@ -95,7 +95,7 @@ jobs:
     - name: Create the Release.7z file
       id: create-release-archive
       run: |
-        7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
+        7z a -t7z -mx=9 -mtm- ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
 
     - name: Check new Release.7z SHA-256
       id: check-sha256-new
