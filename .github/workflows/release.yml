@@ -8,6 +8,8 @@ on: push
 jobs:
   setup-environment:
     runs-on: windows-latest
+    outputs: 
+      oldHash: ${{steps.check-sha256-old.outputs.oldHash}}
     steps:
         - name: Cache tools
           id: cache-tools
@@ -134,7 +136,7 @@ jobs:
         echo ${{ needs.setup-environment.outputs.oldHash }} 
         echo ${{ steps.check-sha256-new.outputs.newHash }}
 
-      if: ${{ steps.check-sha256-old.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
+      if: ${{ needs.setup-environment.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Create release
       id: create-release
       uses: actions/create-release@v1
@@ -149,7 +151,7 @@ jobs:
         draft: false
         prerelease: false
 
-      if: ${{ steps.check-sha256-old.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
+      if: ${{ needs.setup-environment.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Upload release asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
