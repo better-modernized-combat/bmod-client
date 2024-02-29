@@ -56,6 +56,7 @@ jobs:
         - name: Check Release.7z SHA-256
           id: check-sha256
           run: |
+            $hash = Get-FileHash ${{ github.workspace }}\old\Release.7z
             Add-Content -Path $env:OLDHASH -Value "name=$hash.Hash"
             echo $hash.Hash
             echo ${{env.OLDHASH}}
