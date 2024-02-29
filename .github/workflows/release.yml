@@ -87,7 +87,7 @@ jobs:
       run: |
         Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
         Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
-
+        echo ${{ env.OLDHASH }}
     - name: Compile UTF files
       id: compile-utf
       run: |
