@@ -57,7 +57,7 @@ jobs:
           id: check-sha256
           shell: bash
           run: |
-            hash = sha256 ${{ github.workspace }}\old\Release.7z
+            hash = sha256 ${{ github.workspace }}/old/Release.7z
             echo hash
             echo "OLDHASH=$(echo hash | cut -c 1-6)" >> $GITHUB_ENV
 
