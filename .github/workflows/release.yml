@@ -6,93 +6,137 @@ on:
     paths:
       - 'mod-assets/**'
 jobs:
-  release:
+  setup-environment:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Cache tools
+          id: cache-tools
+          uses: actions/cache@v4
+          with:
+            key: ${{ secrets.CACHE }}
+            path: |
+              ${{ github.workspace }}/frc.exe
+              ${{ github.workspace }}/xml2utf.exe
+            restore-keys: |
+              ${{ secrets.CACHE }}
+
+        - if: ${{ steps.cache-tools.outputs.cache-hit != 'true' }}
+          name: Download tools
+          id: download-tools
+          run: | 
+            cd ${{ github.workspace }}
+            curl -O http://adoxa.altervista.org/freelancer/frc.zip
+            unzip frc.zip
+            curl -O http://adoxa.altervista.org/freelancer/xml2utf.exe
+        
+        - name: Upload Freelancer Resource Compiler artefact
+          uses: actions/upload-artifact@v4
+          with:
+            name: frc
+            path: ${{ github.workspace }}/frc.exe
+        
+        - name: Upload XML2UTF artefact
+          uses: actions/upload-artifact@v4
+          with:
+            name: xml2utf
+            path: ${{ github.workspace }}/xml2utf.exe  
+
+  compile-release:
+    needs: setup-environment
     runs-on: windows-latest
     steps:
-        - name: Check out repository code
-          uses: actions/checkout@v3
-          with:
-            fetch-depth: 0
-            path: staging
+
+    - name: Download tooling artefacts
+      uses: actions/download-artifact@v4
+      with:
+        path: ${{ github.workspace }}
+
+    - name: Check out repository code
+      id: checkout-repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        path: staging
+  
+    - name: Compile infocards
+      id: compile-infocards
+      run: |
+        Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
+        Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
+
+    - name: Compile UTF files
+      id: compile-utf
+      run: |
+        $files =  Get-ChildItem -Recurse -Path staging\mod-assets\XML -Filter "*.xml" -Exclude *.vms.xml, *.vwd.xml, *Animation.xml
+        Set-Location "${{ github.workspace }}/staging"
+        Start-Process -Wait D:\a\bmod-client\bmod-client\xml2utf\xml2utf.exe -ArgumentList "-o D:\a\bmod-client\bmod-client/staging/mod-assets/DATA mod-assets\XML\interface.generic.vms.xml"
+        foreach($file in $files){
+        Start-Process -Wait ${{ github.workspace }}\xml2utf\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA $($file.FullName)"
+          Write-Host "Compiling $($file.FullName) to UTF"
+        }
+
+    - name: Create the Release.7z file
+      id: create-release-archive
+      run: |
+        7z a -t7z -mx=9 -mtm- ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
         
-        - name: Get current date
-          id: date
-          run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M')"
 
-        - name: Extract information from CHANGELOG.md
-          id: extract_changelog
-          shell: bash
-          run: |
-            cd '${{ github.workspace }}/staging'
-            res=$''
-            changelog="$(cat CHANGELOG.md)"
-            while read -r line; do    
-              if [[ "$line" =~ ^##[[:space:]][[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+ ]]; then
-                if [ -z "$version" ]; then
-                  version=${line:2}
-                else
-                  break
-                fi
-              else
-                if [ ! -z "$version" ]; then
-                  res+="${line//\r@Q}\n"
-                fi
-              fi
-            done < CHANGELOG.md
-            echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
-            echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
-    
-        - name: Compile infocards
-          run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
-            Expand-Archive ${{ github.workspace }}\frc.zip
-            Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
-            Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
+    - name: Extract information from CHANGELOG.md
+      id: extract_changelog
+      shell: bash
+      run: |
+        cd '${{ github.workspace }}/staging'
+        res=$''
+        changelog="$(cat CHANGELOG.md)"
+        while read -r line; do    
+          if [[ "$line" =~ ^##[[:space:]][[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+ ]]; then
+            if [ -z "$version" ]; then
+              version=${line:2}
+            else
+              break
+            fi
+          else
+            if [ ! -z "$version" ]; then
+              res+="${line//\r@Q}\n"
+            fi
+          fi
+        done < CHANGELOG.md
+        echo -e "version<<EOF"$'\n'"$version"$'\n'EOF >> $GITHUB_OUTPUT
+        echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
+        echo 
 
-        - name: Compile UTF files
-          run: |
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-            $files =  Get-ChildItem -Recurse -Path staging\mod-assets\XML -Filter "*.xml" -Exclude *.vms.xml, *.vwd.xml, *Animation.xml
-            Set-Location "${{ github.workspace }}/staging"
-            Start-Process -Wait D:\a\bmod-client\bmod-client\xml2utf.exe -ArgumentList "-o D:\a\bmod-client\bmod-client/staging/mod-assets/DATA mod-assets\XML\interface.generic.vms.xml"
-            foreach($file in $files){
-            Start-Process -Wait ${{ github.workspace }}\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA $($file.FullName)"
-              Write-Host "Compiling $($file.FullName) to UTF"
-            }
+    - name: Create release
+      id: create-release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.date.outputs.date }}
+        release_name: "${{ steps.extract_changelog.outputs.version }} | ${{ steps.date.outputs.date }}"
+        body: |
+          ${{ steps.extract_changelog.outputs.body }}
+          This is not an installer for the mod, and only contains the client files. If you want an all-in-one installer, please check out the latest releases for [BMOD Installer](https://github.com/better-modernized-combat/bmod-installer).
+        draft: false
+        prerelease: false
 
-        - name: Create the Release.7z file
-          run: |
-            7z a -t7z -mx=9 ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
+    - name: Upload release asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create-release.outputs.upload_url }} 
+        asset_path: ${{ github.workspace }}/staging/Release.7z
+        asset_name: Release.7z
+        asset_content_type: application/zip
 
-        - name: Create Release
-          id: create_release
-          uses: actions/create-release@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            tag_name: ${{ steps.date.outputs.date }}
-            release_name: "${{ steps.extract_changelog.outputs.version }} | ${{ steps.date.outputs.date }}"
-            body: |
-              ${{ steps.extract_changelog.outputs.body }}
-              This is not an installer for the mod, and only contains the client files. If you want an all-in-one installer, please check out the latest releases for [BMOD Installer](https://github.com/better-modernized-combat/bmod-installer).
-            draft: false
-            prerelease: false
-
-        - name: Upload Release Asset
-          id: upload-release-asset 
-          uses: actions/upload-release-asset@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            upload_url: ${{ steps.create_release.outputs.upload_url }} 
-            asset_path: ${{ github.workspace }}/staging/Release.7z
-            asset_name: Release.7z
-            asset_content_type: application/zip
-    
   installer:
-      needs: release
+      needs: compile-release
       runs-on: ubuntu-latest
-      name: Trigger Installer Workflow 
+      name: Trigger installer build workflow 
       steps:
       - uses: passeidireto/trigger-external-workflow-action@main
         env: 
