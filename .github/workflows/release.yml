@@ -15,8 +15,8 @@ jobs:
           with:
             key: ${{ secrets.CACHE }}
             path: |
-              ${{ github.workspace }}\frc\frc.exe
-              ${{ github.workspace }}\xml2utf.exe
+              ${{ github.workspace }}/frc/frc.exe
+              ${{ github.workspace }}/xml2utf.exe
             restore-keys: |
               ${{ secrets.CACHE }}
 
@@ -24,10 +24,10 @@ jobs:
           name: Download tools
           id: download-tools
           run: | 
-            curl -o ${{ github.workspace }}\frc.zip "http://adoxa.altervista.org/freelancer/frc.zip"
-            curl -o ${{ github.workspace }}\xml2utf.exe "http://adoxa.altervista.org/freelancer/xml2utf.exe"
-            unzip ${{ github.workspace }}\frc.zip
-
+            curl -o ${{ github.workspace }}/frc.zip "http://adoxa.altervista.org/freelancer/frc.zip"
+            unzip ${{ github.workspace }}/frc.zip
+            curl -o ${{ github.workspace }}/xml2utf.exe "http://adoxa.altervista.org/freelancer/xml2utf.exe"
+        
         - name: Upload Freelancer Resource Compiler artefact
           uses: actions/upload-artifact@v4
           with:
