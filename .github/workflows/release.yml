@@ -1,10 +1,10 @@
 name: create-release
-on: push
-  # push:
-  #   branches:
-  #     - main
-  #   paths:
-  #     - 'mod-assets/**'
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - 'mod-assets/**'
 jobs:
   setup-environment:
     runs-on: ubuntu-latest
@@ -140,16 +140,16 @@ jobs:
         asset_name: Release.7z
         asset_content_type: application/zip
 
-  # installer:
-  #     needs: compile-release
-  #     runs-on: ubuntu-latest
-  #     name: Trigger installer build workflow 
-  #     steps:
-  #     - uses: passeidireto/trigger-external-workflow-action@main
-  #       env: 
-  #         PAYLOAD_AUTHOR: ${{ github.author }}
-  #       with:
-  #           repository: better-modernized-combat/bmod-installer
-  #           event: trigger-workflow
-  #           github_pat: ${{ secrets.PAT }}
+  installer:
+      needs: compile-release
+      runs-on: ubuntu-latest
+      name: Trigger installer build workflow 
+      steps:
+      - uses: passeidireto/trigger-external-workflow-action@main
+        env: 
+          PAYLOAD_AUTHOR: ${{ github.author }}
+        with:
+            repository: better-modernized-combat/bmod-installer
+            event: trigger-workflow
+            github_pat: ${{ secrets.PAT }}
     
