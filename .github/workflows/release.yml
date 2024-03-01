@@ -7,9 +7,7 @@ on: push
   #     - 'mod-assets/**'
 jobs:
   setup-environment:
-    runs-on: windows-latest
-    outputs: 
-      oldHash: ${{steps.check-sha256-old.outputs.oldHash}}
+    runs-on: ubuntu-latest
     steps:
         - name: Cache tools
           id: cache-tools
@@ -27,8 +25,11 @@ jobs:
           id: download-tools
           run: | 
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
-            Expand-Archive ${{ github.workspace }}\frc.zip -Force
+            unzip ${{ github.workspace }}\frc.zip
             Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
+
+            curl -o ${{ github.workspace }}\frc.zip "http://adoxa.altervista.org/freelancer/frc.zip"
+            curl -o ${{ github.workspace }}\xml2utf.exe "http://adoxa.altervista.org/freelancer/xml2utf.exe"
 
         - name: Upload Freelancer Resource Compiler artefact
           uses: actions/upload-artifact@v4
@@ -41,22 +42,6 @@ jobs:
           with:
             name: xml2utf
             path: ${{ github.workspace }}\xml2utf.exe  
-
-        - name: Download latest BMOD Client release
-          id: download-release
-          uses: robinraju/release-downloader@v1.8
-          with:
-            repository: "better-modernized-combat/bmod-client"
-            fileName: "Release.7z"
-            out-file-path: "old"
-            latest: true
-            extract: false
-
-        - name: Check old Release.7z SHA-256
-          id: check-sha256-old
-          shell: bash
-          run: echo "::set-output name=oldHash::$(sha256sum '${{ github.workspace }}\old\Release.7z')"
-
 
   compile-release:
     needs: setup-environment
@@ -130,13 +115,6 @@ jobs:
         echo -e "body<<EOF"$'\n'$res$'\n'EOF >> $GITHUB_OUTPUT
         echo 
 
-
-    - name: echo vars
-      run: |
-        echo ${{ needs.setup-environment.outputs.oldHash }} 
-        echo ${{ steps.check-sha256-new.outputs.newHash }}
-
-      if: ${{ needs.setup-environment.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Create release
       id: create-release
       uses: actions/create-release@v1
@@ -151,7 +129,6 @@ jobs:
         draft: false
         prerelease: false
 
-      if: ${{ needs.setup-environment.outputs.oldHash }} !=  ${{ steps.check-sha256-new.outputs.newHash }}
     - name: Upload release asset
       id: upload-release-asset 
       uses: actions/upload-release-asset@v1
@@ -164,7 +141,7 @@ jobs:
         asset_content_type: application/zip
 
   # installer:
-  #     needs: publish-release
+  #     needs: compile-release
   #     runs-on: ubuntu-latest
   #     name: Trigger installer build workflow 
   #     steps:
