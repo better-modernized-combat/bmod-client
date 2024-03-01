@@ -25,9 +25,9 @@ jobs:
           id: download-tools
           run: | 
             cd ${{ github.workspace }}
-            curl -O frc.zip "http://adoxa.altervista.org/freelancer/frc.zip"
+            curl -O http://adoxa.altervista.org/freelancer/frc.zip
             unzip frc.zip
-            curl -O xml2utf.exe "http://adoxa.altervista.org/freelancer/xml2utf.exe"
+            curl -O http://adoxa.altervista.org/freelancer/xml2utf.exe
           
         
         - name: Upload Freelancer Resource Compiler artefact
