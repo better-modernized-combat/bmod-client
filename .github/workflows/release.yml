@@ -28,8 +28,6 @@ jobs:
             curl -O http://adoxa.altervista.org/freelancer/frc.zip
             unzip frc.zip
             curl -O http://adoxa.altervista.org/freelancer/xml2utf.exe
-            find .
-            ls -a .
         
         - name: Upload Freelancer Resource Compiler artefact
           uses: actions/upload-artifact@v4
@@ -81,11 +79,6 @@ jobs:
       id: create-release-archive
       run: |
         7z a -t7z -mx=9 -mtm- ${{ github.workspace }}/staging/Release.7z ${{ github.workspace }}/staging/mod-assets/DATA/ ${{ github.workspace }}/staging/mod-assets/DLLS/ ${{ github.workspace }}/staging/mod-assets/EXE/
-
-    - name: Check new Release.7z SHA-256
-      id: check-sha256-new
-      shell: bash
-      run: echo "::set-output name=newHash::$(sha256sum '${{ github.workspace }}\staging\Release.7z')"
         
     - name: Get current date
       id: date
