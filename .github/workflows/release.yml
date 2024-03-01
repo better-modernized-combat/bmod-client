@@ -24,12 +24,9 @@ jobs:
           name: Download tools
           id: download-tools
           run: | 
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/frc.zip" -OutFile ${{ github.workspace }}\frc.zip
-            unzip ${{ github.workspace }}\frc.zip
-            Invoke-WebRequest "http://adoxa.altervista.org/freelancer/xml2utf.exe" -OutFile ${{ github.workspace }}\xml2utf.exe
-
             curl -o ${{ github.workspace }}\frc.zip "http://adoxa.altervista.org/freelancer/frc.zip"
             curl -o ${{ github.workspace }}\xml2utf.exe "http://adoxa.altervista.org/freelancer/xml2utf.exe"
+            unzip ${{ github.workspace }}\frc.zip
 
         - name: Upload Freelancer Resource Compiler artefact
           uses: actions/upload-artifact@v4
