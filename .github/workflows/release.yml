@@ -35,13 +35,13 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: frc
-            path: ${{ github.workspace }}\frc\frc.exe
+            path: ${{ github.workspace }}/frc.exe
         
         - name: Upload XML2UTF artefact
           uses: actions/upload-artifact@v4
           with:
             name: xml2utf
-            path: ${{ github.workspace }}\xml2utf.exe  
+            path: ${{ github.workspace }}/xml2utf.exe  
 
   compile-release:
     needs: setup-environment
