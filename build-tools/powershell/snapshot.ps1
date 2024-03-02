@@ -21,7 +21,7 @@ Remove-Item $destination\$date -Recurse -Force
 }
 
 Write-Host Backing up the server database, cleaning up files older than 14 days.
-Export-Backup "C:\Users\Administrator\OneDrive\Documents\My Games\Freelancer" "C:\bmod-server\Backups\ServerDB"
+Export-Backup "C:\Users\Administrator\Documents\My Games\Freelancer" "C:\bmod-server\Backups\ServerDB"
 
 Write-Host Backing up the server logs, cleaning up files older than 14 days.
 Export-Backup "C:\bmod-server\Freelancer\EXE\logs" "C:\bmod-server\Backups\Logs"
