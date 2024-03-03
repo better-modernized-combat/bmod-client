@@ -25,6 +25,11 @@ jobs:
       run: | 
         python -m pip install tqdm
 
+    - name: "Clone Freelancer HD Edition"
+      run: |
+        git clone https://github.com/BC46/freelancer-hd-edition.git
+        export FL_PATH = "${{ github.workspace }}/freelancer-hd-edition"
+
     - name: "Checkout repository"
       uses: actions/checkout@v4
       with:
