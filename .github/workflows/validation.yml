@@ -19,7 +19,7 @@ jobs:
           failure-message: "Expected CHANGELOG.md to have an update"
 
   ini-validation:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: "Set up Python environment"
       run: | 
