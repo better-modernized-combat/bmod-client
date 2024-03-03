@@ -27,7 +27,8 @@ jobs:
 
     - name: "Clone Freelancer HD Edition"
       run: |
-        git clone https://github.com/BC46/freelancer-hd-edition.git && export FL_PATH="${{ github.workspace }}/freelancer-hd-edition"
+        export FL_PATH=${{ github.workspace }}/freelancer-hd-edition && git clone https://github.com/BC46/freelancer-hd-edition.git
+        
 
     - name: "Checkout repository"
       uses: actions/checkout@v4
