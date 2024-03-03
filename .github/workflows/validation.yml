@@ -26,9 +26,8 @@ jobs:
         python -m pip install tqdm
 
     - name: "Clone Freelancer HD Edition"
-      run: |
-        
-      # && git clone https://github.com/BC46/freelancer-hd-edition.git
+      run: |  
+        git clone https://github.com/BC46/freelancer-hd-edition.git
         
 
     - name: "Checkout repository"
