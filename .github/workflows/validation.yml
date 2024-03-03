@@ -27,7 +27,7 @@ jobs:
 
     - name: "Clone Freelancer HD Edition"
       run: |
-        FL_PATH="${{ github.workspace }}/freelancer-hd-edition"
+        
       # && git clone https://github.com/BC46/freelancer-hd-edition.git
         
 
@@ -40,5 +40,6 @@ jobs:
     - name: "Run validation.py"
       run: |
         cd ${{ github.workspace }}/staging
+        FL_PATH="${{ github.workspace }}/freelancer-hd-edition"
         python ${{ github.workspace }}/staging/build-tools/python/validation.py
     
