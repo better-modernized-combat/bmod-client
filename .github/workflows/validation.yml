@@ -30,7 +30,7 @@ jobs:
       uses: actions/cache@v4
       with:
         key: hd-cache
-        path: ${{ github.workspace }}/freelancer-hd-edition/**
+        path: ${{ github.workspace }}/freelancer-hd-edition/
         restore-keys: hd-cache
 
     - if: ${{ steps.cache-hd-edition.outputs.cache-hit != 'true' }}
