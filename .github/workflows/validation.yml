@@ -1,0 +1,38 @@
+name: changelog
+
+on: push
+  # pull_request:
+  #   branches: 
+  #     - main
+  #   paths:
+  #     - 'mod-assets/**'
+
+jobs:    
+  scan-for-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Looking for changelog update"
+        uses: brettcannon/check-for-changed-files@v1
+        with:
+          file-pattern: "CHANGELOG.md"
+          skip-label: "No Updates?"
+          failure-message: "Expected CHANGELOG.md to have an update"
+
+  ini-validation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Set up Python environment"
+      run: | 
+        python -m pip install tqdm
+
+    - name: "Checkout repository"
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        path: staging 
+    
+    - name: "Run validation.py"
+      run: |
+        cd ${{ github.workspace }}/staging
+        python ${{ github.workspace }}/staging/build-tools/python/validation.py
+    
