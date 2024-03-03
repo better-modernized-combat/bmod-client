@@ -312,7 +312,7 @@ def validate_file_paths(mod_build_dir: str, actively_fix_casing: bool = False, b
                         #print(res_vanilla_path)
                         #print(res_mod_path)
                         #print(res_bmod_path)
-                        #print(f"{bcolors.WARNING}WARNING: {ini} references {match} in line {n}, which does not seem to resolve to a valid path.{bcolors.ENDC}")
+                        print(f"{bcolors.WARNING}WARNING: {ini} references {match} in line {n}, which does not seem to resolve to a valid path.{bcolors.ENDC}")
                 # After going over all matches add the line back for potential overwriting
                 new_lines.append(line)
             # no matches
