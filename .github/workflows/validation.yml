@@ -48,6 +48,6 @@ jobs:
     - name: "Run validation.py"
       run: |
         cd ${{ github.workspace }}/staging
-        export FL_PATH="${{ github.workspace }}/freelancer-hd-edition/EXE"
-        python ${{ github.workspace }}/staging/build-tools/python/validation.py 2>/dev/null
-    
+        $Env:FL_PATH = ${{ github.workspace }}/freelancer-hd-edition/EXE
+        python ${{ github.workspace }}/staging/build-tools/python/validation.py
+      
