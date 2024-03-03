@@ -27,7 +27,7 @@ jobs:
 
     - name: "Clone Freelancer HD Edition"
       run: |
-        export FL_PATH=${{ github.workspace }}/freelancer-hd-edition 
+        FL_PATH="${{ github.workspace }}/freelancer-hd-edition"
       # && git clone https://github.com/BC46/freelancer-hd-edition.git
         
 
