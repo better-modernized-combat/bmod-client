@@ -25,6 +25,14 @@ jobs:
       run: | 
         python -m pip install tqdm
 
+    - name: Cache HD Edition
+      id: cache-hd-edition
+      uses: actions/cache@v4
+      with:
+        key: hd-cache
+        path: ${{ github.workspace }}/freelancer-hd-edition/*
+        restore-keys: hd-cache
+
     - name: "Clone Freelancer HD Edition"
       run: |  
         git clone https://github.com/BC46/freelancer-hd-edition.git
@@ -39,6 +47,6 @@ jobs:
     - name: "Run validation.py"
       run: |
         cd ${{ github.workspace }}/staging
-        export FL_PATH="${{ github.workspace }}/freelancer-hd-edition"
+        export FL_PATH="${{ github.workspace }}/freelancer-hd-edition/EXE"
         python ${{ github.workspace }}/staging/build-tools/python/validation.py 2>/dev/null
     
