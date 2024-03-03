@@ -30,7 +30,7 @@ jobs:
       uses: actions/cache@v4
       with:
         key: hd-cache
-        path: ${{ github.workspace }}/freelancer-hd-edition/
+        path: ${{ github.workspace }}/freelancer-hd-edition
         restore-keys: hd-cache
 
     - if: ${{ steps.cache-hd-edition.outputs.cache-hit != 'true' }}
@@ -47,7 +47,7 @@ jobs:
     
     - name: "Run validation.py"
       run: |
-        cd ${{ github.workspace }}/staging
+        Set-Location ${{ github.workspace }}/staging
         $Env:FL_PATH = "${{ github.workspace }}/freelancer-hd-edition/EXE"
         python ${{ github.workspace }}/staging/build-tools/python/validation.py
       
