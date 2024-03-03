@@ -30,10 +30,11 @@ jobs:
       uses: actions/cache@v4
       with:
         key: hd-cache
-        path: ${{ github.workspace }}/freelancer-hd-edition/*
+        path: ${{ github.workspace }}/freelancer-hd-edition/**
         restore-keys: hd-cache
 
-    - name: "Clone Freelancer HD Edition"
+    - if: ${{ steps.cache-hd-edition.outputs.cache-hit != 'true' }}
+      name: "Clone Freelancer HD Edition"
       run: |  
         git clone https://github.com/BC46/freelancer-hd-edition.git
         
