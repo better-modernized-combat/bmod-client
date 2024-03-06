@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.04
+- Adjustments to 'Fleet' equipment. Classes for freighters now use XL Missile, XL Ballistic, XL Energy, PD Turret and XL Support hardpoints
+- Replace several placeholder infocards with complete ones
+- Restore icons for many auxiliary weapons that previously didn't have any
+- Ensure the bases in Colorado have XL equipment for sale
+- Properly Implement and Balance the Paladin
+
 ## 0.03
 - Add tradelane traffic to Colorado
 - Add Navy, Police, DSE and Ageira NPC ambient zones
