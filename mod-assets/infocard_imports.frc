@@ -1970,7 +1970,7 @@ S 471510 This is an equipment hard point.
 S 471511 Small Energy/Ballistic Weapon
 S 471512 Medium Energy/Ballistic Weapon
 S 471513 Large Energy/Ballistic Weapon
-S 471514 Extra Large Energy/Ballistic Turret
+S 471514 XL Energy/Ballistic Turret
 S 471515 hp_hybrid_gun_5 Placeholder
 S 471516 hp_hybrid_gun_6 Placeholder
 S 471517 hp_hybrid_gun_7 Placeholder
@@ -1981,7 +1981,7 @@ S 471521 This is a kinetic weapon hard point that accepts missile and ballistic 
 S 471522 Small Missile/Ballistic Weapon
 S 471523 Medium Missile/Ballistic Weapon
 S 471524 Large Missile/Ballistic Weapon
-S 471525 Extra Large Missile/Ballistic Turret
+S 471525 XL Missile/Ballistic Turret
 S 471526 hp_kinetic_gun_5 Placeholder
 S 471527 hp_kinetic_gun_6 Placeholder
 S 471528 hp_kinetic_gun_7 Placeholder
@@ -1992,7 +1992,7 @@ S 471532 This is a reactive weapon hard point that accepts energy and missile ty
 S 471533 Small Missile/Energy Weapon
 S 471534 Medium Missile/Energy Weapon
 S 471535 Large Missile/Energy Weapon
-S 471536 Extra Large Missile/Energy Turret
+S 471536 XL Missile/Energy Turret
 S 471537 hp_reactive_gun_5 Placeholder
 S 471538 hp_reactive_gun_6 Placeholder
 S 471539 hp_reactive_gun_7 Placeholder
