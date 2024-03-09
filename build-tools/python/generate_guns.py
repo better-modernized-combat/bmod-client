@@ -438,12 +438,12 @@ def fill_admin_store(
     with open(admin_store_location, "r") as file:
         
         content = file.read()
-        store_pattern = "(?<=;;; ADMIN STORE ;;;\n)((.|\n)*?)(?=;;; ADMIN STORE ;;;)"
+        store_pattern = "(?<=;;; ADMIN STORE ;;;\n)((.|\n)*?)(?=;;; ADMIN STORE ;;;\n)"
         store = []
         # Add anything from any dict to the store by nickname that isnt npc gear
         for sublist in admin_store_items:
             store.extend([f"MarketGood = {nickname}, 0, -1, 10, 10, 0, 1" for nickname in sublist if not "npc" in nickname and any([x in nickname for x in filter])])
-        replacement = "\n".join(store)
+        replacement = "\n".join(store)+"\n"
         new_content = re.sub(store_pattern, replacement, content)
         
     with open(admin_store_location, "w") as file:
@@ -458,12 +458,12 @@ def fill_lootprops_gen_section(
     with open(lootprops_location, "r") as file:
         
         content = file.read()
-        store_pattern = "(?<=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;\n)((.|\n)*?)(?=;;; AUTOMATICALL GENERATED: VARIANT GUNS AND AMMO ;;;)"
+        store_pattern = "(?<=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;\n)((.|\n)*?)(?=;;; AUTOMATICALL GENERATED: VARIANT GUNS AND AMMO ;;;\n)"
         store = []
         # Add any generated weapon thats lootable and any generated ammo that is consumed
         for sublist in lootprops:
             store.extend([f"[mLootProps]\nnickname = {nickname}\ndrop_properties = {5 if '_ammo' in nickname else 0}, 0, 1, 0, 2, 1\n" for nickname in sublist])
-        replacement = "\n".join(store)
+        replacement = "\n".join(store)+"\n"
         new_content = re.sub(store_pattern, replacement, content)
         
     with open(lootprops_location, "w") as file:

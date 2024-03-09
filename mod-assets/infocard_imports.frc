@@ -1762,29 +1762,39 @@ H 483539
 	A control unit for ship shield systems.
 
 H 483540
-	\m\bVOUCHER: XENOS ACE\B
+	\m\bBOUNTY: XENOS ACE\B
 	\l
 	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+	\l
+	This bounty voucher confirms your victory over a famed Xenos Ace.
 
 H 483541
-	\m\b VOUCHER: XENOS ELITE\B
+	\m\bBOUNTY: XENOS ELITE\B
 	\l
 	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+	\l
+	This bounty voucher confirms your victory over an elite Xenos pilot.
 
 H 483542
-	\m\bVOUCHER: XENOS FREIGHTER\B
+	\m\bBOUNTY: XENOS FREIGHTER\B
 	\l
 	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+	\l
+	This bounty voucher confirms your destruction of a Xenos gunship freighter.
 
 H 483543
-	\m\bVOUCHER: XENOS ROOKIE\B
+	\m\bBOUNTY: XENOS ROOKIE\B
 	\l
 	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+	\l
+	This bounty voucher confirms your victory over a rookie Xenos pilot.
 
 H 483544
-	\m\bVOUCHER: XENOS VETERAN\B
+	\m\bBOUNTY: XENOS VETERAN\B
 	\l
 	Bounty vouchers are digital tokens issued by the house navies and police. They are generated when a pilot takes down or disables a registered target and can usually be turned in for a decent sum of credits at the local navy or police headquarters.
+	\l
+	This bounty voucher confirms your victory over a veteran Xenos pilot.
 
 S 482545 Pilot: Navy Ace
 S 482546 Pilot: Navy Elite
@@ -1794,26 +1804,30 @@ S 482549 Pilot: Civilian Ace
 S 482550 Pilot: Civilian Elite
 S 482551 Pilot: Civilian Rookie
 S 482552 Pilot: Civilian Veteran
+S 482553 Dogtags: Navy Ace
+S 482554 Dogtags: Navy Elite
+S 482555 Dogtags: Navy Rookie
+S 482556 Dogtags: Navy Veteran
 
 H 483545
-	\m\bPILOT: NAVY ACE\B
+	\m\bPILOT: LIBERTY NAVY ACE\B
 	\l
-	Navy Ace Pilot Placeholder Text
+	Liberty Navy Ace Pilot Placeholder Text
 
 H 483546
-	\m\bPILOT: NAVY ELITE\B
+	\m\bPILOT: LIBERTY NAVY ELITE\B
 	\l
-	Navy Elite Pilot Placeholder Text
+	Liberty Navy Elite Pilot Placeholder Text
 
 H 483547
-	\m\bPILOT: NAVY ROOKIE\B
+	\m\bPILOT: LIBERTY NAVY ROOKIE\B
 	\l
-	Navy Rookie Pilot Placeholder Text
+	Liberty Navy Rookie Pilot Placeholder Text
 
 H 483548
-	\m\bPILOT: NAVY VETERAN\B
+	\m\bPILOT: LIBERTY NAVY VETERAN\B
 	\l
-	Navy Veteran Pilot Placeholder Text
+	Liberty Navy Veteran Pilot Placeholder Text
 
 H 483549
 	\m\bPILOT: CIVILIAN ACE\B
@@ -1834,6 +1848,34 @@ H 483552
 	\m\bPILOT: CIVILIAN VETERAN\B
 	\l
 	Civilian Veteran Pilot Placeholder Text
+
+H 483553
+	\m\bDOGTAGS: LIBERTY NAVY ACE\B
+	\l
+	As a direct response to the digital bounty program, which has been widely criticized as a legalisation of extrajudicial killings of small-time criminals, criminal factions throughout Sirius have begun offering substantial sums for the confirmed destruction of House Navy ships.
+	\l
+	These dogtags confirm your victory over a famed Liberty Navy Ace.
+
+H 483554
+	\m\bDOGTAGS: LIBERTY NAVY ELITE\B
+	\l
+	As a direct response to the digital bounty program, which has been widely criticized as a legalisation of extrajudicial killings of small-time criminals, criminal factions throughout Sirius have begun offering substantial sums for the confirmed destruction of House Navy ships.
+	\l
+	These dogtags confirm your victory over an elite Liberty Navy pilot.
+
+H 483555
+	\m\bDOGTAGS: LIBERTY NAVY ROOKIE\B
+	\l
+	As a direct response to the digital bounty program, which has been widely criticized as a legalisation of extrajudicial killings of small-time criminals, criminal factions throughout Sirius have begun offering substantial sums for the confirmed destruction of House Navy ships.
+	\l
+	These dogtags confirm your victory over a rookie Liberty Navy pilot.
+
+H 483556
+	\m\bDOGTAGS: LIBERTY NAVY VETERAN\B
+	\l
+	As a direct response to the digital bounty program, which has been widely criticized as a legalisation of extrajudicial killings of small-time criminals, criminal factions throughout Sirius have begun offering substantial sums for the confirmed destruction of House Navy ships.
+	\l
+	These dogtags confirm your victory over a veteran Liberty Navy pilot.
 
 H 484520
 	It's been difficult here. Most of the folks in this bar have been stuck in-system for months and are pretty sick of it. Denver's been okay as we mostly produce the consumer goods and food we use, but I've been really missing my favourite blend of coffee. The synthetic stuff they pump out of the labs here is just awful.

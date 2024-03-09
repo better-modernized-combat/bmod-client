@@ -10,7 +10,6 @@ from utils import bcolors
 
 # TODO: Fill me, maybe?
 excepted_inis = [
-    #"bmod_interface_sounds.ini",
     #"bmod_good_guns.ini"
 ]
 
