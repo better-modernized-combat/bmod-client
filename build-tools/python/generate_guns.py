@@ -114,7 +114,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "nickname": nickname,
         "ids_name": idx,
         "ids_info": idx+1,
-        "DA_archetype": (weapon["Gun Archetype"] if not is_turret else "BMOD\\EQUIPMENT\\MODELS\\TURRETS\\bm_f_fleet_turret_twin.cmp"), # FIXME turrets
+        "DA_archetype": (weapon["Gun Archetype"] if not is_turret else "equipment\\models\\weapons\\li_cannon.cmp"), # FIXME turrets
         "material_library": (weapon["Material Library"] if not is_turret else "equipment\\models\\li_turret.mat"), # FIXME turrets
         "HP_child": "HPConnect",
         "hit_pts": weapon["Gun HP"],

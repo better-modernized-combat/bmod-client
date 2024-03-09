@@ -15,25 +15,14 @@ def recursive_find(top: str, ftype: str = ".ini", level: int = 0):
     return out
 
 # Replace across file
-def find_and_replace(lines: List[str, ], old: str, new: str, strict: bool = True):
+def find_and_replace(lines: List[str, ], old: str, new: str):
     
     new_lines = []
     for line in lines:
-        if strict is True:
-            if not "=" in line:
-                new_lines.append(line)
-                continue
-            split = line.split(" = ")
-            key, value = split[0], split[1].strip("\r\n")
-            if value == old:
-                new_lines.append(f"{key} = {new}\n")
-            else:
-                new_lines.append(line)
+        if old in line:
+            new_lines.append(line.replace(old, new))
         else:
-            if old in line:
-                new_lines.append(line.replace(old, new))
-            else:
-                new_lines.append(line)
+            new_lines.append(line)
     return new_lines    
 
 if __name__ == "__main__":
@@ -50,12 +39,11 @@ if __name__ == "__main__":
     news = [
         
     ]
-    strict = input("Strict? (y/n) ")
-    strict = (False if strict == "n" else "y")
     
     for old, new in zip(olds, news):
         for ini in tqdm(inis):
             with open(ini, "r", encoding = "utf-8") as o:
                 lines = o.readlines()
+                new_lines = find_and_replace(lines = lines, old = old, new = new)
             with open(ini, "w", encoding = "utf-8") as o:
-                o.writelines(find_and_replace(lines = lines, old = old, new = new, strict = strict))
+                o.writelines(new_lines)
