@@ -17,20 +17,21 @@ sep = [
     ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
 ]
 
+# Missiles intentionally not included
 HP_Types = {
     "S Energy": "hp_gun_special_1",
     "M Energy": "hp_gun_special_2",
     "L Energy": "hp_gun_special_3",
-    "S Missile": "hp_gun_special_4",
-    "M Missile": "hp_gun_special_5",
-    "L Missile": "hp_gun_special_6",
+    #"S Missile": "hp_gun_special_4",
+    #"M Missile": "hp_gun_special_5",
+    #"L Missile": "hp_gun_special_6",
     "S Ballistic": "hp_gun_special_7",
     "M Ballistic": "hp_gun_special_8",
     "L Ballistic": "hp_gun_special_9",
     "PD Turret": "hp_turret_special_1",
     "XL Energy": "hp_turret_special_2",
     "XL Ballistic": "hp_turret_special_3",
-    "XL Missile": "hp_turret_special_4",
+    #"XL Missile": "hp_turret_special_4",
     "XL Support": "hp_freighter_shield_special_10",
 }
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.05
+- Lootprops now generates automatically any required entries coming from the variant gun/aux script
+- INI validation script properly outputs mistakes
+- Added new voucher and dog tag icons
+- Cleaned up infocards.frc a little
+- Phantom -> Paladin
+- Scrambled Signal is back
+- Bulk-renamed pilot commodities across inis so they have consistent naming
+- Fixed a couple thousand paths with incorrect casing
+
 ## 0.04
 - Adjustments to 'Fleet' equipment. Classes for freighters now use XL Missile, XL Ballistic, XL Energy, PD Turret and XL Support hardpoints
 - Replace several placeholder infocards with complete ones

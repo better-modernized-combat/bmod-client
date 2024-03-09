@@ -42,11 +42,20 @@ if __name__ == "__main__":
     
     fl_install_path = input("Enter your FL path (mod build area, not FL install): ")
     inis = recursive_find(fl_install_path)
-    old = input("String to replace: ")
-    new = input("Replacement string: ")
+    # These are replaced
+    olds = [
+        
+    ]
+    # with these
+    news = [
+        
+    ]
+    strict = input("Strict? (y/n) ")
+    strict = (False if strict == "n" else "y")
     
-    for ini in tqdm(inis):
-        with open(ini, "r", encoding = "utf-8") as o:
-            lines = o.readlines()
-        with open(ini, "w", encoding = "utf-8") as o:
-            o.writelines(find_and_replace(lines = lines, old = old, new = new, strict = True))
+    for old, new in zip(olds, news):
+        for ini in tqdm(inis):
+            with open(ini, "r", encoding = "utf-8") as o:
+                lines = o.readlines()
+            with open(ini, "w", encoding = "utf-8") as o:
+                o.writelines(find_and_replace(lines = lines, old = old, new = new, strict = strict))
