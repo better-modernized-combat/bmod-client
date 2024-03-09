@@ -138,7 +138,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "separation_explosion": "sever_debris",
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
-        "lootable": "false",
+        "lootable": "true",
         "LODranges": "0, 20, 60, 100",
         "; cost": cost,
     })
@@ -159,6 +159,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     npc_munition_block.update({"nickname": npc_ammo_nickname, "hull_damage": npc_hull_damage, "energy_damage": npc_energy_damage, "lifetime": npc_lifetime})
     npc_weapon_block = deepcopy(weapon_block)
     npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "projectile_archetype": npc_ammo_nickname})
+    npc_weapon_block.update({"lootable": "false"})
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
 
@@ -254,7 +255,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         "separation_explosion": "sever_debris",
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
-        "lootable": "false",
+        "lootable": "true",
         "LODranges": "0, 80, 160, 320, 400",
         "dry_fire_sound": "fire_dry",
         "; cost": cost,
@@ -287,6 +288,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
             npc_munition_block.update({"ids_name": idx+6, "ids_info": idx+7})
     npc_weapon_block = deepcopy(weapon_block)
     npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "projectile_archetype": npc_ammo_nickname, "auto_turret": "true"}) # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
+    npc_weapon_block.update({"lootable": "false"})
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
 
@@ -429,7 +431,7 @@ def write_goods(
 
 def fill_admin_store(
     admin_store_location: str,
-    admin_store_items: List[dict, ],
+    admin_store_items: List,
     filter: List = ["bm"] # by default literally allow in anything from bmod
 ):
     
@@ -445,6 +447,26 @@ def fill_admin_store(
         new_content = re.sub(store_pattern, replacement, content)
         
     with open(admin_store_location, "w") as file:
+        
+        file.write(new_content)
+
+def fill_lootprops_gen_section(
+    lootprops_location: str,
+    lootprops: List,
+):
+    
+    with open(lootprops_location, "r") as file:
+        
+        content = file.read()
+        store_pattern = "(?<=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;\n)((.|\n)*?)(?=;;; AUTOMATICALL GENERATED: VARIANT GUNS AND AMMO ;;;\n)"
+        store = []
+        # Add any generated weapon thats lootable and any generated ammo that is consumed
+        for sublist in lootprops:
+            store.extend([f"[mLootProps]\nnickname = {nickname}\ndrop_properties = {5 if '_ammo' in nickname else 0}, 0, 1, 0, 2, 1\n" for nickname in sublist])
+        replacement = "\n".join(store)+"\n"
+        new_content = re.sub(store_pattern, replacement, content)
+        
+    with open(lootprops_location, "w") as file:
         
         file.write(new_content)
 
@@ -902,15 +924,25 @@ def create_guns(
     fill_admin_store(
         admin_store_location = "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini",
         admin_store_items = [
-            [munition_name for munition_name, munition in writable_munition_blocks.items() if "aux" in munition_name and str(munition["requires_ammo"]).lower() == "true"], 
-            writable_weapon_blocks
+            [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"], 
+            [weapon_name for weapon_name in writable_weapon_blocks]
             ],
-        filter = ["1x_b", "3x_b", "2x_b"]
+        filter = ["1x_b", "2x_b", "3x_b", "1x_xlt", "2x_xlt", "3x_xlt"]
         )
+    
+    # Fill lootprops with ammo to avoid crashes
+    fill_lootprops_gen_section(
+        lootprops_location = "mod-assets\\DATA\\MISSIONS\\lootprops.ini",
+        lootprops = [
+            [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"],
+            [munition_name for munition_name, munition in writable_npc_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"],
+            [weapon_name for weapon_name, weapon in writable_weapon_blocks.items() if str(weapon["lootable"]).lower() == "true"],
+            [weapon_name for weapon_name, weapon in writable_npc_weapon_blocks.items() if str(weapon["lootable"]).lower() == "true"]
+            ]
+    )
     
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
-    # TODO: fix variant and override weapon costs
 
 if __name__ == "__main__":
     

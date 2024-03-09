@@ -20,7 +20,6 @@ from generate_guns import create_guns
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
 
 from utils import bcolors
-# TODO: use bcolors for DEBUG/INFO/WARN/ERROR distinction
 
 def create_dirtree_without_files(src, dst):
     src = os.path.abspath(src)
@@ -42,9 +41,7 @@ def download_master_sheet(pp: pathlib.Path, url: str):
 def sheets_to_csvs(pp, excel_file: pathlib.Path, sheet_names: List = None):
     relevant_sheets = pd.read_excel(excel_file, sheet_name = sheet_names, keep_default_na = False)
     for sheet_name, sheet in tqdm(relevant_sheets.items()):
-        print("DEBUG: Extracting sheet: "+sheet_name)
         sheet.to_csv(pp / "csv_dump" / f"{sheet_name}.csv", index = False)
-        print(pp / "csv_dump" / f"{sheet_name}.csv")
 
 def get_sheet_tab_names(pp: pathlib.Path):
     ini_list = []
