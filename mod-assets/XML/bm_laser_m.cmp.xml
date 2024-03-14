@@ -3,7 +3,7 @@
 <UTFXML filename="bm_laser_m.cmp" path="BMOD\EQUIPMENT\MODELS\GUNS">
    <UTF_ROOT>
       <VMeshLibrary>
-         <aft_capitalturret03_single.lod0-112.vms include="bm_laser_m_cmp\lod0-112.vms.xml"/>
+         <bm_laser_m.lod0-112.vms include="bm_laser_m_cmp\lod0-112.vms.xml"/>
       </VMeshLibrary>
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <Cmpnd>
@@ -25,35 +25,35 @@
          <Part_barrel_lod1>
             <Object_name name="Object name" type="text">barrel_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">barrel_lod1231209095951.3db</File_name>
+            <File_name name="File name" type="text">barrel_lod1240314105419.3db</File_name>
          </Part_barrel_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">aft_capitalturret03_single231209095951.3db</File_name>
+            <File_name name="File name" type="text">bm_laser_m240314105419.3db</File_name>
          </Root>
       </Cmpnd>
-      <aft_capitalturret03_single231209095951.3db>
+      <bm_laser_m240314105419.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> aft_capitalturret03_single.lod0-112.vms,
+               <!-- vmesh lib    --> bm_laser_m.lod0-112.vms,
                <!-- start vert   --> 0,
                <!-- num verts    --> 244,
                <!-- start index  --> 0,
                <!-- num indices  --> 384,
                <!-- start mesh   --> 0,
                <!-- num meshes   --> 1,
-               <!-- bounding box -->  0.57710099,    0.53558922,   0.46479654,
-                                     -0.57109183,   -0.026666522, -0.48440108,
-               <!-- center       -->  0.0030045751,  0.25446129,  -0.009802267,
-               <!-- radius       --> 0.67472833
+               <!-- bounding box -->  0.36934465,    0.34277713,   0.29746985,
+                                     -0.36549878,   -0.017066598, -0.31001663,
+               <!-- center       -->  0.0019229278,  0.16285527,  -0.0062735081,
+               <!-- radius       --> 0.43182608
             </VMeshRef>
          </VMeshPart>
          <Hardpoints>
             <Revolute>
                <HpConnect>
-                  <Position type="Vector">0, -0.023999929, 0</Position>
+                  <Position type="Vector">0, -0.01536, 0</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
@@ -65,28 +65,28 @@
                </HpConnect>
             </Revolute>
          </Hardpoints>
-      </aft_capitalturret03_single231209095951.3db>
-      <barrel_lod1231209095951.3db>
+      </bm_laser_m240314105419.3db>
+      <barrel_lod1240314105419.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> aft_capitalturret03_single.lod0-112.vms,
+               <!-- vmesh lib    --> bm_laser_m.lod0-112.vms,
                <!-- start vert   --> 244,
                <!-- num verts    --> 1667,
                <!-- start index  --> 384,
                <!-- num indices  --> 3288,
                <!-- start mesh   --> 1,
                <!-- num meshes   --> 1,
-               <!-- bounding box -->  0.77272195,   1.2738963,   0.98364878,
-                                     -0.76542628,   0.2528553,  -2.5785971,
-               <!-- center       -->  0.0036478518, 0.76337588, -0.79747421,
-               <!-- radius       --> 1.8151203
+               <!-- bounding box -->  0.49454209,   0.81529367,  0.6295352,
+                                     -0.48987284,   0.16182745, -1.6503024,
+               <!-- center       -->  0.0023346245, 0.48856056, -0.51038337,
+               <!-- radius       --> 1.161677
             </VMeshRef>
          </VMeshPart>
          <Hardpoints>
             <Fixed>
                <HpFire01>
-                  <Position type="Vector">0, 0.93199837, -2.616</Position>
+                  <Position type="Vector">0, 0.59647882, -1.6742396</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
@@ -95,6 +95,6 @@
                </HpFire01>
             </Fixed>
          </Hardpoints>
-      </barrel_lod1231209095951.3db>
+      </barrel_lod1240314105419.3db>
    </UTF_ROOT>
 </UTFXML>
