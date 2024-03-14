@@ -5,6 +5,7 @@
 - Implement placeholder satellite solars in Colorado
 - Implement vignette zones in Colorado in preparation for hacking and objective system
 - Implement hacking VFX and fuses in preparation for hacking and objective system
+- Implement hacking response loadouts for `li_n_grp` and `fc_x_grp`
 
 ## 0.0.5
 - Lootprops now generates automatically any required entries coming from the variant gun/aux script
