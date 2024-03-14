@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.6
+- Resize L, M and S laser models to fit properly onto fighter hardpoints
+- Implement placeholder satellite solars in Colorado
+- Implement vignette zones in Colorado in preparation for hacking and objective system
+- Implement hacking VFX and fuses in preparation for hacking and objective system
+
 ## 0.0.5
 - Lootprops now generates automatically any required entries coming from the variant gun/aux script
 - INI validation script properly outputs mistakes
