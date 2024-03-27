@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.7
+- Reimplement basic commodities with modifiable counterparts
+- Set up a very basic group of producers and consumers within Colorado
+- Give pilots, tokens and dogtags a base sell price and set up points they can be sold at
+
 ## 0.0.6
 - Resize L, M and S laser models to fit properly onto fighter hardpoints
 - Implement placeholder satellite solars in Colorado
