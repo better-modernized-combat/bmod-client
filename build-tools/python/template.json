@@ -98,27 +98,27 @@
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/FIXED/bmod_good_scanner.ini",
         "block_name": "[Good]"
     },
-    "./build-tools/python/csv_dump/bm_slrgun_mn.ini.csv": {
+    "./build-tools/python/csv_dump/bm_slrmssle_expl.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
-        "block_name": "[Munition]"
-    },
-    "./build-tools/python/csv_dump/bm_slrgun_gn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
-        "block_name": "[Gun]"
-    },
-    "./build-tools/python/csv_dump/bm_slrmssle_mn.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
-        "block_name": "[Munition]"
+        "block_name": "[Explosion]"
     },
     "./build-tools/python/csv_dump/bm_slrmssle_mot.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
         "block_name": "[Motor]"
     },
-    "./build-tools/python/csv_dump/bm_slrmssle_expl.ini.csv": {
+    "./build-tools/python/csv_dump/bm_slrmssle_mn.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
-        "block_name": "[Explosion]"
+        "block_name": "[Munition]"
+    },
+    "./build-tools/python/csv_dump/bm_slrgun_mn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Munition]"
     },
     "./build-tools/python/csv_dump/bm_slrmssle_gn.ini.csv": {
+        "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
+        "block_name": "[Gun]"
+    },
+    "./build-tools/python/csv_dump/bm_slrgun_gn.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini",
         "block_name": "[Gun]"
     },

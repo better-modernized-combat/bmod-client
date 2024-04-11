@@ -29,6 +29,7 @@ def parse_blocks(in_file: str) -> dict:
             if "=" in line:
                 vals = line.split(" = ")[1]
                 for val in vals.split(","):
+                    val = val.strip()
                     if val in nicknames:
                         blocks[i]["dependencies"].append(nicknames[val])
             elif line.strip() == "":
@@ -43,8 +44,8 @@ def resolve_dependencies(blocks: dict, i: int):
     # get dependencies
     dep = blocks[i]["dependencies"]
         
-    # if empty, return
-    if dep == []:
+    # if empty, return (or if depending on itself, which can happen if theres something with the same name but outside the file thats referenced - effectively, this is ignored)
+    if dep == [] or dep == [i]:
         return [i]
     # if sub-dependencies, resolve each, prepending current
     else:
@@ -57,7 +58,6 @@ def resolve_dependencies(blocks: dict, i: int):
 def sort_blocks_by_indices(blocks: dict, order_by_type: List[str, ]) -> List[int, ]:
     
     order = []
-    check = [k for k in blocks.keys()]
     # for every object type, starting with the one highest in the typical hierarchy
     for t in order_by_type:
         # go over each block
@@ -110,14 +110,15 @@ def sort_ini(in_file: str, out_file: str, order_by_type: List[str, ]):
 if __name__ == "__main__":
 
     ts = time.time()
-    in_file = "./bmod_equip_guns.ini"
-    #in_file = "./bmod_equip_amssle.ini"
+    #in_file = "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_guns.ini"
+    #in_file = "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_amssle.ini"
+    in_file = "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_solar.ini"
     out_file = in_file.replace(".ini", "_sorted.ini")
     sort_ini(
         in_file = in_file,
         out_file = out_file,
-        order_by_type = ["[Gun]", "[Munition]"]
-        #order_by_type = ["[Gun]", "[Munition]", "[Motor]", "[Explosion]"]
+        #order_by_type = ["[Gun]", "[Munition]"]
+        order_by_type = ["[Gun]", "[Munition]", "[Motor]", "[Explosion]"]
         )
     te = time.time()
     print(te - ts)
