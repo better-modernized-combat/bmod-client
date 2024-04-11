@@ -15,6 +15,9 @@ def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
     frame = frame.loc[:, ~frame.columns.str.contains("^Unnamed")]
     
+    # Clean out comment column, if any
+    frame = frame.loc[:, ~frame.columns.str.contains("^Comment")]
+    
     # Clean out rows where WIP is any kind of true
     if "WIP" in frame.columns:
         l0 = len(frame)
