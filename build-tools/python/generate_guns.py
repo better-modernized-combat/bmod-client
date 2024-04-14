@@ -1,10 +1,10 @@
-import pandas as pd
 from collections import OrderedDict
 from copy import deepcopy
+from io import TextIOWrapper
 from itertools import combinations
-from tqdm.auto import tqdm
+import pandas as pd
 import re
-
+from tqdm.auto import tqdm
 from typing import List
 
 from argparse import ArgumentParser
@@ -95,6 +95,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     # Create ammunition block
     munition_block = OrderedDict({
         "nickname": f"{nickname}_ammo",
+        "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "hp_type": "hp_gun", #TODO: Is this right?
         "requires_ammo": "false",
         "hit_pts": 2,
@@ -112,6 +113,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     # Create weapon block
     weapon_block = OrderedDict({
         "nickname": nickname,
+        "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "ids_name": idx,
         "ids_info": idx+1,
         "DA_archetype": (weapon["Gun Archetype"] if not is_turret else "equipment\\models\\weapons\\li_cannon.cmp"), # FIXME turrets
@@ -207,6 +209,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
     else:
         munition_block = OrderedDict({
             "nickname": f"{nickname}_ammo",
+            "Comment": f"{weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
             "hp_type": "hp_gun", #TODO: Is this right?
             "requires_ammo": weapon["Uses Ammo?"],
             "hit_pts": 2,
@@ -229,6 +232,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
     # Create weapon block
     weapon_block = OrderedDict({
         "nickname": nickname,
+        "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "ids_name": idx,
         "ids_info": idx+1,
         "DA_archetype": weapon["Gun Archetype"],
@@ -292,55 +296,30 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
     
     return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
 
+def write_from_dict(d: dict, block_name: str, out: TextIOWrapper):
+    
+    for name, block in d.items():
+        if "Comment" in block: # Comments go at the top
+            out.write(f";{block['Comment']}\n")
+        out.write(f"{block_name}\n")
+        for key, val in block.items():
+            if key.startswith(";") or key == "Comment": # dont write temp entries or comments in the block
+                continue
+            else:
+                if "\n" in str(val):
+                    out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
+                else:
+                    out.writelines([f"{key} = {pretty_numbers(val)}\n"])
+        out.write("\n")
+
 def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict, npc_ammo_dict: dict, npc_weapon_dict: dict):
     
     with open(ini_out_file, "a", encoding = "utf-8") as out:
         
-        for munition_name, munition_block in ammo_dict.items():
-            out.write(f"[Munition]\n")
-            for key, val in munition_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
-            out.write("\n")
-        for weapon_name, weapon_block in weapon_dict.items():
-            out.write(f"[Gun]\n")
-            for key, val in weapon_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
-            out.write("\n")
-            
-        for munition_name, munition_block in npc_ammo_dict.items():
-            out.write(f"[Munition]\n")
-            for key, val in munition_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
-            out.write("\n")
-        for weapon_name, weapon_block in npc_weapon_dict.items():
-            out.write(f"[Gun]\n")
-            for key, val in weapon_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
-            out.write("\n")
+        write_from_dict(ammo_dict, "[Munition]", out)
+        write_from_dict(weapon_dict, "[Gun]", out)
+        write_from_dict(npc_ammo_dict, "[Munition]", out)
+        write_from_dict(npc_weapon_dict, "[Gun]", out)
 
 def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool, is_override: bool = False):
     

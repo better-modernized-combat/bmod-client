@@ -33,9 +33,6 @@ def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
     frame = frame.loc[:, ~frame.columns.str.contains("^Unnamed")]
     
-    # Clean out comment column, if any
-    frame = frame.loc[:, ~frame.columns.str.contains("^Comment")]
-    
     # Clean out rows where WIP is any kind of true
     if "WIP" in frame.columns:
         l0 = len(frame)
@@ -57,7 +54,7 @@ def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
     
     return frame
 
-def write_block(block: pd.Series, block_name: str, cols: List, out: ContextManager):
+def write_block(block: pd.Series, block_name: str, cols: pd.Index, out: ContextManager):
     
     # Check if block is empty. If empty, skip
     if all(pd.isna(x) or x == "" for x in block.values) or block.empty:
@@ -66,6 +63,8 @@ def write_block(block: pd.Series, block_name: str, cols: List, out: ContextManag
 
     # Write block header
     out.write("\n")
+    if "Comment" in cols:
+        out.write(f";{block.iloc[cols.to_list().index('Comment')]}\n")
     out.write(block_name+"\n")
 
     # Write block

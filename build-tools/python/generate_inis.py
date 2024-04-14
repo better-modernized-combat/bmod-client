@@ -192,12 +192,12 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
         if len(set(block_names)) > 1:
             print(f"Sorting {ini} ...")
             #print(f"sort order is: {[x for x in {k: None for k in block_names[::-1]}]}")
-            sort_ini(in_file = ini, out_file = ini, order_by_type = [x for x in {k: None for k in block_names[::-1]}]) # that ugly comprehension is an ordered set
+            #sort_ini(in_file = ini, out_file = ini, order_by_type = [x for x in {k: None for k in block_names[::-1]}]) # that ugly comprehension is an ordered set
             
     # Some special generated inis don't specify block names - sort these as well
     guns = "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_guns.ini"
     print(f"Sorting {guns} ...")
-    sort_ini(in_file = guns, out_file = guns, order_by_type = ["[Gun]", "[Munition]"])
+    #sort_ini(in_file = guns, out_file = guns, order_by_type = ["[Gun]", "[Munition]"])
 
     print("Deleting temporary CSV dump...")
     shutil.rmtree(pp / "csv_dump")
