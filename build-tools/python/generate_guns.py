@@ -677,7 +677,7 @@ def create_guns(
     oad = override_auxs.to_dict(orient = "index").items()
     avd = aux_variants.to_dict(orient = "index").items()
     
-    i_counter = ID_start
+    i_counter = ID_start - 4
     
     for b, blaster in bd:
         
@@ -730,6 +730,8 @@ def create_guns(
                 # Generate blaster goods entries
                 writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
                 writable_goods[npc_weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+2, mp = multiplicity, is_turret = is_turret) # NPC version
+
+    i_counter += 2 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
                 
     for o, override_blaster in obd:
         
@@ -849,6 +851,8 @@ def create_guns(
             if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
                 writable_goods[base_munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = base_munition_name, ids_name = i_counter+2)
                 writable_goods[base_npc_munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = base_npc_munition_name, ids_name = i_counter+6) # NPC version
+    
+    i_counter += 4 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
         
     for o, override_aux in oad:
         
@@ -893,23 +897,20 @@ def create_guns(
             variant_info = variant["Variant Infocard Paragraph"],
             variant_display = variant["Display Name Suffix"],
         )
-        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit::
-            ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
-                name = aux["Ammo Name"],
-                info = aux["Ammo Infocard"],
-            )
         writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-            writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = display_name)
-            writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)
+        if str(override_aux["Uses Ammo?"]).lower() == "true": #:vomit:
+            ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
+                name = override_aux["Ammo Name"],
+                info = override_aux["Ammo Infocard"],
+            )
+            writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = ammo_name)
+            writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = ammo_infocard_content)
             
         # Generate auxgun goods entries
         writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
         
         # Do not generate ammo goods entries if weapon requires ammo - we STILL use the base variant here
-        #if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-        #    writable_goods[weapon_block["nickname"]] = create_aux_ammo_good(auxgun = override_aux, internal_name = ????, ids_name = i_counter+2, is_override = True)
         
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
