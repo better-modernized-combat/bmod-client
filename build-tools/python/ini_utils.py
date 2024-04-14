@@ -4,6 +4,21 @@ import pandas as pd
 class CSVError(Exception):
     pass
 
+def pretty_numbers(s: str):
+    
+    # if the string can be a number
+    if not s.replace(".", "", 1).isdigit() or (s.startswith("-") and s[1:].replace(".", "", 1).isdigit()):
+        return s
+    
+    # is it an int?
+    if not "." in s:
+        return str(int(s))
+    
+    # if not, make it a float and round to 4 decimal places, eliminating trailing zeroes or commas
+    else:
+        s = float(s)
+        return f"{round(s, 4):.4f}".rstrip('0').rstrip('.')
+
 def parse_to_list(listable_string: str):
     return [item.strip() for item in str(listable_string).split("\n")]
 
@@ -52,17 +67,17 @@ def write_block(block: pd.Series, block_name: str, cols: List, out: ContextManag
 
     # Write block
     for e, col in enumerate(cols):
-        line = str(block.iloc[e]).strip()
-        if "\n" in line:
-            sublines = line.split("\n")
-            for subline in sublines:
-                if subline.strip() == "":
+        value = str(block.iloc[e]).strip()
+        if "\n" in value:
+            subvalues = value.split("\n")
+            for subvalue in subvalues:
+                if subvalue.strip() == "":
                     continue
-                out.write(col+" = "+subline+"\n")
+                out.write(col+" = "+pretty_numbers(subvalue)+"\n")
         else:
-            if line.strip() in ["", "nan"]:
+            if value.strip() in ["", "nan"]:
                 continue
-            out.write(col+" = "+line+"\n")
+            out.write(col+" = "+pretty_numbers(value)+"\n")
 
     out.write("\n") # end of block
 
