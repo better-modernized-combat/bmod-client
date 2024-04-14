@@ -6,6 +6,9 @@ class CSVError(Exception):
 
 def pretty_numbers(s: str):
     
+    # if its not a string, send out the kill squad. also make it a string
+    s = str(s)
+    
     # if the string can be a number
     if not s.replace(".", "", 1).isdigit() or (s.startswith("-") and s[1:].replace(".", "", 1).isdigit()):
         return s

@@ -11,7 +11,7 @@ from argparse import ArgumentParser
 
 from defaults import *
 from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, generate_ammo_infocard_entry, write_infocards_to_frc
-from ini_utils import CSVError, clean_unnamed_wip_empty
+from ini_utils import CSVError, clean_unnamed_wip_empty, pretty_numbers
 from utils import bcolors
 
 # FIXME turrets
@@ -303,9 +303,9 @@ def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict
                     continue
                 else:
                     if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
+                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
                     else:
-                        out.writelines([f"{key} = {str(val)}\n"])
+                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
             out.write("\n")
         for weapon_name, weapon_block in weapon_dict.items():
             out.write(f"[Gun]\n")
@@ -314,9 +314,9 @@ def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict
                     continue
                 else:
                     if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
+                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
                     else:
-                        out.writelines([f"{key} = {str(val)}\n"])
+                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
             out.write("\n")
             
         for munition_name, munition_block in npc_ammo_dict.items():
@@ -326,9 +326,9 @@ def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict
                     continue
                 else:
                     if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
+                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
                     else:
-                        out.writelines([f"{key} = {str(val)}\n"])
+                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
             out.write("\n")
         for weapon_name, weapon_block in npc_weapon_dict.items():
             out.write(f"[Gun]\n")
@@ -337,9 +337,9 @@ def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict
                     continue
                 else:
                     if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
+                        out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
                     else:
-                        out.writelines([f"{key} = {str(val)}\n"])
+                        out.writelines([f"{key} = {pretty_numbers(val)}\n"])
             out.write("\n")
 
 def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool, is_override: bool = False):
@@ -424,9 +424,9 @@ def write_goods(
             out.write("[Good]\n")
             for key, val in good.items():
                 if "\n" in str(val):
-                    out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
+                    out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
                 else:
-                    out.writelines([f"{key} = {str(val)}\n"])
+                    out.writelines([f"{key} = {pretty_numbers(val)}\n"])
             out.write("\n\n")
 
 def fill_admin_store(
