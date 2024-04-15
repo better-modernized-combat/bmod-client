@@ -18,6 +18,7 @@ from defaults import *
 from ini_utils import *
 from generate_guns import create_guns
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
+from sort_ini import sort_ini
 
 from utils import bcolors
 
@@ -142,8 +143,7 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 blaster_variant_csv = template[csv]["blaster_variants_in"], 
                 blaster_scaling_rules_csv = template[csv]["blaster_scalings_in"],
                 aux_csv = template[csv]["aux_in"], 
-                aux_variant_csv = template[csv]["aux_variants_in"], 
-                aux_scaling_rules_csv = template[csv]["aux_scalings_in"],
+                aux_variant_csv = template[csv]["aux_variants_in"],
                 weapon_out = template[csv]["weapon_out"],
                 weapon_goods_out = template[csv]["weapon_goods_out"],
                 weapon_infocards_out = template[csv]["weapon_infocards_out"],
@@ -170,6 +170,33 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
         # This shouldn't exist
         else:
             raise NotImplementedError("Stop messing around with the template, please.")
+
+    # Human-like sorting for any ini with more than one block type
+    no_of_block_types = {}
+    
+    # Figure out which generated inis have more than one block
+    for k, v in template.items():
+        if not "ini" in v:
+            continue
+        if v["ini"] in no_of_block_types:
+            if "block_name" in v:
+                no_of_block_types[v["ini"]].append(v["block_name"])
+        else:
+            no_of_block_types[v["ini"]] = []
+            if "block_name" in v:
+                no_of_block_types[v["ini"]].append(v["block_name"])
+            
+    # For any such generated ini, sort it
+    for ini, block_names in no_of_block_types.items():
+        if len(set(block_names)) > 1:
+            print(f"Sorting {ini} ...")
+            #print(f"sort order is: {[x for x in {k: None for k in block_names[::-1]}]}")
+            sort_ini(in_file = ini, out_file = ini, order_by_type = [x for x in {k: None for k in block_names[::-1]}]) # that ugly comprehension is an ordered set
+            
+    # Some special generated inis don't specify block names - sort these as well
+    guns = "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_guns.ini"
+    print(f"Sorting {guns} ...")
+    sort_ini(in_file = guns, out_file = guns, order_by_type = ["[Gun]", "[Munition]"])
 
     print("Deleting temporary CSV dump...")
     shutil.rmtree(pp / "csv_dump")
