@@ -729,6 +729,7 @@ S 472021 M-ER7 Nanite Burster [+]
 S 472022 ZP-1000M
 S 472023 ZP-1600M
 S 472024 ‹‹Scrambled Signal››
+S 472025 Elite
 
 H 472512
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper\B
@@ -2284,3 +2285,253 @@ H 483594
 	\m\bWATER\B
 	\l
 	Dihydrogen monoxide (H2O) is odorless, tasteless, transparent, and absolutely essential to human life. Roughly 75% of the human body is composed of Water. Deprived of Water, most humans can only live three days. The process of dehydration is a painful one, as tissues shrivel and vessels shrink in a desperate bid by the dying body to preserve its remaining vital functions.
+	
+S 482595 [DEV] Tiny Junk
+H 483595
+	\m\bTiny Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and a junk value.
+	
+	Imagine it was a cheap phone.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482596 [DEV] Small Junk
+H 483596
+	\m\bSmall Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and a junk value.
+	
+	Imagine it was a box of magazines.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482597 [DEV] Medium Junk
+H 483597
+	\m\bMedium Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and a junk value.
+	
+	Imagine it was a store mannequin.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482598 [DEV] Large Junk
+H 483598
+	\m\bLarge Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and a junk value.
+	
+	Imagine it was a stained king mattress.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482599 [DEV] Supersized Junk
+H 483599
+	\m\bSupersized Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and a junk value.
+	
+	Imagine it was a shipping container sized batch of packing peanuts.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482600 [DEV] Tiny Decent
+H 483600
+	\m\bTiny Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and a decent value.
+	
+	Imagine it was a portable hard drive.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482601 [DEV] Small Decent
+H 483601
+	\m\bSmall Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and a decent value.
+	
+	Imagine it was a minifridge.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482602 [DEV] Medium Decent
+H 483602
+	\m\bMedium Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and a decent value.
+	
+	Imagine it was a flatscreen TV.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482603 [DEV] Large Decent
+H 483603
+	\m\bLarge Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and a decent value.
+	
+	Imagine it was a gym machine.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482604 [DEV] Supersized Decent
+H 483604
+	\m\bSupersized Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and a decent value.
+	
+	Imagine it was a shipping container sized batch of rubber chickens.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482605 [DEV] Tiny Good
+H 483605
+	\m\bTiny Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and a good value.
+	
+	Imagine it was a graphics card.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482606 [DEV] Small Good
+H 483606
+	\m\bSmall Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and a good value.
+	
+	Imagine it was a laptop.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482607 [DEV] Medium Good
+H 483607
+	\m\bMedium Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and a good value.
+	
+	Imagine it was a Great Dane.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482608 [DEV] Large Good
+H 483608
+	\m\bLarge Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and a good value.
+	
+	Imagine it was a pool table.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482609 [DEV] Supersized Good
+H 483609
+	\m\bSupersized Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and a good value.
+	
+	Imagine it was a shipping container sized batch of bananas.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482610 [DEV] Tiny Excellent
+H 483610
+	\m\bTiny Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and an excellent value.
+	
+	Imagine it was a luxury watch.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482611 [DEV] Small Excellent
+H 483611
+	\m\bSmall Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and an excellent value.
+	
+	Imagine it was a shoebox full of human kidneys.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482612 [DEV] Medium Excellent
+H 483612
+	\m\bMedium Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and an excellent value.
+	
+	Imagine it was an electric bicycle.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482613 [DEV] Large Excellent
+H 483613
+	\m\bLarge Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and an excellent value.
+	
+	Imagine it was a used car.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482614 [DEV] Supersized Excellent
+H 483614
+	\m\bSupersized Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and an excellent value.
+	
+	Imagine it was a shipping container sized batch of body pillows.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482615 [DEV] Tiny Incredible
+H 483615
+	\m\bTiny Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and an incredible value.
+	
+	Imagine it was an MTG Black Lotus card.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482616 [DEV] Small Incredible
+H 483616
+	\m\bSmall Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and an incredible value.
+	
+	Imagine it was an antique vase.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482617 [DEV] Medium Incredible
+H 483617
+	\m\bMedium Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and an incredible value.
+	
+	Imagine it was a classic motorcycle.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482618 [DEV] Large Incredible
+H 483618
+	\m\bLarge Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and an incredible value.
+	
+	Imagine it was a grand piano.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482619 [DEV] Supersized Incredible
+H 483619
+	\m\bSupersized Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and an incredible value.
+	
+	Imagine it was a boat.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
