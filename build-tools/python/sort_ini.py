@@ -11,7 +11,7 @@ def parse_blocks(in_file: str) -> dict:
     start_lines = []
     i = 0
 
-    for line in lines:
+    for n, line in enumerate(lines):
 
         if line.startswith("["):
             i += 1
@@ -19,6 +19,7 @@ def parse_blocks(in_file: str) -> dict:
             blocks[i]["type"] = line.strip()
             blocks[i]["content"] = []
             blocks[i]["dependencies"] = []
+            blocks[i]["comments"] = [lines[x] for x in [n-2, n-1, n] if lines[x].startswith(";") and i!=1]
         elif line.startswith("nickname ="):
             nickname = line.split(" = ")[1].strip()
             blocks[i]["nickname"] = nickname
@@ -32,7 +33,7 @@ def parse_blocks(in_file: str) -> dict:
                     val = val.strip()
                     if val in nicknames:
                         blocks[i]["dependencies"].append(nicknames[val])
-            elif line.strip() == "":
+            elif line.startswith(";") or line.strip() == "":
                 continue
             blocks[i]["content"].append(line.strip())
 
@@ -79,6 +80,8 @@ def blocks_to_lines(blocks: dict, order: List[int, ], start_lines: List[str, ]) 
     out_lines = [s+"\n" for s in start_lines]
     for i in order:
         b = blocks[i]
+        for line in b["comments"]:
+            out_lines.append(line)
         out_lines.append(b["type"]+"\n")
         out_lines.append("nickname = "+b["nickname"]+"\n")
         out_lines.extend([l+"\n" for l in b["content"]])
