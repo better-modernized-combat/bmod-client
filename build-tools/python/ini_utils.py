@@ -84,6 +84,7 @@ def write_block(block: pd.Series, block_name: str, cols: pd.Index, out: ContextM
                     continue
                 out.write(col+" = "+pretty_numbers(subvalue)+"\n")
         else:
+            print(col, value.strip() in ["", "nan"] or col == "Comment")
             if value.strip() in ["", "nan"] or col == "Comment":
                 continue
             out.write(col+" = "+pretty_numbers(value)+"\n")
