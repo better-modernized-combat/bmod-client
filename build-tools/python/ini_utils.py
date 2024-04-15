@@ -61,10 +61,17 @@ def write_block(block: pd.Series, block_name: str, cols: pd.Index, out: ContextM
         print(f"Warning: Ignoring empty {block_name} block intended for {out.name} - should this block be empty? If not, please amend the master sheet.")
         return
 
+    if isinstance(cols, pd.Index):
+        cols_as_list = cols.to_list()
+    else:
+        cols_as_list = cols
+
     # Write block header
     out.write("\n")
     if "Comment" in cols:
-        out.write(f";{block.iloc[cols.to_list().index('Comment')]}\n")
+        comment = str(block.iloc[cols_as_list.index('Comment')])
+        if comment != "nan":
+            out.write(f";{comment}\n")
     out.write(block_name+"\n")
 
     # Write block
@@ -77,7 +84,7 @@ def write_block(block: pd.Series, block_name: str, cols: pd.Index, out: ContextM
                     continue
                 out.write(col+" = "+pretty_numbers(subvalue)+"\n")
         else:
-            if value.strip() in ["", "nan"]:
+            if value.strip() in ["", "nan"] or col == "Comment":
                 continue
             out.write(col+" = "+pretty_numbers(value)+"\n")
 
