@@ -552,7 +552,6 @@ def create_guns(
     blaster_scaling_rules_csv: str,
     aux_csv: str,
     aux_variant_csv: str,
-    aux_scaling_rules_csv: str,
     weapon_out: str,
     weapon_goods_out: str,
     weapon_infocards_out: str,
@@ -587,10 +586,6 @@ def create_guns(
         aux_variants = pd.read_csv(aux_variant_csv, sep = ",", encoding = "utf-8", comment = "#", dtype = object, keep_default_na = False)
     except:
         raise CSVError(f"CSV {aux_variant_csv} couldn't be read and is probably borked.")
-    try:
-        aux_scaling_rules_raw = pd.read_csv(aux_scaling_rules_csv, sep = ",", encoding = "utf-8", comment = "#", dtype = object)
-    except:
-        raise CSVError(f"CSV {aux_scaling_rules_csv} couldn't be read and is probably borked.")
 
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
     blasters = clean_unnamed_wip_empty(blasters, name = blaster_csv)
@@ -599,8 +594,6 @@ def create_guns(
     blaster_scaling_rules = make_scaling_rules(blaster_scaling_rules_raw)
     auxs = clean_unnamed_wip_empty(auxs, name = aux_csv)
     aux_variants = clean_unnamed_wip_empty(aux_variants, name = aux_variant_csv)
-    aux_scaling_rules_raw = clean_unnamed_wip_empty(aux_scaling_rules_raw, name = aux_scaling_rules_csv)
-    aux_scaling_rules = make_scaling_rules(aux_scaling_rules_raw)
     
     # Split off override entries
     is_override_blaster = blasters["Overrides"].apply(lambda x: False if pd.isna(x) or x == "" else True)
@@ -747,7 +740,7 @@ def create_guns(
             munition_name, munition_block, weapon_name, weapon_block = create_auxgun_ammo_blocks(
                 weapon = aux, 
                 variant = variant,
-                scaling_rules = aux_scaling_rules,
+                scaling_rules = None,
                 idx = i_counter,
                 is_override = False,
                 make_ammo = (v == 0)
@@ -814,7 +807,7 @@ def create_guns(
         munition_name, munition_block, weapon_name, weapon_block = create_auxgun_ammo_blocks(
             weapon = override_aux, 
             variant = variant,
-            scaling_rules = aux_scaling_rules,
+            scaling_rules = None,
             idx = i_counter,
             is_override = True,
             make_ammo = True
@@ -889,7 +882,6 @@ if __name__ == "__main__":
     parser.add_argument("--blaster_scaling_rules_csv", dest = "blaster_scaling_rules_csv", type = str)
     parser.add_argument("--aux_csv", dest = "aux_csv", type = str)
     parser.add_argument("--aux_variant_csv", dest = "aux_variant_csv", type = str)
-    parser.add_argument("--aux_scaling_rules_csv", dest = "aux_scaling_rules_csv", type = str)
     parser.add_argument("--weapon_out", dest = "weapon_out", type = str)
     parser.add_argument("--weapon_goods_out", dest = "weapon_goods_out", type = str)
     parser.add_argument("--weapon_infocards_out", dest = "weapon_infocards_out", type = str)
@@ -903,7 +895,6 @@ if __name__ == "__main__":
         blaster_scaling_rules_csv = args.blaster_scaling_rules_csv,
         aux_csv = args.aux_csv,
         aux_variant_csv = args.aux_variant_csv,
-        aux_scaling_rules_csv = args.aux_scaling_rules_csv,
         weapon_out = args.weapon_out,
         weapon_goods_out = args.weapon_goods_out,
         weapon_infocards_out = args.weapon_infocards_out,

@@ -5,7 +5,6 @@
         "blaster_scalings_in": "./build-tools/python/csv_dump/Blaster Scaling Rules.csv",
         "aux_in": "./build-tools/python/csv_dump/PC Aux Guns.csv",
         "aux_variants_in": "./build-tools/python/csv_dump/Aux Variant Rules.csv",
-        "aux_scalings_in": "./build-tools/python/csv_dump/Aux Scaling Rules.csv",
         "weapon_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_guns.ini",
         "weapon_goods_out": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_guns.ini",
         "weapon_infocards_out": "./mod-assets/weapon_infocard_imports.frc"
