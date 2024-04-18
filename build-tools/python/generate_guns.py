@@ -14,9 +14,8 @@ from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, genera
 from ini_utils import CSVError, clean_unnamed_wip_empty, pretty_numbers
 from utils import bcolors
 
-# FIXME turrets
 # Currently supported multiplicities
-supported_multiplicities = [(1, False), (2, False), (3, False), (3, True)]
+supported_multiplicities = [(1, False), (2, False), (3, False)]
 
 def dfloat(s: str):
     if isinstance(s, str):
@@ -37,10 +36,6 @@ def make_scaling_rules(raw_csv: pd.DataFrame):
     return rules_dict
 
 def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, scaling_rules: dict, idx: int, is_turret: bool = False, is_override: bool = False):
-    
-    # Turrets are all multiplicity 3, if this ever changes, reminder to FIXME turrets
-    if is_turret and multiplicity != 3:
-        raise NotImplementedError("Time to think about how to do turrets properly.")
     
     # Hash out calculated values, or get them from the override
     if not is_override or isinstance(weapon["Overrides"], float):
@@ -73,10 +68,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     
     # HP Type guessing or get from override
     if not is_override or isinstance(weapon["Overrides"], float):
-        if is_turret:
-            hp_type_guess = HP_Types["PD Turret"] # FIXME turrets
-            mt_name = "3xT"
-        elif weapon["HP Type"] != "S Energy":
+        if weapon["HP Type"] != "S Energy":
             hp_type_guess = HP_Types[weapon["HP Type"]]
             mt_name = "1x"
         else:
@@ -119,8 +111,8 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "ids_name": idx,
         "ids_info": idx+1,
-        "DA_archetype": (weapon["Gun Archetype"] if not is_turret else "equipment\\models\\weapons\\li_cannon.cmp"), # FIXME turrets
-        "material_library": (weapon["Material Library"] if not is_turret else "equipment\\models\\li_turret.mat"), # FIXME turrets
+        "DA_archetype": weapon["Gun Archetype"],
+        "material_library": weapon["Material Library"],
         "HP_child": "HPConnect",
         "hit_pts": weapon["Gun HP"],
         "explosion_resistance": 0,
@@ -181,7 +173,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         cost = int(dfloat(weapon["Cost"]))
     
     # HP Type won't be guessed for aux
-    hp_type = HP_Types[weapon["HP Type"]] # FIXME turrets
+    hp_type = HP_Types[weapon["HP Type"]]
     mt_name = "1x"
         
     # Get nickname from override or construct it
@@ -459,19 +451,16 @@ def sanity_check(
             continue
         
         # Skip weapon pairings that have ...
-        for m in ["3xT", "1x", "2x", "3x"]: # FIXME turrets
+        for m in ["1x", "2x", "3x"]:
             if m in n1:
                 m1 = m
                 break
-        for m in ["3xT", "1x", "2x", "3x"]: # FIXME turrets
+        for m in ["1x", "2x", "3x"]:
             if m in n2:
                 m2 = m
                 break
         # different multiplicity?
         if check_multiplicity is False and (m in n1 and not m in n2):
-            continue
-        # the same base weapon, and are just 3x and turret, as those are naturally equal
-        if ((m1 == "3x" and m2 == "3xT") or (m1 == "3xT" and m1 == "3x")) and n1.split(m1)[0] == n2.split(m2)[0]:
             continue
         
         hd1, hd2 = munitions[w1+"_ammo"]["hull_damage"], munitions[w2+"_ammo"]["hull_damage"]
@@ -633,7 +622,7 @@ def create_guns(
             # Either generate all multiplicities (for S Energy weapons) or only the specific one specified
             for n, (multiplicity, is_turret) in enumerate(
                 supported_multiplicities if blaster["HP Type"] == "S Energy" else
-                [(3, True) if blaster["HP Type"] == "PD Turret" else (1, False)] # FIXME Turrets
+                [(1, False)] # FIXME Turrets
                 ):
                 
                 i_counter += 2 # weapon name, weapon info
@@ -688,7 +677,7 @@ def create_guns(
         else:
             variant = base_variant
         multiplicity = int(mt_name[0])
-        is_turret = (override_blaster["HP Type"] == "PD Turret" or mt_name[-1] == "T")
+        is_turret = (override_blaster["HP Type"] == "PD Turret" or mt_name[-1] == "T") # FIXME turrets
         
         i_counter += 2 # weapon name, weapon info
         
