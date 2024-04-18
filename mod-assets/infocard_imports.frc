@@ -2177,7 +2177,7 @@ H 483571
 H 483572 
 	\m\bH-FUEL\B
 	\l
-	H-fuel is the basic fuel used for engine propulsion everywhere in the colonies. A mix of elemental hydrogen, deuterium (H2), and helium-3 (He3), H-fuel can also be mixed with oxygen in fuel cells to provide water (via “cracking”) and electricity for smaller ships, space stations, and other facilities. H-fuel production is almost totally monopolized by the Kusari who obtain their supplies from the Gas Miners Guild before shipping it to storage depots and distribution facilities throughout the colonies.
+	H-fuel is the basic fuel used for engine propulsion everywhere in the colonies. A mix of elemental hydrogen, deuterium (H2), and helium-3 (He3), H-fuel can also be mixed with oxygen in fuel cells to provide water (via 'cracking') and electricity for smaller ships, space stations, and other facilities. H-fuel production is almost totally monopolized by the Kusari who obtain their supplies from the Gas Miners Guild before shipping it to storage depots and distribution facilities throughout the colonies.
 
 H 483573 
 	\m\bHIGH-TEMPERATURE ALLOY\B
@@ -2267,7 +2267,7 @@ H 483589
 H 483590 
 	\m\bSUPERCONDUCTORS\B
 	\l
-	Superconductors are materials that transmit without loss any current applied to them. Unfortunately, many materials act as superconductors only when cooled to temperatures near absolute zero. The discovery of “room temperature” superconductors built around a core of specially treated niobium with copper shunting, however, made possible quantum leaps in technology. Most importantly, superconductors are key components in fusion engines and in the construction of Jump Gates and Trade Lanes.
+	Superconductors are materials that transmit without loss any current applied to them. Unfortunately, many materials act as superconductors only when cooled to temperatures near absolute zero. The discovery of 'room temperature' superconductors built around a core of specially treated niobium with copper shunting, however, made possible quantum leaps in technology. Most importantly, superconductors are key components in fusion engines and in the construction of Jump Gates and Trade Lanes.
 
 H 483591 
 	\m\bTERRAFORMING GASES\B
