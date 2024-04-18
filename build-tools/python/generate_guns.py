@@ -622,7 +622,7 @@ def create_guns(
             # Either generate all multiplicities (for S Energy weapons) or only the specific one specified
             for n, (multiplicity, is_turret) in enumerate(
                 supported_multiplicities if blaster["HP Type"] == "S Energy" else
-                [(3, True) if blaster["HP Type"] == "PD Turret" else (1, False)] # FIXME Turrets
+                [(1, False)] # FIXME Turrets
                 ):
                 
                 i_counter += 2 # weapon name, weapon info
