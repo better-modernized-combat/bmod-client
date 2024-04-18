@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.0.8
+- Objectives: Multiplayer now features satellites that can be hacked to reveal points of interest
+- Experimental changes to the handling of the Falcon, Hawk, Eagle and Rhino
+- Adjusted a number of visual and audio effects
+- Reduced the rock density of the Cheyenne Asteroid Field
+- Numerous adjustments to Rookie NPC flight AI
+- A better basic economy for Colorado, with across-the-board changes to prices and commodities, which now feature volume as a balancing factor
+- Implement placeholder 'treasure' loot
+- Numerous assorted bug fixes
+
 ## 0.0.7
 - Reimplement basic commodities with modifiable counterparts
 - Set up a very basic group of producers and consumers within Colorado
