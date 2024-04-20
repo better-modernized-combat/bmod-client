@@ -949,7 +949,9 @@ S 474047 Xenos Light Fighter
 S 474048 Xenos Heavy Fighter
 S 474049 Xenos Very Heavy Fighter
 S 474050 Xenos Freighter
-S 474051 [ORE] Mid-yield Copper Deposit
+S 474051 [ORE] High-yield Copper Deposit
+S 474052 [ORE] Mid-yield Silver Deposit
+S 474053 [ORE] Mid-yield Gold Deposit
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -2563,3 +2565,21 @@ H 483619
 	Imagine it was a boat.
 	
 	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482620 [GEM] Azurite
+H 483620
+	\m\bAZURITE\B
+	\l
+	A soft, deep-blue stone often found amongst copper ore deposits. Called the ''Stone of Heaven'' by those who love to wear it, it fetches a high price when crafted into jewellery.
+		
+S 482621 [GEM] Rhodochrosite
+H 483621
+	\m\bRHODOCHROSITE\B
+	\l
+	A crystal that's typically rose-red in colour, but can also be shades of pink to pale brown, with streaks of white in between. Valued for its beauty and its use in jewellery, it sells well on planets and stations with populations that can afford fine things.
+	
+S 482622 [GEM] Amethyst
+H 483622
+	\m\bAMETHYST\B
+	\l
+	A deep-purple gemstone that, in ancient times, was thought to protect its owner from getting drunk. While most modern buyers don't expect such protections, they still pay handsomely for good specimens of this beautiful stone.
