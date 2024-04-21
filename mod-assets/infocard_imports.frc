@@ -952,6 +952,7 @@ S 474050 Xenos Freighter
 S 474051 [ORE] High-yield Copper Deposit
 S 474052 [ORE] Mid-yield Silver Deposit
 S 474053 [ORE] Mid-yield Gold Deposit
+S 474054 DSE Mining Ship Charlie-1
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -1304,6 +1305,11 @@ H 476068
 	The ramp door of this freighter seems to have been cut open by some kind of energy tool, a large hole allowing sight into the cargo bay where numerous generic cargo containers seem to have been cut open in the same kind of way, left completely emptied of whatever they previously held.
 	
 	Supplies are still left along the bay's walls like fuel, ammo and rations, but there's no trace of any crew at all or anything to hint at the purpose of this ship's last journey.
+	
+H 476069
+	\bDeep Space Engineering\B
+	\bMining Ship Charlie-1\B
+	\bTask: Copper Harvesting\B
 
 S 478017 Liberty Police
          Tamms Bartender
