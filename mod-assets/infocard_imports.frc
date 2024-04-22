@@ -2583,3 +2583,36 @@ H 483622
 	\m\bAMETHYST\B
 	\l
 	A deep-purple gemstone that, in ancient times, was thought to protect its owner from getting drunk. While most modern buyers don't expect such protections, they still pay handsomely for good specimens of this beautiful stone.
+
+S 474054 Mining Ship Charlie-1
+S 474055 Mining Ship Delta-2
+S 474056 Mining Ship Alpha-4
+S 474057 Mining Ship Alpha-3
+
+H 476069
+	\bDeep Space Engineering\B
+	\bMining Ship Charlie-1\B
+	\bTask: Copper Harvesting\B
+	\l
+	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+
+H 476070
+	\bDeep Space Engineering\B
+	\bMining Ship Delta-2\B
+	\bTask: Silver Harvesting\B
+	\l
+	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+
+H 476071
+	\bDeep Space Engineering\B
+	\bMining Ship Alpha-4\B
+	\bTask: Silver Harvesting\B
+	\l
+	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+
+H 476072
+	\bDeep Space Engineering\B
+	\bMining Ship Alpha-3\B
+	\bTask: Silver Harvesting\B
+	\l
+	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
