@@ -2584,35 +2584,35 @@ H 483622
 	\l
 	A deep-purple gemstone that, in ancient times, was thought to protect its owner from getting drunk. While most modern buyers don't expect such protections, they still pay handsomely for good specimens of this beautiful stone.
 
-S 474054 Mining Ship Charlie-1
-S 474055 Mining Ship Delta-2
-S 474056 Mining Ship Alpha-4
-S 474057 Mining Ship Alpha-3
+S 474054 DSE Mining Ship Charlie-1
+S 474055 DSE Mining Ship Sierra-1
+S 474056 DSE Mining Ship Sierra-2
+S 474057 DSE Mining Ship Sierra-3
 
 H 476069
-	\bDeep Space Engineering\B
-	\bMining Ship Charlie-1\B
-	\bTask: Copper Harvesting\B
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Charlie-1\B
+	\bTASK: Copper Harvesting\B
 	\l
-	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
 
 H 476070
-	\bDeep Space Engineering\B
-	\bMining Ship Delta-2\B
-	\bTask: Silver Harvesting\B
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Sierra-1\B
+	\bTASK: Silver Harvesting\B
 	\l
-	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
 
 H 476071
-	\bDeep Space Engineering\B
-	\bMining Ship Alpha-4\B
-	\bTask: Silver Harvesting\B
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Sierra-2\B
+	\bTASK: Silver Harvesting\B
 	\l
-	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
 
 H 476072
-	\bDeep Space Engineering\B
-	\bMining Ship Alpha-3\B
-	\bTask: Silver Harvesting\B
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Sierra-3\B
+	\bTASK: Silver Harvesting\B
 	\l
-	Asteroid miners are manned or automated ships that extract valuable mineral deposits from asteroid fields.
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
