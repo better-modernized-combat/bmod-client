@@ -4,6 +4,24 @@ import pandas as pd
 class CSVError(Exception):
     pass
 
+def pretty_numbers(s: str):
+    
+    # if its not a string, send out the kill squad. also make it a string
+    s = str(s)
+    
+    # if the string can be a number
+    if not s.replace(".", "", 1).isdigit() or (s.startswith("-") and s[1:].replace(".", "", 1).isdigit()):
+        return s
+    
+    # is it an int?
+    if not "." in s:
+        return str(int(s))
+    
+    # if not, make it a float and round to 4 decimal places, eliminating trailing zeroes or commas
+    else:
+        s = float(s)
+        return f"{round(s, 4):.4f}".rstrip('0').rstrip('.')
+
 def parse_to_list(listable_string: str):
     return [item.strip() for item in str(listable_string).split("\n")]
 
@@ -36,30 +54,39 @@ def clean_unnamed_wip_empty(frame: pd.DataFrame, name: str):
     
     return frame
 
-def write_block(block: pd.Series, block_name: str, cols: List, out: ContextManager):
+def write_block(block: pd.Series, block_name: str, cols: pd.Index, out: ContextManager):
     
     # Check if block is empty. If empty, skip
     if all(pd.isna(x) or x == "" for x in block.values) or block.empty:
         print(f"Warning: Ignoring empty {block_name} block intended for {out.name} - should this block be empty? If not, please amend the master sheet.")
         return
 
+    if isinstance(cols, pd.Index):
+        cols_as_list = cols.to_list()
+    else:
+        cols_as_list = cols
+
     # Write block header
     out.write("\n")
+    if "Comment" in cols:
+        comment = str(block.iloc[cols_as_list.index('Comment')])
+        if comment != "nan":
+            out.write(f";{comment}\n")
     out.write(block_name+"\n")
 
     # Write block
     for e, col in enumerate(cols):
-        line = str(block.iloc[e]).strip()
-        if "\n" in line:
-            sublines = line.split("\n")
-            for subline in sublines:
-                if subline.strip() == "":
+        value = str(block.iloc[e]).strip()
+        if "\n" in value:
+            subvalues = value.split("\n")
+            for subvalue in subvalues:
+                if subvalue.strip() == "":
                     continue
-                out.write(col+" = "+subline+"\n")
+                out.write(col+" = "+pretty_numbers(subvalue)+"\n")
         else:
-            if line.strip() in ["", "nan"]:
+            if value.strip() in ["", "nan"] or col == "Comment":
                 continue
-            out.write(col+" = "+line+"\n")
+            out.write(col+" = "+pretty_numbers(value)+"\n")
 
     out.write("\n") # end of block
 

@@ -1,22 +1,21 @@
-import pandas as pd
 from collections import OrderedDict
 from copy import deepcopy
+from io import TextIOWrapper
 from itertools import combinations
-from tqdm.auto import tqdm
+import pandas as pd
 import re
-
+from tqdm.auto import tqdm
 from typing import List
 
 from argparse import ArgumentParser
 
 from defaults import *
 from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, generate_ammo_infocard_entry, write_infocards_to_frc
-from ini_utils import CSVError, clean_unnamed_wip_empty
+from ini_utils import CSVError, clean_unnamed_wip_empty, pretty_numbers
 from utils import bcolors
 
-# FIXME turrets
 # Currently supported multiplicities
-supported_multiplicities = [(1, False), (2, False), (3, False), (3, True)]
+supported_multiplicities = [(1, False), (2, False), (3, False)]
 
 def dfloat(s: str):
     if isinstance(s, str):
@@ -37,10 +36,6 @@ def make_scaling_rules(raw_csv: pd.DataFrame):
     return rules_dict
 
 def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, scaling_rules: dict, idx: int, is_turret: bool = False, is_override: bool = False):
-    
-    # Turrets are all multiplicity 3, if this ever changes, reminder to FIXME turrets
-    if is_turret and multiplicity != 3:
-        raise NotImplementedError("Time to think about how to do turrets properly.")
     
     # Hash out calculated values, or get them from the override
     if not is_override or isinstance(weapon["Overrides"], float):
@@ -73,10 +68,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     
     # HP Type guessing or get from override
     if not is_override or isinstance(weapon["Overrides"], float):
-        if is_turret:
-            hp_type_guess = HP_Types["PD Turret"] # FIXME turrets
-            mt_name = "3xT"
-        elif weapon["HP Type"] != "S Energy":
+        if weapon["HP Type"] != "S Energy":
             hp_type_guess = HP_Types[weapon["HP Type"]]
             mt_name = "1x"
         else:
@@ -88,13 +80,17 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         
     # Construct nickname or get from override
     if not is_override or isinstance(weapon["Overrides"], float):
-        nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"    
+        if not "npc" in weapon['Family Shorthand']:
+            nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"
+        else:
+            nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{weapon['npc_var_name']}"
     else:
         nickname = weapon["Overrides"]
     
     # Create ammunition block
     munition_block = OrderedDict({
         "nickname": f"{nickname}_ammo",
+        "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "hp_type": "hp_gun", #TODO: Is this right?
         "requires_ammo": "false",
         "hit_pts": 2,
@@ -112,10 +108,11 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     # Create weapon block
     weapon_block = OrderedDict({
         "nickname": nickname,
+        "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "ids_name": idx,
         "ids_info": idx+1,
-        "DA_archetype": (weapon["Gun Archetype"] if not is_turret else "equipment\\models\\weapons\\li_cannon.cmp"), # FIXME turrets
-        "material_library": (weapon["Material Library"] if not is_turret else "equipment\\models\\li_turret.mat"), # FIXME turrets
+        "DA_archetype": weapon["Gun Archetype"],
+        "material_library": weapon["Material Library"],
         "HP_child": "HPConnect",
         "hit_pts": weapon["Gun HP"],
         "explosion_resistance": 0,
@@ -138,30 +135,14 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "separation_explosion": "sever_debris",
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
-        "lootable": "true",
+        "lootable": "false" if "_npc_" in nickname else "true",
         "LODranges": "0, 20, 60, 100",
         "; cost": cost,
     })
     if not pd.isna(weapon["Dispersion Angle"]) and not weapon["Dispersion Angle"] == "":
         weapon_block["dispersion_angle"] = dfloat(weapon["Dispersion Angle"])
     
-    # Create NPC blocks
-    npc_ammo_nickname = weapon_block["projectile_archetype"][:3]+"npc_"+weapon_block["projectile_archetype"][3:]
-    npc_weapon_nickname = nickname[:3]+"npc_"+nickname[3:]
-    npc_hull_damage = hull_damage * dfloat(scaling_rules["NPC Damage Factor"])
-    npc_energy_damage = energy_damage * dfloat(scaling_rules["NPC Damage Factor"])
-    npc_power_usage = power_usage * dfloat(scaling_rules["NPC Energy Factor"])
-    npc_effective_range = effective_range * dfloat(scaling_rules["NPC Range Factor"])
-    npc_muzzle_velocity = muzzle_velocity * dfloat(scaling_rules["NPC Muzzle Velocity Factor"])
-    npc_lifetime = npc_effective_range / npc_muzzle_velocity
-    
-    npc_munition_block = deepcopy(munition_block)
-    npc_munition_block.update({"nickname": npc_ammo_nickname, "hull_damage": npc_hull_damage, "energy_damage": npc_energy_damage, "lifetime": npc_lifetime})
-    npc_weapon_block = deepcopy(weapon_block)
-    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "projectile_archetype": npc_ammo_nickname})
-    npc_weapon_block.update({"lootable": "false"})
-    
-    return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
+    return f"{nickname}_ammo", munition_block, nickname, weapon_block
 
 def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, idx: int, is_override: bool = False, make_ammo = False):
     
@@ -192,12 +173,15 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         cost = int(dfloat(weapon["Cost"]))
     
     # HP Type won't be guessed for aux
-    hp_type = HP_Types[weapon["HP Type"]] # FIXME turrets
+    hp_type = HP_Types[weapon["HP Type"]]
     mt_name = "1x"
         
     # Get nickname from override or construct it
     if not is_override or isinstance(weapon["Overrides"], float):
-        nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"    
+        if not "npc" in weapon['Family Shorthand']:
+            nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"
+        else:
+            nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{weapon['npc_var_name']}"
     else:
         nickname = weapon["Overrides"]
     
@@ -207,6 +191,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
     else:
         munition_block = OrderedDict({
             "nickname": f"{nickname}_ammo",
+            "Comment": f"{weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
             "hp_type": "hp_gun", #TODO: Is this right?
             "requires_ammo": weapon["Uses Ammo?"],
             "hit_pts": 2,
@@ -229,6 +214,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
     # Create weapon block
     weapon_block = OrderedDict({
         "nickname": nickname,
+        "Comment": f"{mt_name} {weapon['Weapon Name']}{variant['Variant Description']}\n;{weapon['Comment']}",
         "ids_name": idx,
         "ids_info": idx+1,
         "DA_archetype": weapon["Gun Archetype"],
@@ -253,9 +239,9 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
         "light_anim": weapon["Light Animation"],
         "projectile_archetype": (f"{nickname}_ammo" if make_ammo is True else f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_b_ammo"),
         "separation_explosion": "sever_debris",
-        "auto_turret": "false",
+        "auto_turret": "true" if "aux" in nickname and "npc" in nickname else "false", # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
         "turn_rate": weapon["Turn Rate"],
-        "lootable": "true",
+        "lootable": "false" if "npc" in nickname else "true",
         "LODranges": "0, 80, 160, 320, 400",
         "dry_fire_sound": "fire_dry",
         "; cost": cost,
@@ -271,76 +257,30 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, scaling_rules: dict, 
     if not pd.isna(weapon["Free Ammo"]) and not weapon["Free Ammo"] == "":
         weapon_block["; free_ammo"] = dfloat(weapon["Free Ammo"])
     
-    # Create NPC blocks
-    npc_ammo_nickname = weapon_block["projectile_archetype"][:3]+"npc_"+weapon_block["projectile_archetype"][3:]
-    npc_weapon_nickname = nickname[:3]+"npc_"+nickname[3:]
-    npc_hull_damage = hull_damage * dfloat(scaling_rules["NPC Damage Factor"])
-    npc_energy_damage = energy_damage * dfloat(scaling_rules["NPC Damage Factor"])
-    npc_power_usage = power_usage * dfloat(scaling_rules["NPC Energy Factor"])
-    npc_effective_range = effective_range * dfloat(scaling_rules["NPC Range Factor"])
-    npc_muzzle_velocity = muzzle_velocity * dfloat(scaling_rules["NPC Muzzle Velocity Factor"])
-    npc_lifetime = npc_effective_range / npc_muzzle_velocity
-    
-    npc_munition_block = deepcopy(munition_block)
-    if make_ammo is True:
-        npc_munition_block.update({"nickname": npc_ammo_nickname, "hull_damage": npc_hull_damage, "energy_damage": npc_energy_damage, "lifetime": npc_lifetime})
-        if str(weapon["Uses Ammo?"]).lower() == "true": #:vomit:
-            npc_munition_block.update({"ids_name": idx+6, "ids_info": idx+7})
-    npc_weapon_block = deepcopy(weapon_block)
-    npc_weapon_block.update({"nickname": npc_weapon_nickname, "power_usage": npc_power_usage, "muzzle_velocity": npc_muzzle_velocity, "projectile_archetype": npc_ammo_nickname, "auto_turret": "true"}) # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
-    npc_weapon_block.update({"lootable": "false"})
-    
-    return f"{nickname}_ammo", munition_block, npc_munition_block, nickname, weapon_block, npc_weapon_block
+    return f"{nickname}_ammo", munition_block, nickname, weapon_block
 
-def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict, npc_ammo_dict: dict, npc_weapon_dict: dict):
+def write_from_dict(d: dict, block_name: str, out: TextIOWrapper):
+    
+    for name, block in d.items():
+        if "Comment" in block: # Comments go at the top
+            out.write(f";{block['Comment']}\n")
+        out.write(f"{block_name}\n")
+        for key, val in block.items():
+            if key.startswith(";") or key == "Comment": # dont write temp entries or comments in the block
+                continue
+            else:
+                if "\n" in str(val):
+                    out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
+                else:
+                    out.writelines([f"{key} = {pretty_numbers(val)}\n"])
+        out.write("\n")
+
+def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict):
     
     with open(ini_out_file, "a", encoding = "utf-8") as out:
         
-        for munition_name, munition_block in ammo_dict.items():
-            out.write(f"[Munition]\n")
-            for key, val in munition_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {str(val)}\n"])
-            out.write("\n")
-        for weapon_name, weapon_block in weapon_dict.items():
-            out.write(f"[Gun]\n")
-            for key, val in weapon_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {str(val)}\n"])
-            out.write("\n")
-            
-        for munition_name, munition_block in npc_ammo_dict.items():
-            out.write(f"[Munition]\n")
-            for key, val in munition_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {str(val)}\n"])
-            out.write("\n")
-        for weapon_name, weapon_block in npc_weapon_dict.items():
-            out.write(f"[Gun]\n")
-            for key, val in weapon_block.items():
-                if key.startswith(";"): # dont write "comments"
-                    continue
-                else:
-                    if "\n" in str(val):
-                        out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
-                    else:
-                        out.writelines([f"{key} = {str(val)}\n"])
-            out.write("\n")
+        write_from_dict(ammo_dict, "[Munition]", out)
+        write_from_dict(weapon_dict, "[Gun]", out)
 
 def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool, is_override: bool = False):
     
@@ -391,7 +331,7 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
     
     if not(pd.isna(auxgun["Free Ammo"]) or auxgun["Free Ammo"] == ""):
         if is_override:
-            print(f"{bcolors.WARNING}WARNING: Guessing name of base variant for override aux gun that requires ammunition. If there is a crash right after this, its probably because your override aux gun didn't conform to the common naming scheme. If there is a crash when trying to buy this weapon, its for the same reason, as it can't find the ammo you're given for free.{bcolors.ENDC}")
+            print(f"{bcolors.WARNING}WARNING: Guessing name of base variant for override aux gun that requires ammunition: {internal_name}. If there is a crash right after this, its probably because your override aux gun didn't conform to the common naming scheme. If there is a crash when trying to buy this weapon, its for the same reason, as it can't find the ammo you're given for free.{bcolors.ENDC}")
         base_variant_guess = "_".join(internal_name.split("_")[:-1]+["b"]) # FIXME: AUX Variants with Variant Ammo
         good["free_ammo"] = f"{base_variant_guess+'_ammo'}, {auxgun['Free Ammo']}"
     
@@ -424,9 +364,9 @@ def write_goods(
             out.write("[Good]\n")
             for key, val in good.items():
                 if "\n" in str(val):
-                    out.writelines([f"{key} = {sval}\n" for sval in val.split("\n")])
+                    out.writelines([f"{key} = {pretty_numbers(sval)}\n" for sval in val.split("\n")])
                 else:
-                    out.writelines([f"{key} = {str(val)}\n"])
+                    out.writelines([f"{key} = {pretty_numbers(val)}\n"])
             out.write("\n\n")
 
 def fill_admin_store(
@@ -502,8 +442,8 @@ def sanity_check(
         
         n1, n2 = weapons[w1]["nickname"], weapons[w2]["nickname"]
         
-        # Skip aux, always
-        if "aux" in n1 or "aux" in n2:
+        # Skip aux and npc weapons, always
+        if "aux" in n1 or "aux" in n2 or "npc" in n1 or "npc" in n2:
             continue
         
         # Skip variants?
@@ -511,19 +451,16 @@ def sanity_check(
             continue
         
         # Skip weapon pairings that have ...
-        for m in ["3xT", "1x", "2x", "3x"]: # FIXME turrets
+        for m in ["1x", "2x", "3x"]:
             if m in n1:
                 m1 = m
                 break
-        for m in ["3xT", "1x", "2x", "3x"]: # FIXME turrets
+        for m in ["1x", "2x", "3x"]:
             if m in n2:
                 m2 = m
                 break
         # different multiplicity?
         if check_multiplicity is False and (m in n1 and not m in n2):
-            continue
-        # the same base weapon, and are just 3x and turret, as those are naturally equal
-        if ((m1 == "3x" and m2 == "3xT") or (m1 == "3xT" and m1 == "3x")) and n1.split(m1)[0] == n2.split(m2)[0]:
             continue
         
         hd1, hd2 = munitions[w1+"_ammo"]["hull_damage"], munitions[w2+"_ammo"]["hull_damage"]
@@ -604,7 +541,6 @@ def create_guns(
     blaster_scaling_rules_csv: str,
     aux_csv: str,
     aux_variant_csv: str,
-    aux_scaling_rules_csv: str,
     weapon_out: str,
     weapon_goods_out: str,
     weapon_infocards_out: str,
@@ -639,10 +575,6 @@ def create_guns(
         aux_variants = pd.read_csv(aux_variant_csv, sep = ",", encoding = "utf-8", comment = "#", dtype = object, keep_default_na = False)
     except:
         raise CSVError(f"CSV {aux_variant_csv} couldn't be read and is probably borked.")
-    try:
-        aux_scaling_rules_raw = pd.read_csv(aux_scaling_rules_csv, sep = ",", encoding = "utf-8", comment = "#", dtype = object)
-    except:
-        raise CSVError(f"CSV {aux_scaling_rules_csv} couldn't be read and is probably borked.")
 
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
     blasters = clean_unnamed_wip_empty(blasters, name = blaster_csv)
@@ -651,8 +583,6 @@ def create_guns(
     blaster_scaling_rules = make_scaling_rules(blaster_scaling_rules_raw)
     auxs = clean_unnamed_wip_empty(auxs, name = aux_csv)
     aux_variants = clean_unnamed_wip_empty(aux_variants, name = aux_variant_csv)
-    aux_scaling_rules_raw = clean_unnamed_wip_empty(aux_scaling_rules_raw, name = aux_scaling_rules_csv)
-    aux_scaling_rules = make_scaling_rules(aux_scaling_rules_raw)
     
     # Split off override entries
     is_override_blaster = blasters["Overrides"].apply(lambda x: False if pd.isna(x) or x == "" else True)
@@ -664,8 +594,6 @@ def create_guns(
     
     writable_munition_blocks = OrderedDict()
     writable_weapon_blocks = OrderedDict()
-    writable_npc_munition_blocks = OrderedDict()
-    writable_npc_weapon_blocks = OrderedDict()
     writable_infocards = OrderedDict()
     writable_goods = OrderedDict()
     
@@ -677,7 +605,7 @@ def create_guns(
     oad = override_auxs.to_dict(orient = "index").items()
     avd = aux_variants.to_dict(orient = "index").items()
     
-    i_counter = ID_start
+    i_counter = ID_start - 2
     
     for b, blaster in bd:
         
@@ -687,15 +615,19 @@ def create_guns(
             if v == 0:
                 base_variant = deepcopy(variant)
             
+            # NPC weapons don't get variants
+            if v != 0 and "npc" in blaster['Family Shorthand']:
+                continue
+            
             # Either generate all multiplicities (for S Energy weapons) or only the specific one specified
             for n, (multiplicity, is_turret) in enumerate(
                 supported_multiplicities if blaster["HP Type"] == "S Energy" else
-                [(3, True) if blaster["HP Type"] == "PD Turret" else (1, False)] # FIXME Turrets
+                [(1, False)] # FIXME Turrets
                 ):
                 
-                i_counter += 4 # weapon name, weapon info, npc weapon, npc weapon info
+                i_counter += 2 # weapon name, weapon info
                 
-                munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_blaster_ammo_blocks(
+                munition_name, munition_block, weapon_name, weapon_block = create_blaster_ammo_blocks(
                     weapon = blaster, 
                     variant = variant, 
                     multiplicity = multiplicity, 
@@ -704,10 +636,12 @@ def create_guns(
                     is_turret = is_turret,
                     is_override = False,
                     )
+                if munition_name in writable_munition_blocks:
+                    raise ValueError(f"Munition with name '{munition_name}' was already in writable_munition_blocks, but is not an Override. This means there was a name duplication somewhere in the sheet - this exact gun family, identifier, multiplicity and variant combo already existed somewhere else!")
+                if weapon_name in writable_weapon_blocks:
+                    raise ValueError(f"Weapon with name '{weapon_name}' was already in writable_weapon_blocks, but is not an Override. This means there was a name duplication somewhere in the sheet - this exact gun family, identifier, multiplicity and variant combo already existed somewhere else!")
                 writable_munition_blocks[munition_name] = munition_block
                 writable_weapon_blocks[weapon_name] = weapon_block
-                writable_npc_munition_blocks[munition_name] = npc_munition_block
-                writable_npc_weapon_blocks[weapon_name] = npc_weapon_block
                 
                 # Generate Infocard FRC entries
                 display_name, formatted_infocard_content = generate_weapon_infocard_entry(
@@ -724,12 +658,11 @@ def create_guns(
                 )
                 writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
                 writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-                writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = display_name)                 # NPC version
-                writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)   # NPC version
                 
                 # Generate blaster goods entries
                 writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
-                writable_goods[npc_weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+2, mp = multiplicity, is_turret = is_turret) # NPC version
+
+    i_counter += 2 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
                 
     for o, override_blaster in obd:
         
@@ -738,17 +671,17 @@ def create_guns(
         split = nickname.split("_")
         mt_name = split[-2]
         
-        # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun
-        if nickname in writable_weapon_blocks:
+        # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun or an npc weapon
+        if "npc" in nickname or nickname in writable_weapon_blocks:
             _, variant = next(iter(blaster_variants[blaster_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
         else:
             variant = base_variant
         multiplicity = int(mt_name[0])
-        is_turret = (override_blaster["HP Type"] == "PD Turret" or mt_name[-1] == "T")
+        is_turret = (override_blaster["HP Type"] == "PD Turret" or mt_name[-1] == "T") # FIXME turrets
         
         i_counter += 2 # weapon name, weapon info
         
-        munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_blaster_ammo_blocks(
+        munition_name, munition_block, weapon_name, weapon_block = create_blaster_ammo_blocks(
             weapon = override_blaster, 
             variant = variant,
             multiplicity = multiplicity,
@@ -757,12 +690,8 @@ def create_guns(
             is_turret = is_turret, # FIXME turrets
             is_override = True
             )
-        if "_npc_" in override_blaster["Overrides"]:
-            writable_npc_munition_blocks[munition_name] = npc_munition_block
-            writable_npc_weapon_blocks[weapon_name] = npc_weapon_block
-        else:
-            writable_munition_blocks[munition_name] = munition_block
-            writable_weapon_blocks[weapon_name] = weapon_block
+        writable_munition_blocks[munition_name] = munition_block
+        writable_weapon_blocks[weapon_name] = weapon_block
         
         # Generate Infocard FRC entries
         display_name, formatted_infocard_content = generate_weapon_infocard_entry(
@@ -791,24 +720,28 @@ def create_guns(
             if v == 0:
                 base_variant = deepcopy(variant)
             
-            i_counter += 8 # weapon name, weapon info, ammo name, ammo info, npc equivalents
+            # NPC weapons don't get variants
+            if v != 0 and "npc" in blaster['Family Shorthand']:
+                continue
             
-            munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_auxgun_ammo_blocks(
+            i_counter += 4 # weapon name, weapon info, ammo name, ammo info
+            
+            munition_name, munition_block, weapon_name, weapon_block = create_auxgun_ammo_blocks(
                 weapon = aux, 
                 variant = variant,
-                scaling_rules = aux_scaling_rules,
+                scaling_rules = None,
                 idx = i_counter,
                 is_override = False,
                 make_ammo = (v == 0)
                 )
             if v == 0: # see https://github.com/better-modernized-combat/bmod-client/issues/23#issuecomment-1934895042
+                if munition_name in writable_munition_blocks:
+                    raise ValueError(f"Munition with name '{munition_name}' was already in writable_munition_blocks, but is not an Override. This means there was a name duplication somewhere in the sheet - this exact gun family, identifier, multiplicity and variant combo already existed somewhere else!")
                 writable_munition_blocks[munition_name] = munition_block
                 base_munition_name = munition_name
+            if weapon_name in writable_weapon_blocks:
+                raise ValueError(f"Weapon with name '{weapon_name}' was already in writable_weapon_blocks, but is not an Override. This means there was a name duplication somewhere in the sheet - this exact gun family, identifier, multiplicity and variant combo already existed somewhere else!")
             writable_weapon_blocks[weapon_name] = weapon_block
-            if v == 0: # see above
-                writable_npc_munition_blocks[munition_name] = npc_munition_block
-                base_npc_munition_name = npc_munition_block["nickname"]
-            writable_npc_weapon_blocks[weapon_name] = npc_weapon_block
             
             # Generate Weapon Infocard FRC entries
             display_name, formatted_infocard_content = generate_weapon_infocard_entry(
@@ -834,29 +767,24 @@ def create_guns(
             if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
                 writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = ammo_name)
                 writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = ammo_infocard_content)
-            
-            writable_infocards[i_counter+4] = FRC_Entry(typus = "S", idx = i_counter+4, content = display_name)                 # NPC version
-            writable_infocards[i_counter+5] = FRC_Entry(typus = "H", idx = i_counter+5, content = formatted_infocard_content)   # NPC version
-            if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-                writable_infocards[i_counter+6] = FRC_Entry(typus = "S", idx = i_counter+6, content = ammo_name)                # NPC version
-                writable_infocards[i_counter+7] = FRC_Entry(typus = "H", idx = i_counter+7, content = ammo_infocard_content)    # NPC version
                 
             # Generate auxgun goods entries
             writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
-            writable_goods[npc_weapon_block["nickname"]] = create_aux_good(auxgun = aux, variant = variant, internal_name = npc_weapon_block["nickname"], ids_name = i_counter+4) # NPC version
             
             # Generate ammo goods entries if weapon requires ammo
             if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
                 writable_goods[base_munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = base_munition_name, ids_name = i_counter+2)
-                writable_goods[base_npc_munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = base_npc_munition_name, ids_name = i_counter+6) # NPC version
+            
+    i_counter += 4 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
         
     for o, override_aux in oad:
         
         # Figure out what the override weapon should be doing
         nickname = override_aux["Overrides"]
+        split = nickname.split("_")
         
-        # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun
-        if nickname in writable_weapon_blocks:
+        # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun or an npc weapon
+        if "npc" in nickname or nickname in writable_weapon_blocks:
             _, variant = next(iter(blaster_variants[blaster_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
         else:
             variant = base_variant
@@ -865,20 +793,16 @@ def create_guns(
         
         i_counter += 4 # weapon name, weapon info, ammo name, ammo info
         
-        munition_name, munition_block, npc_munition_block, weapon_name, weapon_block, npc_weapon_block = create_auxgun_ammo_blocks(
+        munition_name, munition_block, weapon_name, weapon_block = create_auxgun_ammo_blocks(
             weapon = override_aux, 
             variant = variant,
-            scaling_rules = aux_scaling_rules,
+            scaling_rules = None,
             idx = i_counter,
             is_override = True,
             make_ammo = True
             )
-        if "_npc_" in override_aux["Overrides"]:
-            writable_npc_munition_blocks[munition_name] = npc_munition_block
-            writable_npc_weapon_blocks[weapon_name] = npc_weapon_block
-        else:
-            writable_munition_blocks[munition_name] = munition_block
-            writable_weapon_blocks[weapon_name] = weapon_block
+        writable_munition_blocks[munition_name] = munition_block
+        writable_weapon_blocks[weapon_name] = weapon_block
         
         # Generate Infocard FRC entries
         display_name, formatted_infocard_content = generate_weapon_infocard_entry(
@@ -893,30 +817,27 @@ def create_guns(
             variant_info = variant["Variant Infocard Paragraph"],
             variant_display = variant["Display Name Suffix"],
         )
-        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit::
-            ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
-                name = aux["Ammo Name"],
-                info = aux["Ammo Infocard"],
-            )
         writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-        if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-            writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = display_name)
-            writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = formatted_infocard_content)
+        if str(override_aux["Uses Ammo?"]).lower() == "true": #:vomit:
+            ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
+                name = override_aux["Ammo Name"],
+                info = override_aux["Ammo Infocard"],
+            )
+            writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = ammo_name)
+            writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = ammo_infocard_content)
             
         # Generate auxgun goods entries
         writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
         
         # Do not generate ammo goods entries if weapon requires ammo - we STILL use the base variant here
-        #if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
-        #    writable_goods[weapon_block["nickname"]] = create_aux_ammo_good(auxgun = override_aux, internal_name = ????, ids_name = i_counter+2, is_override = True)
-        
+    
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
         sanity_check(writable_weapon_blocks, writable_munition_blocks)
     
     # Write to inis/frc.
-    write_ammo_and_weapons(weapon_out, writable_munition_blocks, writable_weapon_blocks, writable_npc_munition_blocks, writable_npc_weapon_blocks)
+    write_ammo_and_weapons(weapon_out, writable_munition_blocks, writable_weapon_blocks)
     write_infocards_to_frc(weapon_infocards_out, writable_infocards)
     write_goods(weapon_goods_out, writable_goods)
     
@@ -935,9 +856,7 @@ def create_guns(
         lootprops_location = "mod-assets\\DATA\\MISSIONS\\lootprops.ini",
         lootprops = [
             [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"],
-            [munition_name for munition_name, munition in writable_npc_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"],
             [weapon_name for weapon_name, weapon in writable_weapon_blocks.items() if str(weapon["lootable"]).lower() == "true"],
-            [weapon_name for weapon_name, weapon in writable_npc_weapon_blocks.items() if str(weapon["lootable"]).lower() == "true"]
             ]
     )
     
@@ -952,7 +871,6 @@ if __name__ == "__main__":
     parser.add_argument("--blaster_scaling_rules_csv", dest = "blaster_scaling_rules_csv", type = str)
     parser.add_argument("--aux_csv", dest = "aux_csv", type = str)
     parser.add_argument("--aux_variant_csv", dest = "aux_variant_csv", type = str)
-    parser.add_argument("--aux_scaling_rules_csv", dest = "aux_scaling_rules_csv", type = str)
     parser.add_argument("--weapon_out", dest = "weapon_out", type = str)
     parser.add_argument("--weapon_goods_out", dest = "weapon_goods_out", type = str)
     parser.add_argument("--weapon_infocards_out", dest = "weapon_infocards_out", type = str)
@@ -966,7 +884,6 @@ if __name__ == "__main__":
         blaster_scaling_rules_csv = args.blaster_scaling_rules_csv,
         aux_csv = args.aux_csv,
         aux_variant_csv = args.aux_variant_csv,
-        aux_scaling_rules_csv = args.aux_scaling_rules_csv,
         weapon_out = args.weapon_out,
         weapon_goods_out = args.weapon_goods_out,
         weapon_infocards_out = args.weapon_infocards_out,

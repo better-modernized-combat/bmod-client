@@ -600,7 +600,7 @@ S 471510 This is an equipment hard point.
 S 471511 Small Energy/Ballistic Weapon
 S 471512 Medium Energy/Ballistic Weapon
 S 471513 Large Energy/Ballistic Weapon
-S 471514 XL Energy/Ballistic Turret
+S 471514 Fleet Energy/Ballistic Turret
 S 471515 hp_hybrid_gun_5 Placeholder
 S 471516 hp_hybrid_gun_6 Placeholder
 S 471517 hp_hybrid_gun_7 Placeholder
@@ -611,7 +611,7 @@ S 471521 This is a kinetic weapon hard point that accepts missile and ballistic 
 S 471522 Small Missile/Ballistic Weapon
 S 471523 Medium Missile/Ballistic Weapon
 S 471524 Large Missile/Ballistic Weapon
-S 471525 XL Missile/Ballistic Turret
+S 471525 Fleet Missile/Ballistic Turret
 S 471526 hp_kinetic_gun_5 Placeholder
 S 471527 hp_kinetic_gun_6 Placeholder
 S 471528 hp_kinetic_gun_7 Placeholder
@@ -622,7 +622,7 @@ S 471532 This is a reactive weapon hard point that accepts energy and missile ty
 S 471533 Small Missile/Energy Weapon
 S 471534 Medium Missile/Energy Weapon
 S 471535 Large Missile/Energy Weapon
-S 471536 XL Missile/Energy Turret
+S 471536 Fleet Missile/Energy Turret
 S 471537 hp_reactive_gun_5 Placeholder
 S 471538 hp_reactive_gun_6 Placeholder
 S 471539 hp_reactive_gun_7 Placeholder
@@ -729,6 +729,10 @@ S 472021 M-ER7 Nanite Burster [+]
 S 472022 ZP-1000M
 S 472023 ZP-1600M
 S 472024 ‹‹Scrambled Signal››
+S 472025 Elite
+S 472026 Patriot Wreck
+S 472027 Defender Wreck
+S 472028 Guardian Wreck
 
 H 472512
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper\B
@@ -940,6 +944,14 @@ S 474042 The Maverock
 S 474043 Maverick Station
 S 474044 Communications Satellite
 S 474045 Galileo Gate Construction Site
+S 474046 Marker Buoy
+S 474047 Xenos Light Fighter
+S 474048 Xenos Heavy Fighter
+S 474049 Xenos Very Heavy Fighter
+S 474050 Xenos Freighter
+S 474051 [ORE] High-yield Copper Deposit
+S 474052 [ORE] Mid-yield Silver Deposit
+S 474053 [ORE] Mid-yield Gold Deposit
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -1273,6 +1285,25 @@ H 476062
 
 H 476063
 	Hastily assembled in the aftermath of the Houston Catastrophe, the Galileo gate repair project has been plagued by setbacks and delays, in part due to frequent Xenos attacks on the trade lane that connects the site to Planet Denver. The gate suffered severe internal damage during the Catastrophe, and has been a focus for DSE since they bought the New York connection back on line successfully.
+	
+H 476064
+	Buoys like this, when not used to denote navigational hazards, are often used by private individuals to mark a location in space they need to remember or return to.
+	
+H 476065
+	The cockpit of this fighter has popped off, floating nearby, and a little further still floats the pilot's seat from an apparent ejection. There's no trace of the pilot. On closer inspection, it appears the seat straps of the ejected chair were cut open by some kind of energy tool.
+	
+H 476066
+	Scans confirm these are Xenos vessels, though there's no sign of any crew onboard at all. The engines on all these wrecks are burned out from use, as though they'd been pushing past their limits as fast as they could go.
+	
+	Blast marks around the rear of these ships seem to indicate that they were picked off from behind, though scans fail to match the scorch patterns to any known weapon signatures.
+	
+H 476067
+	The cockpit of this fighter is open, floating nearby as it seems to have been pried open by some kind of energy tool. The seat is still in place, meaning no ejection, but there's no trace of the pilot.
+	
+H 476068
+	The ramp door of this freighter seems to have been cut open by some kind of energy tool, a large hole allowing sight into the cargo bay where numerous generic cargo containers seem to have been cut open in the same kind of way, left completely emptied of whatever they previously held.
+	
+	Supplies are still left along the bay's walls like fuel, ammo and rations, but there's no trace of any crew at all or anything to hint at the purpose of this ship's last journey.
 
 S 478017 Liberty Police
          Tamms Bartender
@@ -2173,7 +2204,7 @@ H 483571
 H 483572 
 	\m\bH-FUEL\B
 	\l
-	H-fuel is the basic fuel used for engine propulsion everywhere in the colonies. A mix of elemental hydrogen, deuterium (H2), and helium-3 (He3), H-fuel can also be mixed with oxygen in fuel cells to provide water (via “cracking”) and electricity for smaller ships, space stations, and other facilities. H-fuel production is almost totally monopolized by the Kusari who obtain their supplies from the Gas Miners Guild before shipping it to storage depots and distribution facilities throughout the colonies.
+	H-fuel is the basic fuel used for engine propulsion everywhere in the colonies. A mix of elemental hydrogen, deuterium (H2), and helium-3 (He3), H-fuel can also be mixed with oxygen in fuel cells to provide water (via 'cracking') and electricity for smaller ships, space stations, and other facilities. H-fuel production is almost totally monopolized by the Kusari who obtain their supplies from the Gas Miners Guild before shipping it to storage depots and distribution facilities throughout the colonies.
 
 H 483573 
 	\m\bHIGH-TEMPERATURE ALLOY\B
@@ -2263,7 +2294,7 @@ H 483589
 H 483590 
 	\m\bSUPERCONDUCTORS\B
 	\l
-	Superconductors are materials that transmit without loss any current applied to them. Unfortunately, many materials act as superconductors only when cooled to temperatures near absolute zero. The discovery of “room temperature” superconductors built around a core of specially treated niobium with copper shunting, however, made possible quantum leaps in technology. Most importantly, superconductors are key components in fusion engines and in the construction of Jump Gates and Trade Lanes.
+	Superconductors are materials that transmit without loss any current applied to them. Unfortunately, many materials act as superconductors only when cooled to temperatures near absolute zero. The discovery of 'room temperature' superconductors built around a core of specially treated niobium with copper shunting, however, made possible quantum leaps in technology. Most importantly, superconductors are key components in fusion engines and in the construction of Jump Gates and Trade Lanes.
 
 H 483591 
 	\m\bTERRAFORMING GASES\B
@@ -2284,3 +2315,304 @@ H 483594
 	\m\bWATER\B
 	\l
 	Dihydrogen monoxide (H2O) is odorless, tasteless, transparent, and absolutely essential to human life. Roughly 75% of the human body is composed of Water. Deprived of Water, most humans can only live three days. The process of dehydration is a painful one, as tissues shrivel and vessels shrink in a desperate bid by the dying body to preserve its remaining vital functions.
+	
+S 482595 [DEV] Tiny Junk
+H 483595
+	\m\bTiny Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and a junk value.
+	
+	Imagine it was a cheap phone.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482596 [DEV] Small Junk
+H 483596
+	\m\bSmall Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and a junk value.
+	
+	Imagine it was a box of magazines.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482597 [DEV] Medium Junk
+H 483597
+	\m\bMedium Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and a junk value.
+	
+	Imagine it was a store mannequin.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482598 [DEV] Large Junk
+H 483598
+	\m\bLarge Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and a junk value.
+	
+	Imagine it was a stained king mattress.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482599 [DEV] Supersized Junk
+H 483599
+	\m\bSupersized Junk\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and a junk value.
+	
+	Imagine it was a shipping container sized batch of packing peanuts.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482600 [DEV] Tiny Decent
+H 483600
+	\m\bTiny Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and a decent value.
+	
+	Imagine it was a portable hard drive.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482601 [DEV] Small Decent
+H 483601
+	\m\bSmall Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and a decent value.
+	
+	Imagine it was a minifridge.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482602 [DEV] Medium Decent
+H 483602
+	\m\bMedium Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and a decent value.
+	
+	Imagine it was a flatscreen TV.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482603 [DEV] Large Decent
+H 483603
+	\m\bLarge Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and a decent value.
+	
+	Imagine it was a gym machine.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482604 [DEV] Supersized Decent
+H 483604
+	\m\bSupersized Decent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and a decent value.
+	
+	Imagine it was a shipping container sized batch of rubber chickens.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482605 [DEV] Tiny Good
+H 483605
+	\m\bTiny Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and a good value.
+	
+	Imagine it was a graphics card.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482606 [DEV] Small Good
+H 483606
+	\m\bSmall Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and a good value.
+	
+	Imagine it was a laptop.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482607 [DEV] Medium Good
+H 483607
+	\m\bMedium Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and a good value.
+	
+	Imagine it was a Great Dane.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482608 [DEV] Large Good
+H 483608
+	\m\bLarge Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and a good value.
+	
+	Imagine it was a pool table.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482609 [DEV] Supersized Good
+H 483609
+	\m\bSupersized Good\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and a good value.
+	
+	Imagine it was a shipping container sized batch of bananas.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482610 [DEV] Tiny Excellent
+H 483610
+	\m\bTiny Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and an excellent value.
+	
+	Imagine it was a luxury watch.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482611 [DEV] Small Excellent
+H 483611
+	\m\bSmall Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and an excellent value.
+	
+	Imagine it was a shoebox full of human kidneys.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482612 [DEV] Medium Excellent
+H 483612
+	\m\bMedium Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and an excellent value.
+	
+	Imagine it was an electric bicycle.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482613 [DEV] Large Excellent
+H 483613
+	\m\bLarge Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and an excellent value.
+	
+	Imagine it was a used car.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482614 [DEV] Supersized Excellent
+H 483614
+	\m\bSupersized Excellent\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and an excellent value.
+	
+	Imagine it was a shipping container sized batch of body pillows.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482615 [DEV] Tiny Incredible
+H 483615
+	\m\bTiny Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a tiny volume and an incredible value.
+	
+	Imagine it was an MTG Black Lotus card.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482616 [DEV] Small Incredible
+H 483616
+	\m\bSmall Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a small volume and an incredible value.
+	
+	Imagine it was an antique vase.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+		
+S 482617 [DEV] Medium Incredible
+H 483617
+	\m\bMedium Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a medium volume and an incredible value.
+	
+	Imagine it was a classic motorcycle.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482618 [DEV] Large Incredible
+H 483618
+	\m\bLarge Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a large volume and an incredible value.
+	
+	Imagine it was a grand piano.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+
+S 482619 [DEV] Supersized Incredible
+H 483619
+	\m\bSupersized Incredible\B
+	\l
+	This placeholder piece of loot represents an average of the entire pool of loot you could have rolled which would have had a supersized volume and an incredible value.
+	
+	Imagine it was a boat.
+	
+	* Will be replaced in the future with a whole range of individual items.\n
+	
+S 482620 [GEM] Azurite
+H 483620
+	\m\bAZURITE\B
+	\l
+	A soft, deep-blue stone often found amongst copper ore deposits. Called the ''Stone of Heaven'' by those who love to wear it, it fetches a high price when crafted into jewellery.
+		
+S 482621 [GEM] Rhodochrosite
+H 483621
+	\m\bRHODOCHROSITE\B
+	\l
+	A crystal that's typically rose-red in colour, but can also be shades of pink to pale brown, with streaks of white in between. Valued for its beauty and its use in jewellery, it sells well on planets and stations with populations that can afford fine things.
+	
+S 482622 [GEM] Amethyst
+H 483622
+	\m\bAMETHYST\B
+	\l
+	A deep-purple gemstone that, in ancient times, was thought to protect its owner from getting drunk. While most modern buyers don't expect such protections, they still pay handsomely for good specimens of this beautiful stone.
+
+S 474054 DSE Mining Ship Charlie-1
+S 474055 DSE Mining Ship Sierra-1
+S 474056 DSE Mining Ship Sierra-2
+S 474057 DSE Mining Ship Sierra-3
+
+H 476069
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Charlie-1\B
+	\bTASK: Copper Harvesting\B
+	\l
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
+
+H 476070
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Sierra-1\B
+	\bTASK: Silver Harvesting\B
+	\l
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
+
+H 476071
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Sierra-2\B
+	\bTASK: Silver Harvesting\B
+	\l
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
+
+H 476072
+	\bIFF: Deep Space Engineering\B
+	\bID: Mining Ship Sierra-3\B
+	\bTASK: Silver Harvesting\B
+	\l
+	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.

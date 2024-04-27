@@ -1,5 +1,5 @@
 import pandas as pd
-from ini_utils import CSVError, parse_to_list, write_block, frame_to_ini
+from ini_utils import CSVError, clean_unnamed_wip_empty, frame_to_ini, parse_to_list, write_block
 
 def may_shiparch_perish_under_my_wrathful_gaze(
     ship_csv: str,
@@ -22,9 +22,12 @@ def may_shiparch_perish_under_my_wrathful_gaze(
         raise CSVError(f"CSV {cgroups_csv} couldn't be read and is probably borked.")
     
     # Clean out Unnamed cols, if any, those shouldn't be in the sheet
-    ships = ships.loc[:, ~ships.columns.str.contains("^Unnamed")]
-    simples = simples.loc[:, ~simples.columns.str.contains("^Unnamed")]
-    cgroups = cgroups.loc[:, ~cgroups.columns.str.contains("^Unnamed")]
+    #ships = ships.loc[:, ~ships.columns.str.contains("^Unnamed")]
+    ships = clean_unnamed_wip_empty(ships, name = "shiparch")
+    #simples = simples.loc[:, ~simples.columns.str.contains("^Unnamed")]
+    simples = clean_unnamed_wip_empty(simples, name = "simples")
+    #cgroups = cgroups.loc[:, ~cgroups.columns.str.contains("^Unnamed")]
+    cgroups = clean_unnamed_wip_empty(cgroups, name = "cgroups")
     shipcols = [col for col in ships.columns if not col in ["simples", "cgroups"]]
 
     # Assume file exists already, append to file
