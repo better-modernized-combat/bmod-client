@@ -2,12 +2,15 @@
 
 ## 0.0.8
 - Objectives: Multiplayer now features satellites that can be hacked to reveal points of interest
-- Experimental changes to the handling of the Falcon, Hawk, Eagle and Rhino
+- Experimental changes to the handling of player-flyable ships
 - Adjusted a number of visual and audio effects
 - Reduced the rock density of the Cheyenne Asteroid Field
 - Numerous adjustments to Rookie NPC flight AI
 - A better basic economy for Colorado, with across-the-board changes to prices and commodities, which now feature volume as a balancing factor
+- Cheyenne and Silverton Miner solars are now a bit more interesting
+- General adjustments around Colorado
 - Implement placeholder 'treasure' loot
+- Rejig internal names for wrecks to prevent some strange bugs
 - Numerous assorted bug fixes
 
 ## 0.0.7
