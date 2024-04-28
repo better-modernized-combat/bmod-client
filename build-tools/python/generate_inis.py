@@ -18,6 +18,7 @@ from defaults import *
 from ini_utils import *
 from generate_guns import create_guns
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
+from loot_sheet_to_json import create_loot_tables
 from sort_ini import sort_ini
 
 from utils import bcolors
@@ -157,6 +158,13 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 simples_csv = template[csv]["simples_csv"],
                 cgroups_csv = template[csv]["cgroups_csv"],
                 ini_out_file = template[csv]["ini"],
+            )
+            
+        # Special ini
+        elif csv == "LOOT TABLES":
+            create_loot_tables(
+                loot_table_csv = template[csv]["loot_tables_csv"],
+                out_json = template[csv]["json"]
             )
             
         # All regular inis

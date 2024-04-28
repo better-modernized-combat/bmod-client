@@ -176,5 +176,9 @@
     "./build-tools/python/csv_dump/bm_cmdt_eq.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_equip_commodities.ini",
         "block_name": "[Commodity]"
-    }    
+    },
+    "LOOT TABLES": {
+        "loot_tables_csv": "./build-tools/python/csv_dump/Loot Tables.csv",
+        "json": "./mod-assets/EXE/config/loottables.json"
+    }
 }
