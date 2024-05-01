@@ -2583,6 +2583,12 @@ H 483622
 	\m\bAMETHYST\B
 	\l
 	A deep-purple gemstone that, in ancient times, was thought to protect its owner from getting drunk. While most modern buyers don't expect such protections, they still pay handsomely for good specimens of this beautiful stone.
+	
+S 482623 [LOOT] Shielded Container
+H 483623
+	\m\bSHIELDED CONTAINER\B
+	\l
+	The contents of this cargo could be anything; without scanners being able to penetrate its exterior, the only way to find out is to crack it open by force.
 
 S 474054 DSE Mining Ship Charlie-1
 S 474055 DSE Mining Ship Sierra-1
