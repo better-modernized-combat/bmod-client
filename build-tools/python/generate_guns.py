@@ -54,7 +54,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         lifetime = effective_range / muzzle_velocity
         
         toughness = dfloat(weapon["Toughness Index"]) * multiplicity * dfloat(variant["Toughness Modifier"])
-        cost = int(dfloat(weapon["Cost"]) * dfloat(variant["Cost Modifier"]))
+        cost = int(dfloat(weapon["Cost"]) * dfloat(variant["Cost Modifier"]) * dfloat(scaling_rules[f"{multiplicity}x Cost Factor"]))
     else:
         hull_damage, energy_damage = dfloat(weapon["Hull DMG / rd"]), dfloat(weapon["Energy DMG / rd"])
         power_usage = dfloat(weapon["Energy Usage / rd"])
@@ -282,7 +282,7 @@ def write_ammo_and_weapons(ini_out_file: str, ammo_dict: dict, weapon_dict: dict
         write_from_dict(ammo_dict, "[Munition]", out)
         write_from_dict(weapon_dict, "[Gun]", out)
 
-def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool, is_override: bool = False):
+def create_blaster_good(blaster: dict, variant: dict, scaling_rules: dict, internal_name: str, ids_name: int, mp: int, is_turret: bool, is_override: bool = False):
     
     # Guess item icon, if necessary
     if pd.isna(blaster["Item Icon"]) or blaster["Item Icon"] == "":
@@ -301,7 +301,7 @@ def create_blaster_good(blaster: dict, variant: dict, internal_name: str, ids_na
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": (int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"])) if not is_override else int(dfloat(blaster["Cost"]))),
+        "price": (int(dfloat(blaster["Cost"]) * dfloat(variant["Cost Modifier"]) * dfloat(scaling_rules[f"{mp}x Cost Factor"]))) if not is_override else int(dfloat(blaster["Cost"])),
         "item_icon": item_icon,
         "combinable": False,
         "ids_name": ids_name,
@@ -319,7 +319,7 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
         "nickname": internal_name,
         "equipment": internal_name,
         "category": "equipment",
-        "price": (int(dfloat(auxgun["Cost"]) * dfloat(variant["Cost Modifier"])) if not is_override else int(dfloat(auxgun["Cost"]))),
+        "price": (int(dfloat(auxgun["Cost"]) * dfloat(variant["Cost Modifier"]))) if not is_override else int(dfloat(auxgun["Cost"])),
         "item_icon": auxgun["Item Icon"],
         "combinable": False,
         "ids_name": ids_name,
@@ -660,7 +660,7 @@ def create_guns(
                 writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
                 
                 # Generate blaster goods entries
-                writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
+                writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = blaster, variant = variant, scaling_rules = blaster_scaling_rules, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
 
     i_counter += 2 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
                 
@@ -710,7 +710,7 @@ def create_guns(
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
         
         # Generate blaster goods entries
-        writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = override_blaster, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
+        writable_goods[weapon_block["nickname"]] = create_blaster_good(blaster = override_blaster, variant = variant, scaling_rules = blaster_scaling_rules, internal_name = weapon_block["nickname"], ids_name = i_counter, mp = multiplicity, is_turret = is_turret)
 
     for a, aux, in ad:
         
