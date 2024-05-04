@@ -272,6 +272,7 @@ S 468267 Piranha
 S 468268 Barracuda
 S 468269 Hammerhead
 S 468270 Paladin
+S 468271 Mule
 
 S 468760 Civilian L. F. Engine
 S 468761 Civilian H. F. Engine
@@ -284,6 +285,7 @@ S 468767 Bounty Hunter L. F. Engine
 S 468768 Bounty Hunter H. F. Engine
 S 468769 Bounty Hunter V. H. F. Engine
 S 468770 Liberty H. F. Engine
+S 468771 Rogue Fr. Engine
 
 S 469260 Civilian L. F. Powerplant
 S 469261 Civilian H. F. Powerplant
@@ -296,6 +298,7 @@ S 469267 Bounty Hunter L. F. Powerplant
 S 469268 Bounty Hunter H. F. Powerplant
 S 469269 Bounty Hunter V. H. F. Powerplant
 S 469270 Liberty H. F. Powerplant
+S 469271 Rogue Fr. Powerplant
 
 S 469760 Scanner
 S 469761 Scanner
@@ -308,6 +311,7 @@ S 469767 Scanner
 S 469768 Scanner
 S 469769 Scanner
 S 469770 Scanner
+S 469771 Scanner
 
 S 470260 Tractor Beam
 S 470261 Tractor Beam
@@ -320,6 +324,7 @@ S 470267 Tractor Beam
 S 470268 Tractor Beam
 S 470269 Tractor Beam
 S 470270 Tractor Beam
+S 470271 Tractor Beam
 
 H 468510
 	\m\bCTE-1500 "Hawk" Civilian Light Fighter\B
@@ -376,6 +381,11 @@ H 468520
 	\l
 	Placeholder Text\n
 
+H 468521
+	\m\bZ-1138 "Mule" Pirate Freighter\B
+	\l
+	The lifeline of any organization is its ability to monetize opportunity. In the case of more alternative unions, this fundamental truth is even more vital. Fortunately, the Mule is the solution to the problem of moving a significant supply of goods through hazardous opposition in order to maintain these channels of commerce and opportunity.
+
 H 469010
 	\m\bModel G "Quarrel" High-Performance Engine\B
 	\l
@@ -430,6 +440,11 @@ H 469020
 	\m\bY Series "Galaxy" Hybrid Engine\B
 	\l
 	A powerful engine with surprising fuel economy, allowing Liberty Navy ships to fly faster and further than ever before.\n
+
+H 469021
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
 
 H 469510
 	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
@@ -486,6 +501,11 @@ H 469520
 	\l
 	Developed by the Liberty Navy, the "Minuteman" power supply is the workhorse of Liberty's law enforcement. Offering superior power output compared when compared to civilian power supplies, the "Minuteman" was developed with a focus on performance over cost effectiveness, and its development and manufacturing was subsidized by a significant increase in military budget.\n
 
+H 469521
+	\m\bXX-43 "Backdraft" Liberty Rogue Vacuum-Cooled Power Supply\B
+	\l
+	The "Backdraft" power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Liberty Rogues with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
 H 470010
 	\m\b2k High-Bandwidth Ship Scanner\B
 	\l
@@ -541,6 +561,12 @@ H 470020
 	\l
 	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
 
+H 470021
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+
 H 470510
 	\m\b7b Multi-Focal Tractor Beam\B
 	\l
@@ -592,6 +618,11 @@ H 470519
 	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
 
 H 470520
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470521
 	\m\b7b Multi-Focal Tractor Beam\B
 	\l
 	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
@@ -1537,6 +1568,12 @@ S 482022 Tractor Beam
 S 482023 Tractor Beam
 S 482024 Tractor Beam
 S 482025 Tractor Beam
+S 482026 Tractor Beam
+S 482027 Tractor Beam
+S 482028 Tractor Beam
+S 482029 Tractor Beam
+S 482030 Tractor Beam
+S 482031 Tractor Beam
 
 H 482270
 	\m\b7b Multi-Focal Tractor Beam\B
@@ -1568,12 +1605,48 @@ H 482275
 	\l
 	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
 
+H 482276
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482277
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482278
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482279
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482280
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 482281
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
 S 481520 Scanner
 S 481521 Scanner
 S 481522 Scanner
 S 481523 Scanner
 S 481524 Scanner
 S 481525 Scanner
+S 481526 Scanner
+S 481527 Scanner
+S 481528 Scanner
+S 481529 Scanner
+S 481530 Scanner
+S 481531 Scanner
 
 H 481770
 	\m\b2k High-Bandwidth Ship Scanner\B
@@ -1601,6 +1674,36 @@ H 481774
 	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
 
 H 481775
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481776
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481777
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481778
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481779
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481780
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 481781
 	\m\b2k High-Bandwidth Ship Scanner\B
 	\l
 	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
