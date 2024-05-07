@@ -786,8 +786,10 @@ def create_guns(
         # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun or an npc weapon
         if "npc" in nickname or nickname in writable_weapon_blocks:
             _, variant = next(iter(blaster_variants[blaster_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
+            ammo_exists_already = True
         else:
             variant = base_variant
+            ammo_exists_already = False
         multiplicity = 1
         is_turret = False
         
@@ -830,7 +832,10 @@ def create_guns(
         # Generate auxgun goods entries
         writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
         
-        # Do not generate ammo goods entries if weapon requires ammo - we STILL use the base variant here
+        # Generate ammo goods entries if weapon requires ammo and said ammo is inferred not to exist yet
+        if str(override_aux["Uses Ammo?"]).lower() == "true" and ammo_exists_already == False: #:vomit:
+            base_munition_name = weapon_name+"_ammo"
+            writable_goods[base_munition_name] = create_aux_ammo_good(auxgun = override_aux, internal_name = base_munition_name, ids_name = i_counter+2)
     
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
     if weapon_sanity_check is True:
