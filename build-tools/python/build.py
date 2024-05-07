@@ -35,6 +35,7 @@ parser.add_argument("--ini_to_bini", help="Encodes ini to bini format before cop
 parser.add_argument("--csv_to_ini", help="Build selected INI files from CSV.", action="store_true")
 parser.add_argument("--master_sheet", help="This is the master sheet INI files will be generated from. Accepts both a URL or a file path from your machine.")
 parser.add_argument("--ignore_weapon_balance", help="If True, disables the sanity checker when building weapons", action="store_true", default=False)
+parser.add_argument("--generate_loottables", help="Whether to generate loottables, potentially overwriting an existing loottables.ini file.", action="store_true", default=False)
 parser.add_argument("--no_crc", help="Prevents the script generating a hashmap after copying files.")
 
 args = parser.parse_args()
@@ -50,7 +51,7 @@ else:
     print(bcolors.WARNING + "Warning, checks have been disabled. You may experience errors if the the FL_PATH environment variable has not been set" + bcolors.ENDC)
 
 if args.csv_to_ini:
-    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance))
+    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = (not args.ignore_weapon_balance), generate_loottables = args.generate_loottables)
 
 if not args.ignore_infocards:
     compile_infocards(f"{root_copy_path}\\mod-assets\\infocard_imports.frc", f"{root_copy_path}\\mod-assets\\EXE\\BmodInfocards.dll")
