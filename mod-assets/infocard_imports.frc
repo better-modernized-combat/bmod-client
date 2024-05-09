@@ -2698,6 +2698,8 @@ S 474055 DSE Mining Ship Sierra-1
 S 474056 DSE Mining Ship Sierra-2
 S 474057 DSE Mining Ship Sierra-3
 
+S 474058 Xenos Frigate "Ludlow"
+
 H 476069
 	\bIFF: Deep Space Engineering\B
 	\bID: Mining Ship Charlie-1\B
@@ -2725,3 +2727,12 @@ H 476072
 	\bTASK: Silver Harvesting\B
 	\l
 	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
+	
+H 476073
+	\bIFF: Xenos\B
+	\bID: Frigate "Ludlow"\B
+	\bTASK: Area Defense and Support\B
+	\l
+	This "Boar" miner has been refitted by the Xenos into an improvised warship, with much of its prior functions having been repurposed towards drastically improving its firepower. While it still can't rival a true military vessel of the same size, it's not far enough off to be taken lightly.
+	
+	Records indicate this vessel was registered as "DSE Lockeport" before its corporate crew rebelled and joined the Xenos cause during the recent ion storms that devastated the Sirius sector.
