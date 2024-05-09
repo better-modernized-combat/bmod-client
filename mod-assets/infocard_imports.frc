@@ -969,7 +969,7 @@ S 474036 Denver Orbital Security Perimeter
 S 474037 Pueblo Security Exclusion Zone
 S 474038 Durango Orbital Security Perimeter
 S 474039 Kepler Gate Debris Field
-S 474040 "Big Yen" Asteroid Cluster
+S 474040 "Big Yen" Asteroid Cluster // INCREASED XENOS THREAT
 S 474041 Unknown Planet
 S 474042 The Maverock
 S 474043 Maverick Station
@@ -2745,3 +2745,5 @@ H 476074
 	\l
 	This is a forward operating base, established within a hollowed out asteroid by the Xenos. Serving as an ammunition and supply stockpile, this small base provides repair and rearm for Xenos fighters and other vessels in the area. 
 	It has no room for any permanent residents beyond the small crew of mechanics and militants who run it.
+
+S 474060 Central Alamosa // HIGH XENOS THREAT
