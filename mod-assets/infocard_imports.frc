@@ -2699,6 +2699,7 @@ S 474056 DSE Mining Ship Sierra-2
 S 474057 DSE Mining Ship Sierra-3
 
 S 474058 Xenos Frigate "Ludlow"
+S 474059 Tikas Supply Base
 
 H 476069
 	\bIFF: Deep Space Engineering\B
@@ -2736,3 +2737,11 @@ H 476073
 	This "Boar" miner has been refitted by the Xenos into an improvised warship, with much of its prior functions having been repurposed towards drastically improving its firepower. While it still can't rival a true military vessel of the same size, it's not far enough off to be taken lightly.
 	
 	Records indicate this vessel was registered as "DSE Lockeport" before its corporate crew rebelled and joined the Xenos cause during the recent ion storms that devastated the Sirius sector.
+	
+H 476074
+	\bIFF: Xenos\B
+	\bID: Tikas Supply Base\B
+	\bFUNCTION: Logistical Support\B
+	\l
+	This is a forward operating base, established within a hollowed out asteroid by the Xenos. Serving as an ammunition and supply stockpile, this small base provides repair and rearm for Xenos fighters and other vessels in the area. 
+	It has no room for any permanent residents beyond the small crew of mechanics and militants who run it.
