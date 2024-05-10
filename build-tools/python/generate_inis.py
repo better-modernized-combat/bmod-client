@@ -18,6 +18,7 @@ from defaults import *
 from ini_utils import *
 from generate_guns import create_guns
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
+from loot_sheet_to_json import create_loot_tables
 from sort_ini import sort_ini
 
 from utils import bcolors
@@ -107,7 +108,7 @@ def init_inis(template: dict):
                 for line in sep:
                     out.write(line.strip()+"\n")
 
-def generate_inis(master_sheet: str, weapon_sanity_check: bool):
+def generate_inis(master_sheet: str, weapon_sanity_check: bool, generate_loottables: bool):
 
     pp = pathlib.Path(__file__).parent
     os.makedirs(pp / "csv_dump", exist_ok = True)
@@ -158,6 +159,16 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool):
                 cgroups_csv = template[csv]["cgroups_csv"],
                 ini_out_file = template[csv]["ini"],
             )
+            
+        # Special ini
+        elif csv == "LOOT TABLES":
+            if generate_loottables is True:
+                create_loot_tables(
+                    loot_table_csv = template[csv]["loot_tables_csv"],
+                    out_json = template[csv]["json"]
+                )
+            else:
+                pass
             
         # All regular inis
         elif csv.endswith(".csv"):
@@ -218,6 +229,17 @@ if __name__ == "__main__":
         default = False,
         action = "store_true"
     )
+    parser.add_argument(
+        "--generate_loottables",
+        dest = "generate_loottables",
+        help = "Whether to generate loottables from the sheet, potentially overwriting existing loottables.",
+        default = False,
+        action = "store_true"
+    )
     args = parser.parse_args()
 
-    generate_inis(master_sheet = args.master_sheet, weapon_sanity_check = args.weapon_sanity_check)
+    generate_inis(
+        master_sheet = args.master_sheet, 
+        weapon_sanity_check = args.weapon_sanity_check, 
+        generate_loottables = args.generate_loottables
+        )

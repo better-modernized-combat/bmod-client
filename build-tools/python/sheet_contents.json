@@ -86,5 +86,11 @@
             "bm_cmdt_gd.ini",
             "bm_cmdt_eq.ini"
         ]
+    },
+    {
+        "sheetName": "Loot Tables",
+        "sheetContents": [
+            "Loot Tables"
+        ]
     }
 ]

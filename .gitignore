@@ -456,6 +456,7 @@ mod-assets/EXE/logs
 serverspew.log
 
 # EXE/config
+mod-assets/EXE/config
 mod-assets/EXE/EXPORTS
 mod-assets/EXE/logs
 *.log
