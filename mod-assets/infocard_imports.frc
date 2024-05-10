@@ -32,6 +32,9 @@ S 461766 Adv. Brigandine Fr. Shield
 S 461767 Adv. Brigandine H.F. Shield
 S 461768 Adv. Brigandine L.F. Shield
 S 461769 Adv. Brigandine V.H.F. Shield
+S 461770 Brigandine L.F. Shield [+]
+S 461771 Brigandine V.H.F. Shield [+]
+S 461772 Brigandine Fr. Shield [+]
 
 S 463276 Fleet LRM
 S 463277 Fleet SRM
@@ -190,11 +193,11 @@ H 462012
 H 462013
 	\m\bSP-Ha2 "Brigandine" Heavy Fighter Positron Shield\B
 	\l
-	\b[+] 15% increased shield regeneration rate\B
+	\b[+] 15% increased shield capacity\B
 	
 	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Heavy Fighter class ships.
 	
-	This particular piece of equipment is upgraded, featuring a higher shield regen rate than its base model.\n
+	This particular piece of equipment is upgraded, featuring a higher shield capacity than its base model.\n
 
 H 462014
 	\m\bSP-La2 "Brigandine" Light Fighter Positron Shield\B
@@ -225,6 +228,33 @@ H 462019
 	\m\bSP-Va3 "Brigandine" Very Heavy Fighter Advanced Positron Shield\B
 	\l
 	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been overclocked and draws additional power. It is specifically designed for Very Heavy Fighter class ships.\n
+	
+H 462020
+	\m\bSP-La2 "Brigandine" Light Fighter Positron Shield\B
+	\l
+	\b[+] 15% increased shield capacity\B
+	
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Light Fighter class ships.
+	
+	This particular piece of equipment is upgraded, featuring a higher shield capacity than its base model.\n
+	
+H 462021
+	\m\bSP-Va2 "Brigandine" Very Heavy Fighter Positron Shield\B
+	\l
+	\b[+] 15% increased shield capacity\B
+	
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Very Heavy Fighter class ships.
+	
+	This particular piece of equipment is upgraded, featuring a higher shield capacity than its base model.\n
+	
+H 462022
+	\m\bSP-Fa3 "Brigandine" Freighter Advanced Positron Shield\B
+	\l
+	\b[+] 15% increased shield capacity\B
+	
+	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Very Heavy Fighter class ships.
+	
+	This particular piece of equipment is upgraded, featuring a higher shield capacity than its base model.\n
 
 H 463776
 	\m\bFleet LRM Ammo\B
