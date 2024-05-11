@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.10
+- Possible fix for the crash documented in Issue #91.
+- Adjust distance between players where NPC spawns will start to scale.
+- Increase distances at which players are visible to one another.
+- Fixes for elite and ace NPC behaviours.
+
 ## 0.0.9
 - Added some new points of interest you can find via interacting with the hackable satellites
 - Fixed NPC loadouts and cargo to be closer to what's intended
