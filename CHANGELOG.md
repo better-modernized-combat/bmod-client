@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.11
+- Fix for edge-case crash where NPCs would tractor loot that they wouldn't usually have.
+- Some minor internal fixes
+
 ## 0.0.10
 - Possible fix for the crash documented in Issue #91.
 - Adjust distance between players where NPC spawns will start to scale.
