@@ -303,6 +303,7 @@ S 468268 Barracuda
 S 468269 Hammerhead
 S 468270 Paladin
 S 468271 Mule
+S 468272 CSV
 
 S 468760 Civilian L. F. Engine
 S 468761 Civilian H. F. Engine
@@ -415,6 +416,11 @@ H 468521
 	\m\bZ-1138 "Mule" Pirate Freighter\B
 	\l
 	The lifeline of any organization is its ability to monetize opportunity. In the case of more alternative unions, this fundamental truth is even more vital. Fortunately, the Mule is the solution to the problem of moving a significant supply of goods through hazardous opposition in order to maintain these channels of commerce and opportunity.
+	
+H 468522
+	\m\b"Bullfrog" Combat Service Vehicle\B
+	\l
+	The remarkably low cost of making and maintaining this ship's design has ensured its widespread use across the sector. Cheap, flexible, and with a cargo hold that's significantly larger than most fighter-sized ships, the CSV can be found in almost every star system in Sirius, supporting the needs of almost every group in the sector.
 
 H 469010
 	\m\bModel G "Quarrel" High-Performance Engine\B
