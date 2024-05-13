@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.12
+- CSV added! This is a Heavy Fighter Plus-sized ship that trades having lesser firepower and agility in exchange for Support hardpoints and a much larger cargo hold. This means it's intended to be a support fighter and small transport, capable of repairing allies, carrying larger amounts of loot, and being used for profitable trade runs between Colorado's bases. It's currently available for sale on Pueblo station.
+- Buffed the profitability of the current Colorado trade runs - their profit margins were razor thin before and were only designed to be worth doing on the Rhino freighter with its 500 cargo hold. That's been changed now so that the new CSV can make profitable runs with its 180 cargo. Note that while some goods can make you a hefty profit now, the most lucrative cargo also requires the biggest up-front investment to buy it - which means if you lose that cargo, you'll be taking a big hit.
+
 ## 0.0.11
 - Fix for edge-case crash where NPCs would tractor loot that they wouldn't usually have.
 - Some minor internal fixes
