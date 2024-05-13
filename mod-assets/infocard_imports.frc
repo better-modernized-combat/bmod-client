@@ -317,6 +317,7 @@ S 468768 Bounty Hunter H. F. Engine
 S 468769 Bounty Hunter V. H. F. Engine
 S 468770 Liberty H. F. Engine
 S 468771 Rogue Fr. Engine
+S 468772 Civilian Fr. Engine
 
 S 469260 Civilian L. F. Powerplant
 S 469261 Civilian H. F. Powerplant
@@ -330,6 +331,7 @@ S 469268 Bounty Hunter H. F. Powerplant
 S 469269 Bounty Hunter V. H. F. Powerplant
 S 469270 Liberty H. F. Powerplant
 S 469271 Rogue Fr. Powerplant
+S 469272 Civilian Fr. Powerplant
 
 S 469760 Scanner
 S 469761 Scanner
@@ -343,6 +345,7 @@ S 469768 Scanner
 S 469769 Scanner
 S 469770 Scanner
 S 469771 Scanner
+S 469772 Scanner
 
 S 470260 Tractor Beam
 S 470261 Tractor Beam
@@ -356,6 +359,7 @@ S 470268 Tractor Beam
 S 470269 Tractor Beam
 S 470270 Tractor Beam
 S 470271 Tractor Beam
+S 470272 Heavy Tractor Beam
 
 H 468510
 	\m\bCTE-1500 "Hawk" Civilian Light Fighter\B
@@ -482,6 +486,12 @@ H 469021
 	\l
 	Held together with space-grade duct tape.\n
 
+H 469022
+	\m\bModel G "Quarrel" High-Performance Engine\B
+	\l
+	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+
 H 469510
 	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
 	\l
@@ -541,6 +551,11 @@ H 469521
 	\m\bXX-43 "Backdraft" Liberty Rogue Vacuum-Cooled Power Supply\B
 	\l
 	The "Backdraft" power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Liberty Rogues with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
+H 469522
+	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
+	\l
+	The 48-B Premium edition power supply was developed by Ageira Technologies for the adventurous starfarer. It's superior capacity and liquid-hydrogen cooled cells deliver enough performance to take on the dangers of space. Stay frosty! \n\.
 
 H 470010
 	\m\b2k High-Bandwidth Ship Scanner\B
@@ -602,6 +617,10 @@ H 470021
 	\l
 	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
 
+H 470022
+	\m\b3k High-Bandwidth Ship Scanner\B
+	\l
+	Enhanced tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
 
 H 470510
 	\m\b7b Multi-Focal Tractor Beam\B
@@ -660,6 +679,11 @@ H 470520
 
 H 470521
 	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470522
+	\m\b7b Heavy Tractor Beam\B
 	\l
 	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
 
