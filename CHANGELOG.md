@@ -20,7 +20,7 @@
 - Allowed NPCs to flee when taking too much damage
 - Removed WIP weapons and ships from being for sale
 - Added a few more static ships and objects throughout Colorado
-- Made Rocket Pods a Small Missile instead of a Medium, increased their max ammo
+- Made Rocket Pods a Small Missile instead of a Medium, increased their max ammo.
 - Fixed Xenos Independence freighter ships from being faster than intended
 - Introduced Mule transports to the Xenos's spawns
 - New treasure loot dropping system, currently using a range of placeholder items
