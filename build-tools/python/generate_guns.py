@@ -721,7 +721,7 @@ def create_guns(
                 base_variant = deepcopy(variant)
             
             # NPC weapons don't get variants
-            if v != 0 and "npc" in blaster['Family Shorthand']:
+            if v != 0 and "npc" in aux['Family Shorthand']:
                 continue
             
             i_counter += 4 # weapon name, weapon info, ammo name, ammo info
@@ -785,7 +785,7 @@ def create_guns(
         
         # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun or an npc weapon
         if "npc" in nickname or nickname in writable_weapon_blocks:
-            _, variant = next(iter(blaster_variants[blaster_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
+            _, variant = next(iter(aux_variants[aux_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
             ammo_exists_already = True
         else:
             variant = base_variant
