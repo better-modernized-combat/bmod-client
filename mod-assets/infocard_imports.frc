@@ -835,11 +835,13 @@ H 472512
 H 472513
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper [+]\B
 	\l
+	\b[+] +5% countermeasure effectiveness\B
+	\b[+] +98 max ammo\B
 	The CM-1 Countermeasure Dropper dispenses an expendable "package" of light, heat and electromagnetic radiation that attracts the attention of incoming ordinance and draws it away from the ship. This one has been tuned for maximum duration, at the expense of direct effectiveness.
 
-	This unit has been modified for increased flare effectiveness.
+	This unit has been modified to carry more and better flares.
 	
-	* Requires "Firewall" Long-Life Countermeasure Flare.\n
+	* Requires "Firewall" Long-Life Countermeasure Flare [+].\n
 
 H 472514
 	Designed to be subordinate to the standard engine powerstream, this thruster delivers a brief but significant jolt of speed, crucial when strafing in combat.\n
@@ -901,13 +903,13 @@ H 472521
 H 472522
 	\m\bM-ER7 Basic Repair Burst Launcher\B
 	\l
-	\b[+] 20% faster refire\B
+	\b[+] 3s faster fire rate and detonation\B
 	
 	The M-ER7 Nanite Burster deploys short-lived nanites in an area to repair basic material damage of a ship's hull or internal systems. These nanometer-scale artificial organisms are programmed to synthesize and apply the molecular building blocks as necessary.
 	
-	This particular piece of equipment is upgraded, capable of dispensing repair charges more frequently than its base model.
+	This particular piece of equipment is upgraded, capable of dispensing faster-acting repair charges more frequently than its base model.
 	
-	* Requires M-ER7 Basic Repair Burst Charge.\n
+	* Requires M-ER7 Basic Repair Burst Charge [+].\n
 
 H 472523
 	\m\bZP-1000M Zero Pointer Targeting Module\B
@@ -943,6 +945,7 @@ S 473019 M-EX2 Cutter Mine
 S 473020 M-EM1 Razor EMP Mine
 S 473021 M-EM2 Wardog EMP Mine
 S 473022 M-ER7 Nanite Repair Burst Charge
+S 473023 M-ER7 Nanite Repair Burst Charge [+]
 
 H 473514
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Flare\B
@@ -954,7 +957,7 @@ H 473514
 H 473515
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Flare [+]\B
 	\l
-	\b[+] +10% countermeasure effectiveness\B
+	\b[+] +5% countermeasure effectiveness\B
 	
 	The CM-1 Countermeasure Flare is an expendable "package" of light, heat and electromagnetic radiation that attracts the attention of incoming ordinance and draws it away from the ship. This one has been tuned for maximum duration, at the expense of direct effectiveness.
 	
@@ -1003,6 +1006,15 @@ H 473523
 	The M-ER7 Repair Charge deploys short-lived nanites in an area to repair basic material damage of a ship's hull or internal systems. These nanometer-scale artificial organisms are programmed to synthesize and apply the molecular building blocks as necessary.
 	
 	* Requires M-ER7 Nanite Repair Burst Launcher.\n
+	
+H 473524
+	\m\bM-ER7 Basic Repair Burst Charge [+]\B
+	\l
+	The M-ER7 Repair Charge deploys short-lived nanites in an area to repair basic material damage of a ship's hull or internal systems. These nanometer-scale artificial organisms are programmed to synthesize and apply the molecular building blocks as necessary.
+	
+	These charges are upgraded, detonating faster than their base model.
+	
+	* Requires M-ER7 Nanite Repair Burst Launcher [+].\n
  
 S 474015 The Maw
 S 474016 Houston Planetary Debris Field
