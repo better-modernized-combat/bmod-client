@@ -178,7 +178,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
     # Get nickname from override or construct it
     if not is_override or isinstance(weapon["Overrides"], float):
         nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Variant Shorthand']}"
-        ammo_nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Ammo Shorthand']}"
+        ammo_nickname = f"bm_{weapon['Family Shorthand']}_{weapon['Identifier']}_{mt_name}_{variant['Ammo Shorthand']}_ammo"
     else:
         nickname = weapon["Overrides"]
         ammo_nickname = f"{weapon['Overrides']}_ammo"
@@ -255,7 +255,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
     if not pd.isna(weapon["Free Ammo"]) and not weapon["Free Ammo"] == "":
         weapon_block["; free_ammo"] = dfloat(weapon["Free Ammo"])
     
-    return f"{nickname}_ammo", munition_block, nickname, weapon_block
+    return ammo_nickname, munition_block, nickname, weapon_block
 
 def write_from_dict(d: dict, block_name: str, out: TextIOWrapper):
     
