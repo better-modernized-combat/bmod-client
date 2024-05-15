@@ -1,6 +1,12 @@
 # Changelog
 
 ## 0.0.13
+- Enhanced gear tweaked to fix an issue. Please note if you had any of the old enhanced gear marked with a [+] symobl on your ship before this update, you won't be able to log in to that character now! Players were warned to discard this gear prior to this update as a result.
+- To be clear, now that this issue has been fixed, you are 100% clear to start buying and using enhanced gear marked with [+] as intended. Go ahead and have fun with it!
+- New enhanced gear added to Pueblo: Countermeasure Dropper [+], Cruise Disruptor [+], Repair Mine [+], and [+] variants of the single SRM and LRM launchers as well as their pylon variants. More enhanced gear is soon to come.
+- New enhanced blasters added for the other faction weapon lines, for sale on their appropriate bases.
+- Rhino cruise spool-up SFX improved to match its slower rate.
+- Tikas and Ludlow changed to fix a bug. They won't explode and disappear now at 0 HP, but instead will drop loot as they get close to that number. If you see loot pop out of them, you can consider them defeated. We'll add better effects to replace the satisfying exploding for defeating them in a later update.
 - Fix the Rhino's cruise charge audio not matching the charge time.
 
 ## 0.0.12
