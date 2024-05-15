@@ -328,7 +328,11 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
     })
     
     if not(pd.isna(auxgun["Free Ammo"]) or auxgun["Free Ammo"] == ""):
-        good["free_ammo"] = f"{internal_name+'_ammo'}, {auxgun['Free Ammo']}"
+        if is_override:
+            ammo_name = f"{internal_name}_ammo"
+        else:
+            ammo_name = f"bm_{auxgun['Family Shorthand']}_{auxgun['Identifier']}_1x_{variant['Ammo Shorthand']}_ammo" # -> FIXME: Can there be auxguns with more than 1x?
+        good["free_ammo"] = f"{ammo_name}, {auxgun['Free Ammo']}"
     
     return good
 
@@ -850,7 +854,7 @@ def create_guns(
             [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"], 
             [weapon_name for weapon_name in writable_weapon_blocks]
             ],
-        filter = ["1x_b", "2x_b", "3x_b", "1x_xlt", "2x_xlt", "3x_xlt"]
+        filter = ["1x_b", "2x_b", "3x_b", "1x_xp1", "2x_xp1", "3x_xp1", "1x_xp2", "2x_xp2", "3x_xp2", "1x_xp3", "2x_xp3", "3x_xp3"]
         )
     
     # Fill lootprops with ammo to avoid crashes
