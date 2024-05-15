@@ -740,9 +740,10 @@ def create_guns(
                 make_ammo = True
                 )
             if not munition_name in writable_munition_blocks:   # Ammo must be created
+                ammo_is_new = True
                 writable_munition_blocks[munition_name] = munition_block
             else:                                               # Ammo can be safely reused
-                pass 
+                ammo_is_new = False 
             writable_weapon_blocks[weapon_name] = weapon_block  # Weapon must be created
             
             # Generate Weapon Infocard FRC entries
@@ -758,15 +759,17 @@ def create_guns(
                 variant_info = variant["Variant Infocard Paragraph"],
                 variant_display = variant["Display Name Suffix"],
             )
-            if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
+            if str(aux["Uses Ammo?"]).lower() == "true" and ammo_is_new: #:vomit:
                 ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
                     name = aux["Ammo Name"],
                     info = aux["Ammo Infocard"],
+                    variant_desc = variant["Variant Description"],
+                    variant_display = variant["Display Name Suffix"]
                 )
             # Generate Ammo Infocard FRC entries
             writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
             writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-            if str(aux["Uses Ammo?"]).lower() == "true" and v == 0: #:vomit:
+            if str(aux["Uses Ammo?"]).lower() == "true" and ammo_is_new: #:vomit:
                 writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = ammo_name)
                 writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = ammo_infocard_content)
                 
@@ -774,7 +777,7 @@ def create_guns(
             writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
             
             # Generate ammo goods entries if weapon requires ammo
-            if str(aux["Uses Ammo?"]).lower() == "true" and not munition_name in writable_goods: #:vomit:
+            if str(aux["Uses Ammo?"]).lower() == "true" and ammo_is_new: #:vomit:
                 writable_goods[munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = munition_name, ids_name = i_counter+2)
             
     i_counter += 4 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
@@ -788,10 +791,8 @@ def create_guns(
         # Get the variant that is being overwritten (for infocard snips), assuming base if its a new custom gun
         if nickname in writable_weapon_blocks:
             _, variant = next(iter(aux_variants[aux_variants["Variant Shorthand"] == split[-1]].to_dict(orient = "index").items()))
-            ammo_exists_already = True
         else:
             variant = base_variant
-            ammo_exists_already = False
         multiplicity = 1
         is_turret = False
         
@@ -827,6 +828,8 @@ def create_guns(
             ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
                 name = override_aux["Ammo Name"],
                 info = override_aux["Ammo Infocard"],
+                variant_desc = variant["Variant Description"],
+                variant_display = variant["Display Name Suffix"]
             )
             writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = ammo_name)
             writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = ammo_infocard_content)
