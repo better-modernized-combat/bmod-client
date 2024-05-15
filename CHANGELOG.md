@@ -7,6 +7,7 @@
 - New enhanced blasters added for the other faction weapon lines, for sale on their appropriate bases.
 - Rhino cruise spool-up SFX improved to match its slower rate.
 - Tikas and Ludlow changed to fix a bug. They won't explode and disappear now at 0 HP, but instead will drop loot as they get close to that number. If you see loot pop out of them, you can consider them defeated. We'll add better effects to replace the satisfying exploding for defeating them in a later update.
+- Fix the Rhino's cruise charge audio not matching the charge time.
 
 ## 0.0.12
 - CSV added! This is a Heavy Fighter Plus-sized ship that trades having lesser firepower and agility in exchange for Support hardpoints and a much larger cargo hold. This means it's intended to be a support fighter and small transport, capable of repairing allies, carrying larger amounts of loot, and being used for profitable trade runs between Colorado's bases. It's currently available for sale on Pueblo station.
