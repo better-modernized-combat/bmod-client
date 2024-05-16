@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.14
+- IN PROGRESS
+
 ## 0.0.13
 - Enhanced gear tweaked to fix an issue. Please note if you had any of the old enhanced gear marked with a [+] symobl on your ship before this update, you won't be able to log in to that character now! Players were warned to discard this gear prior to this update as a result.
 - To be clear, now that this issue has been fixed, you are 100% clear to start buying and using enhanced gear marked with [+] as intended. Go ahead and have fun with it!
