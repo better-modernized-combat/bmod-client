@@ -13,7 +13,7 @@ S 462285 SRM Launcher [+]
 S 462286 1 x SRM Pylon
 S 462287 1 x SRM Pylon [+]
 S 462288 Twin SRM Launcher
-S 462289 Sunslayer Torpedo
+S 462289 Skipper Light Torpedo
 S 462290 UGB
 
 S 462756 END AUX NAME
@@ -41,7 +41,7 @@ S 463277 Fleet SRM
 S 463278 LRM
 S 463283 Rocket
 S 463284 SRM
-S 463289 Sunslayer Torpedo
+S 463289 Skipper Light Torpedo
 S 463290 UG Bomb
 
 H 462766
@@ -146,9 +146,9 @@ H 462788
 	This launcher fits in the Large Missile slot and fires two missiles per salvo, doubling the potential damage if both missiles hit. It's useful for delivering a deadly punch of LRMs throughout a fight, allowing users to support a battle from afar or deal heavy damage to large targets unable to effectively evade them.\n
 
 H 462789
-	\m\bSunslayer Torpedo\B
+	\m\bSkipper Light Torpedo\B
 	\l
-	Sunslayer Torpedo Placeholder.\n
+	Skipper Light Torpedo Placeholder.\n
 
 H 462790
 	\m\bUGB\B
@@ -282,7 +282,7 @@ H 463784
 	Short Range Missiles, or "SRMs" are fast, agile missiles made to track nimble fighters in close-range dogfights. SRMs can be fired from a variety of different SRM launchers, each with different specifications and weights.\n
 
 H 463789
-	\m\Torpedo\B
+	\m\Skipper Light Torpedo\B
 	\l
 	Placeholder Text\n
 
