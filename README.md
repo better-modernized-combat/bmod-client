@@ -10,7 +10,7 @@ If you just want to download and play the mod, check our the latest release for 
 - Download and install the latest version of [Python](https://www.python.org/downloads/).
 - Launch VS Code and install the Python Extension from Microsoft.
 - Open a terminal window in Visual Studio Code and run `pip install -r requirements.txt`.
-- You're ready to go! See below for usage.
+- You're ready to go! See below for usage. 
 
 ## Usage
 
