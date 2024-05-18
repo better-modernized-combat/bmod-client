@@ -88,8 +88,7 @@ def generate_ammo_infocard_entry(
     ):
     
     display_name = name+variant_display
-    vsh = " -" if variant_desc != "" else ""
-    infocard_header = f'\\m\\b{name}{vsh}{variant_desc}\\B'
+    infocard_header = f'\\m\\b{name}{variant_desc}\\B'
     infocard = f'\t{infocard_header}\n\t\\l\n\t{info}\\n\n\t'
     
     return display_name, infocard

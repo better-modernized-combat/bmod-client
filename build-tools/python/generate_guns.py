@@ -859,7 +859,7 @@ def create_guns(
             [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"], 
             [weapon_name for weapon_name in writable_weapon_blocks]
             ],
-        filter = ["1x_b", "2x_b", "3x_b", "1x_xp1", "2x_xp1", "3x_xp1", "1x_xp2", "2x_xp2", "3x_xp2", "1x_xp3", "2x_xp3", "3x_xp3"]
+        filter = ["gd_civ", "aux"]
         )
     
     # Fill lootprops with ammo to avoid crashes
