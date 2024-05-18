@@ -139,7 +139,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
     if not pd.isna(weapon["Dispersion Angle"]) and not weapon["Dispersion Angle"] == "":
         weapon_block["dispersion_angle"] = dfloat(weapon["Dispersion Angle"])
     if not pd.isna(weapon["Muzzle Cone Override"]) and not weapon["Muzzle Cone Override"] == "":
-        weapon_block["Muzzle Cone Override"] = dfloat(weapon["Muzzle Cone Override"])
+        weapon_block["muzzle_cone_override"] = dfloat(weapon["Muzzle Cone Override"])
     
     return f"{nickname}_ammo", munition_block, nickname, weapon_block
 
