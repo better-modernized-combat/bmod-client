@@ -6,9 +6,14 @@ rank = 0
 money = %%MONEY%%
 ;voice = %%VOICE%%
 ;All must be Trent!
-voice = trent_voice
 
-costume = %%BASE_COSTUME%%
+voice = juni
+;replace 'trent_voice' above with 'juni' to mute voice on newly created MP characters. Better if you prefer silence to having a male voice. Like the example line below:
+;voice = juni
+
+;costume = %%BASE_COSTUME%%
+costume = bm_mc_player_3
+
 com_costume = %%COMM_COSTUME%%
 
 system = Li03
