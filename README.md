@@ -1,6 +1,6 @@
 # bmod-client
 
-Freelancer: Better Modernized Combat (BMOD) is a modification for Freelancer the 2003 space shooter by Chris Roberts. The core goal of the mod is to create a fun and compelling PvE experience for solo and group players in a multiplayer setting. This repository contains the modified client files, as well as the development environment and tools used by the team.
+Freelancer: Better Modernized Combat (BMOD) is a modification for Freelancer the 2003 space shooter by Digital Anvil. The core goal of the mod is to create a fun and compelling experience for solo and group players in a multiplayer setting. This repository contains the modified client files, as well as the development environment and tools used by the team.
 
 If you just want to download and play the mod, check our the latest release for [the installer](https://github.com/better-modernized-combat/bmod-installer/releases/).
 
@@ -66,3 +66,4 @@ Freelancer.exe and some of the plugins we're using require the following redistr
 - Huge thanks to [Laz](https://github.com/Lazrius) for helping write the original PowerShell scripts this project started as, and also in translating them to Python, and for [FJonske](https://github.com/FJonske) for fine tuning the script and writing the CSV to INI module from scratch.
 - Many thanks to [BC46](https://github.com/BC46) for allowing us to use the excellent texture and model improvements from Freelancer: HD Edition.
 - Thanks once again to Adoxa for the use of his many plugins, which are in use throughout this project.
+- Thank you to Why485 for the use of his excellent Big Huge Effects Pack.
