@@ -304,7 +304,7 @@ S 468269 Hammerhead
 S 468270 Paladin
 S 468271 Mule
 S 468272 CSV
-
+S 468273 Orca
 S 468760 Civilian L. F. Engine
 S 468761 Civilian H. F. Engine
 S 468762 Civilian V. H. F. Engine
@@ -425,6 +425,11 @@ H 468522
 	\m\b"Bullfrog" Combat Service Vehicle\B
 	\l
 	The remarkably low cost of making and maintaining this ship's design has ensured its widespread use across the sector. Cheap, flexible, and with a cargo hold that's significantly larger than most fighter-sized ships, the CSV can be found in almost every star system in Sirius, supporting the needs of almost every group in the sector.
+	
+H 468523
+	\m\b"Orca" Junkers Very Heavy Fighter\B
+	\l
+	Ambitions grow, and the tools used for their achievement must grow with them; that's what led to the Orca being designed. An expansion on the Angler (itself a refit of the humble CSV), this somewhat makeshift Very Heavy Fighter provides the muscle and power needed to take on larger scores. While its hull and powerplant are a little weaker than standard for its size, it makes up for it with a bigger cargo bay, and flexible hardpoints that allows the user to choose between doubling up on powerful missiles or ballistics, or bringing a more standard, balanced loadout.
 
 H 469010
 	\m\bModel G "Quarrel" High-Performance Engine\B
@@ -556,6 +561,11 @@ H 469522
 	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
 	\l
 	The 48-B Premium edition power supply was developed by Ageira Technologies for the adventurous starfarer. It's superior capacity and liquid-hydrogen cooled cells deliver enough performance to take on the dangers of space. Stay frosty! \n\.
+	
+H 469523
+	\m\bVL-800 Junkers Vacuum-Cooled Power Supply\B
+	\l
+	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
 
 H 470010
 	\m\b2k High-Bandwidth Ship Scanner\B
