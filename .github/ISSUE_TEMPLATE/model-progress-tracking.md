@@ -19,9 +19,11 @@ Write any extra notes about the model here if applicable.
 - [ ] .mat file
 - [ ] Wireframed
 - [ ] Hardpointed
+- [ ] Hardpoint stubs
 - [ ] Hitboxed (Hull)
 - [ ] Hitboxed (Shield)
 - [ ] Hitboxes tested ingame
+- [ ] Damage models (If applicable)
 - [ ] XML uploaded
 
 ### INI Checklist
