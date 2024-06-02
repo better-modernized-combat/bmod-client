@@ -10,6 +10,7 @@ money = %%MONEY%%
 voice = juni
 ;replace 'trent_voice' above with 'juni' to mute voice on newly created MP characters. Better if you prefer silence to having a male voice. Like the example line below:
 ;voice = juni
+;Update - this does not mute you out in SPACE!! It actually makes you TALK like you're Juni out in combat!! It's kind of awesome actually!!! But need to set a real 'mute' voice for now
 
 ;costume = %%BASE_COSTUME%%
 costume = bm_mc_player_3
@@ -19,9 +20,9 @@ com_costume = %%COMM_COSTUME%%
 system = Li03
 base = Li03_01_Base
 
-house = 0.1, li_n_grp
-house = 0.1, li_lsf_grp
-house = 0.1, li_p_grp
+house = 0, li_n_grp
+house = 0, li_lsf_grp
+house = 0, li_p_grp
 house = 0, br_n_grp
 house = 0, br_p_grp
 house = 0, ku_n_grp
