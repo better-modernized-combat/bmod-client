@@ -104,12 +104,6 @@
             <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </scrapper_utility_panels_06.002>
-         <cv_glass.003>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.329, 0.467, 0.533</Dc>
-            <Dt_name type="text">cv_glass.003.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </cv_glass.003>
          <scrapper_bw_panel_256>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.89019603, 0.81960797, 0.78823501</Dc>
@@ -134,6 +128,21 @@
             <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </scrapper_freighter1D.001>
+         <cv_glass.005>
+            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
+            <Oc type="float">0.4</Oc>
+            <Type type="text">DcDtOcOt</Type>
+         </cv_glass.005>
+         <cv_glass.003>
+            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
+            <Oc type="float">0.4</Oc>
+            <Type type="text">DcDtOcOt</Type>
+         </cv_glass.003>
+         <cv_glass.001>
+            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
+            <Oc type="float">0.4</Oc>
+            <Type type="text">DcDtOcOt</Type>
+         </cv_glass.001>
       </Material_library>
       <Texture_library name="Texture library">
          <scrapper_utility_panels_01.tga>
@@ -157,6 +166,9 @@
          <scrapper_freighter1.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\scrapper_freighter1.dds"/>
          </scrapper_freighter1.tga>
+         <debris-3.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\debris-3.dds"/>
+         </debris-3.tga>
       </Texture_library>
    </UTF_ROOT>
 </UTFXML>
