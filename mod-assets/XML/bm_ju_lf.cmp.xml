@@ -12,64 +12,64 @@
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "bm_ju_lf_portwing_lod1",
-                  <!-- position    --> 0, 0, -0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,  -0.0000000000,
-                                         0.0000000000,   1.0000000000,  -0.0000000000,
-                                        -0.0000000000,  -0.0000000000,   1.0000000000
+                  <!-- position    --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
+                                         0.0000000000,   1.0000000000,   0.0000000000,
+                                         0.0000000000,   0.0000000000,   1.0000000000
                </part>
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "bm_ju_lf_starwing_lod1",
-                  <!-- position    --> 0, 0, -0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,  -0.0000000000,
-                                         0.0000000000,   1.0000000000,  -0.0000000000,
-                                        -0.0000000000,  -0.0000000000,   1.0000000000
+                  <!-- position    --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
+                                         0.0000000000,   1.0000000000,   0.0000000000,
+                                         0.0000000000,   0.0000000000,   1.0000000000
                </part>
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "bm_ju_lf_tail_lod1",
-                  <!-- position    --> 0, 0, -0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,  -0.0000000000,
-                                         0.0000000000,   1.0000000000,  -0.0000000000,
-                                        -0.0000000000,  -0.0000000000,   1.0000000000
+                  <!-- position    --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
+                                         0.0000000000,   1.0000000000,   0.0000000000,
+                                         0.0000000000,   0.0000000000,   1.0000000000
                </part>
             </Fix>
          </Cons>
          <Part_bm_ju_lf_portwing_lod1>
             <Object_name name="Object name" type="text">bm_ju_lf_portwing_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf_portwing_lod1240531123644.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf_portwing_lod1240601163221.3db</File_name>
          </Part_bm_ju_lf_portwing_lod1>
          <Part_bm_ju_lf_starwing_lod1>
             <Object_name name="Object name" type="text">bm_ju_lf_starwing_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf_starwing_lod1240531123644.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf_starwing_lod1240601163221.3db</File_name>
          </Part_bm_ju_lf_starwing_lod1>
          <Part_bm_ju_lf_tail_lod1>
             <Object_name name="Object name" type="text">bm_ju_lf_tail_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf_tail_lod1240531123644.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf_tail_lod1240601163221.3db</File_name>
          </Part_bm_ju_lf_tail_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf240531123644.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf240601163221.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_ju_lf240531123644.3db>
+      <bm_ju_lf240601163221.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_lf.lod0-112.vms,
                <!-- start vert   --> 0,
-               <!-- num verts    --> 2509,
+               <!-- num verts    --> 2575,
                <!-- start index  --> 0,
-               <!-- num indices  --> 2724,
+               <!-- num indices  --> 2895,
                <!-- start mesh   --> 0,
                <!-- num meshes   --> 9,
-               <!-- bounding box -->  3.3748302,     5.4303646,    3.8354514,
-                                     -3.3748302,    -0.095908642, -6.2913475,
-               <!-- center       -->  0.0076954365,  1.8484904,   -0.37595981,
+               <!-- bounding box -->  3.3748302,     5.4303646,   3.8354511,
+                                     -3.3748302,    -0.09590888, -6.2913475,
+               <!-- center       -->  0.0076954365,  1.8484901,  -0.37595993,
                <!-- radius       --> 6.2357769
             </VMeshRef>
          </VMeshPart>
@@ -78,57 +78,57 @@
             <Fixed>
                <HpEngine01>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,  -0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">2.32, 1.43, 2.96</Position>
                </HpEngine01>
                <HpPilot>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,  -0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, 3, -0.64000034</Position>
                </HpPilot>
                <HpCockpit>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,  -0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, 3, -0.64</Position>
                </HpCockpit>
                <HpMount>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,  -0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0, -1.5, -0</Position>
+                  <Position type="Vector">0, -1.5, 0</Position>
                </HpMount>
                <HpTractor_Source>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,  -0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, -0.03000067, -6.2500057</Position>
                </HpTractor_Source>
                <HpShield01>
                   <Orientation type="Matrix">
-                      -1.0000000000,  87.422777e-09,  -0.0000000000,
-                     -87.422777e-09,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  87.422777e-09,   0.0000000000,
+                     -87.422777e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, -0.06, 0.5</Position>
                </HpShield01>
                <HpMine01>
                   <Orientation type="Matrix">
-                      -1.0000000000,  87.422777e-09,  -0.0000000000,
-                     -87.422777e-09,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  87.422777e-09,   0.0000000000,
+                     -87.422777e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, -0.05, 1.5</Position>
                </HpMine01>
@@ -136,13 +136,13 @@
                   <Orientation type="Matrix">
                        1.0000000000, -350.61547e-09, -116.63428e-09,
                      -369.50615e-09,  -0.9488758400,  -0.3156490900,
-                      -0.0000000000,   0.3156490900,  -0.9488758400
+                       0.0000000000,   0.3156490900,  -0.9488758400
                   </Orientation>
                   <Position type="Vector">0, 0.3, 3</Position>
                </HpThruster01>
                <HpEngine02>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,   0.0000000000,
+                      -1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
@@ -152,70 +152,70 @@
             <Revolute>
                <HpTorpedo01>
                   <Orientation type="Matrix">
-                      -1.0000000000,  866.25153e-09,  -0.0000000000,
-                     -866.25153e-09,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  866.25153e-09,   0.0000000000,
+                     -866.25153e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, -0.07, -1.43</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpTorpedo01>
                <HpWeapon01>
                   <Orientation type="Matrix">
-                      -1.0000000000, -150.99580e-09,  -0.0000000000,
-                      150.99580e-09,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000, -150.99580e-09,   0.0000000000,
+                      150.99580e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0.80000019, 0.05, -5</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon01>
                <HpWeapon02>
                   <Orientation type="Matrix">
-                      -1.0000000000,  1.3430887e-06,  -0.0000000000,
-                     -1.3430887e-06,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  1.3430887e-06,   0.0000000000,
+                     -1.3430887e-06,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">-0.80000019, 0.05, -5</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon02>
                <HpWeapon09>
                   <Orientation type="Matrix">
-                      313.91647e-09,   1.0000000000,  -0.0000000000,
-                      -1.0000000000,  313.91647e-09,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      313.91647e-09,   1.0000000000,   0.0000000000,
+                      -1.0000000000,  313.91647e-09,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0.21000051, 2.75, -1.78</Position>
-                  <Axis type="Vector">0, 0, -0</Axis>
-                  <Min type="float">-0</Min>
-                  <Max type="float">-0</Max>
+                  <Axis type="Vector">0, 0, 0</Axis>
+                  <Min type="float">0</Min>
+                  <Max type="float">0</Max>
                </HpWeapon09>
                <HpWeapon10>
                   <Orientation type="Matrix">
-                      313.91647e-09,   1.0000000000,  -0.0000000000,
-                      -1.0000000000,  313.91647e-09,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      313.91647e-09,   1.0000000000,   0.0000000000,
+                      -1.0000000000,  313.91647e-09,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0.22, 2.81, -1.77</Position>
                   <Axis type="Vector">0, 0, 1</Axis>
-                  <Min type="float">-0</Min>
-                  <Max type="float">-0</Max>
+                  <Min type="float">0</Min>
+                  <Max type="float">0</Max>
                </HpWeapon10>
             </Revolute>
          </Hardpoints>
-      </bm_ju_lf240531123644.3db>
-      <bm_ju_lf_portwing_lod1240531123644.3db>
+      </bm_ju_lf240601163221.3db>
+      <bm_ju_lf_portwing_lod1240601163221.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_lf.lod0-112.vms,
-               <!-- start vert   --> 2509,
+               <!-- start vert   --> 2575,
                <!-- num verts    --> 51,
-               <!-- start index  --> 2724,
+               <!-- start index  --> 2895,
                <!-- num indices  --> 51,
                <!-- start mesh   --> 9,
                <!-- num meshes   --> 4,
@@ -225,52 +225,63 @@
                <!-- radius       --> 6.1810255
             </VMeshRef>
          </VMeshPart>
+         <VMeshWire include="bm_ju_lf_cmp\bm_ju_lf_portwing_lod1.vwd.xml"/>
          <Hardpoints>
+            <Fixed>
+               <HpContrail02>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">-6, 2, 3</Position>
+               </HpContrail02>
+            </Fixed>
             <Revolute>
                <HpWeapon04>
                   <Orientation type="Matrix">
-                      -1.0000000000,  1.8199258e-06,  -0.0000000000,
-                     -1.8199258e-06,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  1.8199258e-06,   0.0000000000,
+                     -1.8199258e-06,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">-3.72, 2.13, 0.69</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon04>
                <HpWeapon06>
                   <Orientation type="Matrix">
-                      -1.0000000000,  1.8199258e-06,  -0.0000000000,
-                     -1.8199258e-06,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  1.8199258e-06,   0.0000000000,
+                     -1.8199258e-06,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">-4.8500185, 2.01, 1.78</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon06>
                <HpWeapon08>
                   <Orientation type="Matrix">
-                      313.91644e-09,  -1.0000000000,  -0.0000000000,
-                       1.0000000000,  313.91644e-09,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      313.91644e-09,  -1.0000000000,   0.0000000000,
+                       1.0000000000,  313.91644e-09,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">-5.7299938, 2.01, 2.5299985</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon08>
             </Revolute>
          </Hardpoints>
-      </bm_ju_lf_portwing_lod1240531123644.3db>
-      <bm_ju_lf_starwing_lod1240531123644.3db>
+      </bm_ju_lf_portwing_lod1240601163221.3db>
+      <bm_ju_lf_starwing_lod1240601163221.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_lf.lod0-112.vms,
-               <!-- start vert   --> 2560,
+               <!-- start vert   --> 2626,
                <!-- num verts    --> 48,
-               <!-- start index  --> 2775,
+               <!-- start index  --> 2946,
                <!-- num indices  --> 48,
                <!-- start mesh   --> 13,
                <!-- num meshes   --> 3,
@@ -280,70 +291,63 @@
                <!-- radius       --> 6.1202817
             </VMeshRef>
          </VMeshPart>
+         <VMeshWire include="bm_ju_lf_cmp\bm_ju_lf_starwing_lod1.vwd.xml"/>
          <Hardpoints>
             <Fixed>
                <HpContrail01>
-                  <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,  -0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
-                  </Orientation>
-                  <Position type="Vector">6.0900021, 2, 3</Position>
-               </HpContrail01>
-               <HpContrail02>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">-6.0900021, 2, 3</Position>
-               </HpContrail02>
+                  <Position type="Vector">6.0900021, 2, 3</Position>
+               </HpContrail01>
             </Fixed>
             <Revolute>
                <HpWeapon03>
                   <Orientation type="Matrix">
-                      -1.0000000000, -627.83295e-09,  -0.0000000000,
-                      627.83295e-09,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000, -627.83295e-09,   0.0000000000,
+                      627.83295e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">3.72, 2.13, 0.69</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon03>
                <HpWeapon05>
                   <Orientation type="Matrix">
-                      -1.0000000000, -1.1046701e-06,  -0.0000000000,
-                      1.1046701e-06,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000, -1.1046701e-06,   0.0000000000,
+                      1.1046701e-06,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">4.8500185, 2.01, 1.78</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon05>
                <HpWeapon07>
                   <Orientation type="Matrix">
-                      75.497894e-09,   1.0000000000,  -0.0000000000,
-                      -1.0000000000,  75.497894e-09,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      75.497894e-09,   1.0000000000,   0.0000000000,
+                      -1.0000000000,  75.497894e-09,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">5.7299938, 2.01, 2.5299985</Position>
-                  <Axis type="Vector">0, 1, -0</Axis>
+                  <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon07>
             </Revolute>
          </Hardpoints>
-      </bm_ju_lf_starwing_lod1240531123644.3db>
-      <bm_ju_lf_tail_lod1240531123644.3db>
+      </bm_ju_lf_starwing_lod1240601163221.3db>
+      <bm_ju_lf_tail_lod1240601163221.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_lf.lod0-112.vms,
-               <!-- start vert   --> 2608,
+               <!-- start vert   --> 2674,
                <!-- num verts    --> 378,
-               <!-- start index  --> 2823,
+               <!-- start index  --> 2994,
                <!-- num indices  --> 378,
                <!-- start mesh   --> 16,
                <!-- num meshes   --> 2,
@@ -353,18 +357,19 @@
                <!-- radius       --> 6.2633357
             </VMeshRef>
          </VMeshPart>
+         <VMeshWire include="bm_ju_lf_cmp\bm_ju_lf_tail_lod1.vwd.xml"/>
          <Hardpoints>
             <Fixed>
                <HpCM01>
                   <Orientation type="Matrix">
-                      -1.0000000000,  87.422777e-09,  -0.0000000000,
-                     -87.422777e-09,  -1.0000000000,  -0.0000000000,
-                      -0.0000000000,  -0.0000000000,   1.0000000000
+                      -1.0000000000,  87.422777e-09,   0.0000000000,
+                     -87.422777e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
                   <Position type="Vector">0, 3.75, 10.28</Position>
                </HpCM01>
             </Fixed>
          </Hardpoints>
-      </bm_ju_lf_tail_lod1240531123644.3db>
+      </bm_ju_lf_tail_lod1240601163221.3db>
    </UTF_ROOT>
 </UTFXML>
