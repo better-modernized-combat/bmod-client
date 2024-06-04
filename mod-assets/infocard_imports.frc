@@ -35,6 +35,7 @@ S 461769 Adv. Brigandine V.H.F. Shield
 S 461770 Brigandine L.F. Shield [+]
 S 461771 Brigandine V.H.F. Shield [+]
 S 461772 Brigandine Fr. Shield [+]
+S 461773 HLX Industrial Frigate Shield
 
 S 463276 Fleet LRM
 S 463277 Fleet SRM
@@ -255,6 +256,11 @@ H 462022
 	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Very Heavy Fighter class ships.
 	
 	This particular piece of equipment is upgraded, featuring a higher shield capacity than its base model.\n
+	
+H 462023
+	\m\bHLX Industrial Frigate Shield\B
+	\l	
+	PLACEHOLDER.\n
 
 H 463776
 	\m\bFleet LRM Ammo\B
