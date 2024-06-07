@@ -3,11 +3,11 @@
 <VMeshWire>
    <VWireData type="VWireData">
       <!-- size  --> 16,
-      <!-- mesh  --> data.equipment.models.turret.bmod.br_gunboat_gun01_fleet.lod0-112.vms,
+      <!-- mesh  --> bm_f_large_energy_turret_x2.lod0-112.vms,
       <!-- base  --> 111,
       <!-- used  --> 36,
       <!-- count --> 120,
-      <!-- span  --> 94
+      <!-- span  --> 93
 
       <!--  Line     Vtx1, Vtx2 -->
       <!--     0 -->   87,   89

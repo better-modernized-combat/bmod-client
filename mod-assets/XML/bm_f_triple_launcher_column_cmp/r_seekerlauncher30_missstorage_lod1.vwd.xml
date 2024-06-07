@@ -3,11 +3,11 @@
 <VMeshWire>
    <VWireData type="VWireData">
       <!-- size  --> 16,
-      <!-- mesh  --> data.equipment.models.turret.bmod.rh_seeker_launcher_fleet_twin_30arc.lod2-112.vms,
+      <!-- mesh  --> bm_f_triple_launcher_column.lod2-112.vms,
       <!-- base  --> 74,
       <!-- used  --> 8,
       <!-- count --> 24,
-      <!-- span  --> 13
+      <!-- span  --> 12
 
       <!--  Line     Vtx1, Vtx2 -->
       <!--     0 -->    2,    0

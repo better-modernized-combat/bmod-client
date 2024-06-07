@@ -3,7 +3,7 @@
 <UTFXML filename="bm_f_large_energy_turret_x2.cmp" path="BMOD\EQUIPMENT\MODELS\TURRETS">
    <UTF_ROOT>
       <VMeshLibrary>
-         <data.equipment.models.turret.bmod.br_gunboat_gun01_fleet.lod0-112.vms include="bm_f_large_energy_turret_x2_cmp\lod0-112.vms.xml"/>
+         <bm_f_large_energy_turret_x2.lod0-112.vms include="bm_f_large_energy_turret_x2_cmp\lod0-112.vms.xml"/>
       </VMeshLibrary>
       <Animation include="bm_f_large_energy_turret_x2_cmp\Animation.xml"/>
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
@@ -39,24 +39,24 @@
          <Part_XGUN>
             <Object_name name="Object name" type="text">XGUN</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">XGUN230511155722.3db</File_name>
+            <File_name name="File name" type="text">XGUN240607070044.3db</File_name>
          </Part_XGUN>
          <Part_XBARREL>
             <Object_name name="Object name" type="text">XBARREL</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">XBARREL230511155722.3db</File_name>
+            <File_name name="File name" type="text">XBARREL240607070044.3db</File_name>
          </Part_XBARREL>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">br_gunboat_gun01_fleet230511155722.3db</File_name>
+            <File_name name="File name" type="text">bm_f_large_energy_turret_x2240607070044.3db</File_name>
          </Root>
       </Cmpnd>
-      <br_gunboat_gun01_fleet230511155722.3db>
+      <bm_f_large_energy_turret_x2240607070044.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> data.equipment.models.turret.bmod.br_gunboat_gun01_fleet.lod0-112.vms,
+               <!-- vmesh lib    --> bm_f_large_energy_turret_x2.lod0-112.vms,
                <!-- start vert   --> 0,
                <!-- num verts    --> 73,
                <!-- start index  --> 0,
@@ -69,28 +69,28 @@
                <!-- radius       --> 0.81111491
             </VMeshRef>
          </VMeshPart>
-         <VMeshWire include="bm_f_large_energy_turret_x2_cmp\br_gunboat_gun01_fleet.vwd.xml"/>
+         <VMeshWire include="bm_f_large_energy_turret_x2_cmp\bm_f_large_energy_turret_x2.vwd.xml"/>
          <Hardpoints>
             <Revolute>
                <HpConnect>
+                  <Position type="Vector">0.19986449, -0.30128253, -0.0014574041</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000, -184.50626e-09,
                        0.0000000000,  184.50626e-09,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0.19986449, -0.30128253, -0.0014574041</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-6.2831855</Min>
                   <Max type="float">6.2831855</Max>
                </HpConnect>
             </Revolute>
          </Hardpoints>
-      </br_gunboat_gun01_fleet230511155722.3db>
-      <XGUN230511155722.3db>
+      </bm_f_large_energy_turret_x2240607070044.3db>
+      <XGUN240607070044.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> data.equipment.models.turret.bmod.br_gunboat_gun01_fleet.lod0-112.vms,
+               <!-- vmesh lib    --> bm_f_large_energy_turret_x2.lod0-112.vms,
                <!-- start vert   --> 73,
                <!-- num verts    --> 38,
                <!-- start index  --> 162,
@@ -98,51 +98,51 @@
                <!-- start mesh   --> 1,
                <!-- num meshes   --> 1,
                <!-- bounding box -->  0.26685423,   0.29884154,    1.1065627,
-                                     -0.25075671,  -0.2988435,    -1.1932859,
-               <!-- center       -->  0.013099059, -0.0018319488, -0.055342417,
-               <!-- radius       --> 1.1778182
+                                     -0.25075665,  -0.2988435,    -1.1932859,
+               <!-- center       -->  0.013099059, -0.0018319488, -0.055342402,
+               <!-- radius       --> 1.1778184
             </VMeshRef>
          </VMeshPart>
          <VMeshWire include="bm_f_large_energy_turret_x2_cmp\XGUN.vwd.xml"/>
-      </XGUN230511155722.3db>
-      <XBARREL230511155722.3db>
+      </XGUN240607070044.3db>
+      <XBARREL240607070044.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> data.equipment.models.turret.bmod.br_gunboat_gun01_fleet.lod0-112.vms,
+               <!-- vmesh lib    --> bm_f_large_energy_turret_x2.lod0-112.vms,
                <!-- start vert   --> 111,
                <!-- num verts    --> 103,
                <!-- start index  --> 270,
                <!-- num indices  --> 198,
                <!-- start mesh   --> 2,
                <!-- num meshes   --> 1,
-               <!-- bounding box -->  0.24018563,     0.20291612,  0.3368482,
-                                     -0.22842877,    -0.20291571, -2.3223553,
-               <!-- center       -->  0.0070767999, 986.03964e-6, -0.99762571,
-               <!-- radius       --> 1.3452477
+               <!-- bounding box -->  0.24018563,     0.20291612,  0.3368485,
+                                     -0.2284288,     -0.20291574, -2.3223543,
+               <!-- center       -->  0.0070767999, 986.03964e-6, -0.99762547,
+               <!-- radius       --> 1.345247
             </VMeshRef>
          </VMeshPart>
          <VMeshWire include="bm_f_large_energy_turret_x2_cmp\XBARREL.vwd.xml"/>
          <Hardpoints>
             <Fixed>
                <HpFire01>
+                  <Position type="Vector">1.5, -448.79317e-6, -2.1363096</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,  60.390029e-09, -9.8145013e-15,
-                     -60.390029e-09,   1.0000000000, -200.58745e-09,
-                     -2.2989804e-15,  200.58745e-09,   1.0000000000
+                       1.0000000000,  60.390029e-09,  3.1757230e-15,
+                     -60.390029e-09,   1.0000000000, -200.58746e-09,
+                     -2.2989817e-15,  200.58742e-09,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">1.5, -448.82298e-6, -2.1363096</Position>
                </HpFire01>
                <HpFire02>
+                  <Position type="Vector">-1.5, -448.82298e-6, -2.1363087</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,  461.14663e-24,  2.2989804e-15,
-                       0.0000000000,   1.0000000000, -200.58745e-09,
-                     -2.2989804e-15,  200.58745e-09,   1.0000000000
+                       1.0000000000,   0.0000000000,  3.1757213e-15,
+                       0.0000000000,   1.0000000000, -200.58749e-09,
+                     -6.4940114e-15,  200.58745e-09,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">-1.5, -448.82298e-6, -2.1363096</Position>
                </HpFire02>
             </Fixed>
          </Hardpoints>
-      </XBARREL230511155722.3db>
+      </XBARREL240607070044.3db>
    </UTF_ROOT>
 </UTFXML>
