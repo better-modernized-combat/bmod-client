@@ -326,6 +326,9 @@ S 468769 Bounty Hunter V. H. F. Engine
 S 468770 Liberty H. F. Engine
 S 468771 Rogue Fr. Engine
 S 468772 Civilian Fr. Engine
+S 468773 Junkers V. H. F. Engine
+S 468774 Junkers L. F. Engine
+S 468775 Junkers H. F. Engine
 
 S 469260 Civilian L. F. Powerplant
 S 469261 Civilian H. F. Powerplant
@@ -340,6 +343,9 @@ S 469269 Bounty Hunter V. H. F. Powerplant
 S 469270 Liberty H. F. Powerplant
 S 469271 Rogue Fr. Powerplant
 S 469272 Civilian Fr. Powerplant
+S 469273 Junkers V. H. F. Powerplant
+S 469274 Junkers L. F. Powerplant
+S 469275 Junkers H. F. Powerplant
 
 S 469760 Scanner
 S 469761 Scanner
@@ -354,6 +360,9 @@ S 469769 Scanner
 S 469770 Scanner
 S 469771 Scanner
 S 469772 Scanner
+S 469773 Scanner
+S 469774 Scanner
+S 469775 Scanner
 
 S 470260 Tractor Beam
 S 470261 Tractor Beam
@@ -368,6 +377,9 @@ S 470269 Tractor Beam
 S 470270 Tractor Beam
 S 470271 Tractor Beam
 S 470272 Heavy Tractor Beam
+S 470273 Tractor Beam
+S 470274 Tractor Beam
+S 470275 Tractor Beam
 
 H 468510
 	\m\bCTE-1500 "Hawk" Civilian Light Fighter\B
@@ -514,6 +526,21 @@ H 469022
 	\l
 	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
 
+H 469023
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
+
+H 469024
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
+
+H 469025
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
+
 
 H 469510
 	\m\b48-B "Vogel" Premium Civilian Power Supply \B\n\
@@ -585,6 +612,17 @@ H 469523
 	\l
 	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
 
+H 469524
+	\m\bVL-800 Junker Vacuum-Cooled Power Supply\B
+	\l
+	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
+
+H 469525
+	\m\bVL-800 Junker Vacuum-Cooled Power Supply\B
+	\l
+	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
 H 470010
 	\m\b2k High-Bandwidth Ship Scanner\B
 	\l
@@ -650,6 +688,21 @@ H 470022
 	\l
 	Enhanced tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
 
+H 470023
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470024
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470025
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
 H 470510
 	\m\b7b Multi-Focal Tractor Beam\B
 	\l
@@ -712,6 +765,21 @@ H 470521
 
 H 470522
 	\m\b7b Heavy Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470523
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470524
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470525
+	\m\b7b Multi-Focal Tractor Beam\B
 	\l
 	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
 
