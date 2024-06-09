@@ -7,7 +7,7 @@ money = %%MONEY%%
 ;voice = %%VOICE%%
 ;All must be Trent!
 
-voice = juni
+voice = 
 ;replace 'trent_voice' above with 'juni' to mute voice on newly created MP characters. Better if you prefer silence to having a male voice. Like the example line below:
 ;voice = juni
 ;Update - this does not mute you out in SPACE!! It actually makes you TALK like you're Juni out in combat!! It's kind of awesome actually!!! But need to set a real 'mute' voice for now
