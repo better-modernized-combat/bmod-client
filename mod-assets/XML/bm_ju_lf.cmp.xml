@@ -262,11 +262,11 @@
                </HpWeapon06>
                <HpWeapon08>
                   <Orientation type="Matrix">
-                      313.91644e-09,  -1.0000000000,   0.0000000000,
-                       1.0000000000,  313.91644e-09,   0.0000000000,
+                      552.33505e-09,  -1.0000000000,   0.0000000000,
+                       1.0000000000,  552.33505e-09,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">-5.7299938, 2.01, 2.5299985</Position>
+                  <Position type="Vector">-5.5561109, 2.01, 2.5808291</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
@@ -328,11 +328,11 @@
                </HpWeapon05>
                <HpWeapon07>
                   <Orientation type="Matrix">
-                      75.497894e-09,   1.0000000000,   0.0000000000,
-                      -1.0000000000,  75.497894e-09,   0.0000000000,
+                      313.91647e-09,   1.0000000000,   0.0000000000,
+                      -1.0000000000,  313.91647e-09,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">5.7299938, 2.01, 2.5299985</Position>
+                  <Position type="Vector">5.5561099, 2.01, 2.5299985</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
