@@ -1148,9 +1148,9 @@ S 474047 Xenos Light Fighter
 S 474048 Xenos Heavy Fighter
 S 474049 Xenos Very Heavy Fighter
 S 474050 Xenos Freighter
-S 474051 [ORE] High-yield Copper Deposit
-S 474052 [ORE] Mid-yield Silver Deposit
-S 474053 [ORE] Mid-yield Gold Deposit
+S 474051 [ORE] Dense Copper Deposit
+S 474052 [ORE] Dense Silver Deposit
+S 474053 [ORE] Dense Gold Deposit
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
