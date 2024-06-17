@@ -3,6 +3,134 @@
 <UTFXML filename="bm_ju_ships.mat" path="BMOD\SHIPS\MODELS">
    <UTF_ROOT>
       <Material_library name="Material library">
+         <scrapper_utility_panels_03D.005>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.541, 0.541, 0.541</Dc>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_03D.005>
+         <scrapper_utility_panels_03RD.005>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.678, 0.404, 0.435</Dc>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_03RD.005>
+         <scrapper_utility_panels_01D.002>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.522, 0.522, 0.522</Dc>
+            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_01D.002>
+         <cv_glass.005>
+            <Type type="text">DcDtOcOt</Type>
+            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
+            <Oc type="float">0.4</Oc>
+         </cv_glass.005>
+         <scrapper_utility_panels_01M.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.631, 0.631, 0.631</Dc>
+            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_01M.001>
+         <scrapper_utility_panels_06.005>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.659, 0.639, 0.639</Dc>
+            <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_06.005>
+         <scrapper_freighter1D.005>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.427, 0.427, 0.427</Dc>
+            <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_freighter1D.005>
+         <debris-3.005>
+            <Type type="text">DcDt</Type>
+            <Dt_name type="text">debris-3.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </debris-3.005>
+         <scrapper_utility_panels_03M.001>
+            <Type type="text">DcDt</Type>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dc type="RGB">0.612, 0.565, 0.541</Dc>
+         </scrapper_utility_panels_03M.001>
+         <scrapper_utility_panels_03RD>
+            <Type type="text">DcDt</Type>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dc type="RGB">0.69, 0.443, 0.42</Dc>
+         </scrapper_utility_panels_03RD>
+         <scrapper_utility_panels_03D>
+            <Type type="text">DcDt</Type>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dc type="RGB">0.612, 0.565, 0.541</Dc>
+         </scrapper_utility_panels_03D>
+         <cv_glass>
+            <Type type="text">DcDtOcOt</Type>
+            <Dc type="RGB">-117.4494e27, -1.8729781, -1.8691021</Dc>
+            <Oc type="float">0.4</Oc>
+         </cv_glass>
+         <scrapper_utility_panels_01>
+            <Type type="text">DcDt</Type>
+            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dc type="RGB">0.61176503, 0.56078398, 0.53725499</Dc>
+         </scrapper_utility_panels_01>
+         <scrapper_freighter1D>
+            <Type type="text">DcDt</Type>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
+            <Dc type="RGB">0.49, 0.459, 0.459</Dc>
+         </scrapper_freighter1D>
+         <scrapper_utility_panels_06>
+            <Type type="text">DcDt</Type>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
+            <Dc type="RGB">0.659, 0.639, 0.639</Dc>
+         </scrapper_utility_panels_06>
+         <scrapper_utility_panels_06.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.659, 0.639, 0.639</Dc>
+            <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_06.001>
+         <debris-3.001>
+            <Type type="text">DcDt</Type>
+            <Dt_name type="text">debris-3.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </debris-3.001>
+         <scrapper_freighter1D.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.49, 0.459, 0.459</Dc>
+            <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_freighter1D.001>
+         <scrapper_utility_panels_03RD.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.69, 0.443, 0.42</Dc>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_03RD.001>
+         <scrapper_utility_panels_03D.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.612, 0.565, 0.541</Dc>
+            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_03D.001>
+         <scrapper_engine.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.8, 0.74117601, 0.72548997</Dc>
+            <Dt_name type="text">scrapper_engine.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_engine.001>
+         <scrapper_utility_panels_01.001>
+            <Type type="text">DcDt</Type>
+            <Dc type="RGB">0.61176503, 0.56078398, 0.53725499</Dc>
+            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
+            <Dt_flags type="int">0x40</Dt_flags>
+         </scrapper_utility_panels_01.001>
          <utility_panels_06>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.659, 0.639, 0.639</Dc>
@@ -39,12 +167,6 @@
             <Dt_name type="text">scrapper_engine.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </scrapper_engine>
-         <scrapper_utility_panels_03D>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.671, 0.624, 0.604</Dc>
-            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03D>
          <scrapper_utility_panels_01D>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.671, 0.624, 0.604</Dc>
@@ -96,166 +218,74 @@
             <Dt_name type="text">equip_gen.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </equip_gen.001>
-         <Material_count name="Material count" type="int">16</Material_count>
-         <cv_glass.001>
-            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
-            <Oc type="float">0.4</Oc>
-            <Type type="text">DcDtOcOt</Type>
-         </cv_glass.001>
-         <cv_glass.003>
-            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
-            <Oc type="float">0.4</Oc>
-            <Type type="text">DcDtOcOt</Type>
-         </cv_glass.003>
-         <cv_glass.005>
-            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
-            <Oc type="float">0.4</Oc>
-            <Type type="text">DcDtOcOt</Type>
-         </cv_glass.005>
-         <scrapper_freighter1D.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.49, 0.459, 0.459</Dc>
-            <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_freighter1D.001>
-         <scrapper_freighter1D.002>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.486, 0.459, 0.459</Dc>
-            <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_freighter1D.002>
-         <scrapper_bw_panel_256>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.89019603, 0.81960797, 0.78823501</Dc>
-            <Dt_name type="text">scrapper_bw_panel_256.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_bw_panel_256>
-         <scrapper_utility_panels_06.002>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.659, 0.639, 0.639</Dc>
-            <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_06.002>
-         <scrapper_utility_panels_03RD.008>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.686, 0.443, 0.42</Dc>
-            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03RD.008>
          <scrapper_utility_panels_03D.007>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.714, 0.659, 0.635</Dc>
             <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </scrapper_utility_panels_03D.007>
-         <scrapper_utility_panels_03M.001>
+         <scrapper_utility_panels_03RD.008>
             <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.69, 0.69, 0.69</Dc>
+            <Dc type="RGB">0.686, 0.443, 0.42</Dc>
             <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03M.001>
-         <debris-3.005>
+         </scrapper_utility_panels_03RD.008>
+         <scrapper_freighter1D.002>
             <Type type="text">DcDt</Type>
-            <Dt_name type="text">debris-3.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </debris-3.005>
-         <scrapper_freighter1D.005>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.427, 0.427, 0.427</Dc>
+            <Dc type="RGB">0.486, 0.459, 0.459</Dc>
             <Dt_name type="text">scrapper_freighter1.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_freighter1D.005>
-         <scrapper_utility_panels_06.005>
+         </scrapper_freighter1D.002>
+         <scrapper_utility_panels_06.002>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.659, 0.639, 0.639</Dc>
             <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_06.005>
-         <scrapper_utility_panels_01D.002>
+         </scrapper_utility_panels_06.002>
+         <cv_glass.003>
+            <Type type="text">DcDtOcOt</Type>
+            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
+            <Oc type="float">0.4</Oc>
+         </cv_glass.003>
+         <scrapper_bw_panel_256>
             <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.522, 0.522, 0.522</Dc>
-            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
+            <Dc type="RGB">0.89019603, 0.81960797, 0.78823501</Dc>
+            <Dt_name type="text">scrapper_bw_panel_256.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_01D.002>
-         <scrapper_utility_panels_03RD.005>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.678, 0.404, 0.435</Dc>
-            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03RD.005>
-         <scrapper_utility_panels_03D.005>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.541, 0.541, 0.541</Dc>
-            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03D.005>
-         <scrapper_utility_panels_01M.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.631, 0.631, 0.631</Dc>
-            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_01M.001>
-         <scrapper_utility_panels_01.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.61176503, 0.56078398, 0.53725499</Dc>
-            <Dt_name type="text">scrapper_utility_panels_01.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_01.001>
-         <scrapper_engine.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.8, 0.74117601, 0.72548997</Dc>
-            <Dt_name type="text">scrapper_engine.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_engine.001>
-         <scrapper_utility_panels_03D.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.612, 0.565, 0.541</Dc>
-            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03D.001>
-         <scrapper_utility_panels_03RD.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.69, 0.443, 0.42</Dc>
-            <Dt_name type="text">scrapper_utility_panels_03.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_03RD.001>
-         <scrapper_utility_panels_06.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.659, 0.639, 0.639</Dc>
-            <Dt_name type="text">scrapper_utility_panels_06.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </scrapper_utility_panels_06.001>
-         <debris-3.001>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">debris-3.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </debris-3.001>
+         </scrapper_bw_panel_256>
+         <Material_count name="Material count" type="int">43</Material_count>
       </Material_library>
       <Texture_library name="Texture library">
+         <scrapper_utility_panels_03.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_03.dds"/>
+         </scrapper_utility_panels_03.tga>
+         <scrapper_utility_panels_01.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_01.dds"/>
+         </scrapper_utility_panels_01.tga>
+         <scrapper_utility_panels_06.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_06.dds"/>
+         </scrapper_utility_panels_06.tga>
+         <scrapper_freighter1.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_freighter1.dds"/>
+         </scrapper_freighter1.tga>
+         <debris-3.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\debris-3.dds"/>
+         </debris-3.tga>
+         <scrapper_engine.tga>
+            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_engine.dds"/>
+         </scrapper_engine.tga>
          <utility_panels_06.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\utility_panels_06.dds"/>
          </utility_panels_06.tga>
          <freighter1.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\freighter1.dds"/>
          </freighter1.tga>
-         <scrapper_utility_panels_03.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_03.dds"/>
-         </scrapper_utility_panels_03.tga>
          <scrapper_utility_panels_03battledamage.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_03battledamage.dds"/>
          </scrapper_utility_panels_03battledamage.tga>
-         <scrapper_utility_panels_01.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_01.dds"/>
-         </scrapper_utility_panels_01.tga>
-         <scrapper_engine.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_engine.dds"/>
-         </scrapper_engine.tga>
          <utility_windows_128.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\utility_windows_128.dds"/>
          </utility_windows_128.tga>
-         <scrapper_utility_panels_03battledamage2.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_03battledamage2.dds"/>
-         </scrapper_utility_panels_03battledamage2.tga>
          <utility_panels_04.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\utility_panels_04.dds"/>
          </utility_panels_04.tga>
@@ -265,18 +295,9 @@
          <equip_gen.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\equip_gen.dds"/>
          </equip_gen.tga>
-         <scrapper_utility_panels_06.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_utility_panels_06.dds"/>
-         </scrapper_utility_panels_06.tga>
          <scrapper_bw_panel_256.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\scrapper_bw_panel_256.dds"/>
          </scrapper_bw_panel_256.tga>
-         <debris-3.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\debris-3.dds"/>
-         </debris-3.tga>
-         <scrapper_freighter1.tga>
-            <MIPS type="file" filename="bm_ju_ships_mat\scrapper_freighter1.dds"/>
-         </scrapper_freighter1.tga>
       </Texture_library>
    </UTF_ROOT>
 </UTFXML>
