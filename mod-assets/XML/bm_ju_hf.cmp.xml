@@ -138,6 +138,22 @@
                   </Orientation>
                   <Position type="Vector">0, -1.6, -5.5</Position>
                </HpPilot>
+               <HpHeadlight>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">0, -3.8020959, -10.642949</Position>
+               </HpHeadlight>
+               <HpRunningLight01>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">0.15907808, 1.9136031, 2.4414318</Position>
+               </HpRunningLight01>
             </Fixed>
             <Revolute>
                <HpTorpedo01>
@@ -255,6 +271,22 @@
          </VMeshPart>
          <Hardpoints>
             <Fixed>
+               <HpDockLight01>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">-7.0296202, -3.4449778, 0.31172585</Position>
+               </HpDockLight01>
+               <HpRunningLight05>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">-7.0296202, -3.4449778, 0.31172585</Position>
+               </HpRunningLight05>
                <HpContrail01>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,  -0.0000000000,
@@ -320,6 +352,22 @@
          </VMeshPart>
          <Hardpoints>
             <Fixed>
+               <HpDockLight02>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">7.0296202, -3.4449778, 0.31172585</Position>
+               </HpDockLight02>
+               <HpRunningLight06>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">7.0296202, -3.4449778, 0.31172585</Position>
+               </HpRunningLight06>
                <HpContrail02>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
@@ -393,6 +441,30 @@
                   </Orientation>
                   <Position type="Vector">0, 0.61999971, 7.8399963</Position>
                </HpCM01>
+               <HpRunningLight02>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">0, 5.2300711, 9.9250355</Position>
+               </HpRunningLight02>
+               <HpRunningLight03>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">-4.0443559, -1.3184601, 10.0897</Position>
+               </HpRunningLight03>
+               <HpRunningLight04>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">4.0443559, -1.3184601, 10.0897</Position>
+               </HpRunningLight04>
             </Fixed>
          </Hardpoints>
       </bm_ju_hf_tail_lod1240601181519.3db>
