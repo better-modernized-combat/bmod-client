@@ -3,9 +3,9 @@
 <UTFXML filename="bm_f_zsu.cmp" path="BMOD\EQUIPMENT\MODELS\TURRETS">
    <UTF_ROOT>
       <VMeshLibrary>
-         <bm_f_zsu_1_.lod0-112.vms name="bm_f_zsu(1).lod0-112.vms" include="bm_f_zsu_cmp\lod0-112.vms.xml"/>
+         <bm_f_zsu.lod0-112.vms include="bm_f_zsu_cmp\lod0-112.vms.xml"/>
       </VMeshLibrary>
-      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
+      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <Cmpnd>
          <Cons>
             <Fix type="Fix" count="1">
@@ -22,21 +22,21 @@
          <Part_Barrel>
             <Object_name name="Object name" type="text">Barrel</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">Barrel240615163511.3db</File_name>
+            <File_name name="File name" type="text">Barrel240617164241.3db</File_name>
          </Part_Barrel>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_f_zsu(1)240615163511.3db</File_name>
+            <File_name name="File name" type="text">bm_f_zsu240617164241.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_f_zsu_1_240615163511.3db name="bm_f_zsu(1)240615163511.3db">
+      <bm_f_zsu240617164241.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> bm_f_zsu(1).lod0-112.vms,
+               <!-- vmesh lib    --> bm_f_zsu.lod0-112.vms,
                <!-- start vert   --> 0,
-               <!-- num verts    --> 218,
+               <!-- num verts    --> 172,
                <!-- start index  --> 0,
                <!-- num indices  --> 336,
                <!-- start mesh   --> 0,
@@ -47,30 +47,30 @@
                <!-- radius       --> 2.9085956
             </VMeshRef>
          </VMeshPart>
-         <VMeshWire include="bm_f_zsu_cmp\bm_f_zsu(1).vwd.xml"/>
+         <VMeshWire include="bm_f_zsu_cmp\bm_f_zsu.vwd.xml"/>
          <Hardpoints>
             <Revolute>
                <HpConnect>
+                  <Position type="Vector">0, -0.45421094, 0</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0, -0.45421094, 0</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-6.2831855</Min>
                   <Max type="float">6.2831855</Max>
                </HpConnect>
             </Revolute>
          </Hardpoints>
-      </bm_f_zsu_1_240615163511.3db>
-      <Barrel240615163511.3db>
+      </bm_f_zsu240617164241.3db>
+      <Barrel240617164241.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
-               <!-- vmesh lib    --> bm_f_zsu(1).lod0-112.vms,
-               <!-- start vert   --> 218,
-               <!-- num verts    --> 1815,
+               <!-- vmesh lib    --> bm_f_zsu.lod0-112.vms,
+               <!-- start vert   --> 172,
+               <!-- num verts    --> 970,
                <!-- start index  --> 336,
                <!-- num indices  --> 1815,
                <!-- start mesh   --> 3,
@@ -85,39 +85,39 @@
          <Hardpoints>
             <Fixed>
                <HpFire01>
+                  <Position type="Vector">-0.50195318, 0.7174806, -7.1586437</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">-0.50195318, 0.7174806, -7.1586437</Position>
                </HpFire01>
                <HpFire02>
-                  <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,   0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,   0.0000000000,   1.0000000000
-                  </Orientation>
                   <Position type="Vector">0.50195318, 0.7174806, -7.1586437</Position>
-               </HpFire02>
-               <HpFire03>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+               </HpFire02>
+               <HpFire03>
                   <Position type="Vector">-0.50195318, 1.3001639, -7.1586437</Position>
-               </HpFire03>
-               <HpFire04>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
-                       0.0000000000,   1.0000000000,  -0.0000000000,
-                      -0.0000000000,   0.0000000000,   1.0000000000
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+               </HpFire03>
+               <HpFire04>
                   <Position type="Vector">0.50195318, 1.3001639, -7.1586437</Position>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
                </HpFire04>
             </Fixed>
          </Hardpoints>
-      </Barrel240615163511.3db>
+      </Barrel240617164241.3db>
    </UTF_ROOT>
 </UTFXML>
