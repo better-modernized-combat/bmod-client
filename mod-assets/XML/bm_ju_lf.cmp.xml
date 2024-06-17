@@ -154,7 +154,7 @@
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0, 0.42041844, -6.3135228</Position>
+                  <Position type="Vector">0, 0.42041844, -6.5423121</Position>
                </HpHeadlight>
                <HpRunningLight01>
                   <Orientation type="Matrix">
