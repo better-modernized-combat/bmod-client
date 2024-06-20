@@ -8,29 +8,32 @@
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <Cmpnd>
          <Cons>
-            <Fix type="Fix" count="1">
+            <Rev type="Rev" count="1">
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "Barrel",
                   <!-- position    --> 0, 0, 0,
+                  <!-- offset      --> 0, 0, 0,
                   <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
                                          0.0000000000,   1.0000000000,   0.0000000000,
-                                         0.0000000000,   0.0000000000,   1.0000000000
+                                         0.0000000000,   0.0000000000,   1.0000000000,
+                  <!-- axis        -->   1.0000000000,   0.0000000000,   0.0000000000,
+                  <!-- min, max    --> -0.34906584, 1.5707806
                </part>
-            </Fix>
+            </Rev>
          </Cons>
          <Part_Barrel>
             <Object_name name="Object name" type="text">Barrel</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">Barrel240617164241.3db</File_name>
+            <File_name name="File name" type="text">Barrel240620082750.3db</File_name>
          </Part_Barrel>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_f_zsu240617164241.3db</File_name>
+            <File_name name="File name" type="text">bm_f_zsu240620082750.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_f_zsu240617164241.3db>
+      <bm_f_zsu240620082750.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -63,8 +66,8 @@
                </HpConnect>
             </Revolute>
          </Hardpoints>
-      </bm_f_zsu240617164241.3db>
-      <Barrel240617164241.3db>
+      </bm_f_zsu240620082750.3db>
+      <Barrel240620082750.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -118,6 +121,6 @@
                </HpFire04>
             </Fixed>
          </Hardpoints>
-      </Barrel240617164241.3db>
+      </Barrel240620082750.3db>
    </UTF_ROOT>
 </UTFXML>
