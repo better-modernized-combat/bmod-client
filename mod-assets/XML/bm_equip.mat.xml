@@ -112,19 +112,7 @@
             <MIPS type="file" filename="bm_equip_mat\Weapon_Rheinland.dds"/>
          </Weapon_Rheinland.tga>
          <Rheinlandvents.tga>
-            <MIP0 type="file" filename="bm_equip_mat\Rheinlandvents_mip0.tga"/>
-            <MIP1 type="file" filename="bm_equip_mat\Rheinlandvents_mip1.tga"/>
-            <MIP2 type="file" filename="bm_equip_mat\Rheinlandvents_mip2.tga"/>
-            <MIP3 type="file" filename="bm_equip_mat\Rheinlandvents_mip3.tga"/>
-            <MIP4 type="file" filename="bm_equip_mat\Rheinlandvents_mip4.tga"/>
-            <MIP5 type="file" filename="bm_equip_mat\Rheinlandvents_mip5.tga"/>
-            <MIP6 type="file" filename="bm_equip_mat\Rheinlandvents_mip6.tga"/>
-            <MIP7 type="file" filename="bm_equip_mat\Rheinlandvents_mip7.tga"/>
-            <MIP8 type="file" filename="bm_equip_mat\Rheinlandvents_mip8.tga"/>
-            <MIP9 type="file" filename="bm_equip_mat\Rheinlandvents_mip9.tga"/>
-            <MIP10 type="hex" size="22">
-               000002000000000000000000010001002000191a1aff
-            </MIP10>
+            <MIPS type="file" filename="bm_equip_mat\Rheinlandvents.dds"/>
          </Rheinlandvents.tga>
       </Texture_library>
    </UTF_ROOT>

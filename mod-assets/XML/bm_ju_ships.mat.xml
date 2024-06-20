@@ -68,9 +68,9 @@
             <Dc type="RGB">0.612, 0.565, 0.541</Dc>
          </scrapper_utility_panels_03D>
          <cv_glass>
-            <Type type="text">DcDtOcOt</Type>
-            <Dc type="RGB">-117.4494e27, -1.8729781, -1.8691021</Dc>
+            <Dc type="RGB">0.32941177, 0.4666667, 0.53333336</Dc>
             <Oc type="float">0.4</Oc>
+            <Type type="text">DcDtOcOt</Type>
          </cv_glass>
          <scrapper_utility_panels_01>
             <Type type="text">DcDt</Type>
