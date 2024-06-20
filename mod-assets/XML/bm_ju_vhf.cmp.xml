@@ -222,7 +222,7 @@
                       -1.0000000000,  313.91647e-09,  -0.0000000000,
                       -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0.899999, -3.03, -9.9300222</Position>
+                  <Position type="Vector">0.89999902, -3.03, -9.9300222</Position>
                   <Axis type="Vector">0, 0, -0</Axis>
                   <Min type="float">-0</Min>
                   <Max type="float">-0</Max>
@@ -233,7 +233,7 @@
                       -1.0000000000,  313.91647e-09,  -0.0000000000,
                       -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0.899999, -2.94, -9.9300203</Position>
+                  <Position type="Vector">0.89999902, -2.94, -9.9300203</Position>
                   <Axis type="Vector">0, 0, 1</Axis>
                   <Min type="float">-0</Min>
                   <Max type="float">-0</Max>
