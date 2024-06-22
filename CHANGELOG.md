@@ -1,7 +1,21 @@
 # Changelog
 
 ## 0.0.14
-- IN PROGRESS
+- A new ship line: The Xenos seem to have acquired some refitted CSVs and are using them to hit traffic across the Colorado system. These new ships can be found for sale on Ouray base.
+- A complete rework of the 'hacking' system. Various satellites can now be accessed with `/terminal use` or `/terminal hack`, for legal and illegal options respectively. Legal use of the satellites costs credits, hacking does not guarantee a hostile response and more content and rewards have been added to the pool for these. More information is also provided about what is found in each instance so you can decide whether or not it's worth investigating.
+- Mining Lasers: These very short range lasers can be used to quickly break down large asteroids that can sometimes be scanned using DSE's radar satellites.
+- The Rhino has been resized and had it's shape and hardpoints adjusted slightly in preparation for upcoming fleet gear changes.
+- Some fleet gear now has new and unique models.
+- New models for some fighter auxilliary gear: Machine Guns, LRM pylons and SRM pylons should now have distinct models.
+- A new model and loadout for the Xenos Ludlow.
+- Large static ships, such as the Asteroid Miner and the Xenos Ludlow now have proper shield bubbles.
+- Many changes to several auxilliary weapons.
+- Many changes to Xenos NPC loadouts.
+- Fix: multibarrel weapons no longer decrement the wrong amount of ammo.
+- Known Issue: Objects that 'move around' on server restart do not currently have infocards.
+- Known Issue: Glass textures on the Orca render incorrectly.
+- Known Issue: Fire sounds play inconsistently when multiple multibarrel weapons are fired at once.
+- Known Issue: Some of the new weapon models have minor texture issues.
 
 ## 0.0.13
 - Enhanced gear tweaked to fix an issue. Please note if you had any of the old enhanced gear marked with a [+] symobl on your ship before this update, you won't be able to log in to that character now! Players were warned to discard this gear prior to this update as a result.
