@@ -5,13 +5,13 @@
       <VMeshLibrary>
          <bm_wplat_scrap2.lod0-112.vms include="bm_wplat_scrap2_3db\lod0-112.vms.xml"/>
       </VMeshLibrary>
-      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
+      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <VMeshPart>
          <VMeshRef type="VMeshRef">
             <!-- header size  --> 60,
             <!-- vmesh lib    --> bm_wplat_scrap2.lod0-112.vms,
             <!-- start vert   --> 0,
-            <!-- num verts    --> 66,
+            <!-- num verts    --> 53,
             <!-- start index  --> 0,
             <!-- num indices  --> 153,
             <!-- start mesh   --> 0,
@@ -22,6 +22,7 @@
             <!-- radius       --> 6.756536
          </VMeshRef>
       </VMeshPart>
+      <VMeshWire include="bm_wplat_scrap2_3db\bm_wplat_scrap2.vwd.xml"/>
       <Hardpoints>
          <Fixed>
             <HpRunningLight01>
