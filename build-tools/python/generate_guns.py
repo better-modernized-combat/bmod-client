@@ -207,6 +207,8 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         })
         if not (pd.isna(weapon["Ammo Limit"]) or weapon["Ammo Limit"] == ""):
             munition_block["ammo_limit"] = weapon["Ammo Limit"]
+        if not (pd.isna(weapon["Units per Container"]) or weapon["Units per Container"] == ""):
+            munition_block["units_per_container"] = weapon["Units per Container"]
         if str(weapon["Uses Ammo?"]).lower() == "true": #:vomit:
             munition_block["ids_name"] = idx+2
             munition_block["ids_info"] = idx+3
