@@ -133,7 +133,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
         "lootable": "false" if "_npc_" in nickname else "true",
-        "LODranges": "0, 15000",
+        "LODranges": weapon["LODranges"],
         "; cost": cost,
     })
     if not pd.isna(weapon["Dispersion Angle"]) and not weapon["Dispersion Angle"] == "":
@@ -242,7 +242,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         "auto_turret": "true" if "aux" in nickname and "npc" in nickname else "false", # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
         "turn_rate": weapon["Turn Rate"],
         "lootable": "false" if "npc" in nickname else "true",
-        "LODranges": "0, 15000",
+        "LODranges": weapon["LODranges"],
         "dry_fire_sound": "fire_dry",
         "; cost": cost,
     })
