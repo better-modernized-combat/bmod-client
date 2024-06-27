@@ -3,114 +3,63 @@
 <UTFXML filename="bm_equip.mat" path="BMOD\EQUIPMENT\MODELS">
    <UTF_ROOT>
       <Material_library name="Material library">
-         <missile_matte>
+         <equip_bm>
             <Type type="text">DcDt</Type>
-            <Dt_name type="text">missile_matte.tga</Dt_name>
+            <Dt_name type="text">equip_bm.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </missile_matte>
-         <equip_gen>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">equip_gen.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </equip_gen>
+         </equip_bm>
          <missile_matteRD>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">1, 0.2, 0.098</Dc>
             <Dt_name type="text">missile_matte.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </missile_matteRD>
-         <missile_matte.001>
+         <missile_matte>
             <Type type="text">DcDt</Type>
             <Dt_name type="text">missile_matte.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </missile_matte.001>
-         <equip_gen.003>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">equip_gen.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </equip_gen.003>
-         <misisle_matte>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">missile_matte.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </misisle_matte>
+         </missile_matte>
          <missile_matteBL>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.318, 0.502, 1</Dc>
             <Dt_name type="text">missile_matte.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </missile_matteBL>
-         <equip_gen.001>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">equip_gen.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </equip_gen.001>
-         <missile_matteBL.001>
-            <Type type="text">DcDt</Type>
-            <Dc type="RGB">0.318, 0.502, 1</Dc>
-            <Dt_name type="text">missile_matte.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </missile_matteBL.001>
-         <equip_gen.002>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">Image_1.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </equip_gen.002>
          <Material_count name="Material count" type="int">10</Material_count>
-         <Weapon_Rheinland.001>
+         <Weapon_Rheinland_Desat>
             <Type type="text">DcDt</Type>
-            <Dt_name type="text">Weapon_Rheinland.tga</Dt_name>
+            <Dt_name type="text">Weapon_Rheinland_Desat.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </Weapon_Rheinland.001>
-         <Rheinlandvents.001>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">Rheinlandvents.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </Rheinlandvents.001>
-         <Weapon_Rheinland>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">Weapon_Rheinland.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </Weapon_Rheinland>
+         </Weapon_Rheinland_Desat>
          <Rheinlandvents>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.773, 0.773, 0.773</Dc>
             <Dt_name type="text">Rheinlandvents.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
          </Rheinlandvents>
-         <Weapon_Rheinland.006>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">Weapon_Rheinland.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </Weapon_Rheinland.006>
-         <Rheinlandvents.006>
-            <Type type="text">DcDt</Type>
-            <Dt_name type="text">Rheinlandvents.tga</Dt_name>
-            <Dt_flags type="int">0x40</Dt_flags>
-         </Rheinlandvents.006>
-         <Weapon_RheinlandGY>
+         <Weapon_Rheinland_DesatGY>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.616, 0.616, 0.616</Dc>
-            <Dt_name type="text">Weapon_Rheinland.tga</Dt_name>
+            <Dt_name type="text">Weapon_Rheinland_Desat.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </Weapon_RheinlandGY>
-         <Weapon_RheinlandB>
+         </Weapon_Rheinland_DesatGY>
+         <Weapon_Rheinland_DesatB>
             <Type type="text">DcDt</Type>
             <Dc type="RGB">0.929, 0.984, 1</Dc>
-            <Dt_name type="text">Weapon_Rheinland.tga</Dt_name>
+            <Dt_name type="text">Weapon_Rheinland_Desat.tga</Dt_name>
             <Dt_flags type="int">0x40</Dt_flags>
-         </Weapon_RheinlandB>
+         </Weapon_Rheinland_DesatB>
       </Material_library>
       <Texture_library name="Texture library">
          <missile_matte.tga>
             <MIPS type="file" filename="bm_equip_mat\missile_matte.dds"/>
          </missile_matte.tga>
-         <equip_gen.tga>
-            <MIPS type="file" filename="bm_equip_mat\equip_gen.dds"/>
-         </equip_gen.tga>
-         <Weapon_Rheinland.tga>
-            <MIPS type="file" filename="bm_equip_mat\Weapon_Rheinland.dds"/>
-         </Weapon_Rheinland.tga>
+         <equip_bm.tga>
+            <MIPS type="file" filename="bm_equip_mat\equip_bm.dds"/>
+         </equip_bm.tga>
+         <Weapon_Rheinland_Desat.tga>
+            <MIPS type="file" filename="bm_equip_mat\Weapon_Rheinland_Desat.dds"/>
+         </Weapon_Rheinland_Desat.tga>
          <Rheinlandvents.tga>
             <MIPS type="file" filename="bm_equip_mat\Rheinlandvents.dds"/>
          </Rheinlandvents.tga>

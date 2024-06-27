@@ -5,7 +5,7 @@
       <mesh count="3">
          <!-- Mesh Triangle  First   Last Count   Pad  Material -->
          <!--   0      0 -->     0,   228,  360, 0xcc, 0xE6C99068
-         <!--   1    120 -->   229,   252,   24, 0xcc, 0xEA6C8C45
+         <!--   1    120 -->   229,   252,   24, 0xcc, 0x04BB92D8
          <!--   2    128 -->   253,   348,   96, 0xcc, 0xE3E238E8
       </mesh>
       <index count="480">

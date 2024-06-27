@@ -4,9 +4,9 @@
    <VMeshData type="VMeshData" format="1" surface="4">
       <mesh count="3">
          <!-- Mesh Triangle  First   Last Count   Pad  Material -->
-         <!--   0      0 -->     0,   229,  342, 0xcc, 0xE3306737
+         <!--   0      0 -->     0,   229,  342, 0xcc, 0xE6C99068
          <!--   1    114 -->   230,   300,   72, 0xcc, 0xEF1BA28B
-         <!--   2    138 -->   301,   312,   12, 0xcc, 0xEEB2A576
+         <!--   2    138 -->   301,   312,   12, 0xcc, 0x04BB92D8
       </mesh>
       <index count="426">
          <!-- Triangle  Vtx1, Vtx2, Vtx3 -->

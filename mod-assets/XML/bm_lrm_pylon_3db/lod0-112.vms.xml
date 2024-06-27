@@ -5,8 +5,8 @@
       <mesh count="3">
          <!-- Mesh Triangle  First   Last Count   Pad  Material -->
          <!--   0      0 -->     0,   234,  354, 0xcc, 0xE6C99068
-         <!--   1    118 -->   235,   305,   72, 0xcc, 0xF2B72263
-         <!--   2    142 -->   306,   317,   12, 0xcc, 0xF5BBF4CC
+         <!--   1    118 -->   235,   305,   72, 0xcc, 0xEF1BA28B
+         <!--   2    142 -->   306,   317,   12, 0xcc, 0x04BB92D8
       </mesh>
       <index count="438">
          <!-- Triangle  Vtx1, Vtx2, Vtx3 -->

@@ -8,19 +8,16 @@
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
       <Cmpnd>
          <Cons>
-            <Rev type="Rev" count="1">
+            <Fix type="Fix" count="1">
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "Barrel",
                   <!-- position    --> 0, 0, -0,
-                  <!-- offset      --> 0, 0, 0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
-                                         0.0000000000,   1.0000000000,   0.0000000000,
-                                         0.0000000000,   0.0000000000,   1.0000000000,
-                  <!-- axis        -->   1.0000000000,   0.0000000000,   0.0000000000,
-                  <!-- min, max    --> -0.34906584, 1.5707806
+                  <!-- orientation -->   1.0000000000,   0.0000000000,  -0.0000000000,
+                                         0.0000000000,   1.0000000000,  -0.0000000000,
+                                        -0.0000000000,  -0.0000000000,   1.0000000000
                </part>
-            </Rev>
+            </Fix>
          </Cons>
          <Part_Barrel>
             <Object_name name="Object name" type="text">Barrel</Object_name>
@@ -93,16 +90,32 @@
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">-0.93327868, 0.258708, -4.1187696</Position>
+                  <Position type="Vector">-0.93327868, -0.053442001, -4.1187696</Position>
                </HpFire01>
                <HpFire02>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">0.93327868, -0.053442001, -4.1187696</Position>
+               </HpFire02>
+               <HpFire03>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
-                  <Position type="Vector">0.93327868, 0.25871, -4.1187696</Position>
-               </HpFire02>
+                  <Position type="Vector">0.93327868, 0.61077601, -3.9952567</Position>
+               </HpFire03>
+               <HpFire04>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">-0.93327868, 0.61077601, -3.9952567</Position>
+               </HpFire04>
             </Fixed>
          </Hardpoints>
       </Barrel240615165433.3db>

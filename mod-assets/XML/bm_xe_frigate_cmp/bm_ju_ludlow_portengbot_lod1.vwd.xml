@@ -3,11 +3,11 @@
 <VMeshWire>
    <VWireData type="VWireData">
       <!-- size  --> 16,
-      <!-- mesh  --> ludlow.lod0-112.vms,
-      <!-- base  --> 6743,
+      <!-- mesh  --> bm_xe_frigate.lod0-112.vms,
+      <!-- base  --> 8519,
       <!-- used  --> 72,
       <!-- count --> 362,
-      <!-- span  --> 527
+      <!-- span  --> 526
 
       <!--  Line     Vtx1, Vtx2 -->
       <!--     0 -->  126,  127

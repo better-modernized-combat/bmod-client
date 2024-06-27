@@ -4,10 +4,10 @@
    <VWireData type="VWireData">
       <!-- size  --> 16,
       <!-- mesh  --> bm_ju_lf.lod0-112.vms,
-      <!-- base  --> 2575,
+      <!-- base  --> 2663,
       <!-- used  --> 12,
       <!-- count --> 54,
-      <!-- span  --> 31
+      <!-- span  --> 30
 
       <!--  Line     Vtx1, Vtx2 -->
       <!--     0 -->    0,    1

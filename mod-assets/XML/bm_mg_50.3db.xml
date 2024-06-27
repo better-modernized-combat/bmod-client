@@ -3,13 +3,13 @@
 <UTFXML filename="bm_mg_50.3db" path="BMOD\EQUIPMENT\MODELS\GUNS">
    <UTF_ROOT>
       <VMeshLibrary>
-         <bm_mg_50_1_.lod0-112.vms name="bm_mg_50(1).lod0-112.vms" include="bm_mg_50_3db\lod0-112.vms.xml"/>
+         <bm_mg_50.lod0-112.vms include="bm_mg_50_3db\lod0-112.vms.xml"/>
       </VMeshLibrary>
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
       <VMeshPart>
          <VMeshRef type="VMeshRef">
             <!-- header size  --> 60,
-            <!-- vmesh lib    --> bm_mg_50(1).lod0-112.vms,
+            <!-- vmesh lib    --> bm_mg_50.lod0-112.vms,
             <!-- start vert   --> 0,
             <!-- num verts    --> 309,
             <!-- start index  --> 0,
