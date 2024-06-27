@@ -17,8 +17,8 @@
          </scrapper_utility_panels_03D>
          <scrapper_glass>
             <Type type="text">DcDtOcOt</Type>
-            <Dc type="RGB">-117.4494e27, -1.8729781, -1.8691021</Dc>
-            <Oc type="float">0.4</Oc>
+            <Dc type="RGB">0.19586864, 0.31721008, 0.36448598</Dc>
+            <Oc type="float">0.7</Oc>
          </scrapper_glass>
          <scrapper_utility_panels_01>
             <Type type="text">DcDt</Type>
@@ -113,6 +113,11 @@
             <Dt_flags type="int">0x40</Dt_flags>
          </scrapper_bw_panel_256>
          <Material_count name="Material count" type="int">43</Material_count>
+         <weaponplate2>
+            <Dt_flags type="int">0x40</Dt_flags>
+            <Dt_name type="text">weaponplate2.TGA</Dt_name>
+            <Type type="text">DcDt</Type>
+         </weaponplate2>
       </Material_library>
       <Texture_library name="Texture library">
          <scrapper_utility_panels_03.tga>
@@ -151,6 +156,9 @@
          <scrapper_bw_panel_256.tga>
             <MIPS type="file" filename="bm_ju_ships_mat\scrapper_bw_panel_256.dds"/>
          </scrapper_bw_panel_256.tga>
+         <weaponplate2.TGA>
+            <MIPS type="file" filename="bm_ju_ships_mat\weaponplate2.dds"/>
+         </weaponplate2.TGA>
       </Texture_library>
    </UTF_ROOT>
 </UTFXML>
