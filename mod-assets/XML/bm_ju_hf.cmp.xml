@@ -126,122 +126,114 @@
          <Hardpoints>
             <Fixed>
                <HpMine01>
+                  <Orientation type="Matrix">
+                      -1.0000000000,  87.422777e-09,   0.0000000000,
+                     -87.422777e-09,  -1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
                   <Position type="Vector">0, -4.2399826, -1.7699987</Position>
-                  <Orientation type="Matrix">
-                      -1.0000000000,  87.422777e-09,   0.0000000000,
-                     -87.422777e-09,  -1.0000000000,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
-                  </Orientation>
                </HpMine01>
-               <HpShield01>
-                  <Position type="Vector">0, -4.2900066, -3.5</Position>
-                  <Orientation type="Matrix">
-                      -1.0000000000,  87.422777e-09,   0.0000000000,
-                     -87.422777e-09,  -1.0000000000,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
-                  </Orientation>
-               </HpShield01>
                <HpMount>
-                  <Position type="Vector">0, -5.3900089, -3.5</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -5.9324937, -3.5</Position>
                </HpMount>
                <HpTractor_Source>
-                  <Position type="Vector">0, -4.2399826, -10.42001</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -4.2399826, -10.42001</Position>
                </HpTractor_Source>
                <HpCockpit>
-                  <Position type="Vector">0, -1.6, -5.5</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -1.6, -5.5</Position>
                </HpCockpit>
                <HpPilot>
-                  <Position type="Vector">0, -1.6, -5.5</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -1.6, -5.5</Position>
                </HpPilot>
                <HpHeadlight>
-                  <Position type="Vector">0, -3.7469025, -10.37206</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -3.7469025, -10.37206</Position>
                </HpHeadlight>
                <HpRunningLight01>
-                  <Position type="Vector">0, 1.9666915, 2.4470367</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, 1.9666915, 2.4470367</Position>
                </HpRunningLight01>
             </Fixed>
             <Revolute>
                <HpTorpedo01>
-                  <Position type="Vector">0, -4.3399849, -5.6600151</Position>
                   <Orientation type="Matrix">
-                      -1.0000000000,  87.422777e-09,   0.0000000000,
-                     -87.422777e-09,  -1.0000000000,   0.0000000000,
+                      -1.0000000000,  389.41437e-09,   0.0000000000,
+                     -389.41437e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -4.3399849, -7.2291975</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpTorpedo01>
                <HpWeapon01>
-                  <Position type="Vector">0.79999954, -4.2300053, -9.6099911</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  87.422777e-09,   0.0000000000,
                      -87.422777e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0.79999954, -4.2300053, -9.6099911</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon01>
                <HpWeapon02>
-                  <Position type="Vector">-0.79999954, -4.2300053, -9.6099911</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  87.422777e-09,   0.0000000000,
                      -87.422777e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-0.79999954, -4.2300053, -9.6099911</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon02>
                <HpWeapon09>
-                  <Position type="Vector">0.58, -1.49, -7</Position>
                   <Orientation type="Matrix">
                       313.91644e-09,   1.0000000000,   0.0000000000,
                       -1.0000000000,  313.91644e-09,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0.58, -1.49, -7</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">0</Min>
                   <Max type="float">0</Max>
                </HpWeapon09>
                <HpWeapon10>
-                  <Position type="Vector">0.58, -1.4, -7</Position>
                   <Orientation type="Matrix">
                       313.91644e-09,   1.0000000000,   0.0000000000,
                       -1.0000000000,  313.91644e-09,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0.58, -1.4, -7</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">0</Min>
                   <Max type="float">0</Max>
@@ -305,20 +297,20 @@
          <Hardpoints>
             <Fixed>
                <HpEngine01>
-                  <Position type="Vector">0, -2.49, 2.34</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -2.49, 2.34</Position>
                </HpEngine01>
                <HpThruster01>
-                  <Position type="Vector">0, -3.88, -0.25</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  389.41437e-09,   0.0000000000,
                      -389.41437e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, -3.88, -0.25</Position>
                </HpThruster01>
             </Fixed>
          </Hardpoints>
@@ -343,60 +335,60 @@
          <Hardpoints>
             <Fixed>
                <HpDockLight02>
-                  <Position type="Vector">-6.9819403, -3.5678062, 0.55024493</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-6.9819403, -3.5678062, 0.55024493</Position>
                </HpDockLight02>
                <HpRunningLight06>
-                  <Position type="Vector">-6.9819403, -3.5678062, 0.55024493</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-6.9819403, -3.5678062, 0.55024493</Position>
                </HpRunningLight06>
                <HpContrail01>
-                  <Position type="Vector">-7.3600197, -3.62, -3.1199989</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-7.3600197, -3.62, -3.1199989</Position>
                </HpContrail01>
             </Fixed>
             <Revolute>
                <HpWeapon04>
-                  <Position type="Vector">-3.42, -3.5300097, -4.8499966</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  151.64355e-15, -389.41437e-09,
                        0.0000000000,  -1.0000000000, -389.41437e-09,
                      -389.41437e-09, -389.41437e-09,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-3.42, -3.5300097, -4.8499966</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon04>
                <HpWeapon06>
-                  <Position type="Vector">-5.42, -3.5300097, -3.309978</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  87.422777e-09,   0.0000000000,
                      -87.422777e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-5.42, -3.5300097, -3.309978</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon06>
                <HpWeapon08>
-                  <Position type="Vector">-7.0799923, -3.5300097, -3.309978</Position>
                   <Orientation type="Matrix">
                       313.91647e-09,  -1.0000000000,   0.0000000000,
                        1.0000000000,  313.91647e-09,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-7.0799923, -3.5300097, -3.309978</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
@@ -424,60 +416,60 @@
          <Hardpoints>
             <Fixed>
                <HpContrail02>
-                  <Position type="Vector">7.3600197, -3.62, -3.1199989</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">7.3600197, -3.62, -3.1199989</Position>
                </HpContrail02>
                <HpRunningLight05>
-                  <Position type="Vector">6.9819403, -3.5678062, 0.55024493</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">6.9819403, -3.5678062, 0.55024493</Position>
                </HpRunningLight05>
                <HpDockLight01>
-                  <Position type="Vector">6.9819403, -3.5678062, 0.55024493</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">6.9819403, -3.5678062, 0.55024493</Position>
                </HpDockLight01>
             </Fixed>
             <Revolute>
                <HpWeapon03>
-                  <Position type="Vector">3.42, -3.5300097, -4.8499966</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  627.83295e-09,   0.0000000000,
                      -627.83295e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">3.42, -3.5300097, -4.8499966</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon03>
                <HpWeapon05>
-                  <Position type="Vector">5.42, -3.5300097, -3.309978</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  1.3430887e-06,   0.0000000000,
                      -1.3430887e-06,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">5.42, -3.5300097, -3.309978</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
                </HpWeapon05>
                <HpWeapon07>
-                  <Position type="Vector">7.0799923, -3.5300097, -3.309978</Position>
                   <Orientation type="Matrix">
                       313.91644e-09,   1.0000000000,   0.0000000000,
                       -1.0000000000,  313.91644e-09,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">7.0799923, -3.5300097, -3.309978</Position>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
                   <Max type="float">0.78539819</Max>
@@ -504,37 +496,45 @@
          </VMeshPart>
          <Hardpoints>
             <Fixed>
+               <HpShield01>
+                  <Orientation type="Matrix">
+                       1.0000000000,   0.0000000000,   0.0000000000,
+                       0.0000000000,   1.0000000000,   0.0000000000,
+                       0.0000000000,   0.0000000000,   1.0000000000
+                  </Orientation>
+                  <Position type="Vector">0, 1.2101419, 3.2802269</Position>
+               </HpShield01>
                <HpCM01>
-                  <Position type="Vector">0, 0.61999971, 7.8399963</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  87.422777e-09,   0.0000000000,
                      -87.422777e-09,  -1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, 0.61999971, 7.8399963</Position>
                </HpCM01>
                <HpRunningLight02>
-                  <Position type="Vector">0, 5.2527561, 10.010395</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">0, 5.2527561, 10.010395</Position>
                </HpRunningLight02>
                <HpRunningLight03>
-                  <Position type="Vector">-4.0485921, -1.4121339, 10.010395</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">-4.0485921, -1.4121339, 10.010395</Position>
                </HpRunningLight03>
                <HpRunningLight04>
-                  <Position type="Vector">4.0485921, -1.4121339, 10.010395</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,   0.0000000000,
                        0.0000000000,   1.0000000000,   0.0000000000,
                        0.0000000000,   0.0000000000,   1.0000000000
                   </Orientation>
+                  <Position type="Vector">4.0485921, -1.4121339, 10.010395</Position>
                </HpRunningLight04>
             </Fixed>
          </Hardpoints>
