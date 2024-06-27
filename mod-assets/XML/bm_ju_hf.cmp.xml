@@ -6,26 +6,11 @@
          <bm_ju_hf.lod0-112.vms include="bm_ju_hf_cmp\lod0-112.vms.xml"/>
          <bm_ju_hf.wire-2.vms include="bm_ju_hf_cmp\bm_ju_hf.wire-2.vms.xml"/>
       </VMeshLibrary>
-      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
+      <Animation include="bm_ju_hf_cmp\Animation.xml"/>
+      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <Cmpnd>
          <Cons>
-            <Fix type="Fix" count="6">
-               <part>
-                  <!-- parent      --> "Root",
-                  <!-- child       --> "cargoport01_lod1",
-                  <!-- position    --> 0, -0.15747166, 0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
-                                         0.0000000000,   1.0000000000,   0.0000000000,
-                                         0.0000000000,   0.0000000000,   1.0000000000
-               </part>
-               <part>
-                  <!-- parent      --> "Root",
-                  <!-- child       --> "cargoport02_lod1",
-                  <!-- position    --> 0, -0.15747166, 0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
-                                         0.0000000000,   1.0000000000,   0.0000000000,
-                                         0.0000000000,   0.0000000000,   1.0000000000
-               </part>
+            <Fix type="Fix" count="4">
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "bm_ju_hf_engine01_lod1",
@@ -59,50 +44,74 @@
                                          0.0000000000,   0.0000000000,   1.0000000000
                </part>
             </Fix>
+            <Rev type="Rev" count="2">
+               <part>
+                  <!-- parent      --> "Root",
+                  <!-- child       --> "cargoport02_lod1",
+                  <!-- position    --> 1.0027504, -4.1403122, -4.3169074,
+                  <!-- offset      --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
+                                         0.0000000000,   1.0000000000,   0.0000000000,
+                                         0.0000000000,   0.0000000000,   1.0000000000,
+                  <!-- axis        -->   0.0000000000,   0.0000000000,   1.0000000000,
+                  <!-- min, max    --> 0, 1.5707964
+               </part>
+               <part>
+                  <!-- parent      --> "Root",
+                  <!-- child       --> "cargoport01_lod1",
+                  <!-- position    --> -1.0027509, -4.1773758, -4.3169079,
+                  <!-- offset      --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
+                                         0.0000000000,   1.0000000000,   0.0000000000,
+                                         0.0000000000,   0.0000000000,   1.0000000000,
+                  <!-- axis        -->   0.0000000000,   0.0000000000,  -1.0000000000,
+                  <!-- min, max    --> 0, 1.5707964
+               </part>
+            </Rev>
          </Cons>
-         <Part_cargoport01_lod1>
-            <Object_name name="Object name" type="text">cargoport01_lod1</Object_name>
-            <Index type="int">0</Index>
-            <File_name name="File name" type="text">cargoport01_lod1240626210805.3db</File_name>
-         </Part_cargoport01_lod1>
          <Part_cargoport02_lod1>
             <Object_name name="Object name" type="text">cargoport02_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">cargoport02_lod1240626210805.3db</File_name>
+            <File_name name="File name" type="text">cargoport02_lod1240627094332.3db</File_name>
          </Part_cargoport02_lod1>
+         <Part_cargoport01_lod1>
+            <Object_name name="Object name" type="text">cargoport01_lod1</Object_name>
+            <Index type="int">0</Index>
+            <File_name name="File name" type="text">cargoport01_lod1240627094332.3db</File_name>
+         </Part_cargoport01_lod1>
          <Part_bm_ju_hf_engine01_lod1>
             <Object_name name="Object name" type="text">bm_ju_hf_engine01_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_hf_engine01_lod1240626210805.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_hf_engine01_lod1240627094332.3db</File_name>
          </Part_bm_ju_hf_engine01_lod1>
          <Part_bm_ju_hf_portwing_lod1>
             <Object_name name="Object name" type="text">bm_ju_hf_portwing_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_hf_portwing_lod1240626210805.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_hf_portwing_lod1240627094332.3db</File_name>
          </Part_bm_ju_hf_portwing_lod1>
          <Part_bm_ju_hf_starwing_lod1>
             <Object_name name="Object name" type="text">bm_ju_hf_starwing_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_hf_starwing_lod1240626210805.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_hf_starwing_lod1240627094332.3db</File_name>
          </Part_bm_ju_hf_starwing_lod1>
          <Part_bm_ju_hf_tail_lod1>
             <Object_name name="Object name" type="text">bm_ju_hf_tail_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_hf_tail_lod1240626210805.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_hf_tail_lod1240627094332.3db</File_name>
          </Part_bm_ju_hf_tail_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_hf240626210805.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_hf240627094332.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_ju_hf240626210805.3db>
+      <bm_ju_hf240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
                <!-- start vert   --> 0,
-               <!-- num verts    --> 996,
+               <!-- num verts    --> 617,
                <!-- start index  --> 0,
                <!-- num indices  --> 1260,
                <!-- start mesh   --> 0,
@@ -239,50 +248,50 @@
                </HpWeapon10>
             </Revolute>
          </Hardpoints>
-      </bm_ju_hf240626210805.3db>
-      <cargoport01_lod1240626210805.3db>
+      </bm_ju_hf240627094332.3db>
+      <cargoport02_lod1240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
-               <!-- start vert   --> 996,
-               <!-- num verts    --> 36,
+               <!-- start vert   --> 617,
+               <!-- num verts    --> 24,
                <!-- start index  --> 1260,
                <!-- num indices  --> 36,
                <!-- start mesh   --> 6,
                <!-- num meshes   --> 1,
-               <!-- bounding box --> -0.001670468, -3.9285955, -2.6241698,
-                                     -1.0027504,   -4.1112123, -6.009645,
-               <!-- center       --> -0.50221056,  -4.0199046, -4.3169065,
+               <!-- bounding box -->  0,           0.054245472,   1.6927376,
+                                     -1.0010799,  -0.12837124,   -1.6927376,
+               <!-- center       --> -0.50053984, -0.037063599, 953.67432e-9,
                <!-- radius       --> 1.7675524
             </VMeshRef>
          </VMeshPart>
-      </cargoport01_lod1240626210805.3db>
-      <cargoport02_lod1240626210805.3db>
+      </cargoport02_lod1240627094332.3db>
+      <cargoport01_lod1240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
-               <!-- start vert   --> 1032,
-               <!-- num verts    --> 36,
+               <!-- start vert   --> 641,
+               <!-- num verts    --> 24,
                <!-- start index  --> 1296,
                <!-- num indices  --> 36,
                <!-- start mesh   --> 7,
                <!-- num meshes   --> 1,
-               <!-- bounding box --> 1.0027504,    -3.9285955, -2.6241698,
-                                     0.0016704679, -4.1112123, -6.009645,
-               <!-- center       --> 0.50221056,   -4.0199046, -4.3169065,
+               <!-- bounding box -->   1.0010804,   0.091309071,   1.6927376,
+                                     476.83716e-9, -0.09130764,   -1.6927376,
+               <!-- center       -->   0.50054032,  0,           953.67432e-9,
                <!-- radius       --> 1.7675524
             </VMeshRef>
          </VMeshPart>
-      </cargoport02_lod1240626210805.3db>
-      <bm_ju_hf_engine01_lod1240626210805.3db>
+      </cargoport01_lod1240627094332.3db>
+      <bm_ju_hf_engine01_lod1240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
-               <!-- start vert   --> 1068,
-               <!-- num verts    --> 1344,
+               <!-- start vert   --> 665,
+               <!-- num verts    --> 591,
                <!-- start index  --> 1332,
                <!-- num indices  --> 1344,
                <!-- start mesh   --> 8,
@@ -313,14 +322,14 @@
                </HpThruster01>
             </Fixed>
          </Hardpoints>
-      </bm_ju_hf_engine01_lod1240626210805.3db>
-      <bm_ju_hf_portwing_lod1240626210805.3db>
+      </bm_ju_hf_engine01_lod1240627094332.3db>
+      <bm_ju_hf_portwing_lod1240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
-               <!-- start vert   --> 2412,
-               <!-- num verts    --> 156,
+               <!-- start vert   --> 1256,
+               <!-- num verts    --> 98,
                <!-- start index  --> 2676,
                <!-- num indices  --> 156,
                <!-- start mesh   --> 12,
@@ -394,14 +403,14 @@
                </HpWeapon08>
             </Revolute>
          </Hardpoints>
-      </bm_ju_hf_portwing_lod1240626210805.3db>
-      <bm_ju_hf_starwing_lod1240626210805.3db>
+      </bm_ju_hf_portwing_lod1240627094332.3db>
+      <bm_ju_hf_starwing_lod1240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
-               <!-- start vert   --> 2568,
-               <!-- num verts    --> 156,
+               <!-- start vert   --> 1354,
+               <!-- num verts    --> 100,
                <!-- start index  --> 2832,
                <!-- num indices  --> 156,
                <!-- start mesh   --> 17,
@@ -475,14 +484,14 @@
                </HpWeapon07>
             </Revolute>
          </Hardpoints>
-      </bm_ju_hf_starwing_lod1240626210805.3db>
-      <bm_ju_hf_tail_lod1240626210805.3db>
+      </bm_ju_hf_starwing_lod1240627094332.3db>
+      <bm_ju_hf_tail_lod1240627094332.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_hf.lod0-112.vms,
-               <!-- start vert   --> 2724,
-               <!-- num verts    --> 573,
+               <!-- start vert   --> 1454,
+               <!-- num verts    --> 331,
                <!-- start index  --> 2988,
                <!-- num indices  --> 573,
                <!-- start mesh   --> 22,
@@ -529,6 +538,6 @@
                </HpRunningLight04>
             </Fixed>
          </Hardpoints>
-      </bm_ju_hf_tail_lod1240626210805.3db>
+      </bm_ju_hf_tail_lod1240627094332.3db>
    </UTF_ROOT>
 </UTFXML>
