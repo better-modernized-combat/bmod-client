@@ -63,35 +63,35 @@
          <Part_bm_ju_lf_portwing_lod1>
             <Object_name name="Object name" type="text">bm_ju_lf_portwing_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf_portwing_lod1240627225557.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf_portwing_lod1240628104800.3db</File_name>
          </Part_bm_ju_lf_portwing_lod1>
          <Part_bm_ju_lf_starwing_lod1>
             <Object_name name="Object name" type="text">bm_ju_lf_starwing_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf_starwing_lod1240627225557.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf_starwing_lod1240628104800.3db</File_name>
          </Part_bm_ju_lf_starwing_lod1>
          <Part_bm_ju_lf_tail_lod1>
             <Object_name name="Object name" type="text">bm_ju_lf_tail_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf_tail_lod1240627225557.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf_tail_lod1240628104800.3db</File_name>
          </Part_bm_ju_lf_tail_lod1>
          <Part_Cargodoor02_lod1>
             <Object_name name="Object name" type="text">Cargodoor02_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">Cargodoor02_lod1240627225557.3db</File_name>
+            <File_name name="File name" type="text">Cargodoor02_lod1240628104800.3db</File_name>
          </Part_Cargodoor02_lod1>
          <Part_Cargodoor01_lod1>
             <Object_name name="Object name" type="text">Cargodoor01_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">Cargodoor01_lod1240627225557.3db</File_name>
+            <File_name name="File name" type="text">Cargodoor01_lod1240628104800.3db</File_name>
          </Part_Cargodoor01_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_lf240627225557.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_lf240628104800.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_ju_lf240627225557.3db>
+      <bm_ju_lf240628104800.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -170,9 +170,9 @@
                <HpThruster01>
                   <Position type="Vector">0, 0.044324096, 3.0015588</Position>
                   <Orientation type="Matrix">
-                      -1.0000000000,  1.8199257e-06,  389.41454e-09,
-                     -1.8199257e-06,  -1.0000000000, -87.422777e-09,
-                      389.41437e-09, -87.423487e-09,   1.0000000000
+                      -1.0000000000,  1.8199256e-06,  476.83801e-09,
+                     -1.8199258e-06,  -1.0000000000, -476.83716e-09,
+                      476.83716e-09, -476.83801e-09,   1.0000000000
                   </Orientation>
                </HpThruster01>
                <HpHeadlight>
@@ -266,8 +266,8 @@
                </HpWeapon10>
             </Revolute>
          </Hardpoints>
-      </bm_ju_lf240627225557.3db>
-      <bm_ju_lf_portwing_lod1240627225557.3db>
+      </bm_ju_lf240628104800.3db>
+      <bm_ju_lf_portwing_lod1240628104800.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -348,8 +348,8 @@
                </HpWeapon08>
             </Revolute>
          </Hardpoints>
-      </bm_ju_lf_portwing_lod1240627225557.3db>
-      <bm_ju_lf_starwing_lod1240627225557.3db>
+      </bm_ju_lf_portwing_lod1240628104800.3db>
+      <bm_ju_lf_starwing_lod1240628104800.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -430,8 +430,8 @@
                </HpWeapon07>
             </Revolute>
          </Hardpoints>
-      </bm_ju_lf_starwing_lod1240627225557.3db>
-      <bm_ju_lf_tail_lod1240627225557.3db>
+      </bm_ju_lf_starwing_lod1240628104800.3db>
+      <bm_ju_lf_tail_lod1240628104800.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -477,8 +477,8 @@
                </HpRunningLight03>
             </Fixed>
          </Hardpoints>
-      </bm_ju_lf_tail_lod1240627225557.3db>
-      <Cargodoor02_lod1240627225557.3db>
+      </bm_ju_lf_tail_lod1240628104800.3db>
+      <Cargodoor02_lod1240628104800.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -495,8 +495,8 @@
                <!-- radius       --> 1.8857281
             </VMeshRef>
          </VMeshPart>
-      </Cargodoor02_lod1240627225557.3db>
-      <Cargodoor01_lod1240627225557.3db>
+      </Cargodoor02_lod1240628104800.3db>
+      <Cargodoor01_lod1240628104800.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
@@ -513,6 +513,6 @@
                <!-- radius       --> 1.8857284
             </VMeshRef>
          </VMeshPart>
-      </Cargodoor01_lod1240627225557.3db>
+      </Cargodoor01_lod1240628104800.3db>
    </UTF_ROOT>
 </UTFXML>
