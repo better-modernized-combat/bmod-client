@@ -183,7 +183,7 @@ entities =
 	{
 		entity_name = "Ship_l_freighter_1",
 		type = COMPOUND,
-		template_name = "rtcprop_l_freighter",
+		template_name = "bm_li_fr",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -196,6 +196,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_li_fr_co_me_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -292,7 +294,7 @@ entities =
 	},	{
 		entity_name = "Ship_l_freighter_2",
 		type = COMPOUND,
-		template_name = "rtcprop_l_freighter",
+		template_name = "bm_li_fr",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -305,6 +307,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_li_fr_co_me_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -401,7 +405,7 @@ entities =
 	},	{
 		entity_name = "Ship_l_freighter_3",
 		type = COMPOUND,
-		template_name = "rtcprop_l_freighter",
+		template_name = "bm_li_fr",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -414,6 +418,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_li_fr_co_me_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -508,9 +514,9 @@ entities =
 			sparam = 0
 		}
 	},	{
-		entity_name = "Ship_l_fighter_1",
+		entity_name = "Ship_bh_fighter_1",
 		type = COMPOUND,
-		template_name = "rtcprop_l_fighter",
+		template_name = "bm_bh_lf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -523,6 +529,90 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			--Vanilla loadout here, this should be removed when we have a proper NPC loadout for bm_bh_lf
+			loadout = "gd_bh_bh_fighter_loadout01",
+			running_lights = "true",
+
+		}
+	},
+
+    {
+		entity_name = "Ship_bh_fighter_1_engine_sound",
+		type = SOUND,
+		template_name = "engine_li_small",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = SPATIAL,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		audioprops =
+		{
+			attenuation = -15,
+			pan = 0,
+			dmin = 50,
+			dmax = 1000,
+			ain = 360,
+			aout = 360,
+			atout = 0,
+			rmix = 0,
+		},
+		userprops =
+		{
+			category = "Audio",
+		}
+	},
+	{
+		entity_name = "Ship_bh_fighter_1_engine_fire_1",
+		type = PSYS,
+		template_name = "gf_li_smallengine02_fire",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},
+	{
+		entity_name = "Ship_bh_fighter_1_trail_1",
+		type = PSYS,
+		template_name = "gf_li_smallengine02_trail",
+		lt_grp = 0, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC + LIT_AMBIENT,
+		spatialprops =
+		{
+			pos = { 0, 0, 0 },
+			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
+		},
+		psysprops =
+		{
+			sparam = 0
+		}
+	},	{
+		entity_name = "Ship_l_fighter_1",
+		type = COMPOUND,
+		template_name = "bm_li_lf",
+		lt_grp = 3, srt_grp = 0, usr_flg = 0,
+		flags = LIT_DYNAMIC,
+		spatialprops =
+		{
+			pos = { -166.7056, -171.296, 1365.295 },
+			orient = { {  0.999733,  0.000000, -0.023114 },
+					   {  0.000000,  1.000000,  0.000000 },
+					   {  0.023114,  0.000000,  0.999733 } }
+		},
+		userprops =
+		{
+			category = "Spaceship",
+			loadout = "bm_li_lf_li_n_grp_pilot",
+			running_lights = "true",
+
 		}
 	},
 
@@ -585,86 +675,9 @@ entities =
 			sparam = 0
 		}
 	},	{
-		entity_name = "Ship_l_fighter_2",
-		type = COMPOUND,
-		template_name = "rtcprop_l_fighter",
-		lt_grp = 3, srt_grp = 0, usr_flg = 0,
-		flags = LIT_DYNAMIC,
-		spatialprops =
-		{
-			pos = { -166.7056, -171.296, 1365.295 },
-			orient = { {  0.999733,  0.000000, -0.023114 },
-					   {  0.000000,  1.000000,  0.000000 },
-					   {  0.023114,  0.000000,  0.999733 } }
-		},
-		userprops =
-		{
-			category = "Spaceship",
-		}
-	},
-
-    {
-		entity_name = "Ship_l_fighter_2_engine_sound",
-		type = SOUND,
-		template_name = "engine_li_small",
-		lt_grp = 0, srt_grp = 0, usr_flg = 0,
-		flags = SPATIAL,
-		spatialprops =
-		{
-			pos = { 0, 0, 0 },
-			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
-		},
-		audioprops =
-		{
-			attenuation = -15,
-			pan = 0,
-			dmin = 50,
-			dmax = 1000,
-			ain = 360,
-			aout = 360,
-			atout = 0,
-			rmix = 0,
-		},
-		userprops =
-		{
-			category = "Audio",
-		}
-	},
-	{
-		entity_name = "Ship_l_fighter_2_engine_fire_1",
-		type = PSYS,
-		template_name = "gf_li_smallengine02_fire",
-		lt_grp = 0, srt_grp = 0, usr_flg = 0,
-		flags = LIT_DYNAMIC + LIT_AMBIENT,
-		spatialprops =
-		{
-			pos = { 0, 0, 0 },
-			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
-		},
-		psysprops =
-		{
-			sparam = 0
-		}
-	},
-	{
-		entity_name = "Ship_l_fighter_2_trail_1",
-		type = PSYS,
-		template_name = "gf_li_smallengine02_trail",
-		lt_grp = 0, srt_grp = 0, usr_flg = 0,
-		flags = LIT_DYNAMIC + LIT_AMBIENT,
-		spatialprops =
-		{
-			pos = { 0, 0, 0 },
-			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
-		},
-		psysprops =
-		{
-			sparam = 0
-		}
-	},	{
 		entity_name = "Ship_l_elite_1",
 		type = COMPOUND,
-		template_name = "rtcprop_l_elite",
+		template_name = "bm_li_hf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -677,6 +690,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_li_hf_li_n_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -773,7 +788,7 @@ entities =
 	},	{
 		entity_name = "Ship_l_elite_2",
 		type = COMPOUND,
-		template_name = "rtcprop_l_elite",
+		template_name = "bm_li_hf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -786,6 +801,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_li_hf_li_n_grp_pilot",
+			running_lights = "true",			
 		}
 	},
 
@@ -880,9 +897,9 @@ entities =
 			sparam = 0
 		}
 	},	{
-		entity_name = "Ship_r_freighter_1",
+		entity_name = "Ship_ju_fighter_1",
 		type = COMPOUND,
-		template_name = "rtcprop_r_freighter",
+		template_name = "bm_ju_lf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -895,11 +912,13 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_ju_lf_fc_x_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
     {
-		entity_name = "Ship_r_freighter_1_engine_sound",
+		entity_name = "Ship_ju_fighter_1_engine_sound",
 		type = SOUND,
 		template_name = "engine_rh_small",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
@@ -926,9 +945,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_1_engine_fire_1",
+		entity_name = "Ship_ju_fighter_1_engine_fire_1",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_fire",
+		template_name = "bm_jnk_lf_enginefire01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -942,9 +961,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_1_trail_1",
+		entity_name = "Ship_ju_fighter_1_trail_1",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_trail",
+		template_name = "bm_jnk_lf_enginetrail01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -958,9 +977,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_1_engine_fire_2",
+		entity_name = "Ship_ju_fighter_1_engine_fire_2",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_fire",
+		template_name = "bm_jnk_lf_enginefire01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -974,9 +993,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_1_trail_2",
+		entity_name = "Ship_ju_fighter_1_trail_2",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_trail",
+		template_name = "bm_jnk_lf_enginetrail01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -989,9 +1008,9 @@ entities =
 			sparam = 0
 		}
 	},	{
-		entity_name = "Ship_r_freighter_2",
+		entity_name = "Ship_ju_fighter_2",
 		type = COMPOUND,
-		template_name = "rtcprop_r_freighter",
+		template_name = "bm_ju_lf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -1004,11 +1023,13 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_ju_lf_fc_x_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
     {
-		entity_name = "Ship_r_freighter_2_engine_sound",
+		entity_name = "Ship_ju_fighter_2_engine_sound",
 		type = SOUND,
 		template_name = "engine_rh_small",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
@@ -1035,9 +1056,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_2_engine_fire_1",
+		entity_name = "Ship_ju_fighter_2_engine_fire_1",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_fire",
+		template_name = "bm_jnk_lf_enginefire01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -1051,9 +1072,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_2_trail_1",
+		entity_name = "Ship_ju_fighter_2_trail_1",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_trail",
+		template_name = "bm_jnk_lf_enginetrail01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -1067,9 +1088,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_2_engine_fire_2",
+		entity_name = "Ship_ju_fighter_2_engine_fire_2",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_fire",
+		template_name = "bm_jnk_lf_enginefire01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -1083,9 +1104,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_r_freighter_2_trail_2",
+		entity_name = "Ship_ju_fighter_2_trail_2",
 		type = PSYS,
-		template_name = "gf_rh_smallengine03_trail",
+		template_name = "bm_jnk_lf_enginetrail01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -1100,7 +1121,7 @@ entities =
 	},	{
 		entity_name = "Ship_civ_elite",
 		type = COMPOUND,
-		template_name = "rtcprop_civ_elite",
+		template_name = "bm_cv_hf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -1113,6 +1134,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_cv_hf_co_me_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -1177,7 +1200,7 @@ entities =
 	},	{
 		entity_name = "Ship_civ_fighter_1",
 		type = COMPOUND,
-		template_name = "rtcprop_civ_fighter",
+		template_name = "bm_cv_lf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -1190,6 +1213,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_cv_lf_co_me_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -1267,6 +1292,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_rtc_starblazer",
+			running_lights = "true",
 		}
 	},
 
@@ -1344,6 +1371,10 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			--Vanilla loadout here, this should be removed when we have a proper NPC loadout for bm_bh_lf
+			loadout = "co_br_freighter_loadout01",
+			running_lights = "true",
+
 		}
 	},
 
@@ -1438,9 +1469,9 @@ entities =
 			sparam = 0
 		}
 	},	{
-		entity_name = "Ship_k_freighter_1",
+		entity_name = "Ship_ju_elite_1",
 		type = COMPOUND,
-		template_name = "rtcprop_k_freighter",
+		template_name = "bm_ju_hf",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -1453,11 +1484,13 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_ju_hf_fc_x_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
     {
-		entity_name = "Ship_k_freighter_1_engine_sound",
+		entity_name = "Ship_ju_elite_1_engine_sound",
 		type = SOUND,
 		template_name = "engine_br_small",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
@@ -1484,9 +1517,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_k_freighter_1_engine_fire_1",
+		entity_name = "Ship_ju_elite_1_engine_fire_1",
 		type = PSYS,
-		template_name = "gf_ku_smallengine02_fire",
+		template_name = "bm_jnk_hf_enginefire01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -1500,9 +1533,9 @@ entities =
 		}
 	},
 	{
-		entity_name = "Ship_k_freighter_1_trail_1",
+		entity_name = "Ship_ju_elite_1_trail_1",
 		type = PSYS,
-		template_name = "gf_ku_smallengine02_trail",
+		template_name = "bm_jnk_hf_enginetrail01",
 		lt_grp = 0, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC + LIT_AMBIENT,
 		spatialprops =
@@ -1515,41 +1548,10 @@ entities =
 			sparam = 0
 		}
 	},
-	{
-		entity_name = "Ship_k_freighter_1_engine_fire_2",
-		type = PSYS,
-		template_name = "gf_ku_smallengine02_fire",
-		lt_grp = 0, srt_grp = 0, usr_flg = 0,
-		flags = LIT_DYNAMIC + LIT_AMBIENT,
-		spatialprops =
 		{
-			pos = { 0, 0, 0 },
-			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
-		},
-		psysprops =
-		{
-			sparam = 0
-		}
-	},
-	{
-		entity_name = "Ship_k_freighter_1_trail_2",
-		type = PSYS,
-		template_name = "gf_ku_smallengine02_trail",
-		lt_grp = 0, srt_grp = 0, usr_flg = 0,
-		flags = LIT_DYNAMIC + LIT_AMBIENT,
-		spatialprops =
-		{
-			pos = { 0, 0, 0 },
-			orient = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } }
-		},
-		psysprops =
-		{
-			sparam = 0
-		}
-	},	{
 		entity_name = "Ship_armored_transport_1",
 		type = COMPOUND,
-		template_name = "rtcprop_armored_transport",
+		template_name = "bm_ge_armored",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -1562,6 +1564,8 @@ entities =
 		userprops =
 		{
 			category = "Spaceship",
+			loadout = "bm_ge_armored_li_n_grp_pilot",
+			running_lights = "true",
 		}
 	},
 
@@ -2040,7 +2044,7 @@ events =
 
 
 	{
-		0.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_MOP_1" },
+		0.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_MOP_1" },
 		{
 			duration = 1.000,
 			target_part = "",
@@ -2201,7 +2205,7 @@ events =
 
 
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_1", "Ship_r_freighter_2" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_1", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -2213,13 +2217,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_2_engine_fire_1" },
+		0.000, START_PSYS, { "Ship_ju_fighter_2_engine_fire_1" },
 		{
 			duration = 13.57
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_1"}, {
             duration = 13.57,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -2230,7 +2234,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_2", "Ship_r_freighter_2" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_2", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -2242,13 +2246,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_2_engine_fire_2" },
+		0.000, START_PSYS, { "Ship_ju_fighter_2_engine_fire_2" },
 		{
 			duration = 13.57
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_2"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_2"}, {
             duration = 13.57,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -2259,7 +2263,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_1", "Ship_r_freighter_2" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_1", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -2271,13 +2275,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_2_trail_1" },
+		0.000, START_PSYS, { "Ship_ju_fighter_2_trail_1" },
 		{
 			duration = 13.57
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_1"}, {
             duration = 13.57,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -2288,7 +2292,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_2", "Ship_r_freighter_2" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_2", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -2300,13 +2304,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_2_trail_2" },
+		0.000, START_PSYS, { "Ship_ju_fighter_2_trail_2" },
 		{
 			duration = 13.57
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_2"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_2"}, {
             duration = 13.57,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -2317,14 +2321,14 @@ events =
         }
     },
     {
-		0.000, START_SOUND, { "Ship_r_freighter_2_engine_sound" },
+		0.000, START_SOUND, { "Ship_ju_fighter_2_engine_sound" },
 		{
 			duration = 13.57,
 			flags = LOOP
 		}
 	},
 	{
-		0.000, START_PATH_ANIMATION, { "Ship_r_freighter_2", "Traffic_Zone_04_upper_lane" },
+		0.000, START_PATH_ANIMATION, { "Ship_ju_fighter_2", "Traffic_Zone_04_upper_lane" },
 		{
 			duration = 13.770,
 			start_percent = 1,
@@ -2352,7 +2356,7 @@ events =
 
 
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_1_engine_fire_1", "Ship_r_freighter_1" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_1_engine_fire_1", "Ship_ju_fighter_1" },
 		{
 			duration = 26.296,
 			offset = { 0, 0, 0 },
@@ -2364,13 +2368,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_1_engine_fire_1" },
+		0.000, START_PSYS, { "Ship_ju_fighter_1_engine_fire_1" },
 		{
 			duration = 26.296
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_engine_fire_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_engine_fire_1"}, {
             duration = 26.296,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -2381,7 +2385,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_1_engine_fire_2", "Ship_r_freighter_1" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_1_engine_fire_2", "Ship_ju_fighter_1" },
 		{
 			duration = 26.296,
 			offset = { 0, 0, 0 },
@@ -2393,13 +2397,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_1_engine_fire_2" },
+		0.000, START_PSYS, { "Ship_ju_fighter_1_engine_fire_2" },
 		{
 			duration = 26.296
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_engine_fire_2"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_engine_fire_2"}, {
             duration = 26.296,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -2410,7 +2414,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_1_trail_1", "Ship_r_freighter_1" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_1_trail_1", "Ship_ju_fighter_1" },
 		{
 			duration = 26.296,
 			offset = { 0, 0, 0 },
@@ -2422,13 +2426,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_1_trail_1" },
+		0.000, START_PSYS, { "Ship_ju_fighter_1_trail_1" },
 		{
 			duration = 26.296
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_trail_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_trail_1"}, {
             duration = 26.296,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -2439,7 +2443,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_r_freighter_1_trail_2", "Ship_r_freighter_1" },
+		0.000, ATTACH_ENTITY, { "Ship_ju_fighter_1_trail_2", "Ship_ju_fighter_1" },
 		{
 			duration = 26.296,
 			offset = { 0, 0, 0 },
@@ -2451,13 +2455,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_r_freighter_1_trail_2" },
+		0.000, START_PSYS, { "Ship_ju_fighter_1_trail_2" },
 		{
 			duration = 26.296
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_trail_2"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_trail_2"}, {
             duration = 26.296,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -2468,14 +2472,14 @@ events =
         }
     },
     {
-		0.000, START_SOUND, { "Ship_r_freighter_1_engine_sound" },
+		0.000, START_SOUND, { "Ship_ju_fighter_1_engine_sound" },
 		{
 			duration = 26.296,
 			flags = LOOP
 		}
 	},
 	{
-		0.000, START_PATH_ANIMATION, { "Ship_r_freighter_1", "Traffic_Zone_04_lower_lane" },
+		0.000, START_PATH_ANIMATION, { "Ship_ju_fighter_1", "Traffic_Zone_04_lower_lane" },
 		{
 			duration = 26.496,
 			start_percent = 0,
@@ -2626,7 +2630,7 @@ events =
 
 
 	{
-		0.000, ATTACH_ENTITY, { "Ship_l_fighter_2_engine_fire_1", "Ship_l_fighter_2" },
+		0.000, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
 		{
 			duration = 14.8,
 			offset = { 0, 0, 0 },
@@ -2638,13 +2642,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_l_fighter_2_engine_fire_1" },
+		0.000, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
 		{
 			duration = 14.8
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_l_fighter_2_engine_fire_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
             duration = 14.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -2655,7 +2659,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_l_fighter_2_trail_1", "Ship_l_fighter_2" },
+		0.000, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
 		{
 			duration = 14.8,
 			offset = { 0, 0, 0 },
@@ -2667,13 +2671,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_l_fighter_2_trail_1" },
+		0.000, START_PSYS, { "Ship_l_fighter_1_trail_1" },
 		{
 			duration = 14.8
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_l_fighter_2_trail_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
             duration = 14.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -2684,14 +2688,14 @@ events =
         }
     },
     {
-		0.000, START_SOUND, { "Ship_l_fighter_2_engine_sound" },
+		0.000, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
 		{
 			duration = 14.8,
 			flags = LOOP
 		}
 	},
 	{
-		0.000, START_PATH_ANIMATION, { "Ship_l_fighter_2", "Path_Dyn_1_civ_fighter_1" },
+		0.000, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Path_Dyn_1_civ_fighter_1" },
 		{
 			duration = 15.000,
 			start_percent = 0,
@@ -2717,7 +2721,7 @@ events =
 
 
 	{
-		0.000, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
+		0.000, ATTACH_ENTITY, { "Ship_bh_fighter_1_engine_fire_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -2729,13 +2733,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
+		0.000, START_PSYS, { "Ship_bh_fighter_1_engine_fire_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_engine_fire_1"}, {
             duration = 4.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -2746,7 +2750,7 @@ events =
         }
     },
 	{
-		0.000, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
+		0.000, ATTACH_ENTITY, { "Ship_bh_fighter_1_trail_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -2758,13 +2762,13 @@ events =
 		}
 	},
 	{
-		0.000, START_PSYS, { "Ship_l_fighter_1_trail_1" },
+		0.000, START_PSYS, { "Ship_bh_fighter_1_trail_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		0.000, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
+		0.000, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_trail_1"}, {
             duration = 4.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -2775,14 +2779,14 @@ events =
         }
     },
     {
-		0.000, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
+		0.000, START_SOUND, { "Ship_bh_fighter_1_engine_sound" },
 		{
 			duration = 4.8,
 			flags = LOOP
 		}
 	},
 	{
-		0.000, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_03_lower_lane" },
+		0.000, START_PATH_ANIMATION, { "Ship_bh_fighter_1", "Traffic_Zone_03_lower_lane" },
 		{
 			duration = 5.000,
 			start_percent = 1,
@@ -3527,7 +3531,7 @@ events =
 		}
 	},
 	{
-		3.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_MOP_2" },
+		3.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_MOP_2" },
 		{
 			duration = 1.312,
 			target_part = "",
@@ -3678,7 +3682,7 @@ events =
 
 
 	{
-		4.312, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_MOP_3" },
+		4.312, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_MOP_3" },
 		{
 			duration = 2.750,
 			target_part = "",
@@ -3716,7 +3720,7 @@ events =
 
 
 	{
-		5.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
+		5.000, START_SPATIAL_PROP_ANIM, { "Ship_bh_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -3744,7 +3748,7 @@ events =
 
 
 	{
-		8.125, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_MOP_4" },
+		8.125, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_MOP_4" },
 		{
 			duration = 2.000,
 			target_part = "",
@@ -3808,7 +3812,7 @@ events =
 
 
 	{
-		10.312, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_MOP_5" },
+		10.312, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_MOP_5" },
 		{
 			duration = 2.000,
 			target_part = "",
@@ -3949,7 +3953,7 @@ events =
 
 
 	{
-		13.770, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_2", "Mk_Ship_Park" },
+		13.770, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_2", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -3977,7 +3981,7 @@ events =
 
 
 	{
-		14.687, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_1", "Ship_r_freighter_2" },
+		14.687, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_1", "Ship_ju_fighter_2" },
 		{
 			duration = 5.8,
 			offset = { 0, 0, 0 },
@@ -3989,13 +3993,13 @@ events =
 		}
 	},
 	{
-		14.687, START_PSYS, { "Ship_r_freighter_2_engine_fire_1" },
+		14.687, START_PSYS, { "Ship_ju_fighter_2_engine_fire_1" },
 		{
 			duration = 5.8
 		}
 	},
 	{
-		14.687, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_1"}, {
+		14.687, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_1"}, {
             duration = 5.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -4006,7 +4010,7 @@ events =
         }
     },
 	{
-		14.687, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_2", "Ship_r_freighter_2" },
+		14.687, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_2", "Ship_ju_fighter_2" },
 		{
 			duration = 5.8,
 			offset = { 0, 0, 0 },
@@ -4018,13 +4022,13 @@ events =
 		}
 	},
 	{
-		14.687, START_PSYS, { "Ship_r_freighter_2_engine_fire_2" },
+		14.687, START_PSYS, { "Ship_ju_fighter_2_engine_fire_2" },
 		{
 			duration = 5.8
 		}
 	},
 	{
-		14.687, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_2"}, {
+		14.687, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_2"}, {
             duration = 5.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -4035,7 +4039,7 @@ events =
         }
     },
 	{
-		14.687, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_1", "Ship_r_freighter_2" },
+		14.687, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_1", "Ship_ju_fighter_2" },
 		{
 			duration = 5.8,
 			offset = { 0, 0, 0 },
@@ -4047,13 +4051,13 @@ events =
 		}
 	},
 	{
-		14.687, START_PSYS, { "Ship_r_freighter_2_trail_1" },
+		14.687, START_PSYS, { "Ship_ju_fighter_2_trail_1" },
 		{
 			duration = 5.8
 		}
 	},
 	{
-		14.687, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_1"}, {
+		14.687, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_1"}, {
             duration = 5.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -4064,7 +4068,7 @@ events =
         }
     },
 	{
-		14.687, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_2", "Ship_r_freighter_2" },
+		14.687, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_2", "Ship_ju_fighter_2" },
 		{
 			duration = 5.8,
 			offset = { 0, 0, 0 },
@@ -4076,13 +4080,13 @@ events =
 		}
 	},
 	{
-		14.687, START_PSYS, { "Ship_r_freighter_2_trail_2" },
+		14.687, START_PSYS, { "Ship_ju_fighter_2_trail_2" },
 		{
 			duration = 5.8
 		}
 	},
 	{
-		14.687, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_2"}, {
+		14.687, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_2"}, {
             duration = 5.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -4093,14 +4097,14 @@ events =
         }
     },
     {
-		14.687, START_SOUND, { "Ship_r_freighter_2_engine_sound" },
+		14.687, START_SOUND, { "Ship_ju_fighter_2_engine_sound" },
 		{
 			duration = 5.8,
 			flags = LOOP
 		}
 	},
 	{
-		14.687, START_PATH_ANIMATION, { "Ship_r_freighter_2", "Traffic_Zone_03_lower_lane" },
+		14.687, START_PATH_ANIMATION, { "Ship_ju_fighter_2", "Traffic_Zone_03_lower_lane" },
 		{
 			duration = 6.000,
 			start_percent = 0,
@@ -4128,7 +4132,7 @@ events =
 
 
 	{
-		15.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_Ship_Park" },
+		15.000, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -4293,7 +4297,7 @@ events =
 
 
 	{
-		19.375, ATTACH_ENTITY, { "Ship_k_freighter_1_engine_fire_1", "Ship_k_freighter_1" },
+		19.375, ATTACH_ENTITY, { "Ship_ju_elite_1_engine_fire_1", "Ship_ju_elite_1" },
 		{
 			duration = 5.8,
 			offset = { 0, 0, 0 },
@@ -4305,13 +4309,13 @@ events =
 		}
 	},
 	{
-		19.375, START_PSYS, { "Ship_k_freighter_1_engine_fire_1" },
+		19.375, START_PSYS, { "Ship_ju_elite_1_engine_fire_1" },
 		{
 			duration = 5.8
 		}
 	},
 	{
-		19.375, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_engine_fire_1"}, {
+		19.375, START_PSYS_PROP_ANIM, {"Ship_ju_elite_1_engine_fire_1"}, {
             duration = 5.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -4322,36 +4326,7 @@ events =
         }
     },
 	{
-		19.375, ATTACH_ENTITY, { "Ship_k_freighter_1_engine_fire_2", "Ship_k_freighter_1" },
-		{
-			duration = 5.8,
-			offset = { 0, 0, 0 },
-			up = Y_AXIS,
-			front = NEG_Z_AXIS,
-			target_part = "HpEngine02",
-			target_type = HARDPOINT,
-			flags = POSITION + ORIENTATION
-		}
-	},
-	{
-		19.375, START_PSYS, { "Ship_k_freighter_1_engine_fire_2" },
-		{
-			duration = 5.8
-		}
-	},
-	{
-		19.375, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_engine_fire_2"}, {
-            duration = 5.8,
-            psysprops = {sparam = 1.00 },
-            param_curve = {
-                CLSID = "FreeFormPCurve",
-                points = { {0, 0, 0, 0}, {1, 1, 0, 0} }
-            },
-            pcurve_period = -1000
-        }
-    },
-	{
-		19.375, ATTACH_ENTITY, { "Ship_k_freighter_1_trail_1", "Ship_k_freighter_1" },
+		19.375, ATTACH_ENTITY, { "Ship_ju_elite_1_trail_1", "Ship_ju_elite_1" },
 		{
 			duration = 5.8,
 			offset = { 0, 0, 0 },
@@ -4363,42 +4338,13 @@ events =
 		}
 	},
 	{
-		19.375, START_PSYS, { "Ship_k_freighter_1_trail_1" },
+		19.375, START_PSYS, { "Ship_ju_elite_1_trail_1" },
 		{
 			duration = 5.8
 		}
 	},
 	{
-		19.375, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_trail_1"}, {
-            duration = 5.8,
-            psysprops = {sparam = 0.89 },
-            param_curve = {
-                CLSID = "FreeFormPCurve",
-                points = { {0, 0, 0, 0}, {1, 1, 0, 0} }
-            },
-            pcurve_period = -1000
-        }
-    },
-	{
-		19.375, ATTACH_ENTITY, { "Ship_k_freighter_1_trail_2", "Ship_k_freighter_1" },
-		{
-			duration = 5.8,
-			offset = { 0, 0, 0 },
-			up = Y_AXIS,
-			front = NEG_Z_AXIS,
-			target_part = "HpEngine02",
-			target_type = HARDPOINT,
-			flags = POSITION + ORIENTATION
-		}
-	},
-	{
-		19.375, START_PSYS, { "Ship_k_freighter_1_trail_2" },
-		{
-			duration = 5.8
-		}
-	},
-	{
-		19.375, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_trail_2"}, {
+		19.375, START_PSYS_PROP_ANIM, {"Ship_ju_elite_1_trail_1"}, {
             duration = 5.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -4409,14 +4355,14 @@ events =
         }
     },
     {
-		19.375, START_SOUND, { "Ship_k_freighter_1_engine_sound" },
+		19.375, START_SOUND, { "Ship_ju_elite_1_engine_sound" },
 		{
 			duration = 5.8,
 			flags = LOOP
 		}
 	},
 	{
-		19.375, START_PATH_ANIMATION, { "Ship_k_freighter_1", "Traffic_Zone_03_lower_lane" },
+		19.375, START_PATH_ANIMATION, { "Ship_ju_elite_1", "Traffic_Zone_03_lower_lane" },
 		{
 			duration = 6.000,
 			start_percent = 1,
@@ -4523,7 +4469,7 @@ events =
 
 
 	{
-		20.687, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_2", "Mk_Ship_Park" },
+		20.687, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_2", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -4767,7 +4713,7 @@ events =
 
 
 	{
-		21.250, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
+		21.250, ATTACH_ENTITY, { "Ship_bh_fighter_1_engine_fire_1", "Ship_bh_fighter_1" },
 		{
 			duration = 20.8,
 			offset = { 0, 0, 0 },
@@ -4779,13 +4725,13 @@ events =
 		}
 	},
 	{
-		21.250, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
+		21.250, START_PSYS, { "Ship_bh_fighter_1_engine_fire_1" },
 		{
 			duration = 20.8
 		}
 	},
 	{
-		21.250, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
+		21.250, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_engine_fire_1"}, {
             duration = 20.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -4796,7 +4742,7 @@ events =
         }
     },
 	{
-		21.250, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
+		21.250, ATTACH_ENTITY, { "Ship_bh_fighter_1_trail_1", "Ship_bh_fighter_1" },
 		{
 			duration = 20.8,
 			offset = { 0, 0, 0 },
@@ -4808,13 +4754,13 @@ events =
 		}
 	},
 	{
-		21.250, START_PSYS, { "Ship_l_fighter_1_trail_1" },
+		21.250, START_PSYS, { "Ship_bh_fighter_1_trail_1" },
 		{
 			duration = 20.8
 		}
 	},
 	{
-		21.250, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
+		21.250, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_trail_1"}, {
             duration = 20.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -4825,14 +4771,14 @@ events =
         }
     },
     {
-		21.250, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
+		21.250, START_SOUND, { "Ship_bh_fighter_1_engine_sound" },
 		{
 			duration = 20.8,
 			flags = LOOP
 		}
 	},
 	{
-		21.250, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_02_upper_lane" },
+		21.250, START_PATH_ANIMATION, { "Ship_bh_fighter_1", "Traffic_Zone_02_upper_lane" },
 		{
 			duration = 21.000,
 			start_percent = 0,
@@ -4846,7 +4792,7 @@ events =
 
 
 	{
-		22.031, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_1", "Ship_r_freighter_2" },
+		22.031, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_1", "Ship_ju_fighter_2" },
 		{
 			duration = 28.24,
 			offset = { 0, 0, 0 },
@@ -4858,13 +4804,13 @@ events =
 		}
 	},
 	{
-		22.031, START_PSYS, { "Ship_r_freighter_2_engine_fire_1" },
+		22.031, START_PSYS, { "Ship_ju_fighter_2_engine_fire_1" },
 		{
 			duration = 28.24
 		}
 	},
 	{
-		22.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_1"}, {
+		22.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_1"}, {
             duration = 28.24,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -4875,7 +4821,7 @@ events =
         }
     },
 	{
-		22.031, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_2", "Ship_r_freighter_2" },
+		22.031, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_2", "Ship_ju_fighter_2" },
 		{
 			duration = 28.24,
 			offset = { 0, 0, 0 },
@@ -4887,13 +4833,13 @@ events =
 		}
 	},
 	{
-		22.031, START_PSYS, { "Ship_r_freighter_2_engine_fire_2" },
+		22.031, START_PSYS, { "Ship_ju_fighter_2_engine_fire_2" },
 		{
 			duration = 28.24
 		}
 	},
 	{
-		22.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_2"}, {
+		22.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_2"}, {
             duration = 28.24,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -4904,7 +4850,7 @@ events =
         }
     },
 	{
-		22.031, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_1", "Ship_r_freighter_2" },
+		22.031, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_1", "Ship_ju_fighter_2" },
 		{
 			duration = 28.24,
 			offset = { 0, 0, 0 },
@@ -4916,13 +4862,13 @@ events =
 		}
 	},
 	{
-		22.031, START_PSYS, { "Ship_r_freighter_2_trail_1" },
+		22.031, START_PSYS, { "Ship_ju_fighter_2_trail_1" },
 		{
 			duration = 28.24
 		}
 	},
 	{
-		22.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_1"}, {
+		22.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_1"}, {
             duration = 28.24,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -4933,7 +4879,7 @@ events =
         }
     },
 	{
-		22.031, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_2", "Ship_r_freighter_2" },
+		22.031, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_2", "Ship_ju_fighter_2" },
 		{
 			duration = 28.24,
 			offset = { 0, 0, 0 },
@@ -4945,13 +4891,13 @@ events =
 		}
 	},
 	{
-		22.031, START_PSYS, { "Ship_r_freighter_2_trail_2" },
+		22.031, START_PSYS, { "Ship_ju_fighter_2_trail_2" },
 		{
 			duration = 28.24
 		}
 	},
 	{
-		22.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_2"}, {
+		22.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_2"}, {
             duration = 28.24,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -4962,14 +4908,14 @@ events =
         }
     },
     {
-		22.031, START_SOUND, { "Ship_r_freighter_2_engine_sound" },
+		22.031, START_SOUND, { "Ship_ju_fighter_2_engine_sound" },
 		{
 			duration = 28.24,
 			flags = LOOP
 		}
 	},
 	{
-		22.031, START_PATH_ANIMATION, { "Ship_r_freighter_2", "Traffic_Zone_05_very_low_lane" },
+		22.031, START_PATH_ANIMATION, { "Ship_ju_fighter_2", "Traffic_Zone_05_very_low_lane" },
 		{
 			duration = 28.440,
 			start_percent = 1,
@@ -4983,7 +4929,7 @@ events =
 
 
 	{
-		23.750, ATTACH_ENTITY, { "Ship_l_fighter_2_engine_fire_1", "Ship_l_fighter_2" },
+		23.750, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
 		{
 			duration = 19.3,
 			offset = { 0, 0, 0 },
@@ -4995,13 +4941,13 @@ events =
 		}
 	},
 	{
-		23.750, START_PSYS, { "Ship_l_fighter_2_engine_fire_1" },
+		23.750, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
 		{
 			duration = 19.3
 		}
 	},
 	{
-		23.750, START_PSYS_PROP_ANIM, {"Ship_l_fighter_2_engine_fire_1"}, {
+		23.750, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
             duration = 19.3,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -5012,7 +4958,7 @@ events =
         }
     },
 	{
-		23.750, ATTACH_ENTITY, { "Ship_l_fighter_2_trail_1", "Ship_l_fighter_2" },
+		23.750, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
 		{
 			duration = 19.3,
 			offset = { 0, 0, 0 },
@@ -5024,13 +4970,13 @@ events =
 		}
 	},
 	{
-		23.750, START_PSYS, { "Ship_l_fighter_2_trail_1" },
+		23.750, START_PSYS, { "Ship_l_fighter_1_trail_1" },
 		{
 			duration = 19.3
 		}
 	},
 	{
-		23.750, START_PSYS_PROP_ANIM, {"Ship_l_fighter_2_trail_1"}, {
+		23.750, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
             duration = 19.3,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -5041,14 +4987,14 @@ events =
         }
     },
     {
-		23.750, START_SOUND, { "Ship_l_fighter_2_engine_sound" },
+		23.750, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
 		{
 			duration = 19.3,
 			flags = LOOP
 		}
 	},
 	{
-		23.750, START_PATH_ANIMATION, { "Ship_l_fighter_2", "Traffic_Zone_02_lower_lane" },
+		23.750, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_02_lower_lane" },
 		{
 			duration = 19.500,
 			start_percent = 1,
@@ -5199,7 +5145,7 @@ events =
 
 
 	{
-		25.375, START_SPATIAL_PROP_ANIM, { "Ship_k_freighter_1", "Mk_Ship_Park" },
+		25.375, START_SPATIAL_PROP_ANIM, { "Ship_ju_elite_1", "Mk_Ship_Park" },
 		{
 			duration = 0.000,
 			target_part = "",
@@ -5227,7 +5173,7 @@ events =
 
 
 	{
-		26.562, ATTACH_ENTITY, { "Ship_k_freighter_1_engine_fire_1", "Ship_k_freighter_1" },
+		26.562, ATTACH_ENTITY, { "Ship_ju_elite_1_engine_fire_1", "Ship_ju_elite_1" },
 		{
 			duration = 23.862,
 			offset = { 0, 0, 0 },
@@ -5239,13 +5185,13 @@ events =
 		}
 	},
 	{
-		26.562, START_PSYS, { "Ship_k_freighter_1_engine_fire_1" },
+		26.562, START_PSYS, { "Ship_ju_elite_1_engine_fire_1" },
 		{
 			duration = 23.862
 		}
 	},
 	{
-		26.562, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_engine_fire_1"}, {
+		26.562, START_PSYS_PROP_ANIM, {"Ship_ju_elite_1_engine_fire_1"}, {
             duration = 23.862,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -5256,36 +5202,7 @@ events =
         }
     },
 	{
-		26.562, ATTACH_ENTITY, { "Ship_k_freighter_1_engine_fire_2", "Ship_k_freighter_1" },
-		{
-			duration = 23.862,
-			offset = { 0, 0, 0 },
-			up = Y_AXIS,
-			front = NEG_Z_AXIS,
-			target_part = "HpEngine02",
-			target_type = HARDPOINT,
-			flags = POSITION + ORIENTATION
-		}
-	},
-	{
-		26.562, START_PSYS, { "Ship_k_freighter_1_engine_fire_2" },
-		{
-			duration = 23.862
-		}
-	},
-	{
-		26.562, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_engine_fire_2"}, {
-            duration = 23.862,
-            psysprops = {sparam = 1.00 },
-            param_curve = {
-                CLSID = "FreeFormPCurve",
-                points = { {0, 0, 0, 0}, {1, 1, 0, 0} }
-            },
-            pcurve_period = -1000
-        }
-    },
-	{
-		26.562, ATTACH_ENTITY, { "Ship_k_freighter_1_trail_1", "Ship_k_freighter_1" },
+		26.562, ATTACH_ENTITY, { "Ship_ju_elite_1_trail_1", "Ship_ju_elite_1" },
 		{
 			duration = 23.862,
 			offset = { 0, 0, 0 },
@@ -5297,42 +5214,13 @@ events =
 		}
 	},
 	{
-		26.562, START_PSYS, { "Ship_k_freighter_1_trail_1" },
+		26.562, START_PSYS, { "Ship_ju_elite_1_trail_1" },
 		{
 			duration = 23.862
 		}
 	},
 	{
-		26.562, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_trail_1"}, {
-            duration = 23.862,
-            psysprops = {sparam = 0.89 },
-            param_curve = {
-                CLSID = "FreeFormPCurve",
-                points = { {0, 0, 0, 0}, {1, 1, 0, 0} }
-            },
-            pcurve_period = -1000
-        }
-    },
-	{
-		26.562, ATTACH_ENTITY, { "Ship_k_freighter_1_trail_2", "Ship_k_freighter_1" },
-		{
-			duration = 23.862,
-			offset = { 0, 0, 0 },
-			up = Y_AXIS,
-			front = NEG_Z_AXIS,
-			target_part = "HpEngine02",
-			target_type = HARDPOINT,
-			flags = POSITION + ORIENTATION
-		}
-	},
-	{
-		26.562, START_PSYS, { "Ship_k_freighter_1_trail_2" },
-		{
-			duration = 23.862
-		}
-	},
-	{
-		26.562, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_trail_2"}, {
+		26.562, START_PSYS_PROP_ANIM, {"Ship_ju_elite_1_trail_1"}, {
             duration = 23.862,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -5343,14 +5231,14 @@ events =
         }
     },
     {
-		26.562, START_SOUND, { "Ship_k_freighter_1_engine_sound" },
+		26.562, START_SOUND, { "Ship_ju_elite_1_engine_sound" },
 		{
 			duration = 23.862,
 			flags = LOOP
 		}
 	},
 	{
-		26.562, START_PATH_ANIMATION, { "Ship_k_freighter_1", "Traffic_Zone_04_lower_lane" },
+		26.562, START_PATH_ANIMATION, { "Ship_ju_elite_1", "Traffic_Zone_04_lower_lane" },
 		{
 			duration = 24.062,
 			start_percent = 1,
@@ -5364,7 +5252,7 @@ events =
 
 
 	{
-		26.809, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_1", "Mk_Ship_Park" },
+		26.809, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -5378,7 +5266,7 @@ events =
 
 
 	{
-		27.031, ATTACH_ENTITY, { "Ship_r_freighter_1_engine_fire_1", "Ship_r_freighter_1" },
+		27.031, ATTACH_ENTITY, { "Ship_ju_fighter_1_engine_fire_1", "Ship_ju_fighter_1" },
 		{
 			duration = 3.23,
 			offset = { 0, 0, 0 },
@@ -5390,13 +5278,13 @@ events =
 		}
 	},
 	{
-		27.031, START_PSYS, { "Ship_r_freighter_1_engine_fire_1" },
+		27.031, START_PSYS, { "Ship_ju_fighter_1_engine_fire_1" },
 		{
 			duration = 3.23
 		}
 	},
 	{
-		27.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_engine_fire_1"}, {
+		27.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_engine_fire_1"}, {
             duration = 3.23,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -5407,7 +5295,7 @@ events =
         }
     },
 	{
-		27.031, ATTACH_ENTITY, { "Ship_r_freighter_1_engine_fire_2", "Ship_r_freighter_1" },
+		27.031, ATTACH_ENTITY, { "Ship_ju_fighter_1_engine_fire_2", "Ship_ju_fighter_1" },
 		{
 			duration = 3.23,
 			offset = { 0, 0, 0 },
@@ -5419,13 +5307,13 @@ events =
 		}
 	},
 	{
-		27.031, START_PSYS, { "Ship_r_freighter_1_engine_fire_2" },
+		27.031, START_PSYS, { "Ship_ju_fighter_1_engine_fire_2" },
 		{
 			duration = 3.23
 		}
 	},
 	{
-		27.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_engine_fire_2"}, {
+		27.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_engine_fire_2"}, {
             duration = 3.23,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -5436,7 +5324,7 @@ events =
         }
     },
 	{
-		27.031, ATTACH_ENTITY, { "Ship_r_freighter_1_trail_1", "Ship_r_freighter_1" },
+		27.031, ATTACH_ENTITY, { "Ship_ju_fighter_1_trail_1", "Ship_ju_fighter_1" },
 		{
 			duration = 3.23,
 			offset = { 0, 0, 0 },
@@ -5448,13 +5336,13 @@ events =
 		}
 	},
 	{
-		27.031, START_PSYS, { "Ship_r_freighter_1_trail_1" },
+		27.031, START_PSYS, { "Ship_ju_fighter_1_trail_1" },
 		{
 			duration = 3.23
 		}
 	},
 	{
-		27.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_trail_1"}, {
+		27.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_trail_1"}, {
             duration = 3.23,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -5465,7 +5353,7 @@ events =
         }
     },
 	{
-		27.031, ATTACH_ENTITY, { "Ship_r_freighter_1_trail_2", "Ship_r_freighter_1" },
+		27.031, ATTACH_ENTITY, { "Ship_ju_fighter_1_trail_2", "Ship_ju_fighter_1" },
 		{
 			duration = 3.23,
 			offset = { 0, 0, 0 },
@@ -5477,13 +5365,13 @@ events =
 		}
 	},
 	{
-		27.031, START_PSYS, { "Ship_r_freighter_1_trail_2" },
+		27.031, START_PSYS, { "Ship_ju_fighter_1_trail_2" },
 		{
 			duration = 3.23
 		}
 	},
 	{
-		27.031, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_trail_2"}, {
+		27.031, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_trail_2"}, {
             duration = 3.23,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -5494,7 +5382,7 @@ events =
         }
     },
     {
-		27.031, START_SOUND, { "Ship_r_freighter_1_engine_sound" },
+		27.031, START_SOUND, { "Ship_ju_fighter_1_engine_sound" },
 		{
 			duration = 3.23,
 			flags = LOOP
@@ -5513,7 +5401,7 @@ events =
 		}
 	},
 	{
-		27.031, START_PATH_ANIMATION, { "Ship_r_freighter_1", "Traffic_Zone_03_upper_lane" },
+		27.031, START_PATH_ANIMATION, { "Ship_ju_fighter_1", "Traffic_Zone_03_upper_lane" },
 		{
 			duration = 3.430,
 			start_percent = 1,
@@ -5994,7 +5882,7 @@ events =
 
 
 	{
-		30.461, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_1", "Mk_Ship_Park" },
+		30.461, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -6742,7 +6630,7 @@ events =
 
 
 	{
-		42.250, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
+		42.250, START_SPATIAL_PROP_ANIM, { "Ship_bh_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -6770,7 +6658,7 @@ events =
 
 
 	{
-		43.250, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_Ship_Park" },
+		43.250, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -6798,7 +6686,7 @@ events =
 
 
 	{
-		44.062, ATTACH_ENTITY, { "Ship_l_fighter_2_engine_fire_1", "Ship_l_fighter_2" },
+		44.062, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
 		{
 			duration = 25.4,
 			offset = { 0, 0, 0 },
@@ -6810,13 +6698,13 @@ events =
 		}
 	},
 	{
-		44.062, START_PSYS, { "Ship_l_fighter_2_engine_fire_1" },
+		44.062, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
 		{
 			duration = 25.4
 		}
 	},
 	{
-		44.062, START_PSYS_PROP_ANIM, {"Ship_l_fighter_2_engine_fire_1"}, {
+		44.062, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
             duration = 25.4,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -6827,7 +6715,7 @@ events =
         }
     },
 	{
-		44.062, ATTACH_ENTITY, { "Ship_l_fighter_2_trail_1", "Ship_l_fighter_2" },
+		44.062, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
 		{
 			duration = 25.4,
 			offset = { 0, 0, 0 },
@@ -6839,13 +6727,13 @@ events =
 		}
 	},
 	{
-		44.062, START_PSYS, { "Ship_l_fighter_2_trail_1" },
+		44.062, START_PSYS, { "Ship_l_fighter_1_trail_1" },
 		{
 			duration = 22.4
 		}
 	},
 	{
-		44.062, START_PSYS_PROP_ANIM, {"Ship_l_fighter_2_trail_1"}, {
+		44.062, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
             duration = 25.4,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -6856,14 +6744,14 @@ events =
         }
     },
     {
-		44.062, START_SOUND, { "Ship_l_fighter_2_engine_sound" },
+		44.062, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
 		{
 			duration = 25.4,
 			flags = LOOP
 		}
 	},
 	{
-		44.062, START_PATH_ANIMATION, { "Ship_l_fighter_2", "Traffic_Zone_01_lower_lane" },
+		44.062, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_01_lower_lane" },
 		{
 			duration = 25.600,
 			start_percent = 1,
@@ -6877,7 +6765,7 @@ events =
 
 
 	{
-		44.841, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
+		44.841, ATTACH_ENTITY, { "Ship_bh_fighter_1_engine_fire_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -6889,13 +6777,13 @@ events =
 		}
 	},
 	{
-		44.841, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
+		44.841, START_PSYS, { "Ship_bh_fighter_1_engine_fire_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		44.841, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
+		44.841, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_engine_fire_1"}, {
             duration = 4.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -6906,7 +6794,7 @@ events =
         }
     },
 	{
-		44.841, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
+		44.841, ATTACH_ENTITY, { "Ship_bh_fighter_1_trail_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -6918,13 +6806,13 @@ events =
 		}
 	},
 	{
-		44.841, START_PSYS, { "Ship_l_fighter_1_trail_1" },
+		44.841, START_PSYS, { "Ship_bh_fighter_1_trail_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		44.841, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
+		44.841, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_trail_1"}, {
             duration = 4.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -6935,14 +6823,14 @@ events =
         }
     },
     {
-		44.841, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
+		44.841, START_SOUND, { "Ship_bh_fighter_1_engine_sound" },
 		{
 			duration = 4.8,
 			flags = LOOP
 		}
 	},
 	{
-		44.841, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_03_lower_lane" },
+		44.841, START_PATH_ANIMATION, { "Ship_bh_fighter_1", "Traffic_Zone_03_lower_lane" },
 		{
 			duration = 5.000,
 			start_percent = 0,
@@ -7258,7 +7146,7 @@ events =
 
 
 	{
-		48.750, ATTACH_ENTITY, { "Ship_r_freighter_1_engine_fire_1", "Ship_r_freighter_1" },
+		48.750, ATTACH_ENTITY, { "Ship_ju_fighter_1_engine_fire_1", "Ship_ju_fighter_1" },
 		{
 			duration = 12.768,
 			offset = { 0, 0, 0 },
@@ -7270,13 +7158,13 @@ events =
 		}
 	},
 	{
-		48.750, START_PSYS, { "Ship_r_freighter_1_engine_fire_1" },
+		48.750, START_PSYS, { "Ship_ju_fighter_1_engine_fire_1" },
 		{
 			duration = 12.768
 		}
 	},
 	{
-		48.750, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_engine_fire_1"}, {
+		48.750, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_engine_fire_1"}, {
             duration = 12.768,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -7287,7 +7175,7 @@ events =
         }
     },
 	{
-		48.750, ATTACH_ENTITY, { "Ship_r_freighter_1_engine_fire_2", "Ship_r_freighter_1" },
+		48.750, ATTACH_ENTITY, { "Ship_ju_fighter_1_engine_fire_2", "Ship_ju_fighter_1" },
 		{
 			duration = 12.768,
 			offset = { 0, 0, 0 },
@@ -7299,13 +7187,13 @@ events =
 		}
 	},
 	{
-		48.750, START_PSYS, { "Ship_r_freighter_1_engine_fire_2" },
+		48.750, START_PSYS, { "Ship_ju_fighter_1_engine_fire_2" },
 		{
 			duration = 12.768
 		}
 	},
 	{
-		48.750, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_engine_fire_2"}, {
+		48.750, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_engine_fire_2"}, {
             duration = 12.768,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -7316,7 +7204,7 @@ events =
         }
     },
 	{
-		48.750, ATTACH_ENTITY, { "Ship_r_freighter_1_trail_1", "Ship_r_freighter_1" },
+		48.750, ATTACH_ENTITY, { "Ship_ju_fighter_1_trail_1", "Ship_ju_fighter_1" },
 		{
 			duration = 12.768,
 			offset = { 0, 0, 0 },
@@ -7328,13 +7216,13 @@ events =
 		}
 	},
 	{
-		48.750, START_PSYS, { "Ship_r_freighter_1_trail_1" },
+		48.750, START_PSYS, { "Ship_ju_fighter_1_trail_1" },
 		{
 			duration = 12.768
 		}
 	},
 	{
-		48.750, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_trail_1"}, {
+		48.750, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_trail_1"}, {
             duration = 12.768,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -7345,7 +7233,7 @@ events =
         }
     },
 	{
-		48.750, ATTACH_ENTITY, { "Ship_r_freighter_1_trail_2", "Ship_r_freighter_1" },
+		48.750, ATTACH_ENTITY, { "Ship_ju_fighter_1_trail_2", "Ship_ju_fighter_1" },
 		{
 			duration = 12.768,
 			offset = { 0, 0, 0 },
@@ -7357,13 +7245,13 @@ events =
 		}
 	},
 	{
-		48.750, START_PSYS, { "Ship_r_freighter_1_trail_2" },
+		48.750, START_PSYS, { "Ship_ju_fighter_1_trail_2" },
 		{
 			duration = 12.768
 		}
 	},
 	{
-		48.750, START_PSYS_PROP_ANIM, {"Ship_r_freighter_1_trail_2"}, {
+		48.750, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_1_trail_2"}, {
             duration = 12.768,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -7374,14 +7262,14 @@ events =
         }
     },
     {
-		48.750, START_SOUND, { "Ship_r_freighter_1_engine_sound" },
+		48.750, START_SOUND, { "Ship_ju_fighter_1_engine_sound" },
 		{
 			duration = 12.768,
 			flags = LOOP
 		}
 	},
 	{
-		48.750, START_PATH_ANIMATION, { "Ship_r_freighter_1", "Traffic_Zone_04_upper_lane" },
+		48.750, START_PATH_ANIMATION, { "Ship_ju_fighter_1", "Traffic_Zone_04_upper_lane" },
 		{
 			duration = 12.968,
 			start_percent = 0,
@@ -7421,7 +7309,7 @@ events =
 		}
 	},
 	{
-		49.840, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
+		49.840, START_SPATIAL_PROP_ANIM, { "Ship_bh_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -7435,7 +7323,7 @@ events =
 
 
 	{
-		50.471, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_2", "Mk_Ship_Park" },
+		50.471, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_2", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -7449,7 +7337,7 @@ events =
 
 
 	{
-		50.625, START_SPATIAL_PROP_ANIM, { "Ship_k_freighter_1", "Mk_Ship_Park" },
+		50.625, START_SPATIAL_PROP_ANIM, { "Ship_ju_elite_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -7463,7 +7351,7 @@ events =
 
 
 	{
-		51.562, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_1", "Ship_r_freighter_2" },
+		51.562, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_1", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -7475,13 +7363,13 @@ events =
 		}
 	},
 	{
-		51.562, START_PSYS, { "Ship_r_freighter_2_engine_fire_1" },
+		51.562, START_PSYS, { "Ship_ju_fighter_2_engine_fire_1" },
 		{
 			duration = 13.57
 		}
 	},
 	{
-		51.562, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_1"}, {
+		51.562, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_1"}, {
             duration = 13.57,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -7492,7 +7380,7 @@ events =
         }
     },
 	{
-		51.562, ATTACH_ENTITY, { "Ship_r_freighter_2_engine_fire_2", "Ship_r_freighter_2" },
+		51.562, ATTACH_ENTITY, { "Ship_ju_fighter_2_engine_fire_2", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -7504,13 +7392,13 @@ events =
 		}
 	},
 	{
-		51.562, START_PSYS, { "Ship_r_freighter_2_engine_fire_2" },
+		51.562, START_PSYS, { "Ship_ju_fighter_2_engine_fire_2" },
 		{
 			duration = 13.57
 		}
 	},
 	{
-		51.562, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_engine_fire_2"}, {
+		51.562, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_engine_fire_2"}, {
             duration = 13.57,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -7521,7 +7409,7 @@ events =
         }
     },
 	{
-		51.562, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_1", "Ship_r_freighter_2" },
+		51.562, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_1", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -7533,13 +7421,13 @@ events =
 		}
 	},
 	{
-		51.562, START_PSYS, { "Ship_r_freighter_2_trail_1" },
+		51.562, START_PSYS, { "Ship_ju_fighter_2_trail_1" },
 		{
 			duration = 10.57
 		}
 	},
 	{
-		51.562, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_1"}, {
+		51.562, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_1"}, {
             duration = 13.57,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -7550,7 +7438,7 @@ events =
         }
     },
 	{
-		51.562, ATTACH_ENTITY, { "Ship_r_freighter_2_trail_2", "Ship_r_freighter_2" },
+		51.562, ATTACH_ENTITY, { "Ship_ju_fighter_2_trail_2", "Ship_ju_fighter_2" },
 		{
 			duration = 13.57,
 			offset = { 0, 0, 0 },
@@ -7562,13 +7450,13 @@ events =
 		}
 	},
 	{
-		51.562, START_PSYS, { "Ship_r_freighter_2_trail_2" },
+		51.562, START_PSYS, { "Ship_ju_fighter_2_trail_2" },
 		{
 			duration = 10.57
 		}
 	},
 	{
-		51.562, START_PSYS_PROP_ANIM, {"Ship_r_freighter_2_trail_2"}, {
+		51.562, START_PSYS_PROP_ANIM, {"Ship_ju_fighter_2_trail_2"}, {
             duration = 13.57,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -7579,14 +7467,14 @@ events =
         }
     },
     {
-		51.562, START_SOUND, { "Ship_r_freighter_2_engine_sound" },
+		51.562, START_SOUND, { "Ship_ju_fighter_2_engine_sound" },
 		{
 			duration = 13.57,
 			flags = LOOP
 		}
 	},
 	{
-		51.562, START_PATH_ANIMATION, { "Ship_r_freighter_2", "Traffic_Zone_04_upper_lane" },
+		51.562, START_PATH_ANIMATION, { "Ship_ju_fighter_2", "Traffic_Zone_04_upper_lane" },
 		{
 			duration = 13.770,
 			start_percent = 0,
@@ -7600,7 +7488,7 @@ events =
 
 
 	{
-		53.437, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
+		53.437, ATTACH_ENTITY, { "Ship_bh_fighter_1_engine_fire_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -7612,13 +7500,13 @@ events =
 		}
 	},
 	{
-		53.437, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
+		53.437, START_PSYS, { "Ship_bh_fighter_1_engine_fire_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		53.437, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
+		53.437, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_engine_fire_1"}, {
             duration = 4.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -7629,7 +7517,7 @@ events =
         }
     },
 	{
-		53.437, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
+		53.437, ATTACH_ENTITY, { "Ship_bh_fighter_1_trail_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -7641,13 +7529,13 @@ events =
 		}
 	},
 	{
-		53.437, START_PSYS, { "Ship_l_fighter_1_trail_1" },
+		53.437, START_PSYS, { "Ship_bh_fighter_1_trail_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		53.437, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
+		53.437, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_trail_1"}, {
             duration = 4.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -7658,14 +7546,14 @@ events =
         }
     },
     {
-		53.437, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
+		53.437, START_SOUND, { "Ship_bh_fighter_1_engine_sound" },
 		{
 			duration = 4.8,
 			flags = LOOP
 		}
 	},
 	{
-		53.437, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_03_lower_lane" },
+		53.437, START_PATH_ANIMATION, { "Ship_bh_fighter_1", "Traffic_Zone_03_lower_lane" },
 		{
 			duration = 5.000,
 			start_percent = 1,
@@ -7909,7 +7797,7 @@ events =
 
 
 	{
-		54.062, ATTACH_ENTITY, { "Ship_k_freighter_1_engine_fire_1", "Ship_k_freighter_1" },
+		54.062, ATTACH_ENTITY, { "Ship_ju_elite_1_engine_fire_1", "Ship_ju_elite_1" },
 		{
 			duration = 3.23,
 			offset = { 0, 0, 0 },
@@ -7921,13 +7809,13 @@ events =
 		}
 	},
 	{
-		54.062, START_PSYS, { "Ship_k_freighter_1_engine_fire_1" },
+		54.062, START_PSYS, { "Ship_ju_elite_1_engine_fire_1" },
 		{
 			duration = 3.23
 		}
 	},
 	{
-		54.062, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_engine_fire_1"}, {
+		54.062, START_PSYS_PROP_ANIM, {"Ship_ju_elite_1_engine_fire_1"}, {
             duration = 3.23,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -7938,36 +7826,7 @@ events =
         }
     },
 	{
-		54.062, ATTACH_ENTITY, { "Ship_k_freighter_1_engine_fire_2", "Ship_k_freighter_1" },
-		{
-			duration = 3.23,
-			offset = { 0, 0, 0 },
-			up = Y_AXIS,
-			front = NEG_Z_AXIS,
-			target_part = "HpEngine02",
-			target_type = HARDPOINT,
-			flags = POSITION + ORIENTATION
-		}
-	},
-	{
-		54.062, START_PSYS, { "Ship_k_freighter_1_engine_fire_2" },
-		{
-			duration = 3.23
-		}
-	},
-	{
-		54.062, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_engine_fire_2"}, {
-            duration = 3.23,
-            psysprops = {sparam = 1.00 },
-            param_curve = {
-                CLSID = "FreeFormPCurve",
-                points = { {0, 0, 0, 0}, {1, 1, 0, 0} }
-            },
-            pcurve_period = -1000
-        }
-    },
-	{
-		54.062, ATTACH_ENTITY, { "Ship_k_freighter_1_trail_1", "Ship_k_freighter_1" },
+		54.062, ATTACH_ENTITY, { "Ship_ju_elite_1_trail_1", "Ship_ju_elite_1" },
 		{
 			duration = 3.23,
 			offset = { 0, 0, 0 },
@@ -7979,42 +7838,13 @@ events =
 		}
 	},
 	{
-		54.062, START_PSYS, { "Ship_k_freighter_1_trail_1" },
+		54.062, START_PSYS, { "Ship_ju_elite_1_trail_1" },
 		{
 			duration = 3.23
 		}
 	},
 	{
-		54.062, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_trail_1"}, {
-            duration = 3.23,
-            psysprops = {sparam = 0.89 },
-            param_curve = {
-                CLSID = "FreeFormPCurve",
-                points = { {0, 0, 0, 0}, {1, 1, 0, 0} }
-            },
-            pcurve_period = -1000
-        }
-    },
-	{
-		54.062, ATTACH_ENTITY, { "Ship_k_freighter_1_trail_2", "Ship_k_freighter_1" },
-		{
-			duration = 3.23,
-			offset = { 0, 0, 0 },
-			up = Y_AXIS,
-			front = NEG_Z_AXIS,
-			target_part = "HpEngine02",
-			target_type = HARDPOINT,
-			flags = POSITION + ORIENTATION
-		}
-	},
-	{
-		54.062, START_PSYS, { "Ship_k_freighter_1_trail_2" },
-		{
-			duration = 3.23
-		}
-	},
-	{
-		54.062, START_PSYS_PROP_ANIM, {"Ship_k_freighter_1_trail_2"}, {
+		54.062, START_PSYS_PROP_ANIM, {"Ship_ju_elite_1_trail_1"}, {
             duration = 3.23,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -8025,14 +7855,14 @@ events =
         }
     },
     {
-		54.062, START_SOUND, { "Ship_k_freighter_1_engine_sound" },
+		54.062, START_SOUND, { "Ship_ju_elite_1_engine_sound" },
 		{
 			duration = 3.23,
 			flags = LOOP
 		}
 	},
 	{
-		54.062, START_PATH_ANIMATION, { "Ship_k_freighter_1", "Traffic_Zone_03_upper_lane" },
+		54.062, START_PATH_ANIMATION, { "Ship_ju_elite_1", "Traffic_Zone_03_upper_lane" },
 		{
 			duration = 3.430,
 			start_percent = 0,
@@ -8288,21 +8118,8 @@ events =
 		}
 	},
 
-
 	{
-		57.589, START_AUDIO_PROP_ANIM, { "Ship_k_freighter_loop_10" },
-		{
-			duration = 3.000,
-			audioprops =
-			{
-				attenuation = -100
-			}
-		}
-	},
-
-
-	{
-		58.437, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
+		58.437, START_SPATIAL_PROP_ANIM, { "Ship_bh_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -8328,7 +8145,7 @@ events =
 		}
 	},
 	{
-		59.402, START_SPATIAL_PROP_ANIM, { "Ship_k_freighter_1", "Mk_Ship_Park" },
+		59.402, START_SPATIAL_PROP_ANIM, { "Ship_ju_elite_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -8370,7 +8187,7 @@ events =
 
 
 	{
-		61.250, ATTACH_ENTITY, { "Ship_l_fighter_1_engine_fire_1", "Ship_l_fighter_1" },
+		61.250, ATTACH_ENTITY, { "Ship_bh_fighter_1_engine_fire_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -8382,13 +8199,13 @@ events =
 		}
 	},
 	{
-		61.250, START_PSYS, { "Ship_l_fighter_1_engine_fire_1" },
+		61.250, START_PSYS, { "Ship_bh_fighter_1_engine_fire_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		61.250, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_engine_fire_1"}, {
+		61.250, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_engine_fire_1"}, {
             duration = 4.8,
             psysprops = {sparam = 1.00 },
             param_curve = {
@@ -8399,7 +8216,7 @@ events =
         }
     },
 	{
-		61.250, ATTACH_ENTITY, { "Ship_l_fighter_1_trail_1", "Ship_l_fighter_1" },
+		61.250, ATTACH_ENTITY, { "Ship_bh_fighter_1_trail_1", "Ship_bh_fighter_1" },
 		{
 			duration = 4.8,
 			offset = { 0, 0, 0 },
@@ -8411,13 +8228,13 @@ events =
 		}
 	},
 	{
-		61.250, START_PSYS, { "Ship_l_fighter_1_trail_1" },
+		61.250, START_PSYS, { "Ship_bh_fighter_1_trail_1" },
 		{
 			duration = 4.8
 		}
 	},
 	{
-		61.250, START_PSYS_PROP_ANIM, {"Ship_l_fighter_1_trail_1"}, {
+		61.250, START_PSYS_PROP_ANIM, {"Ship_bh_fighter_1_trail_1"}, {
             duration = 4.8,
             psysprops = {sparam = 0.89 },
             param_curve = {
@@ -8428,14 +8245,14 @@ events =
         }
     },
     {
-		61.250, START_SOUND, { "Ship_l_fighter_1_engine_sound" },
+		61.250, START_SOUND, { "Ship_bh_fighter_1_engine_sound" },
 		{
 			duration = 4.8,
 			flags = LOOP
 		}
 	},
 	{
-		61.250, START_PATH_ANIMATION, { "Ship_l_fighter_1", "Traffic_Zone_03_lower_lane" },
+		61.250, START_PATH_ANIMATION, { "Ship_bh_fighter_1", "Traffic_Zone_03_lower_lane" },
 		{
 			duration = 5.000,
 			start_percent = 0,
@@ -8449,7 +8266,7 @@ events =
 
 
 	{
-		61.715, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_1", "Mk_Ship_Park" },
+		61.715, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -8693,7 +8510,7 @@ events =
 
 
 	{
-		65.331, START_SPATIAL_PROP_ANIM, { "Ship_r_freighter_2", "Mk_Ship_Park" },
+		65.331, START_SPATIAL_PROP_ANIM, { "Ship_ju_fighter_2", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -8707,7 +8524,7 @@ events =
 
 
 	{
-		66.250, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
+		66.250, START_SPATIAL_PROP_ANIM, { "Ship_bh_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
@@ -8805,7 +8622,7 @@ events =
 
 
 	{
-		68.750, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_2", "Mk_Ship_Park" },
+		68.750, START_SPATIAL_PROP_ANIM, { "Ship_l_fighter_1", "Mk_Ship_Park" },
 		{
 			duration = 0.100,
 			target_part = "",
