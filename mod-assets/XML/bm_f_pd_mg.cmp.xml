@@ -8,16 +8,19 @@
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
       <Cmpnd>
          <Cons>
-            <Fix type="Fix" count="1">
+            <Rev type="Rev" count="1">
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "Barrel",
                   <!-- position    --> 0, 0, -0,
-                  <!-- orientation -->   1.0000000000,   0.0000000000,  -0.0000000000,
-                                         0.0000000000,   1.0000000000,  -0.0000000000,
-                                        -0.0000000000,  -0.0000000000,   1.0000000000
+                  <!-- offset      --> 0, 0, 0,
+                  <!-- orientation -->   1.0000000000,   0.0000000000,   0.0000000000,
+                                         0.0000000000,   1.0000000000,   0.0000000000,
+                                         0.0000000000,   0.0000000000,   1.0000000000,
+                  <!-- axis        -->   1.0000000000,   0.0000000000,   0.0000000000,
+                  <!-- min, max    --> -0.34906584, 1.5707806
                </part>
-            </Fix>
+            </Rev>
          </Cons>
          <Part_Barrel>
             <Object_name name="Object name" type="text">Barrel</Object_name>

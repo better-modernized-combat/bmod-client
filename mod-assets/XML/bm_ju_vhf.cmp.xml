@@ -7,7 +7,7 @@
          <bm_ju_vhf.wire-2.vms include="bm_ju_vhf_cmp\bm_ju_vhf.wire-2.vms.xml"/>
       </VMeshLibrary>
       <Animation include="bm_ju_vhf_cmp\Animation.xml"/>
-      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
+      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
       <Cmpnd>
          <Cons>
             <Fix type="Fix" count="4">
@@ -72,54 +72,54 @@
          <Part_bm_ju_vhf_portwinglod1>
             <Object_name name="Object name" type="text">bm_ju_vhf_portwinglod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_vhf_portwinglod1240628142319.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_vhf_portwinglod1240628152544.3db</File_name>
          </Part_bm_ju_vhf_portwinglod1>
          <Part_bm_ju_vhf_starwinglod1>
             <Object_name name="Object name" type="text">bm_ju_vhf_starwinglod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_vhf_starwinglod1240628142319.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_vhf_starwinglod1240628152544.3db</File_name>
          </Part_bm_ju_vhf_starwinglod1>
          <Part_bm_ju_vhf_enginelod1>
             <Object_name name="Object name" type="text">bm_ju_vhf_enginelod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_vhf_enginelod1240628142319.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_vhf_enginelod1240628152544.3db</File_name>
          </Part_bm_ju_vhf_enginelod1>
          <Part_bm_ju_vhf_taillod1>
             <Object_name name="Object name" type="text">bm_ju_vhf_taillod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_vhf_taillod1240628142319.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_vhf_taillod1240628152544.3db</File_name>
          </Part_bm_ju_vhf_taillod1>
          <Part_Baydoor01_lod1>
             <Object_name name="Object name" type="text">Baydoor01_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">Baydoor01_lod1240628142319.3db</File_name>
+            <File_name name="File name" type="text">Baydoor01_lod1240628152544.3db</File_name>
          </Part_Baydoor01_lod1>
          <Part_Baydoor02_lod1>
             <Object_name name="Object name" type="text">Baydoor02_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">Baydoor02_lod1240628142319.3db</File_name>
+            <File_name name="File name" type="text">Baydoor02_lod1240628152544.3db</File_name>
          </Part_Baydoor02_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ju_vhf240628142319.3db</File_name>
+            <File_name name="File name" type="text">bm_ju_vhf240628152544.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_ju_vhf240628142319.3db>
+      <bm_ju_vhf240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
                <!-- start vert   --> 0,
-               <!-- num verts    --> 1027,
+               <!-- num verts    --> 1592,
                <!-- start index  --> 0,
-               <!-- num indices  --> 1845,
+               <!-- num indices  --> 1839,
                <!-- start mesh   --> 0,
                <!-- num meshes   --> 8,
-               <!-- bounding box -->  4.2955647,     3.7938232,    2.5164778,
-                                     -4.2955232,    -3.884999,   -10.654447,
-               <!-- center       --> -0.0027256915,  0.14755534,  -3.6199284,
-               <!-- radius       --> 7.9527516
+               <!-- bounding box -->  4.2955647,     3.7938235,    2.5164778,
+                                     -4.2955232,    -3.885,      -10.654447,
+               <!-- center       -->  0.0011374184, -0.28213453,  -3.9672496,
+               <!-- radius       --> 7.4555292
             </VMeshRef>
          </VMeshPart>
          <VMeshWire include="bm_ju_vhf_cmp\bm_ju_vhf.vwd.xml"/>
@@ -160,9 +160,9 @@
                <HpThruster01>
                   <Position type="Vector">-0.0042458829, -2.9993439, 1.9799417</Position>
                   <Orientation type="Matrix">
-                      -1.0000000000,  106.17260e-15, -325.84137e-09,
-                       0.0000000000,  -1.0000000000, -325.84137e-09,
-                     -325.84137e-09, -325.84137e-09,   1.0000000000
+                      -1.0000000000,  151.64355e-15, -389.41437e-09,
+                       0.0000000000,  -1.0000000000, -389.41437e-09,
+                     -389.41437e-09, -389.41437e-09,   1.0000000000
                   </Orientation>
                </HpThruster01>
                <HpMine01>
@@ -278,15 +278,15 @@
                </HpTorpedo01>
             </Revolute>
          </Hardpoints>
-      </bm_ju_vhf240628142319.3db>
-      <bm_ju_vhf_portwinglod1240628142319.3db>
+      </bm_ju_vhf240628152544.3db>
+      <bm_ju_vhf_portwinglod1240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
-               <!-- start vert   --> 1027,
-               <!-- num verts    --> 228,
-               <!-- start index  --> 1845,
+               <!-- start vert   --> 1592,
+               <!-- num verts    --> 390,
+               <!-- start index  --> 1839,
                <!-- num indices  --> 390,
                <!-- start mesh   --> 8,
                <!-- num meshes   --> 5,
@@ -327,9 +327,9 @@
                <HpWeapon06>
                   <Position type="Vector">-5.359, -3.537, -4.547</Position>
                   <Orientation type="Matrix">
-                      -1.0000000000,  106.17260e-15, -325.84137e-09,
-                       0.0000000000,  -1.0000000000, -325.84137e-09,
-                     -325.84137e-09, -325.84137e-09,   1.0000000000
+                      -1.0000000000,  151.64355e-15, -389.41437e-09,
+                       0.0000000000,  -1.0000000000, -389.41437e-09,
+                     -389.41437e-09, -389.41437e-09,   1.0000000000
                   </Orientation>
                   <Axis type="Vector">0, 1, 0</Axis>
                   <Min type="float">-0.78539819</Min>
@@ -348,15 +348,15 @@
                </HpWeapon08>
             </Revolute>
          </Hardpoints>
-      </bm_ju_vhf_portwinglod1240628142319.3db>
-      <bm_ju_vhf_starwinglod1240628142319.3db>
+      </bm_ju_vhf_portwinglod1240628152544.3db>
+      <bm_ju_vhf_starwinglod1240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
-               <!-- start vert   --> 1255,
-               <!-- num verts    --> 225,
-               <!-- start index  --> 2235,
+               <!-- start vert   --> 1982,
+               <!-- num verts    --> 387,
+               <!-- start index  --> 2229,
                <!-- num indices  --> 387,
                <!-- start mesh   --> 13,
                <!-- num meshes   --> 5,
@@ -418,15 +418,15 @@
                </HpWeapon07>
             </Revolute>
          </Hardpoints>
-      </bm_ju_vhf_starwinglod1240628142319.3db>
-      <bm_ju_vhf_enginelod1240628142319.3db>
+      </bm_ju_vhf_starwinglod1240628152544.3db>
+      <bm_ju_vhf_enginelod1240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
-               <!-- start vert   --> 1480,
-               <!-- num verts    --> 203,
-               <!-- start index  --> 2622,
+               <!-- start vert   --> 2369,
+               <!-- num verts    --> 492,
+               <!-- start index  --> 2616,
                <!-- num indices  --> 492,
                <!-- start mesh   --> 18,
                <!-- num meshes   --> 3,
@@ -448,15 +448,15 @@
                </HpEngine01>
             </Fixed>
          </Hardpoints>
-      </bm_ju_vhf_enginelod1240628142319.3db>
-      <bm_ju_vhf_taillod1240628142319.3db>
+      </bm_ju_vhf_enginelod1240628152544.3db>
+      <bm_ju_vhf_taillod1240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
-               <!-- start vert   --> 1683,
-               <!-- num verts    --> 963,
-               <!-- start index  --> 3114,
+               <!-- start vert   --> 2861,
+               <!-- num verts    --> 1749,
+               <!-- start index  --> 3108,
                <!-- num indices  --> 1749,
                <!-- start mesh   --> 21,
                <!-- num meshes   --> 4,
@@ -518,15 +518,15 @@
                </HpRunningLight04>
             </Fixed>
          </Hardpoints>
-      </bm_ju_vhf_taillod1240628142319.3db>
-      <Baydoor01_lod1240628142319.3db>
+      </bm_ju_vhf_taillod1240628152544.3db>
+      <Baydoor01_lod1240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
-               <!-- start vert   --> 2646,
-               <!-- num verts    --> 24,
-               <!-- start index  --> 4863,
+               <!-- start vert   --> 4610,
+               <!-- num verts    --> 36,
+               <!-- start index  --> 4857,
                <!-- num indices  --> 36,
                <!-- start mesh   --> 25,
                <!-- num meshes   --> 1,
@@ -536,15 +536,15 @@
                <!-- radius       --> 2.168658
             </VMeshRef>
          </VMeshPart>
-      </Baydoor01_lod1240628142319.3db>
-      <Baydoor02_lod1240628142319.3db>
+      </Baydoor01_lod1240628152544.3db>
+      <Baydoor02_lod1240628152544.3db>
          <VMeshPart>
             <VMeshRef type="VMeshRef">
                <!-- header size  --> 60,
                <!-- vmesh lib    --> bm_ju_vhf.lod0-112.vms,
-               <!-- start vert   --> 2670,
-               <!-- num verts    --> 24,
-               <!-- start index  --> 4899,
+               <!-- start vert   --> 4646,
+               <!-- num verts    --> 36,
+               <!-- start index  --> 4893,
                <!-- num indices  --> 36,
                <!-- start mesh   --> 26,
                <!-- num meshes   --> 1,
@@ -554,6 +554,6 @@
                <!-- radius       --> 2.168658
             </VMeshRef>
          </VMeshPart>
-      </Baydoor02_lod1240628142319.3db>
+      </Baydoor02_lod1240628152544.3db>
    </UTF_ROOT>
 </UTFXML>
