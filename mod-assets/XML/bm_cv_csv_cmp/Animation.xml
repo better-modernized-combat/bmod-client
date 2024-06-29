@@ -46,7 +46,7 @@
             </Channel>
          </Joint_map_2>
       </Sc_end_anim>
-      <Sc_open_door name="Sc_open door">
+      <Sc_open_baydoor name="Sc_open baydoor">
          <Joint_map_0 name="Joint map 0">
             <Parent_name name="Parent name" type="text">Root</Parent_name>
             <Child_name name="Child name" type="text">bay_poly_lod1</Child_name>
@@ -92,6 +92,6 @@
                </Frames>
             </Channel>
          </Joint_map_2>
-      </Sc_open_door>
+      </Sc_open_baydoor>
    </Script>
 </Animation>
