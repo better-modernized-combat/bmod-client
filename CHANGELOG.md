@@ -1,21 +1,49 @@
 # Changelog
 
 ## 0.0.14
-- A new ship line: The Xenos seem to have acquired some refitted CSVs and are using them to hit traffic across the Colorado system. These new ships can be found for sale on Ouray base.
-- A complete rework of the 'hacking' system. Various satellites can now be accessed with `/terminal use` or `/terminal hack`, for legal and illegal options respectively. Legal use of the satellites costs credits, hacking does not guarantee a hostile response and more content and rewards have been added to the pool for these. More information is also provided about what is found in each instance so you can decide whether or not it's worth investigating.
-- Mining Lasers: These very short range lasers can be used to quickly break down large asteroids that can sometimes be scanned using DSE's radar satellites.
-- The Rhino has been resized and had it's shape and hardpoints adjusted slightly in preparation for upcoming fleet gear changes.
-- Some fleet gear now has new and unique models.
+- Xenos NPC accuracy was too high, it's been lowered to more reasonable levels now so you should be able to survive in more situations like when you're outnumbered.
+- Added a new shipline modelled by our new collaborator, McDyson! Meet the Manta, Angler and Orca fighters in the hands of Xenos NPCs, or buy them on the Xenos's Ouray station. They're slightly flimsier in some ways than the civilian Falcon line, but they have a more flexible hardpoint setup.
+- Implemented a full new system of discovering dynamic events and points of interest by interacting with (and potentially hacking) useable terminals found in space across Colorado, thanks to IrateRedKite's very hard work. These terminals, tagged with [USE] at the start of their name, can be interacted with by selecting them and typing `/terminal use` or `/terminal hack`, for legal and illegal options respectively. These interactions give the player information on interesting things, events and opportunities to make a profit. Legal use cost credits, while hacking may trigger consequences from the terminal's owning faction. Type '/terminal show' to review the information you've recieved.
+- For this first implementation, there is only one active terminal to interact with, a DSE mineral scanning radar that can be found between Planet Denver and the Cheyenne asteroid field. It can provide information on profitable mining, salvage and other opportunities it detects through geological analysis. Many more terminals and events will be added soon that cover many different types of gameplay, including trading, exploration, bounty hunting, research, and combat.
+- Made ores and gems sell for better prices.
+- Added a new Support Turret tool, a mining beam intended for CSVs and Rhinos to use in cutting up ore-carrying rocks and salvageable wrecks at point blank range. For sale on Denver and Pueblo.
+- Made it so [+] gear doesn't cost absurd amounts to repair anymore, this was unintended.
+- Added new [+] gear for sale on Pueblo, inculding enhanced variants of Autocannons, MGs, Lasers and PPCs.
+- Ammo for [+] weaponry added to all stores for convenience.
+- Lowered the sizes of the Mule group spawns a bit.
+- NPCs should spam less Cruise Disruptors at you, reducing their obnoxiousness.
+- Repair gun range was doubled.
+- Tweaks to Xenos weapons loadouts, including less lasers across the board for all pilots except for Elites.
+- Light Fighters had their agility nerfed somewhat.
+- VHFs recieved a small buff to their top speed.
+- Added a roundabout way to start a pirate character, just shoot up the crates on the cargo depots outside Planet Denver until you're neutral with Xenos (and red with the Navy.)
+- The Rhino has been resized and had it's shape and hardpoints adjusted slightly to better fit fleet-sized gear.
+- New models for launched SRMs and LRMs that can properly be shot down with weapons fire. This is especially useful for Rhino players who can use point defense guns to protect themselves from these missiles.
 - New models for some fighter auxilliary gear: Machine Guns, LRM pylons and SRM pylons should now have distinct models.
-- A new model and loadout for the Xenos Ludlow.
-- Large static ships, such as the Asteroid Miner and the Xenos Ludlow now have proper shield bubbles.
-- Many changes to several auxilliary weapons.
-- Many changes to Xenos NPC loadouts.
-- Fix: multibarrel weapons no longer decrement the wrong amount of ammo.
+- Shields added to DSE Mining Ships and the Xenos Ludlow frigate.
+- In addition, big upgrade to the Xenos's Ludlow frigate in general, as along with a new shield and a new model (Thanks McDyson!), it has a completely frigate-appropriate weapons loadout which provides massively increased lethality.
+- Fixed problems with how destructible solars like the Ludlow frigate would respawn wrong and not drop loot. They should now blow up properly, only respawn on server restarts, and have their loot drop consistently when killed.
+- First Torpedo implemented, the Skipper Light Torpedo, an L Missile weapon intended for hunting freighter sized targets. Sold on most bases in Colorado.
+- Added bomber-style loadouts as an alternative spawn for Xenos VHFs. They can now spawn with PPCs and Torpedoes for hunting freighters.
+- Adjusted buy and sell prices of commodities and etcetera across all bases in Colorado, including the addition of proper sell prices to Ouray base for pirate players.
+- Changed the appearance and behaviour of any newly created MP characters from this point on - they will appear as anonymously helmeted and mute.
+- Increased range at which Countermeasures can distract incoming missiles, and how long Wasp Cruise Disruptor missiles can fly for before self-destructing.
+- Buffs to PPCs and Lasers, including fleet versions, to make them more effective and easier to use.
+- Nerf to the AC/L's damage output, it was overperforming.
+- Complete rework of the NAC/L; its slow-firing, huge damage behaviour was transferred to a new Fleet Medium Ballistic, the NAC/H, while the NAC/L is now a faster firing but lighter gun instead that provides high damage at closer ranges.
+- Ballistic PD Turrets can now be bought on Pueblo.
+- Tweaks to how Fleet LRMs and SRMs work. LRMs fire in a fixed high-arc from the launcher now, like arcing artillery. They both fire more missiles now, too.
+- Fleet PPC now fires two projectiles instead of one, making it twice as powerful.
+- New fleet-sized weapon, the Fleet Quad Autocannon, a Small Turret Ballistic gun that provides high damage at close range, perfect for enhancing your anti-fighter power on the Rhino.
+- Area of effect increased for UGBs and Rocket Pods; they'll do splash damage in a wider range now.
+- Reduced density of those little annoying micro-rocks in Colorado's asteroid fields. They threw your aim off a lot and were generally irritating at their previous density.
+- Attempted to spread out the player formation in MP so players don't bang into each other on autopilot when formed up, unsure if the fix targeted the right formation, testing needed please!
+- Fixed multibarrel weapons using the wrong amount of ammo.
+- Fixed multiple crashes.
+- Many general improvements.
 - Known Issue: Objects that 'move around' on server restart do not currently have infocards.
-- Known Issue: Glass textures on the Orca render incorrectly.
 - Known Issue: Fire sounds play inconsistently when multiple multibarrel weapons are fired at once.
-- Known Issue: Some of the new weapon models have minor texture issues.
+
 
 ## 0.0.13
 - Enhanced gear tweaked to fix an issue. Please note if you had any of the old enhanced gear marked with a [+] symobl on your ship before this update, you won't be able to log in to that character now! Players were warned to discard this gear prior to this update as a result.
