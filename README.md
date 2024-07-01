@@ -1,4 +1,4 @@
-# bmod-client
+# BMOD Client Files
 
 ![Discord](https://img.shields.io/discord/676300713210413087?logo=discord&label=Discord&color=purple)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/better-modernized-combat/bmod-client?label=Issues)
