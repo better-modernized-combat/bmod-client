@@ -1,9 +1,9 @@
 # bmod-client
 
 ![Discord](https://img.shields.io/discord/676300713210413087?logo=discord&label=Discord&color=purple)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/better-modernized-combat/bmod-client)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-closed/better-modernized-combat/bmod-client?color=green)
-![GitHub Release](https://img.shields.io/github/v/release/better-modernized-combat/bmod-client)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/better-modernized-combat/bmod-client?label=Issues)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-closed/better-modernized-combat/bmod-client?color=green&label=Issues)
+![GitHub Release](https://img.shields.io/github/v/release/better-modernized-combat/bmod-client?label=Release)
 
 Freelancer: Better Modernized Combat (BMOD) is a modification for Freelancer the 2003 space shooter by Digital Anvil. The core goal of the mod is to create a fun and compelling experience for solo and group players in a multiplayer setting. This repository contains the modified client files, as well as the development environment and tools used by the team.
 
