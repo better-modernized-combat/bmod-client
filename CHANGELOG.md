@@ -42,7 +42,9 @@
 - Fixed multiple crashes.
 - Many general improvements.
 - Known Issue: Objects that 'move around' on server restart do not currently have infocards.
+- Known Issue: Some objects that 'move around' on restart or objects that are created in space when interacting with a terminal do not properly display their name infocard.
 - Known Issue: Fire sounds play inconsistently when multiple multibarrel weapons are fired at once.
+- Client instability when using tradelanes in singleplayer mode.
 
 
 ## 0.0.13
