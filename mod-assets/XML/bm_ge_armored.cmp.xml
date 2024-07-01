@@ -3,12 +3,12 @@
 <UTFXML filename="bm_ge_armored.cmp" path="BMOD\SHIPS\MODELS\bm_ge_armored">
    <UTF_ROOT>
       <VMeshLibrary>
-         <bm_ge_armored.lod0-112.vms include="bm_ge_armored_cmp\lod0-112.vms.xml"/>
-         <bm_ge_armored.lod1-112.vms include="bm_ge_armored_cmp\lod1-112.vms.xml"/>
-         <bm_ge_armored.lod2-112.vms include="bm_ge_armored_cmp\lod2-112.vms.xml"/>
+         <transport_armored.lod0-112.vms include="bm_ge_armored_cmp\lod0-112.vms.xml"/>
+         <transport_armored.lod1-112.vms include="bm_ge_armored_cmp\lod1-112.vms.xml"/>
+         <transport_armored.lod2-112.vms include="bm_ge_armored_cmp\lod2-112.vms.xml"/>
       </VMeshLibrary>
       <Animation include="bm_ge_armored_cmp\Animation.xml"/>
-      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
+      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
       <Cmpnd>
          <Cons>
             <Rev type="Rev" count="2">
@@ -39,20 +39,20 @@
          <Part_BayDoor01_lod1>
             <Object_name name="Object name" type="text">BayDoor01_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">BayDoor01_lod1231216154603.3db</File_name>
+            <File_name name="File name" type="text">BayDoor01_lod1240603164130.3db</File_name>
          </Part_BayDoor01_lod1>
          <Part_BayDoor02_lod1>
             <Object_name name="Object name" type="text">BayDoor02_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">BayDoor02_lod1231216154603.3db</File_name>
+            <File_name name="File name" type="text">BayDoor02_lod1240603164130.3db</File_name>
          </Part_BayDoor02_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ge_armored231216154603.3db</File_name>
+            <File_name name="File name" type="text">transport_armored240603164130.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_ge_armored231216154603.3db>
+      <transport_armored240603164130.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -64,9 +64,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod0-112.vms,
+                     <!-- vmesh lib    --> transport_armored.lod0-112.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 2399,
+                     <!-- num verts    --> 3681,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 3714,
                      <!-- start mesh   --> 0,
@@ -82,9 +82,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod1-112.vms,
+                     <!-- vmesh lib    --> transport_armored.lod1-112.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 1028,
+                     <!-- num verts    --> 1048,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 1536,
                      <!-- start mesh   --> 0,
@@ -100,9 +100,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod2-112.vms,
+                     <!-- vmesh lib    --> transport_armored.lod2-112.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 618,
+                     <!-- num verts    --> 620,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 858,
                      <!-- start mesh   --> 0,
@@ -115,7 +115,7 @@
                </VMeshPart>
             </Level2>
          </MultiLevel>
-         <VMeshWire include="bm_ge_armored_cmp\bm_ge_armored.vwd.xml"/>
+         <VMeshWire include="bm_ge_armored_cmp\transport_armored.vwd.xml"/>
          <Hardpoints>
             <Fixed>
                <HpBayDoor01>
@@ -455,8 +455,8 @@
                </HpTurret09>
             </Revolute>
          </Hardpoints>
-      </bm_ge_armored231216154603.3db>
-      <BayDoor01_lod1231216154603.3db>
+      </transport_armored240603164130.3db>
+      <BayDoor01_lod1240603164130.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -468,9 +468,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod0-112.vms,
-                     <!-- start vert   --> 2399,
-                     <!-- num verts    --> 16,
+                     <!-- vmesh lib    --> transport_armored.lod0-112.vms,
+                     <!-- start vert   --> 3681,
+                     <!-- num verts    --> 24,
                      <!-- start index  --> 3714,
                      <!-- num indices  --> 24,
                      <!-- start mesh   --> 8,
@@ -486,9 +486,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod1-112.vms,
-                     <!-- start vert   --> 1028,
-                     <!-- num verts    --> 4,
+                     <!-- vmesh lib    --> transport_armored.lod1-112.vms,
+                     <!-- start vert   --> 1048,
+                     <!-- num verts    --> 6,
                      <!-- start index  --> 1536,
                      <!-- num indices  --> 6,
                      <!-- start mesh   --> 1,
@@ -504,9 +504,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod2-112.vms,
-                     <!-- start vert   --> 618,
-                     <!-- num verts    --> 4,
+                     <!-- vmesh lib    --> transport_armored.lod2-112.vms,
+                     <!-- start vert   --> 620,
+                     <!-- num verts    --> 6,
                      <!-- start index  --> 858,
                      <!-- num indices  --> 6,
                      <!-- start mesh   --> 1,
@@ -520,8 +520,8 @@
             </Level2>
          </MultiLevel>
          <VMeshWire include="bm_ge_armored_cmp\BayDoor01_lod1.vwd.xml"/>
-      </BayDoor01_lod1231216154603.3db>
-      <BayDoor02_lod1231216154603.3db>
+      </BayDoor01_lod1240603164130.3db>
+      <BayDoor02_lod1240603164130.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -533,9 +533,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod0-112.vms,
-                     <!-- start vert   --> 2415,
-                     <!-- num verts    --> 16,
+                     <!-- vmesh lib    --> transport_armored.lod0-112.vms,
+                     <!-- start vert   --> 3705,
+                     <!-- num verts    --> 24,
                      <!-- start index  --> 3738,
                      <!-- num indices  --> 24,
                      <!-- start mesh   --> 12,
@@ -551,9 +551,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod1-112.vms,
-                     <!-- start vert   --> 1032,
-                     <!-- num verts    --> 4,
+                     <!-- vmesh lib    --> transport_armored.lod1-112.vms,
+                     <!-- start vert   --> 1054,
+                     <!-- num verts    --> 6,
                      <!-- start index  --> 1542,
                      <!-- num indices  --> 6,
                      <!-- start mesh   --> 2,
@@ -569,9 +569,9 @@
                <VMeshPart>
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_ge_armored.lod2-112.vms,
-                     <!-- start vert   --> 622,
-                     <!-- num verts    --> 4,
+                     <!-- vmesh lib    --> transport_armored.lod2-112.vms,
+                     <!-- start vert   --> 626,
+                     <!-- num verts    --> 6,
                      <!-- start index  --> 864,
                      <!-- num indices  --> 6,
                      <!-- start mesh   --> 2,
@@ -585,6 +585,6 @@
             </Level2>
          </MultiLevel>
          <VMeshWire include="bm_ge_armored_cmp\BayDoor02_lod1.vwd.xml"/>
-      </BayDoor02_lod1231216154603.3db>
+      </BayDoor02_lod1240603164130.3db>
    </UTF_ROOT>
 </UTFXML>

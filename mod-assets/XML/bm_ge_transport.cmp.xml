@@ -10,7 +10,7 @@
          <bm_ge_transport.lod1-112.vms include="bm_ge_transport_cmp\lod1-112.vms.xml"/>
          <bm_ge_transport.lod2-112.vms include="bm_ge_transport_cmp\lod2-112.vms.xml"/>
       </VMeshLibrary>
-      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
+      <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.98</Exporter_Version>
       <Cmpnd>
          <Cons>
             <Fix type="Fix" count="7">
@@ -75,45 +75,45 @@
          <Part_trans_rear_lod1>
             <Object_name name="Object name" type="text">trans_rear_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_rear_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_rear_lod1240607180711.3db</File_name>
          </Part_trans_rear_lod1>
          <Part_trans_eng_lod1>
             <Object_name name="Object name" type="text">trans_eng_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_eng_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_eng_lod1240607180711.3db</File_name>
          </Part_trans_eng_lod1>
          <Part_trans_tail_fin_lod1>
             <Object_name name="Object name" type="text">trans_tail_fin_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_tail_fin_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_tail_fin_lod1240607180711.3db</File_name>
          </Part_trans_tail_fin_lod1>
          <Part_trans_frnt_lod1>
             <Object_name name="Object name" type="text">trans_frnt_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_frnt_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_frnt_lod1240607180711.3db</File_name>
          </Part_trans_frnt_lod1>
          <Part_trans_star_eng_lod1>
             <Object_name name="Object name" type="text">trans_star_eng_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_star_eng_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_star_eng_lod1240607180711.3db</File_name>
          </Part_trans_star_eng_lod1>
          <Part_trans_cntrl_twr_lod1>
             <Object_name name="Object name" type="text">trans_cntrl_twr_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_cntrl_twr_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_cntrl_twr_lod1240607180711.3db</File_name>
          </Part_trans_cntrl_twr_lod1>
          <Part_trans_port_eng_lod1>
             <Object_name name="Object name" type="text">trans_port_eng_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">trans_port_eng_lod1231216154827.3db</File_name>
+            <File_name name="File name" type="text">trans_port_eng_lod1240607180711.3db</File_name>
          </Part_trans_port_eng_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_ge_transport231216154827.3db</File_name>
+            <File_name name="File name" type="text">bm_ge_transport240607180711.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_ge_transport231216154827.3db>
+      <bm_ge_transport240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -127,7 +127,7 @@
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-212.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 1218,
+                     <!-- num verts    --> 1510,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 2058,
                      <!-- start mesh   --> 0,
@@ -145,7 +145,7 @@
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-212.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 490,
+                     <!-- num verts    --> 905,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 954,
                      <!-- start mesh   --> 0,
@@ -163,7 +163,7 @@
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-212.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 242,
+                     <!-- num verts    --> 251,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 348,
                      <!-- start mesh   --> 0,
@@ -237,8 +237,8 @@
                </HpMount>
             </Fixed>
          </Hardpoints>
-      </bm_ge_transport231216154827.3db>
-      <trans_rear_lod1231216154827.3db>
+      </bm_ge_transport240607180711.3db>
+      <trans_rear_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -251,15 +251,15 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-212.vms,
-                     <!-- start vert   --> 1218,
-                     <!-- num verts    --> 284,
+                     <!-- start vert   --> 1510,
+                     <!-- num verts    --> 498,
                      <!-- start index  --> 2058,
                      <!-- num indices  --> 498,
                      <!-- start mesh   --> 3,
                      <!-- num meshes   --> 5,
                      <!-- bounding box -->  12.263813,    12.386774,   10.824589,
                                            -12.263817,    -7.6302319, -20.708776,
-                     <!-- center       -->  -0.011680203,  1.3609912,  -2.8541794,
+                     <!-- center       -->  -0.011680202,  1.3609912,  -2.8541794,
                      <!-- radius       --> 20.817343
                   </VMeshRef>
                </VMeshPart>
@@ -269,15 +269,15 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-212.vms,
-                     <!-- start vert   --> 490,
-                     <!-- num verts    --> 164,
+                     <!-- start vert   --> 905,
+                     <!-- num verts    --> 282,
                      <!-- start index  --> 954,
                      <!-- num indices  --> 282,
                      <!-- start mesh   --> 3,
                      <!-- num meshes   --> 3,
                      <!-- bounding box -->  12.263811,    12.386376,   10.824989,
                                            -12.263823,    -7.6306248, -20.708374,
-                     <!-- center       -->  -0.011680203,  1.3609912,  -2.8541794,
+                     <!-- center       -->  -0.011680202,  1.3609912,  -2.8541794,
                      <!-- radius       --> 20.816805
                   </VMeshRef>
                </VMeshPart>
@@ -287,15 +287,15 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-212.vms,
-                     <!-- start vert   --> 242,
-                     <!-- num verts    --> 105,
+                     <!-- start vert   --> 251,
+                     <!-- num verts    --> 147,
                      <!-- start index  --> 348,
                      <!-- num indices  --> 147,
                      <!-- start mesh   --> 1,
                      <!-- num meshes   --> 1,
                      <!-- bounding box -->  12.263815,    12.386771,   10.824585,
                                            -12.263819,    -7.6302299, -20.708778,
-                     <!-- center       -->  -0.011680203,  1.3609912,  -2.8541794,
+                     <!-- center       -->  -0.011680202,  1.3609912,  -2.8541794,
                      <!-- radius       --> 20.817343
                   </VMeshRef>
                </VMeshPart>
@@ -305,23 +305,23 @@
          <Hardpoints>
             <Fixed>
                <DpEng>
-                  <Position type="Vector">-0.21205759, -3.3587332, 10.80452</Position>
+                  <Position type="Vector">-0.21205762, -3.3587332, 10.80452</Position>
                   <Orientation type="Matrix">
-                      -1.0000000000,  150.99582e-09, -26.434503e-09,
-                     -26.434527e-09, -162.92068e-09,   1.0000000000,
+                      -1.0000000000,  150.99582e-09, -26.434510e-09,
+                     -26.434535e-09, -162.92068e-09,   1.0000000000,
                       150.99582e-09,   1.0000000000,  162.92068e-09
                   </Orientation>
                </DpEng>
                <DpMain>
-                  <Position type="Vector">-0.21206036, 9.7446318, -20.287367</Position>
+                  <Position type="Vector">-0.21206038, 9.7446318, -20.287367</Position>
                   <Orientation type="Matrix">
-                       1.0000000000, -75.510421e-09,  197.47873e-09,
-                     -197.47870e-09,  313.91647e-09,   1.0000000000,
-                     -75.510485e-09,  -1.0000000000,  313.91644e-09
+                       1.0000000000, -75.510407e-09,  197.47870e-09,
+                     -197.47867e-09,  313.91647e-09,   1.0000000000,
+                     -75.510471e-09,  -1.0000000000,  313.91644e-09
                   </Orientation>
                </DpMain>
                <DpTail>
-                  <Position type="Vector">-0.21205935, -6.0437164, 5.185585</Position>
+                  <Position type="Vector">-0.21205938, -6.0437164, 5.185585</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  26.434465e-09,  150.99580e-09,
                      -26.434524e-09,  -1.0000000000, -389.41437e-09,
@@ -345,7 +345,7 @@
                   </Orientation>
                </HpFx07>
                <HpFx08>
-                  <Position type="Vector">-0.039978236, 6.7837949, 3.9165573</Position>
+                  <Position type="Vector">-0.039978232, 6.7837949, 3.9165573</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -476.83716e-09,  16.056958e-09,
                       476.83716e-09,   1.0000000000, -660.98571e-12,
@@ -353,7 +353,7 @@
                   </Orientation>
                </HpFx08>
                <HpFx09>
-                  <Position type="Vector">12.344316, 1.0216985, 11.982292</Position>
+                  <Position type="Vector">12.344315, 1.0216985, 11.982292</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -476.83716e-09,  16.056958e-09,
                       476.83716e-09,   1.0000000000, -660.98571e-12,
@@ -361,7 +361,7 @@
                   </Orientation>
                </HpFx09>
                <HpFx10>
-                  <Position type="Vector">-12.056189, 1.0216918, 11.9823</Position>
+                  <Position type="Vector">-12.05619, 1.0216918, 11.9823</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -476.83716e-09,  16.056958e-09,
                       476.83716e-09,   1.0000000000, -660.98571e-12,
@@ -369,7 +369,7 @@
                   </Orientation>
                </HpFx10>
                <HpRunningLight08>
-                  <Position type="Vector">-3.9447901, 9.4377871, 2.8422775</Position>
+                  <Position type="Vector">-3.9447899, 9.4377871, 2.8422775</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -87.422791e-09, -13.752586e-15,
                      -87.422791e-09,  -1.0000000000, -150.99580e-09,
@@ -377,7 +377,7 @@
                   </Orientation>
                </HpRunningLight08>
                <HpRunningLight09>
-                  <Position type="Vector">4.0149245, 9.4377813, 2.8422623</Position>
+                  <Position type="Vector">4.0149255, 9.4377813, 2.8422623</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -87.422791e-09, -13.752586e-15,
                      -87.422791e-09,  -1.0000000000, -150.99580e-09,
@@ -385,7 +385,7 @@
                   </Orientation>
                </HpRunningLight09>
                <HpRunningLight12>
-                  <Position type="Vector">-11.419005, -6.0135479, -5.4431076</Position>
+                  <Position type="Vector">-11.419003, -6.0135479, -5.4431076</Position>
                   <Orientation type="Matrix">
                        1.0000000000,  59.604641e-09, -19.480318e-18,
                      -59.604641e-09,   1.0000000000, -7.7715612e-15,
@@ -393,7 +393,7 @@
                   </Orientation>
                </HpRunningLight12>
                <HpRunningLight13>
-                  <Position type="Vector">11.485914, -6.0135517, -5.4431229</Position>
+                  <Position type="Vector">11.485916, -6.0135517, -5.4431229</Position>
                   <Orientation type="Matrix">
                        1.0000000000,  59.604641e-09, -19.480318e-18,
                      -59.604641e-09,   1.0000000000, -7.7715612e-15,
@@ -403,11 +403,11 @@
             </Fixed>
             <Revolute>
                <HpTurret_U1_01>
-                  <Position type="Vector">-0.0086667789, 10.380629, -2.3448639</Position>
+                  <Position type="Vector">-0.0086667798, 10.380629, -2.3448639</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,  58.302135e-09, -12.392510e-09,
-                     -59.604641e-09,   0.9781475700,  -0.2079118200,
-                     -63.405267e-18,   0.2079118200,   0.9781475700
+                       1.0000000000,  58.302149e-09, -12.392514e-09,
+                     -59.604659e-09,   0.9781475700,  -0.2079118800,
+                     -3.6161188e-15,   0.2079118800,   0.9781475700
                   </Orientation>
                   <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-6.2831855</Min>
@@ -415,8 +415,8 @@
                </HpTurret_U1_01>
             </Revolute>
          </Hardpoints>
-      </trans_rear_lod1231216154827.3db>
-      <trans_eng_lod1231216154827.3db>
+      </trans_rear_lod1240607180711.3db>
+      <trans_eng_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -429,16 +429,16 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-212.vms,
-                     <!-- start vert   --> 1502,
-                     <!-- num verts    --> 212,
+                     <!-- start vert   --> 2008,
+                     <!-- num verts    --> 318,
                      <!-- start index  --> 2556,
                      <!-- num indices  --> 318,
                      <!-- start mesh   --> 8,
                      <!-- num meshes   --> 4,
-                     <!-- bounding box -->  12.263814,   6.3394809,   7.9389153,
-                                           -12.263816,  -6.3394809,  -9.683506,
+                     <!-- bounding box -->  12.263813,   6.3394809,   7.9389153,
+                                           -12.263817,  -6.3394809,  -9.683506,
                      <!-- center       -->   0.1271635, -0.52676296, -0.73719406,
-                     <!-- radius       --> 13.737078
+                     <!-- radius       --> 13.737079
                   </VMeshRef>
                </VMeshPart>
             </Level0>
@@ -447,14 +447,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-212.vms,
-                     <!-- start vert   --> 654,
-                     <!-- num verts    --> 72,
+                     <!-- start vert   --> 1187,
+                     <!-- num verts    --> 102,
                      <!-- start index  --> 1236,
                      <!-- num indices  --> 102,
                      <!-- start mesh   --> 6,
                      <!-- num meshes   --> 2,
-                     <!-- bounding box -->  12.263814,   6.339479,    7.9389305,
-                                           -12.263815,  -6.3394818,  -5.5084686,
+                     <!-- bounding box -->  12.263813,   6.339479,    7.9389305,
+                                           -12.263816,  -6.3394818,  -5.5084686,
                      <!-- center       -->   0.1271635, -0.52676296, -0.73719406,
                      <!-- radius       --> 13.737078
                   </VMeshRef>
@@ -465,16 +465,16 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-212.vms,
-                     <!-- start vert   --> 347,
-                     <!-- num verts    --> 70,
+                     <!-- start vert   --> 398,
+                     <!-- num verts    --> 96,
                      <!-- start index  --> 495,
                      <!-- num indices  --> 96,
                      <!-- start mesh   --> 2,
                      <!-- num meshes   --> 1,
-                     <!-- bounding box -->  12.263815,   6.3394775,   7.9389153,
-                                           -12.263818,  -6.339479,   -5.5084686,
+                     <!-- bounding box -->  12.263814,   6.3394775,   7.9389153,
+                                           -12.263819,  -6.339479,   -5.5084686,
                      <!-- center       -->   0.1271635, -0.52676296, -0.73719406,
-                     <!-- radius       --> 13.737079
+                     <!-- radius       --> 13.73708
                   </VMeshRef>
                </VMeshPart>
             </Level2>
@@ -483,33 +483,33 @@
          <Hardpoints>
             <Fixed>
                <HpEngine01>
-                  <Position type="Vector">-2.2032491e-6, 3.764534, -3.798233</Position>
+                  <Position type="Vector">-2.2032455e-6, 3.764534, -3.798233</Position>
                   <Orientation type="Matrix">
                        1.0000000000,  7.1658093e-09,  80.958102e-09,
-                     -7.1658093e-09,   1.0000000000, -55.511151e-18,
+                     -7.1658093e-09,   1.0000000000, -111.02230e-18,
                      -80.958102e-09, -555.11151e-18,   1.0000000000
                   </Orientation>
                </HpEngine01>
                <HpEngine02>
-                  <Position type="Vector">-8.7090607, -2.0510898, 1.2628021</Position>
+                  <Position type="Vector">-8.7090616, -2.0510898, 1.2628021</Position>
                   <Orientation type="Matrix">
                        1.0000000000,  7.1658093e-09,  80.958102e-09,
-                     -7.1658093e-09,   1.0000000000, -55.511151e-18,
+                     -7.1658093e-09,   1.0000000000, -111.02230e-18,
                      -80.958102e-09, -555.11151e-18,   1.0000000000
                   </Orientation>
                </HpEngine02>
                <HpEngine03>
-                  <Position type="Vector">8.5177193, -2.0510964, 1.2628021</Position>
+                  <Position type="Vector">8.5177183, -2.0510964, 1.2628021</Position>
                   <Orientation type="Matrix">
                        1.0000000000,  7.1658093e-09,  80.958102e-09,
-                     -7.1658093e-09,   1.0000000000, -55.511151e-18,
+                     -7.1658093e-09,   1.0000000000, -111.02230e-18,
                      -80.958102e-09, -555.11151e-18,   1.0000000000
                   </Orientation>
                </HpEngine03>
                <HpRunningLight06>
                   <Position type="Vector">-5.6379409, -2.1466689, 8.2298737</Position>
                   <Orientation type="Matrix">
-                       1.0000000000, -127.91395e-09, -17.305300e-15,
+                       1.0000000000, -127.91395e-09, -20.858014e-15,
                      -127.91395e-09,  -1.0000000000, -150.99580e-09,
                      -113.74438e-18,  150.99580e-09,  -1.0000000000
                   </Orientation>
@@ -517,15 +517,15 @@
                <HpRunningLight07>
                   <Position type="Vector">5.7098827, -2.1466737, 8.2298737</Position>
                   <Orientation type="Matrix">
-                       1.0000000000, -127.91395e-09, -17.305300e-15,
+                       1.0000000000, -127.91395e-09, -20.858014e-15,
                      -127.91395e-09,  -1.0000000000, -150.99580e-09,
                      -113.74438e-18,  150.99580e-09,  -1.0000000000
                   </Orientation>
                </HpRunningLight07>
             </Fixed>
          </Hardpoints>
-      </trans_eng_lod1231216154827.3db>
-      <trans_tail_fin_lod1231216154827.3db>
+      </trans_eng_lod1240607180711.3db>
+      <trans_tail_fin_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -539,13 +539,13 @@
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-112.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 115,
+                     <!-- num verts    --> 142,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 225,
                      <!-- start mesh   --> 0,
                      <!-- num meshes   --> 1,
                      <!-- bounding box -->  1.6787628,   15.876895,    7.5339012,
-                                           -1.6787629,    4.6313572, -18.393768,
+                                           -1.678763,     4.6313572, -18.393768,
                      <!-- center       --> -0.034475069, 10.130564,   -5.1678391,
                      <!-- radius       --> 13.629954
                   </VMeshRef>
@@ -557,13 +557,13 @@
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-112.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 79,
+                     <!-- num verts    --> 148,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 159,
                      <!-- start mesh   --> 0,
                      <!-- num meshes   --> 2,
                      <!-- bounding box -->  1.3158848,   15.87689,     7.5311928,
-                                           -1.3440174,    4.6313572, -18.393764,
+                                           -1.3440173,    4.6313572, -18.393764,
                      <!-- center       --> -0.034475069, 10.130564,   -5.1678391,
                      <!-- radius       --> 13.62649
                   </VMeshRef>
@@ -575,13 +575,13 @@
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-112.vms,
                      <!-- start vert   --> 0,
-                     <!-- num verts    --> 59,
+                     <!-- num verts    --> 58,
                      <!-- start index  --> 0,
                      <!-- num indices  --> 69,
                      <!-- start mesh   --> 0,
                      <!-- num meshes   --> 1,
-                     <!-- bounding box -->  0.98605639,  15.876886,   11.294842,
-                                           -1.0139449,    4.6313591, -18.3437,
+                     <!-- bounding box -->  0.98605645,  15.876886,   11.294842,
+                                           -1.013945,     4.6313591, -18.3437,
                      <!-- center       --> -0.034475069, 10.130564,   -5.1678391,
                      <!-- radius       --> 17.070868
                   </VMeshRef>
@@ -592,7 +592,7 @@
          <Hardpoints>
             <Fixed>
                <HpRunningLight01>
-                  <Position type="Vector">1.1657619, 3.3814049, 9.5217133</Position>
+                  <Position type="Vector">1.1657617, 3.3814049, 9.5217133</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -94.025438e-09,  14.161294e-15,
                      -94.025438e-09,  -1.0000000000,  150.99580e-09,
@@ -600,7 +600,7 @@
                   </Orientation>
                </HpRunningLight01>
                <HpRunningLight02>
-                  <Position type="Vector">-1.1497188, 3.3814049, 9.5217133</Position>
+                  <Position type="Vector">-1.149719, 3.3814049, 9.5217133</Position>
                   <Orientation type="Matrix">
                        1.0000000000, -94.025438e-09,  14.161294e-15,
                      -94.025438e-09,  -1.0000000000,  150.99580e-09,
@@ -610,31 +610,31 @@
                <HpRunningLight03>
                   <Position type="Vector">-0.023272537, 7.5368156, 9.7016602</Position>
                   <Orientation type="Matrix">
-                       1.0000000000, -83.220215e-09, -26.968538e-15,
-                     -83.220215e-09,  -1.0000000000, -325.84137e-09,
-                     -124.73199e-18,  325.84137e-09,  -1.0000000000
+                       1.0000000000, -83.220215e-09, -32.156911e-15,
+                     -83.220215e-09,  -1.0000000000, -389.41437e-09,
+                     -124.73199e-18,  389.41437e-09,  -1.0000000000
                   </Orientation>
                </HpRunningLight03>
                <HpRunningLight04>
                   <Position type="Vector">-0.023272712, 5.6333504, 11.605129</Position>
                   <Orientation type="Matrix">
-                       1.0000000000, -83.220215e-09, -26.968538e-15,
-                     -83.220215e-09,  -1.0000000000, -325.84137e-09,
-                     -124.73199e-18,  325.84137e-09,  -1.0000000000
+                       1.0000000000, -83.220215e-09, -32.156911e-15,
+                     -83.220215e-09,  -1.0000000000, -389.41437e-09,
+                     -124.73199e-18,  389.41437e-09,  -1.0000000000
                   </Orientation>
                </HpRunningLight04>
                <HpRunningLight05>
-                  <Position type="Vector">-0.02327114, 3.609623, -8.4121552</Position>
+                  <Position type="Vector">-0.023271136, 3.609623, -8.4121552</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,  20.571838e-15,  65.193589e-09,
-                     -65.193589e-09,  313.91647e-09,   1.0000000000,
-                     -111.44767e-18,  -1.0000000000,  313.91647e-09
+                       1.0000000000,  20.571838e-15,  65.193575e-09,
+                     -65.193575e-09,  313.91647e-09,   1.0000000000,
+                     -111.44766e-18,  -1.0000000000,  313.91647e-09
                   </Orientation>
                </HpRunningLight05>
             </Fixed>
          </Hardpoints>
-      </trans_tail_fin_lod1231216154827.3db>
-      <trans_frnt_lod1231216154827.3db>
+      </trans_tail_fin_lod1240607180711.3db>
+      <trans_frnt_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -647,14 +647,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-212.vms,
-                     <!-- start vert   --> 1714,
-                     <!-- num verts    --> 330,
+                     <!-- start vert   --> 2326,
+                     <!-- num verts    --> 558,
                      <!-- start index  --> 2874,
                      <!-- num indices  --> 558,
                      <!-- start mesh   --> 12,
                      <!-- num meshes   --> 5,
                      <!-- bounding box -->  8.9956951,   8.0123367,   18.977505,
-                                           -8.9956951,  -8.0123367,  -18.977505,
+                                           -8.9956961,  -8.0123367,  -18.977505,
                      <!-- center       -->  0.17960361,  0.42174697,   0.73903275,
                      <!-- radius       --> 20.171412
                   </VMeshRef>
@@ -665,14 +665,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-212.vms,
-                     <!-- start vert   --> 726,
-                     <!-- num verts    --> 201,
+                     <!-- start vert   --> 1289,
+                     <!-- num verts    --> 312,
                      <!-- start index  --> 1338,
                      <!-- num indices  --> 312,
                      <!-- start mesh   --> 8,
                      <!-- num meshes   --> 5,
                      <!-- bounding box -->  8.9956884,   8.0123377,   18.977503,
-                                           -8.9956884,  -8.0123377,  -18.977505,
+                                           -8.9956894,  -8.0123377,  -18.977505,
                      <!-- center       -->  0.17960361,  0.42174697,   0.73903275,
                      <!-- radius       --> 20.171412
                   </VMeshRef>
@@ -683,14 +683,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-212.vms,
-                     <!-- start vert   --> 417,
-                     <!-- num verts    --> 118,
+                     <!-- start vert   --> 494,
+                     <!-- num verts    --> 156,
                      <!-- start index  --> 591,
                      <!-- num indices  --> 156,
                      <!-- start mesh   --> 3,
                      <!-- num meshes   --> 1,
                      <!-- bounding box -->  8.9956799,   8.0123377,   18.977505,
-                                           -8.9956818,  -8.0123377,  -18.977501,
+                                           -8.9956827,  -8.0123377,  -18.977501,
                      <!-- center       -->  0.17960361,  0.42174697,   0.73903275,
                      <!-- radius       --> 20.171408
                   </VMeshRef>
@@ -701,7 +701,7 @@
          <Hardpoints>
             <Fixed>
                <DpCntrl_twr>
-                  <Position type="Vector">-0.21205696, 2.4820948, -1.9714127</Position>
+                  <Position type="Vector">-0.21205695, 2.4820948, -1.9714127</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000,  528.50848e-18,
                        0.0000000000,   1.0000000000, -92.705051e-09,
@@ -709,15 +709,15 @@
                   </Orientation>
                </DpCntrl_twr>
                <DpFrnt>
-                  <Position type="Vector">-0.21206008, 6.3701982, 18.677126</Position>
+                  <Position type="Vector">-0.21206011, 6.3701982, 18.677126</Position>
                   <Orientation type="Matrix">
-                       1.0000000000, -20.388818e-15, -140.50455e-09,
+                       1.0000000000, -13.283391e-15, -140.50455e-09,
                      -140.50455e-09, -162.92068e-09,  -1.0000000000,
-                      45.577523e-18,   1.0000000000, -162.92068e-09
+                     -7.0598498e-15,   1.0000000000, -162.92068e-09
                   </Orientation>
                </DpFrnt>
                <DpPort_eng>
-                  <Position type="Vector">-6.623394, -2.3225932, 0.1675415</Position>
+                  <Position type="Vector">-6.6233945, -2.3225932, 0.1675415</Position>
                   <Orientation type="Matrix">
                        0.4848093700,  -0.8746198400,  176.14042e-09,
                       -0.8746198400,  -0.4848093700,  188.79173e-09,
@@ -725,7 +725,7 @@
                   </Orientation>
                </DpPort_eng>
                <DpStar_eng>
-                  <Position type="Vector">6.6091428, -2.3225927, 0.1675415</Position>
+                  <Position type="Vector">6.6091423, -2.3225927, 0.1675415</Position>
                   <Orientation type="Matrix">
                       -0.4848093400,   0.8746198400, -59.785918e-09,
                       -0.8746198400,  -0.4848093400, -231.17511e-09,
@@ -733,7 +733,7 @@
                   </Orientation>
                </DpStar_eng>
                <HpHeadlight01>
-                  <Position type="Vector">-2.906781, 1.057719, -19.166954</Position>
+                  <Position type="Vector">-2.906781, 1.0577188, -19.166954</Position>
                   <Orientation type="Matrix">
                        1.0000000000,  8.4376950e-15,  1.7714714e-18,
                      -8.4376950e-15,   1.0000000000,  -0.0000000000,
@@ -759,7 +759,7 @@
             </Fixed>
             <Revolute>
                <HpTurret_U3_01>
-                  <Position type="Vector">-0.2120572, -8.0622101, 0.11547089</Position>
+                  <Position type="Vector">-0.21205719, -8.0622101, 0.11547089</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,  5.6818812e-09, -150.99580e-09,
                      -5.6818585e-09,  -1.0000000000, -150.99580e-09,
@@ -771,8 +771,8 @@
                </HpTurret_U3_01>
             </Revolute>
          </Hardpoints>
-      </trans_frnt_lod1231216154827.3db>
-      <trans_star_eng_lod1231216154827.3db>
+      </trans_frnt_lod1240607180711.3db>
+      <trans_star_eng_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -785,14 +785,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-112.vms,
-                     <!-- start vert   --> 115,
-                     <!-- num verts    --> 118,
+                     <!-- start vert   --> 142,
+                     <!-- num verts    --> 162,
                      <!-- start index  --> 225,
                      <!-- num indices  --> 162,
                      <!-- start mesh   --> 1,
                      <!-- num meshes   --> 2,
                      <!-- bounding box -->  5.056139,    5.2558427,   3.8333359,
-                                           -5.0561414,  -5.2558436,  -3.8333321,
+                                           -5.0561419,  -5.2558436,  -3.8333321,
                      <!-- center       -->  0.70917034, -0.27520895,  0.080905914,
                      <!-- radius       --> 7.3256516
                   </VMeshRef>
@@ -803,14 +803,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-112.vms,
-                     <!-- start vert   --> 79,
-                     <!-- num verts    --> 70,
+                     <!-- start vert   --> 148,
+                     <!-- num verts    --> 102,
                      <!-- start index  --> 159,
                      <!-- num indices  --> 102,
                      <!-- start mesh   --> 2,
                      <!-- num meshes   --> 2,
                      <!-- bounding box -->  5.056139,    5.2558432,   3.8333359,
-                                           -5.0561414,  -5.2558436,  -3.8333321,
+                                           -5.0561419,  -5.2558436,  -3.8333321,
                      <!-- center       -->  0.70917034, -0.27520895,  0.080905914,
                      <!-- radius       --> 7.3256516
                   </VMeshRef>
@@ -821,14 +821,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-112.vms,
-                     <!-- start vert   --> 59,
-                     <!-- num verts    --> 30,
+                     <!-- start vert   --> 58,
+                     <!-- num verts    --> 42,
                      <!-- start index  --> 69,
                      <!-- num indices  --> 42,
                      <!-- start mesh   --> 1,
                      <!-- num meshes   --> 1,
                      <!-- bounding box -->  5.056139,    5.2558427,   3.8333321,
-                                           -5.0561409,  -5.2558436,  -3.8333321,
+                                           -5.0561414,  -5.2558436,  -3.8333321,
                      <!-- center       -->  0.70917034, -0.27520895,  0.080905914,
                      <!-- radius       --> 7.3256507
                   </VMeshRef>
@@ -839,11 +839,11 @@
          <Hardpoints>
             <Fixed>
                <HpDocklight03>
-                  <Position type="Vector">5.1098843, -5.4410472, 3.1204681</Position>
+                  <Position type="Vector">5.1098804, -5.4410472, 3.1204681</Position>
                   <Orientation type="Matrix">
-                      -0.7071069500, -5.6818599e-09,  -0.7071065900,
-                     -3.7972243e-09,   1.0000000000, -4.2381392e-09,
-                       0.7071065900, -311.77461e-12,  -0.7071069500
+                      -0.7071069500, -5.6818603e-09,  -0.7071065900,
+                     -3.7972252e-09,   1.0000000000, -4.2381392e-09,
+                       0.7071065900, -311.77394e-12,  -0.7071069500
                   </Orientation>
                </HpDocklight03>
                <HpEngine04>
@@ -867,9 +867,9 @@
                <HpTurret_U1_02>
                   <Position type="Vector">5.0641499, -2.0653458, -0.17321777</Position>
                   <Orientation type="Matrix">
-                      75.497901e-09,   1.0000000000, -43.370015e-09,
-                      -1.0000000000,  75.497901e-09, -1.6375790e-15,
-                      1.6375790e-15,  43.370015e-09,   1.0000000000
+                      313.91647e-09,   1.0000000000, -43.370008e-09,
+                      -1.0000000000,  313.91647e-09, -6.8001160e-15,
+                      6.8278716e-15,  43.370008e-09,   1.0000000000
                   </Orientation>
                   <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-6.2831855</Min>
@@ -877,8 +877,8 @@
                </HpTurret_U1_02>
             </Revolute>
          </Hardpoints>
-      </trans_star_eng_lod1231216154827.3db>
-      <trans_cntrl_twr_lod1231216154827.3db>
+      </trans_star_eng_lod1240607180711.3db>
+      <trans_cntrl_twr_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -891,8 +891,8 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-212.vms,
-                     <!-- start vert   --> 2044,
-                     <!-- num verts    --> 207,
+                     <!-- start vert   --> 2884,
+                     <!-- num verts    --> 384,
                      <!-- start index  --> 3432,
                      <!-- num indices  --> 384,
                      <!-- start mesh   --> 17,
@@ -909,8 +909,8 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-212.vms,
-                     <!-- start vert   --> 927,
-                     <!-- num verts    --> 95,
+                     <!-- start vert   --> 1601,
+                     <!-- num verts    --> 216,
                      <!-- start index  --> 1650,
                      <!-- num indices  --> 216,
                      <!-- start mesh   --> 13,
@@ -927,8 +927,8 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-212.vms,
-                     <!-- start vert   --> 535,
-                     <!-- num verts    --> 73,
+                     <!-- start vert   --> 650,
+                     <!-- num verts    --> 132,
                      <!-- start index  --> 747,
                      <!-- num indices  --> 132,
                      <!-- start mesh   --> 4,
@@ -945,7 +945,7 @@
          <Hardpoints>
             <Fixed>
                <HpFx01>
-                  <Position type="Vector">-0.039982703, 0.22245789, -11.758911</Position>
+                  <Position type="Vector">-0.039982695, 0.22245789, -11.758911</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000, -16.811587e-18,
                        0.0000000000,   1.0000000000, -1.6375790e-15,
@@ -953,7 +953,7 @@
                   </Orientation>
                </HpFx01>
                <HpFx02>
-                  <Position type="Vector">-0.039983861, 3.9269938, -1.8704224</Position>
+                  <Position type="Vector">-0.039983854, 3.9269938, -1.8704224</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000, -16.811587e-18,
                        0.0000000000,   1.0000000000, -1.6375790e-15,
@@ -961,7 +961,7 @@
                   </Orientation>
                </HpFx02>
                <HpFx03>
-                  <Position type="Vector">-0.039981131, -11.998319, 5.6358261</Position>
+                  <Position type="Vector">-0.039981134, -11.998319, 5.6358261</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000, -16.811587e-18,
                        0.0000000000,   1.0000000000, -1.6375790e-15,
@@ -969,7 +969,7 @@
                   </Orientation>
                </HpFx03>
                <HpFx04>
-                  <Position type="Vector">-0.03998426, 2.5581779, 12.793095</Position>
+                  <Position type="Vector">-0.039984263, 2.5581779, 12.793095</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000, -16.811587e-18,
                        0.0000000000,   1.0000000000, -1.6375790e-15,
@@ -979,7 +979,7 @@
             </Fixed>
             <Revolute>
                <HpTurret_U1_04>
-                  <Position type="Vector">-0.039983936, 3.2906513, 2.3763428</Position>
+                  <Position type="Vector">-0.039983939, 3.2906513, 2.3763428</Position>
                   <Orientation type="Matrix">
                        1.0000000000,   0.0000000000, -16.811587e-18,
                        0.0000000000,   1.0000000000, -1.6375790e-15,
@@ -991,8 +991,8 @@
                </HpTurret_U1_04>
             </Revolute>
          </Hardpoints>
-      </trans_cntrl_twr_lod1231216154827.3db>
-      <trans_port_eng_lod1231216154827.3db>
+      </trans_cntrl_twr_lod1240607180711.3db>
+      <trans_port_eng_lod1240607180711.3db>
          <MultiLevel>
             <Switch2 type="float array" count="4">
                0,
@@ -1005,8 +1005,8 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod0-112.vms,
-                     <!-- start vert   --> 233,
-                     <!-- num verts    --> 118,
+                     <!-- start vert   --> 304,
+                     <!-- num verts    --> 162,
                      <!-- start index  --> 387,
                      <!-- num indices  --> 162,
                      <!-- start mesh   --> 3,
@@ -1023,14 +1023,14 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod1-112.vms,
-                     <!-- start vert   --> 149,
-                     <!-- num verts    --> 70,
+                     <!-- start vert   --> 250,
+                     <!-- num verts    --> 102,
                      <!-- start index  --> 261,
                      <!-- num indices  --> 102,
                      <!-- start mesh   --> 4,
                      <!-- num meshes   --> 2,
                      <!-- bounding box -->  5.0561414,   5.2558427,   3.8333321,
-                                           -5.0561409,  -5.2558436,  -3.8333397,
+                                           -5.0561419,  -5.2558436,  -3.8333397,
                      <!-- center       --> -0.71161747, -0.37673569,  0.31378555,
                      <!-- radius       --> 7.4244399
                   </VMeshRef>
@@ -1041,8 +1041,8 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_ge_transport.lod2-112.vms,
-                     <!-- start vert   --> 89,
-                     <!-- num verts    --> 30,
+                     <!-- start vert   --> 100,
+                     <!-- num verts    --> 42,
                      <!-- start index  --> 111,
                      <!-- num indices  --> 42,
                      <!-- start mesh   --> 2,
@@ -1059,10 +1059,10 @@
          <Hardpoints>
             <Fixed>
                <HpDocklight02>
-                  <Position type="Vector">-4.9537048, -5.441051, 3.1204681</Position>
+                  <Position type="Vector">-4.9537086, -5.441051, 3.1204681</Position>
                   <Orientation type="Matrix">
                       -0.7071069500,  14.563843e-09,   0.7071065900,
-                     -4.2381463e-09,   1.0000000000, -24.834543e-09,
+                     -4.2381472e-09,   1.0000000000, -24.834543e-09,
                       -0.7071065900, -20.557497e-09,  -0.7071069500
                   </Orientation>
                </HpDocklight02>
@@ -1097,6 +1097,6 @@
                </HpTurret_U1_03>
             </Revolute>
          </Hardpoints>
-      </trans_port_eng_lod1231216154827.3db>
+      </trans_port_eng_lod1240607180711.3db>
    </UTF_ROOT>
 </UTFXML>

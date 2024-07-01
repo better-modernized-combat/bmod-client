@@ -81,11 +81,14 @@ def generate_weapon_infocard_entry(
         return display_name, info
 
 def generate_ammo_infocard_entry(
-    name: str,              # Display name of the gun (i.e. "Scorpion")
-    info: str,              # Infocard text, without header
+    name: str,                  # Display name of the gun (i.e. "Scorpion")
+    info: str,                  # Infocard text, without header
+    variant_desc: str = "",     # Variant Description (e.g. " - Increased Damage" for xdm weapons)
+    variant_display: str = ""   # Variant Display Suffix (e.g. "Scorpion" becomes "Scorpion [+]")
     ):
     
-    infocard_header = f'\\m\\b{name}\\B'
+    display_name = name+variant_display
+    infocard_header = f'\\m\\b{name}{variant_desc}\\B'
     infocard = f'\t{infocard_header}\n\t\\l\n\t{info}\\n\n\t'
     
-    return name, infocard
+    return display_name, infocard

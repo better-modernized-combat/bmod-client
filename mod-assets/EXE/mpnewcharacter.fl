@@ -6,17 +6,23 @@ rank = 0
 money = %%MONEY%%
 ;voice = %%VOICE%%
 ;All must be Trent!
-voice = trent_voice
 
-costume = %%BASE_COSTUME%%
+voice = 
+;replace 'trent_voice' above with 'juni' to mute voice on newly created MP characters. Better if you prefer silence to having a male voice. Like the example line below:
+;voice = juni
+;Update - this does not mute you out in SPACE!! It actually makes you TALK like you're Juni out in combat!! It's kind of awesome actually!!! But need to set a real 'mute' voice for now
+
+;costume = %%BASE_COSTUME%%
+costume = bm_mc_player_3
+
 com_costume = %%COMM_COSTUME%%
 
 system = Li03
 base = Li03_01_Base
 
-house = 0.2, li_n_grp
-house = 0.2, li_lsf_grp
-house = 0.2, li_p_grp
+house = 0, li_n_grp
+house = 0, li_lsf_grp
+house = 0, li_p_grp
 house = 0, br_n_grp
 house = 0, br_p_grp
 house = 0, ku_n_grp
@@ -32,7 +38,7 @@ house = 0, co_ic_grp
 house = -0.3, co_khc_grp
 house = -0.3, co_kt_grp
 house = 0, rh_m_grp
-house = 0.2, co_me_grp
+house = 0, co_me_grp
 house = 0.2, co_ni_grp
 house = 0, co_os_grp
 house = -0.3, co_rs_grp
@@ -56,7 +62,7 @@ house = -0.65, fc_ou_grp
 house = -0.65, fc_rh_grp
 house = 0, fc_or_grp
 house = -0.65, fc_u_grp
-house = -0.65, fc_x_grp
+house = -0.91, fc_x_grp
 house = 0, gd_gm_grp
 house = 0, fc_uk_grp
 house = -0.65, fc_n_grp
@@ -78,11 +84,11 @@ visit = 8778,65         ;li_n_grp
 visit = 33711,65        ;li_p_grp
 visit = 65354,65        ;li_lsf_grp
 visit = 2626,65         ;gd_bh_grp
-visit = 36789,65        ;co_ic_grp
+;visit = 36789,65        ;co_ic_grp
 visit = 32354,65        ;co_me_grp
 visit = 21524,65        ;co_vr_grp
 visit = 36813,65        ;fc_x_grp
-visit = 57826,65        ;fc_j_grp
-visit = 28402,65        ;fc_lr_grp
+;visit = 57826,65        ;fc_j_grp
+;visit = 28402,65        ;fc_lr_grp
 
 %%PACKAGE%%

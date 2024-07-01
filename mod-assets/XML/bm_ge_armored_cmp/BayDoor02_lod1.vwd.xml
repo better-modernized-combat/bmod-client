@@ -3,16 +3,16 @@
 <VMeshWire>
    <VWireData type="VWireData">
       <!-- size  --> 16,
-      <!-- mesh  --> bm_ge_armored.lod2-112.vms,
-      <!-- base  --> 622,
+      <!-- mesh  --> transport_armored.lod2-112.vms,
+      <!-- base  --> 626,
       <!-- used  --> 4,
       <!-- count --> 8,
-      <!-- span  --> 4
+      <!-- span  --> 5
 
       <!--  Line     Vtx1, Vtx2 -->
       <!--     0 -->    0,    1
-      <!--     1 -->    2,    3
-      <!--     2 -->    1,    3
+      <!--     1 -->    2,    4
+      <!--     2 -->    1,    4
       <!--     3 -->    2,    0
    </VWireData>
 </VMeshWire>

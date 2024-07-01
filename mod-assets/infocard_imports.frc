@@ -13,7 +13,7 @@ S 462285 SRM Launcher [+]
 S 462286 1 x SRM Pylon
 S 462287 1 x SRM Pylon [+]
 S 462288 Twin SRM Launcher
-S 462289 Sunslayer Torpedo
+S 462289 Skipper Light Torpedo
 S 462290 UGB
 
 S 462756 END AUX NAME
@@ -35,13 +35,14 @@ S 461769 Adv. Brigandine V.H.F. Shield
 S 461770 Brigandine L.F. Shield [+]
 S 461771 Brigandine V.H.F. Shield [+]
 S 461772 Brigandine Fr. Shield [+]
+S 461773 HLX Industrial Frigate Shield
 
 S 463276 Fleet LRM
 S 463277 Fleet SRM
 S 463278 LRM
 S 463283 Rocket
 S 463284 SRM
-S 463289 Sunslayer Torpedo
+S 463289 Skipper Light Torpedo
 S 463290 UG Bomb
 
 H 462766
@@ -146,9 +147,9 @@ H 462788
 	This launcher fits in the Large Missile slot and fires two missiles per salvo, doubling the potential damage if both missiles hit. It's useful for delivering a deadly punch of LRMs throughout a fight, allowing users to support a battle from afar or deal heavy damage to large targets unable to effectively evade them.\n
 
 H 462789
-	\m\bSunslayer Torpedo\B
+	\m\bSkipper Light Torpedo\B
 	\l
-	Sunslayer Torpedo Placeholder.\n
+	Skipper Light Torpedo Placeholder.\n
 
 H 462790
 	\m\bUGB\B
@@ -255,6 +256,11 @@ H 462022
 	This is a positron-based shield that provides improved regeneration rate at the cost of capacity and rebuild time. This model has been specifically designed for Very Heavy Fighter class ships.
 	
 	This particular piece of equipment is upgraded, featuring a higher shield capacity than its base model.\n
+	
+H 462023
+	\m\bHLX Industrial Frigate Shield\B
+	\l	
+	PLACEHOLDER.\n
 
 H 463776
 	\m\bFleet LRM Ammo\B
@@ -282,7 +288,7 @@ H 463784
 	Short Range Missiles, or "SRMs" are fast, agile missiles made to track nimble fighters in close-range dogfights. SRMs can be fired from a variety of different SRM launchers, each with different specifications and weights.\n
 
 H 463789
-	\m\Torpedo\B
+	\m\Skipper Light Torpedo\B
 	\l
 	Placeholder Text\n
 
@@ -304,7 +310,9 @@ S 468269 Hammerhead
 S 468270 Paladin
 S 468271 Mule
 S 468272 CSV
-
+S 468273 Orca
+S 468274 Manta
+S 468275 Angler
 S 468760 Civilian L. F. Engine
 S 468761 Civilian H. F. Engine
 S 468762 Civilian V. H. F. Engine
@@ -318,6 +326,9 @@ S 468769 Bounty Hunter V. H. F. Engine
 S 468770 Liberty H. F. Engine
 S 468771 Rogue Fr. Engine
 S 468772 Civilian Fr. Engine
+S 468773 Junkers V. H. F. Engine
+S 468774 Junkers L. F. Engine
+S 468775 Junkers H. F. Engine
 
 S 469260 Civilian L. F. Powerplant
 S 469261 Civilian H. F. Powerplant
@@ -332,6 +343,9 @@ S 469269 Bounty Hunter V. H. F. Powerplant
 S 469270 Liberty H. F. Powerplant
 S 469271 Rogue Fr. Powerplant
 S 469272 Civilian Fr. Powerplant
+S 469273 Junkers V. H. F. Powerplant
+S 469274 Junkers L. F. Powerplant
+S 469275 Junkers H. F. Powerplant
 
 S 469760 Scanner
 S 469761 Scanner
@@ -346,6 +360,9 @@ S 469769 Scanner
 S 469770 Scanner
 S 469771 Scanner
 S 469772 Scanner
+S 469773 Scanner
+S 469774 Scanner
+S 469775 Scanner
 
 S 470260 Tractor Beam
 S 470261 Tractor Beam
@@ -360,6 +377,9 @@ S 470269 Tractor Beam
 S 470270 Tractor Beam
 S 470271 Tractor Beam
 S 470272 Heavy Tractor Beam
+S 470273 Tractor Beam
+S 470274 Tractor Beam
+S 470275 Tractor Beam
 
 H 468510
 	\m\bCTE-1500 "Hawk" Civilian Light Fighter\B
@@ -422,9 +442,24 @@ H 468521
 	The lifeline of any organization is its ability to monetize opportunity. In the case of more alternative unions, this fundamental truth is even more vital. Fortunately, the Mule is the solution to the problem of moving a significant supply of goods through hazardous opposition in order to maintain these channels of commerce and opportunity.
 	
 H 468522
-	\m\b"Bullfrog" Combat Service Vehicle\B
+	\m\bR-100 "Bullfrog" Combat Service Vehicle\B
 	\l
 	The remarkably low cost of making and maintaining this ship's design has ensured its widespread use across the sector. Cheap, flexible, and with a cargo hold that's significantly larger than most fighter-sized ships, the CSV can be found in almost every star system in Sirius, supporting the needs of almost every group in the sector.
+	
+H 468523
+	\m\bR301-C "Orca" Junkers Very Heavy Fighter\B
+	\l
+	Ambitions grow, and the tools used for their achievement must grow with them: An expansion on the Angler, this fighter provides the muscle and power needed to take on larger scores. While its hull and powerplant are weaker than normal for its size, it makes up for it with a larger cargo bay, and more flexible hardpoint layout.
+	
+H 468524
+	\m\bR101-B "Manta" Junkers Light Fighter\B
+	\l
+	Little more than a stripped-down CSV chassis with oversized engines and rigged with a combat-rated powerplant, the Manta offers a cheap and relatively reliable option for interception and reconnaissance tasks. The fighter is often seen in the hands of pirate groups who have had to make the most of the limited resources available to them following the Houston catastrophe.
+	
+H 468525
+	\m\bR-201-C "Angler" Junkers Heavy Fighter\B
+	\l
+	Built atop the chassis of the venerable Combat Service Vehicle, the Angler is a full-fighter conversion of the original design. With additional armour plating, a streamlined profile and massively improved heat dispersion capacity, the Angler is able to survive and thrive in a harsher post-Houston Sirius, and has the cargohold to turn a profit in the process.
 
 H 469010
 	\m\bModel G "Quarrel" High-Performance Engine\B
@@ -490,6 +525,21 @@ H 469022
 	\m\bModel G "Quarrel" High-Performance Engine\B
 	\l
 	A larger engine for the civilian craft with a long distance commute. Smooth sailing and very power efficient.\n
+
+H 469023
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
+
+H 469024
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
+
+H 469025
+	\m\b"Old Reliable"\B
+	\l
+	Held together with space-grade duct tape.\n
 
 
 H 469510
@@ -557,6 +607,22 @@ H 469522
 	\l
 	The 48-B Premium edition power supply was developed by Ageira Technologies for the adventurous starfarer. It's superior capacity and liquid-hydrogen cooled cells deliver enough performance to take on the dangers of space. Stay frosty! \n\.
 
+H 469523
+	\m\bVL-800 Junker Vacuum-Cooled Power Supply\B
+	\l
+	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
+H 469524
+	\m\bVL-800 Junker Vacuum-Cooled Power Supply\B
+	\l
+	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
+
+H 469525
+	\m\bVL-800 Junker Vacuum-Cooled Power Supply\B
+	\l
+	The VL-800 power supply does not pass safety standards in any of the four Houses, but the simple design has worked to supply the Junkers with cheap and efficient power. These are often made from salvaged parts and are incompatible with other ships of the same class. It's best not to think too hard about what's inside your power supply.\n
+
 H 470010
 	\m\b2k High-Bandwidth Ship Scanner\B
 	\l
@@ -622,6 +688,21 @@ H 470022
 	\l
 	Enhanced tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
 
+H 470023
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470024
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
+H 470025
+	\m\b2k High-Bandwidth Ship Scanner\B
+	\l
+	Standard tomographic imaging device that employs magnetic, infrared, sonar, and gravitational sensors to produce a three-dimensional model of a target and then match that target to a database of known ships.\n
+
 H 470510
 	\m\b7b Multi-Focal Tractor Beam\B
 	\l
@@ -684,6 +765,21 @@ H 470521
 
 H 470522
 	\m\b7b Heavy Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470523
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470524
+	\m\b7b Multi-Focal Tractor Beam\B
+	\l
+	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
+
+H 470525
+	\m\b7b Multi-Focal Tractor Beam\B
 	\l
 	Projects energy beams to manipulate or retrieve objects in space. Uses a variation of the same technology that produces energy shields.\n
 
@@ -805,6 +901,23 @@ S 471621 \x00B0
 S 471622 \x00B0/s
 S 471623 Detonation Distance:
 S 471624 Maximum Range:
+S 471625 Generic Placeholder
+
+S 471626 PLANET TYPE TEST
+S 471627 SUN TYPE TEST
+S 471628 DOCKING_RING TYPE TEST
+S 471629 STATION TYPE TEST
+S 471630 SATELLITE TYPE TEST
+S 471631 MISSION_SATELLITE TYPE TEST
+S 471632 WEAPONS_PLATFORM TYPE TEST
+S 471633 TRADELANE_RING TYPE TEST
+S 471634 DESTROYABLE_DEPOT TYPE TEST
+S 471635 JUMP_GATE TYPE TEST
+S 471636 JUMP_HOLE TYPE TEST
+S 471637 AIRLOCK_GATE TYPE TEST
+S 471638 NON_TARGETABLE TYPE TEST
+S 471639 WAYPOINT TYPE TEST
+S 471640 TRIGGERS TESTING SATELLITE
 
 S 472011 Countermeasure Dropper
 S 472012 Countermeasure Dropper [+]
@@ -824,6 +937,7 @@ S 472025 Elite
 S 472026 Patriot Wreck
 S 472027 Defender Wreck
 S 472028 Guardian Wreck
+S 472029 ZP-LRM
 
 H 472512
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper\B
@@ -928,6 +1042,19 @@ H 472524
 	\m\bZP-1600M Zero Pointer Targeting Module\B
 	\l
 	Zero Pointers are not weapons, but special tools used to adjust the amount of lead your targeting crosshair displays by adding them to a weapon group with your other guns. This model simulates a weapon with a projectile speed of 1600m, and will add a moderate amount of lead to your weapon group.
+	
+	When factors like aging targeting software or ionic interference reduce the accuracy of a pilot's lead indicator, it's necessary to adjust the aim point, or zeroing, of the ship's computer manually.  Unfortunately, clunky interfaces and a loss of knowledge in how to adjust certain hardcoded systems means many pilots were unable to perform this important function without significant downtime.
+	
+	Zero Pointers are a simple but effective solution. Sold as an aftermarket modification, they are cheap and easy to install 'ghost' weapons that fool the ship's computer into thinking they're another gun, usually slower than the others already installed. By adding these slower fake weapons into the same weapon group, they bring down the average that the targeting computer uses to compute a unified aim point for all the grouped weapons, resulting in more lead on the target when added to a group of faster weapons or less lead if added to a group of slower weapons.
+	
+	Using a Zero Pointer is easy. Just install it, then add it to any weapon group to modify that group's lead pip as desired, and toggle the weapon off when the leading modification is no longer desired. If your shots always seem to be too slow to catch the target, proper use of a Zero Pointer or multiple in combination can improve your accuracy tremendously.
+	
+	Thanks to the tool's spreading popularity amongst pilots, most ships now have special Class 10 hardpoints that allow their installation without giving up space for any real weapons.\n
+	
+H 472525
+	\m\bZP-LRM Zero Pointer Targeting Module\B
+	\l
+	Zero Pointers are not weapons, but special tools used to adjust the amount of lead your targeting crosshair displays by adding them to a weapon group with your other guns. This model assists with long range targeting for missiles, allowing them to be launched at a range of up to 10km.
 	
 	When factors like aging targeting software or ionic interference reduce the accuracy of a pilot's lead indicator, it's necessary to adjust the aim point, or zeroing, of the ship's computer manually.  Unfortunately, clunky interfaces and a loss of knowledge in how to adjust certain hardcoded systems means many pilots were unable to perform this important function without significant downtime.
 	
@@ -1052,9 +1179,9 @@ S 474047 Xenos Light Fighter
 S 474048 Xenos Heavy Fighter
 S 474049 Xenos Very Heavy Fighter
 S 474050 Xenos Freighter
-S 474051 [ORE] High-yield Copper Deposit
-S 474052 [ORE] Mid-yield Silver Deposit
-S 474053 [ORE] Mid-yield Gold Deposit
+S 474051 [ORE] Copper Deposit
+S 474052 [ORE] Silver Deposit
+S 474053 [ORE] Gold Deposit
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -2765,20 +2892,20 @@ H 483623
 	\l
 	The contents of this cargo could be anything; without scanners being able to penetrate its exterior, the only way to find out is to crack it open by force.
 
-S 474054 DSE Mining Ship Charlie-1
-S 474055 DSE Mining Ship Sierra-1
+S 474054 DSE - Boar Mining Ship
+S 474055 [USE] DSE Radar C-01
 S 474056 DSE Mining Ship Sierra-2
 S 474057 DSE Mining Ship Sierra-3
 
-S 474058 Xenos Frigate "Ludlow"
+S 474058 Xenos - Frigate Ludlow
 S 474059 Tikas Supply Base
 
 H 476069
 	\bIFF: Deep Space Engineering\B
-	\bID: Mining Ship Charlie-1\B
-	\bTASK: Copper Harvesting\B
+	\bID: Boar Mining Ship, Frigate class\B
+	\bTASK: Ore Harvesting\B
 	\l
-	Huge destroyer-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
+	Huge frigate-sized utility vessels, "Boar" Mining Ships extract valuable mineral deposits from asteroid fields.
 
 H 476070
 	\bIFF: Deep Space Engineering\B
@@ -2819,3 +2946,28 @@ H 476074
 	It has no room for any permanent residents beyond the small crew of mechanics and militants who run it.
 
 S 474060 Central Alamosa // HIGH XENOS THREAT
+
+S 474061 [SLVG] Boar Wreck
+S 474062 [SLVG] Buffalo Wreck
+S 474063 [SLVG] CSV Wreck
+S 474064 [SLVG] Hawk Wreck
+S 474065 [SLVG] Falcon Wreck
+S 474066 [SLVG] Eagle Wreck
+S 474067 [SLVG] Manta Wreck
+S 474068 [SLVG] Angler Wreck
+S 474069 [SLVG] Orca Wreck
+S 474070 [SLVG] Rhino Wreck
+S 474071 [SLVG] Cargo Crate
+S 474073 [SLVG] Mule Wreck
+
+S 474074 Xenos - Quad AC Platform
+S 474075 Xenos - NAC/L Platform
+S 474076 Xenos Stash
+
+H 476074
+	\bIFF: Xenos\B
+	\bID: Tikas Supply Base\B
+	\bFUNCTION: Logistical Support\B
+	\l
+	This is a forward operating base, established within a hollowed out asteroid by the Xenos. Serving as an ammunition and supply stockpile, this small base provides repair and rearm for Xenos fighters and other vessels in the area. 
+	It has no room for any permanent residents beyond the small crew of mechanics and militants who run it.
