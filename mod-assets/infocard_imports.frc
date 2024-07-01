@@ -937,6 +937,7 @@ S 472025 Elite
 S 472026 Patriot Wreck
 S 472027 Defender Wreck
 S 472028 Guardian Wreck
+S 472029 ZP-LRM
 
 H 472512
 	\m\b"Firewall" CM-1 Long-Life Countermeasure Dropper\B
@@ -1041,6 +1042,19 @@ H 472524
 	\m\bZP-1600M Zero Pointer Targeting Module\B
 	\l
 	Zero Pointers are not weapons, but special tools used to adjust the amount of lead your targeting crosshair displays by adding them to a weapon group with your other guns. This model simulates a weapon with a projectile speed of 1600m, and will add a moderate amount of lead to your weapon group.
+	
+	When factors like aging targeting software or ionic interference reduce the accuracy of a pilot's lead indicator, it's necessary to adjust the aim point, or zeroing, of the ship's computer manually.  Unfortunately, clunky interfaces and a loss of knowledge in how to adjust certain hardcoded systems means many pilots were unable to perform this important function without significant downtime.
+	
+	Zero Pointers are a simple but effective solution. Sold as an aftermarket modification, they are cheap and easy to install 'ghost' weapons that fool the ship's computer into thinking they're another gun, usually slower than the others already installed. By adding these slower fake weapons into the same weapon group, they bring down the average that the targeting computer uses to compute a unified aim point for all the grouped weapons, resulting in more lead on the target when added to a group of faster weapons or less lead if added to a group of slower weapons.
+	
+	Using a Zero Pointer is easy. Just install it, then add it to any weapon group to modify that group's lead pip as desired, and toggle the weapon off when the leading modification is no longer desired. If your shots always seem to be too slow to catch the target, proper use of a Zero Pointer or multiple in combination can improve your accuracy tremendously.
+	
+	Thanks to the tool's spreading popularity amongst pilots, most ships now have special Class 10 hardpoints that allow their installation without giving up space for any real weapons.\n
+	
+H 472525
+	\m\bZP-LRM Zero Pointer Targeting Module\B
+	\l
+	Zero Pointers are not weapons, but special tools used to adjust the amount of lead your targeting crosshair displays by adding them to a weapon group with your other guns. This model assists with long range targeting for missiles, allowing them to be launched at a range of up to 10km.
 	
 	When factors like aging targeting software or ionic interference reduce the accuracy of a pilot's lead indicator, it's necessary to adjust the aim point, or zeroing, of the ship's computer manually.  Unfortunately, clunky interfaces and a loss of knowledge in how to adjust certain hardcoded systems means many pilots were unable to perform this important function without significant downtime.
 	
@@ -1165,9 +1179,9 @@ S 474047 Xenos Light Fighter
 S 474048 Xenos Heavy Fighter
 S 474049 Xenos Very Heavy Fighter
 S 474050 Xenos Freighter
-S 474051 [ORE] Dense Copper Deposit
-S 474052 [ORE] Dense Silver Deposit
-S 474053 [ORE] Dense Gold Deposit
+S 474051 [ORE] Copper Deposit
+S 474052 [ORE] Silver Deposit
+S 474053 [ORE] Gold Deposit
 
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
@@ -2879,11 +2893,11 @@ H 483623
 	The contents of this cargo could be anything; without scanners being able to penetrate its exterior, the only way to find out is to crack it open by force.
 
 S 474054 DSE - Boar Mining Ship
-S 474055 DSE - Deep Penetrating Radar C-01
+S 474055 [USE] DSE Radar C-01
 S 474056 DSE Mining Ship Sierra-2
 S 474057 DSE Mining Ship Sierra-3
 
-S 474058 Xenos Frigate "Ludlow"
+S 474058 Xenos - Frigate Ludlow
 S 474059 Tikas Supply Base
 
 H 476069
@@ -2932,3 +2946,28 @@ H 476074
 	It has no room for any permanent residents beyond the small crew of mechanics and militants who run it.
 
 S 474060 Central Alamosa // HIGH XENOS THREAT
+
+S 474061 [SLVG] Boar Wreck
+S 474062 [SLVG] Buffalo Wreck
+S 474063 [SLVG] CSV Wreck
+S 474064 [SLVG] Hawk Wreck
+S 474065 [SLVG] Falcon Wreck
+S 474066 [SLVG] Eagle Wreck
+S 474067 [SLVG] Manta Wreck
+S 474068 [SLVG] Angler Wreck
+S 474069 [SLVG] Orca Wreck
+S 474070 [SLVG] Rhino Wreck
+S 474071 [SLVG] Cargo Crate
+S 474073 [SLVG] Mule Wreck
+
+S 474074 Xenos - Quad AC Platform
+S 474075 Xenos - NAC/L Platform
+S 474076 Xenos Stash
+
+H 476074
+	\bIFF: Xenos\B
+	\bID: Tikas Supply Base\B
+	\bFUNCTION: Logistical Support\B
+	\l
+	This is a forward operating base, established within a hollowed out asteroid by the Xenos. Serving as an ammunition and supply stockpile, this small base provides repair and rearm for Xenos fighters and other vessels in the area. 
+	It has no room for any permanent residents beyond the small crew of mechanics and militants who run it.
