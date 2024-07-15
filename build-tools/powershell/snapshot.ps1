@@ -8,7 +8,7 @@ function Export-Backup{
 
 Write-Host("Creating a backup of $source")
 if (Test-Path($source)){
-    Get-ChildItem -Path "$destination" | Where-Object {$_.psiscontainer -and $_.lastwritetime -le (get-date).adddays(-14)} | ForEach-Object {remove-item $_.fullname -Force -Recurse -ErrorAction SilentlyContinue }
+    Get-ChildItem -Path "$destination" | Where-Object {$_.lastwritetime -le (get-date).adddays(-14)} | ForEach-Object {remove-item $_.fullname -Force -Recurse }
     Get-Childitem -Path "$source" | Copy-item -Destination "$destination\$date" -Force
     }
 else{Write-Host("Failed to copy files to $destination")}
@@ -27,3 +27,4 @@ Write-Host Backing up the server logs, cleaning up files older than 14 days.
 Export-Backup "C:\bmod-server\Freelancer\EXE\logs" "C:\bmod-server\Backups\Logs"
 
 Copy-Item "C:\bmod-server\Freelancer\EXE\flserver.log" -Destination "C:\bmod-server\Backups\Logs\flserver-$date.log"
+Copy-Item -Path "C:\bmod-server\Freelancer\EXE\logs" -Destination "C:\bmod-server\Backups\Logs\logs-flhook-$date" -Recurse

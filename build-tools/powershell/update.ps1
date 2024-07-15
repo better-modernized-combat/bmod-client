@@ -38,24 +38,26 @@ function Get-LatestRelease{
 }
 
 Get-LatestRelease "better-modernized-combat/bmod-client" "Release.7z" "7z" "C:\bmod-server\Freelancer"
-Get-LatestRelease "TheStarport/FLHook" "Release.zip" "zip" "C:\bmod-server\staging"
 
-Write-Host Installing the latest release of FLHook
-Copy-Item -Path "C:\bmod-server\staging\Release\*" -Destination "C:\bmod-server\Freelancer\EXE" -Force
+#Cutting the latest release of FLHook right now as the auto-build isn't running on the box.
 
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\afk.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\autobuy.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\betting.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\bountyhunt.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\cargo_drop.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\cash_manager.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\ip_ban.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\mark.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\message.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\misc_commands.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\npc.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\rename.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
-Copy-Item -Path "C:\bmod-server\staging\Release\plugins\stats.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Get-LatestRelease "TheStarport/FLHook" "Release.zip" "zip" "C:\bmod-server\staging"
+
+#Write-Host Installing the latest release of FLHook
+#Copy-Item -Path "C:\bmod-server\staging\Release\*" -Destination "C:\bmod-server\Freelancer\EXE" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\advanced_startup_solars.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\autobuy.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\bountyhunt.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\cash_manager.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\ip_ban.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\mark.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\message.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\misc_commands.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\npc.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\rename.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\stats.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\solar.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
+#Copy-Item -Path "C:\bmod-server\staging\Release\plugins\loottables.dll" -Destination "C:\bmod-server\Freelancer\EXE\plugins" -Force
 
 Write-Host Updating FLHook configuration files
 Set-Location "C:\Users\Administrator\Documents\GitHub\bmod-flhook-configs"
