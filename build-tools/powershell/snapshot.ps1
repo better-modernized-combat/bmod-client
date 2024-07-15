@@ -16,7 +16,7 @@ else{Write-Host("Failed to copy files to $destination")}
 
 7z a $destination/$date.7z $source\*
 
-Remove-Item $destination\$date -Recurse -Force
+Remove-Item -Path $destination\$date\ -Recurse -Force
 
 }
 
@@ -27,4 +27,3 @@ Write-Host Backing up the server logs, cleaning up files older than 14 days.
 Export-Backup "C:\bmod-server\Freelancer\EXE\logs" "C:\bmod-server\Backups\Logs"
 
 Copy-Item "C:\bmod-server\Freelancer\EXE\flserver.log" -Destination "C:\bmod-server\Backups\Logs\flserver-$date.log"
-Copy-Item -Path "C:\bmod-server\Freelancer\EXE\logs" -Destination "C:\bmod-server\Backups\Logs\logs-flhook-$date" -Recurse
