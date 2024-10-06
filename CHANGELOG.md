@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.15
+- Fixed the missile range formula and changed 'Maximum Range' to 'Approximate Range' to better convey what the numbers in this field actually represent.
+- Fixed a server crash that occurred when destroying a particular NPC Orca type.
+- Fixed burst fire behaviour courtesy of adjustments made to our plugins by @Volken.
+
 ## 0.0.14
 - Xenos NPC accuracy was too high, it's been lowered to more reasonable levels now so you should be able to survive in more situations like when you're outnumbered.
 - Added a new shipline modelled by our new collaborator, McDyson! Meet the Manta, Angler and Orca fighters in the hands of Xenos NPCs, or buy them on the Xenos's Ouray station. They're slightly flimsier in some ways than the civilian Falcon line, but they have a more flexible hardpoint setup.

@@ -8,7 +8,7 @@ function Export-Backup{
 
 Write-Host("Creating a backup of $source")
 if (Test-Path($source)){
-    Get-ChildItem -Path "$destination" | Where-Object {$_.psiscontainer -and $_.lastwritetime -le (get-date).adddays(-14)} | ForEach-Object {remove-item $_.fullname -Force -Recurse -ErrorAction SilentlyContinue }
+    Get-ChildItem -Path "$destination" | Where-Object {$_.lastwritetime -le (get-date).adddays(-14)} | ForEach-Object {remove-item $_.fullname -Force -Recurse }
     Get-Childitem -Path "$source" | Copy-item -Destination "$destination\$date" -Force
     }
 else{Write-Host("Failed to copy files to $destination")}
@@ -16,7 +16,7 @@ else{Write-Host("Failed to copy files to $destination")}
 
 7z a $destination/$date.7z $source\*
 
-Remove-Item $destination\$date -Recurse -Force
+Remove-Item -Path $destination\$date\ -Recurse -Force
 
 }
 
