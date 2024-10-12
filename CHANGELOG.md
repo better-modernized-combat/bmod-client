@@ -3,6 +3,7 @@
 ## 0.0.16
 - Increased tradelane regeneration time when intercepted from 30s to 90s.
 - Deployed a fix for a persistent crash in single-player that occurred when using tradelanes (#94).
+- Fixed visibility of some fields.
 
 ## 0.0.15
 - Fixed the missile range formula and changed 'Maximum Range' to 'Approximate Range' to better convey what the numbers in this field actually represent.
