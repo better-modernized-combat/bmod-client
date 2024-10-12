@@ -465,6 +465,7 @@ mod-assets/EXE/logs
 HashList.txt
 IDs.txt
 build-tools/hashmap.txt
+*-fl.ini
 
 # CSV
 build-tools/python/csv_dump
