@@ -1183,6 +1183,7 @@ S 474051 [ORE] Copper Deposit
 S 474052 [ORE] Silver Deposit
 S 474053 [ORE] Gold Deposit
 
+
 H 476016
 	A Jump Gate allows instantaneous travel between two distinct points in space. Jump Gates were pioneered by Ageira Technologies and are constructed in partnership with Deep Space Engineering.
 	
@@ -2963,3 +2964,9 @@ S 474073 [SLVG] Mule Wreck
 S 474074 Xenos - Quad AC Platform
 S 474075 Xenos - NAC/L Platform
 S 474076 Xenos Stash
+S 474077 Prototype Navy Fighter
+
+H 476075
+	The remains of a Xenos Rookie caught by a Navy patrol. It appears they were attempting to pick over the wrecked cargo lost during the Houston Catastrophe.
+H 476076
+	The hull of a protoype Navy fighter, lost during a sortie towards the Kepler Debris field. The wreck has been picked clean by scavengers.
