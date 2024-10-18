@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.17
+- Fix for a crash that occurred when destroying NPCs in Copperton
+- Create 'Aggressive', 'Cowardly' and 'Standard' pilots.
+- Some internal adjustments made to unused systems in preparation for modification with LancerEdit
+
 ## 0.0.16
 - Increased tradelane regeneration time when intercepted from 30s to 90s.
 - Deployed a fix for a persistent crash in single-player that occurred when using tradelanes (#94).
