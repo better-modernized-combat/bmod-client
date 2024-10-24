@@ -76,7 +76,12 @@ def default_properties(block):
     # No other, pre-configured default
     return "0, 0, 1, 0, 2, 1"
 
-def get_drop_properties(block):
+def get_drop_properties(block, no_drop: bool = False):
+    
+    # No drops allowed (for plugin)?
+    if no_drop is True:
+        drop_properties = "0, 0, 1, 0, 2, 1"
+        return drop_properties
     
     # Item should be dropped at the specified rate, defaulting to 0 if empty, missing, or malformed
     drop_properties = block_get(block, keyword = "drop_properties", default = default_properties(block)) # maybe missing
@@ -121,7 +126,7 @@ def parse_all_files():
         
     return all_blocks
         
-def generate_lootprops(target_file = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini"):
+def generate_lootprops(target_file: str = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini", no_drop: bool = False):
     
     print("Generating lootprops from configurated files ...")
     all_blocks = parse_all_files()
@@ -130,7 +135,7 @@ def generate_lootprops(target_file = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\M
             o.write(f"{line}\n")
         o.write("\n")
         for block in all_blocks:
-            o.write(f"\n\n[mLootProps]\nnickname = {block['nickname']}\ndrop_properties = {get_drop_properties(block)}\n")
+            o.write(f"\n\n[mLootProps]\nnickname = {block['nickname']}\ndrop_properties = {get_drop_properties(block, no_drop)}\n")
 
 if __name__ == "__main__":
     
