@@ -5,6 +5,8 @@ from tqdm.auto import tqdm
 
 # TODO: Weapons/Ammo or Good or both? If only one, remove corresponding drop_properties entries from the other in generate_guns.py
 # TODO: Are there other block types Playground should check for?
+# TODO: Set reasonable default values in absence of actual values
+# TODO: Set up columns for drop_properties on all items, copy old values where they exist
 
 file_map = {
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_amssle.ini": ["[Munition]", "[Gun]"],
@@ -55,28 +57,45 @@ def block_get(block: dict, keyword: str, default: bool = True):
     d = {line.split("=")[0].strip(): line.split("=")[1].strip() for line in block["content"]}
     return d.get(keyword, default)
 
-def get_drop_properties(block):
+def default_properties(block):
+    
+    # TODO: Get reasonable defaults
     
     # Item should never be dropped
     if any([x in block["nickname"] for x in never_drop]):
         return "0, 0, 1, 0, 2, 1"
+    
     # Item should always be dropped
     if any([x in block["nickname"] for x in always_drop]):
         return "100, 0, 1, 0, 2, 1"
+    
+    # Ammunition should drop sometimes
+    if block["type"] in ["[CounterMeasure]", "[Mine]", "[Munition]"]:
+        return "5, 0, 1, 0, 2, 1"
+    
+    # No other, pre-configured default
+    return "0, 0, 1, 0, 2, 1"
+
+def get_drop_properties(block):
+    
     # Item should be dropped at the specified rate, defaulting to 0 if empty, missing, or malformed
-    drop_properties = block_get(block, keyword = "drop_properties", default = "0, 0, 1, 0, 2, 1") # maybe missing
+    drop_properties = block_get(block, keyword = "drop_properties", default = default_properties(block)) # maybe missing
+    
+    # Empty, 0% drop
     if len(drop_properties) == 0 or drop_properties in ["nan", None]: # empty
         return "0, 0, 1, 0, 2, 1"
-    elif len([n.strip() for n in drop_properties.split(",")]) != 6: # malformed
+    
+    # Malformed, 0% drop, warning
+    if len([n.strip() for n in drop_properties.split(",")]) != 6: # malformed
         print(f"WARNING: Dropping malformed drop_properties entry '{drop_properties}' of {block['nickname']} and defaulting to '0, 0, 1, 0, 2, 1'.")
         return "0, 0, 1, 0, 2, 1"
-    else:
-        try:
-            assert int(drop_properties.split(",")[0].strip()) >= 0 and int(drop_properties.split(",")[0].strip()) <= 100 # malformed
-            return drop_properties
-        except:
-            print(f"WARNING: Dropping malformed drop_properties entry '{drop_properties}' of {block['nickname']} and defaulting to '0, 0, 1, 0, 2, 1'.")
-            return "0, 0, 1, 0, 2, 1"
+    
+    # Invalid drop chance, 0% drop, warning
+    if int(drop_properties.split(",")[0].strip()) < 0 or int(drop_properties.split(",")[0].strip()) > 100:
+        print(f"WARNING: Dropping malformed drop_properties entry '{drop_properties}' of {block['nickname']} and defaulting to '0, 0, 1, 0, 2, 1'.")
+        return "0, 0, 1, 0, 2, 1"
+    
+    return drop_properties
 
 def parse_all_files():
     
@@ -115,4 +134,5 @@ def generate_lootprops(target_file = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\M
 
 if __name__ == "__main__":
     
+    # TODO: When merging, convert file names to OS-agnostic format and delete comment
     generate_lootprops(target_file = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini")

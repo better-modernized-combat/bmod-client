@@ -865,6 +865,7 @@ def create_guns(
     write_goods(weapon_goods_out, writable_goods)
     
     # Fill admin store with goodies (for testing)
+    # TODO: When merging, convert file names to OS-agnostic format and delete comment
     fill_admin_store(
         admin_store_location = "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini",
         admin_store_items = [
@@ -873,17 +874,6 @@ def create_guns(
             ],
         filter = ["gd_civ", "aux"]
         )
-    
-    # Fill lootprops - DEPRECATED
-    '''
-    fill_lootprops_gen_section(
-        lootprops_location = "mod-assets\\DATA\\MISSIONS\\lootprops.ini",
-        lootprops = [
-            [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True],
-            [weapon_name for weapon_name, weapon in writable_weapon_blocks.items() if coerce_str_to_bool(weapon["lootable"]) is True],
-            ]
-    )
-    '''
     
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
