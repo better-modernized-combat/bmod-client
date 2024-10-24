@@ -11,7 +11,7 @@ from argparse import ArgumentParser
 
 from defaults import *
 from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, generate_ammo_infocard_entry, write_infocards_to_frc
-from ini_utils import CSVError, clean_unnamed_wip_empty, pretty_numbers
+from ini_utils import CSVError, clean_unnamed_wip_empty, coerce_str_to_bool, pretty_numbers
 from utils import bcolors
 
 # Currently supported multiplicities
@@ -133,6 +133,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
         "lootable": "false" if "_npc_" in nickname else "true",
+        "drop_properties": weapon.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1"),
         "LODranges": weapon["LODranges"],
         "; cost": cost,
     })
@@ -203,13 +204,14 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
             "const_effect": f"{weapon['Projectile Effect']}", # TODO: generate and use {variant['Variant Visual Shorthand']}
             "lifetime": lifetime,
             "force_gun_ori": weapon["Force Gun Orientation"],
-            "mass": 1
+            "mass": 1,
+            "drop_properties": weapon.get("Ammo Drop Properties", "0, 0, 1, 0, 2, 1"),
         })
         if not (pd.isna(weapon["Ammo Limit"]) or weapon["Ammo Limit"] == ""):
             munition_block["ammo_limit"] = weapon["Ammo Limit"]
         if not (pd.isna(weapon["Units per Container"]) or weapon["Units per Container"] == ""):
             munition_block["units_per_container"] = weapon["Units per Container"]
-        if str(weapon["Uses Ammo?"]).lower() == "true": #:vomit:
+        if coerce_str_to_bool(weapon["Uses Ammo?"]) is True:
             munition_block["ids_name"] = idx+2
             munition_block["ids_info"] = idx+3
     
@@ -244,6 +246,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         "auto_turret": "true" if "aux" in nickname and "npc" in nickname else "false", # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
         "turn_rate": weapon["Turn Rate"],
         "lootable": "false" if "npc" in nickname else "true",
+        "drop_properties": weapon.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1"),
         "LODranges": weapon["LODranges"],
         "dry_fire_sound": "fire_dry",
         "; cost": cost,
@@ -311,6 +314,7 @@ def create_blaster_good(blaster: dict, variant: dict, scaling_rules: dict, inter
         "shop_archetype": blaster["Gun Archetype"],
         "material_library": blaster["Material Library"],
         "DA_archetype": blaster["Gun Archetype"],
+        "drop_properties": blaster.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1")
     })
     
     return good
@@ -329,6 +333,7 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
         "shop_archetype": auxgun["Gun Archetype"],
         "material_library": auxgun["Material Library"],
         "DA_archetype": auxgun["Gun Archetype"],
+        "drop_properties": auxgun.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1")
     })
     
     if not(pd.isna(auxgun["Free Ammo"]) or auxgun["Free Ammo"] == ""):
@@ -352,7 +357,8 @@ def create_aux_ammo_good(auxgun: dict, internal_name: str, ids_name: int, is_ove
         "ids_name": ids_name,
         "ids_info": ids_name+1,
         "shop_archetype": auxgun["Gun Archetype"],
-        "material_library": auxgun["Material Library"]
+        "material_library": auxgun["Material Library"],
+        "drop_properties": auxgun.get("Ammo Drop Properties", "0, 0, 1, 0, 2, 1")
     })
     
     return good
@@ -401,13 +407,15 @@ def fill_lootprops_gen_section(
     with open(lootprops_location, "r") as file:
         
         content = file.read()
-        store_pattern = "(?<=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;\n)((.|\n)*?)(?=;;; AUTOMATICALL GENERATED: VARIANT GUNS AND AMMO ;;;\n)"
-        store = []
+        gam_pattern = "(?<=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;\n)((.|\n)*?)(?=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;)"
+        gam = []
         # Add any generated weapon thats lootable and any generated ammo that is consumed
         for sublist in lootprops:
-            store.extend([f"[mLootProps]\nnickname = {nickname}\ndrop_properties = {5 if '_ammo' in nickname else 0}, 0, 1, 0, 2, 1\n" for nickname in sublist])
-        replacement = "\n".join(store)+"\n"
-        new_content = re.sub(store_pattern, replacement, content)
+            gam.extend([f"[mLootProps]\nnickname = {nickname}\ndrop_properties = {5 if '_ammo' in nickname else 0}, 0, 1, 0, 2, 1\n" for nickname in sublist])
+        replacement = "\n".join(gam)+"\n"
+        new_content, count = re.subn(gam_pattern, replacement, content)
+        if count != 1:
+            print(print(f"{bcolors.WARNING}WARNING: The lootprops.ini section meant for weapons generated in generate_guns.py had {count} matches, meaning there was likely a problem."))
         
     with open(lootprops_location, "w") as file:
         
@@ -765,7 +773,7 @@ def create_guns(
                 variant_info = variant["Variant Infocard Paragraph"],
                 variant_display = variant["Display Name Suffix"],
             )
-            if str(aux["Uses Ammo?"]).lower() == "true" and ammo_is_new: #:vomit:
+            if coerce_str_to_bool(aux["Uses Ammo?"]) is True and ammo_is_new:
                 ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
                     name = aux["Ammo Name"],
                     info = aux["Ammo Infocard"],
@@ -775,7 +783,7 @@ def create_guns(
             # Generate Ammo Infocard FRC entries
             writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
             writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-            if str(aux["Uses Ammo?"]).lower() == "true" and ammo_is_new: #:vomit:
+            if coerce_str_to_bool(aux["Uses Ammo?"]) is True and ammo_is_new:
                 writable_infocards[i_counter+2] = FRC_Entry(typus = "S", idx = i_counter+2, content = ammo_name)
                 writable_infocards[i_counter+3] = FRC_Entry(typus = "H", idx = i_counter+3, content = ammo_infocard_content)
                 
@@ -783,7 +791,7 @@ def create_guns(
             writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter)
             
             # Generate ammo goods entries if weapon requires ammo
-            if str(aux["Uses Ammo?"]).lower() == "true" and ammo_is_new: #:vomit:
+            if coerce_str_to_bool(aux["Uses Ammo?"]) is True and ammo_is_new:
                 writable_goods[munition_name] = create_aux_ammo_good(auxgun = aux, internal_name = munition_name, ids_name = i_counter+2)
             
     i_counter += 4 # By my counting I should not have to add this, but apparently I do. If something ends up not working, this is a prime suspect.
@@ -830,7 +838,7 @@ def create_guns(
         )
         writable_infocards[i_counter] = FRC_Entry(typus = "S", idx = i_counter, content = display_name)
         writable_infocards[i_counter+1] = FRC_Entry(typus = "H", idx = i_counter+1, content = formatted_infocard_content)
-        if str(override_aux["Uses Ammo?"]).lower() == "true": #:vomit:
+        if coerce_str_to_bool(override_aux["Uses Ammo?"]) is True:
             ammo_name, ammo_infocard_content = generate_ammo_infocard_entry(
                 name = override_aux["Ammo Name"],
                 info = override_aux["Ammo Infocard"],
@@ -844,7 +852,7 @@ def create_guns(
         writable_goods[weapon_block["nickname"]] = create_aux_good(auxgun = override_aux, variant = variant, internal_name = weapon_block["nickname"], ids_name = i_counter, is_override = True)
         
         # Generate ammo goods entries if weapon requires ammo and said ammo is inferred not to exist yet
-        if str(override_aux["Uses Ammo?"]).lower() == "true" and not munition_name in writable_goods: #:vomit:
+        if coerce_str_to_bool(override_aux["Uses Ammo?"]) is True and not munition_name in writable_goods:
             writable_goods[munition_name] = create_aux_ammo_good(auxgun = override_aux, internal_name = munition_name, ids_name = i_counter+2)
     
     # Sanity check weapon balance. NPC weapon balance is implied by PC weapon balance (probably), sorta irrelevant, and therefore ignored.
@@ -860,20 +868,22 @@ def create_guns(
     fill_admin_store(
         admin_store_location = "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini",
         admin_store_items = [
-            [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"], 
+            [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True], 
             [weapon_name for weapon_name in writable_weapon_blocks]
             ],
         filter = ["gd_civ", "aux"]
         )
     
-    # Fill lootprops with ammo to avoid crashes
+    # Fill lootprops - DEPRECATED
+    '''
     fill_lootprops_gen_section(
         lootprops_location = "mod-assets\\DATA\\MISSIONS\\lootprops.ini",
         lootprops = [
-            [munition_name for munition_name, munition in writable_munition_blocks.items() if str(munition["requires_ammo"]).lower() == "true"],
-            [weapon_name for weapon_name, weapon in writable_weapon_blocks.items() if str(weapon["lootable"]).lower() == "true"],
+            [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True],
+            [weapon_name for weapon_name, weapon in writable_weapon_blocks.items() if coerce_str_to_bool(weapon["lootable"]) is True],
             ]
     )
+    '''
     
     # TODO: generate the following corresponding files based on the name of the gun:
     ### - flash_particle_name, const_effect, munition_hit_effect, one_shot_sound
