@@ -5,7 +5,6 @@ from tqdm.auto import tqdm
 
 # TODO: Weapons/Ammo or Good or both? If only one, remove corresponding drop_properties entries from the other in generate_guns.py
 # TODO: Are there other block types Playground should check for?
-# TODO: Set reasonable default values in absence of actual values
 # TODO: Set up columns for drop_properties on all items, copy old values where they exist
 
 file_map = {
@@ -37,16 +36,16 @@ file_map = {
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_shield.ini": ["[ShieldGenerator]"],
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini": ["[Munition]", "[Gun]"],
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_amssle.ini": ["[Munition]", "[Gun]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_commodities.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_gear.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_guns.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_npc_only.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_playground.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_shield.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_commodities.ini": ["[Good]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini": [],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_ships.ini": [],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_weaponmoddb.ini": [],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_commodities.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_gear.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_guns.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_npc_only.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_playground.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_shield.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_commodities.ini": ["[Good]"],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini": [],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_ships.ini": [],
+    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_weaponmoddb.ini": [],
 }
 always_drop = ["bm_com_dev", "voucher", "dogtags"]
 never_drop = ["_npc_"]
@@ -59,7 +58,18 @@ def block_get(block: dict, keyword: str, default: bool = True):
 
 def default_properties(block):
     
-    # TODO: Get reasonable defaults
+    # Default per item type
+    types = {
+        "[Commodity]": "75, 0, 1, 0, 2, 1",
+        "[Countermeasure]": "5, 0, 1, 0, 2, 1",
+        "[CountermeasureDropper]": "5, 0, 1, 0, 2, 1",
+        "[Gun]": "1, 0, 1, 0, 2, 1",
+        "[Mine]": "5, 0, 1, 0, 2, 1",
+        "[MineDropper]": "5, 0, 1, 0, 2, 1",
+        "[Munition]": "10, 0, 1, 0, 2, 1",
+        "[ShieldGenerator]": "5, 0, 1, 0, 2, 1",
+        "[Thruster]": "5, 0, 1, 0, 2, 1",
+    }
     
     # Item should never be dropped
     if any([x in block["nickname"] for x in never_drop]):
@@ -69,12 +79,7 @@ def default_properties(block):
     if any([x in block["nickname"] for x in always_drop]):
         return "100, 0, 1, 0, 2, 1"
     
-    # Ammunition should drop sometimes
-    if block["type"] in ["[CounterMeasure]", "[Mine]", "[Munition]"]:
-        return "5, 0, 1, 0, 2, 1"
-    
-    # No other, pre-configured default
-    return "0, 0, 1, 0, 2, 1"
+    return types.get(block["type"], "0, 0, 1, 0, 2, 1")
 
 def get_drop_properties(block, no_drop: bool = False):
     
@@ -126,7 +131,7 @@ def parse_all_files():
         
     return all_blocks
         
-def generate_lootprops(target_file: str = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini", no_drop: bool = False):
+def generate_lootprops(target_file: str = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini", no_drops: bool = False):
     
     print("Generating lootprops from configurated files ...")
     all_blocks = parse_all_files()
@@ -135,7 +140,7 @@ def generate_lootprops(target_file: str = "D:\\GitHub\\fl_parity\\mod-assets\\DA
             o.write(f"{line}\n")
         o.write("\n")
         for block in all_blocks:
-            o.write(f"\n\n[mLootProps]\nnickname = {block['nickname']}\ndrop_properties = {get_drop_properties(block, no_drop)}\n")
+            o.write(f"\n\n[mLootProps]\nnickname = {block['nickname']}\ndrop_properties = {get_drop_properties(block, no_drops)}\n")
 
 if __name__ == "__main__":
     
