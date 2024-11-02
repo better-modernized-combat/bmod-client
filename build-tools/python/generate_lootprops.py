@@ -56,7 +56,7 @@ def default_properties(block):
         "[Gun]": "0, 0, 1, 0, 2, 1",
         "[Mine]": "5, 0, 1, 0, 2, 1",
         "[MineDropper]": "5, 0, 1, 0, 2, 1",
-        "[Munition]": "10, 0, 1, 0, 2, 1",
+        "[Munition]": "5, 0, 1, 0, 2, 1",
         "[ShieldGenerator]": "10, 0, 1, 0, 2, 1",
         "[Thruster]": "5, 0, 1, 0, 2, 1",
     }
