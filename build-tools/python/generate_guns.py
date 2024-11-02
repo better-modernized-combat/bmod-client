@@ -101,6 +101,8 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "force_gun_ori": "false",
         "mass": 1
     })
+    if not pd.isna(weapon["Ammo Drop Properties"]) and not weapon["Ammo Drop Properties"] == "":
+        weapon_block["drop_properties"] = dfloat(weapon["Ammo Drop Properties"])
     
     # Create weapon block
     weapon_block = OrderedDict({
@@ -133,7 +135,6 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
         "lootable": "false" if "_npc_" in nickname else "true",
-        "drop_properties": weapon.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1"),
         "LODranges": weapon["LODranges"],
         "; cost": cost,
     })
@@ -141,6 +142,8 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         weapon_block["dispersion_angle"] = dfloat(weapon["Dispersion Angle"])
     if not pd.isna(weapon["Muzzle Cone Override"]) and not weapon["Muzzle Cone Override"] == "":
         weapon_block["muzzle_cone_override"] = dfloat(weapon["Muzzle Cone Override"])
+    if not pd.isna(weapon["Weapon Drop Properties"]) and not weapon["Weapon Drop Properties"] == "":
+        weapon_block["drop_properties"] = dfloat(weapon["Weapon Drop Properties"])
     
     return f"{nickname}_ammo", munition_block, nickname, weapon_block
 
@@ -205,12 +208,13 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
             "lifetime": lifetime,
             "force_gun_ori": weapon["Force Gun Orientation"],
             "mass": 1,
-            "drop_properties": weapon.get("Ammo Drop Properties", "0, 0, 1, 0, 2, 1"),
         })
         if not (pd.isna(weapon["Ammo Limit"]) or weapon["Ammo Limit"] == ""):
             munition_block["ammo_limit"] = weapon["Ammo Limit"]
         if not (pd.isna(weapon["Units per Container"]) or weapon["Units per Container"] == ""):
             munition_block["units_per_container"] = weapon["Units per Container"]
+        if not pd.isna(weapon["Ammo Drop Properties"]) and not weapon["Ammo Drop Properties"] == "":
+            weapon_block["drop_properties"] = dfloat(weapon["Ammo Drop Properties"])
         if coerce_str_to_bool(weapon["Uses Ammo?"]) is True:
             munition_block["ids_name"] = idx+2
             munition_block["ids_info"] = idx+3
@@ -246,7 +250,6 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         "auto_turret": "true" if "aux" in nickname and "npc" in nickname else "false", # npc aux guns HAVE to auto_turret, see https://github.com/better-modernized-combat/bmod-client/issues/35
         "turn_rate": weapon["Turn Rate"],
         "lootable": "false" if "npc" in nickname else "true",
-        "drop_properties": weapon.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1"),
         "LODranges": weapon["LODranges"],
         "dry_fire_sound": "fire_dry",
         "; cost": cost,
@@ -259,6 +262,8 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         weapon_block["total_projectiles_per_fire"] = dfloat(weapon["Projectiles / shot"])
     if not pd.isna(weapon["Burst Interval"]) and not weapon["Burst Interval"] == "":
         weapon_block["time_between_multiple_projectiles"] = dfloat(weapon["Burst Interval"])
+    if not pd.isna(weapon["Weapon Drop Properties"]) and not weapon["Weapon Drop Properties"] == "":
+        weapon_block["drop_properties"] = dfloat(weapon["Weapon Drop Properties"])
     if not pd.isna(weapon["Free Ammo"]) and not weapon["Free Ammo"] == "":
         weapon_block["; free_ammo"] = dfloat(weapon["Free Ammo"])
     
@@ -314,7 +319,6 @@ def create_blaster_good(blaster: dict, variant: dict, scaling_rules: dict, inter
         "shop_archetype": blaster["Gun Archetype"],
         "material_library": blaster["Material Library"],
         "DA_archetype": blaster["Gun Archetype"],
-        "drop_properties": blaster.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1")
     })
     
     return good
@@ -333,7 +337,6 @@ def create_aux_good(auxgun: dict, variant: dict, internal_name: str, ids_name: i
         "shop_archetype": auxgun["Gun Archetype"],
         "material_library": auxgun["Material Library"],
         "DA_archetype": auxgun["Gun Archetype"],
-        "drop_properties": auxgun.get("Weapon Drop Properties", "0, 0, 1, 0, 2, 1")
     })
     
     if not(pd.isna(auxgun["Free Ammo"]) or auxgun["Free Ammo"] == ""):
@@ -358,7 +361,6 @@ def create_aux_ammo_good(auxgun: dict, internal_name: str, ids_name: int, is_ove
         "ids_info": ids_name+1,
         "shop_archetype": auxgun["Gun Archetype"],
         "material_library": auxgun["Material Library"],
-        "drop_properties": auxgun.get("Ammo Drop Properties", "0, 0, 1, 0, 2, 1")
     })
     
     return good

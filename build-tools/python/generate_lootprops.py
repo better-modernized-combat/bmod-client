@@ -34,6 +34,10 @@ file_map = {
 }                                                           # parse only these files
 always_drop = ["bm_com_dev", "voucher", "dogtags"]          # gets 100% drop chance
 never_drop = ["_npc"]                                       # gets 0% drop chance, but still has a lootprops entry
+never_drop_files = [
+    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini",
+    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini"
+]                                                           # gets 0% drop chance for all in file, but still has lootprops entries
 invalid_blocks = ["[Explosion]", "[LootCrate]", "[Motor]"]  # gets no entry
 
 def block_get(block: dict, keyword: str, default: bool = True):
@@ -75,6 +79,10 @@ def get_drop_properties(block, no_drop: bool = False):
         drop_properties = "0, 0, 1, 0, 2, 1"
         return drop_properties
     
+    # No drops allowed for file?
+    if block["file"] in never_drop_files:
+        return "0, 0, 1, 0, 2, 1"
+    
     # Item should be dropped at the specified rate, defaulting to 0 if empty, missing, or malformed
     drop_properties = block_get(block, keyword = "drop_properties", default = default_properties(block)) # maybe missing
     
@@ -103,6 +111,8 @@ def parse_all_files():
         # parse out all blocks
         start_lines, lines, blocks, nicknames = parse_blocks(file)
         blocks = [block for b, block in blocks.items()]
+        for block in blocks:
+            block["file"] = file
         
         # toss block types which should never drop
         blocks = [block for block in blocks if not block["type"] in invalid_blocks]
