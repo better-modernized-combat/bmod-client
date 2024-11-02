@@ -1223,7 +1223,7 @@ H 476022
 
 H 476023
 	DIAMETER: 11,282 km
-	MASS: 3.72 x 10\f09²\4\F kg
+	MASS: 3.72 x 10\x00B2\x2074 kg
 	TERRAIN: N/A
 	TEMPERATURE: N/A
 	ESCAPE VELOCITY: 9.67 km/s
@@ -1329,10 +1329,12 @@ H 476044
 	A large rock asteroid field. Although initial surveys indicated no ore or other resources worth mining, recent investigations have revealed a cluster of copper-rich asteroids in the southern end of the field. The field is heavily patrolled by the Liberty Navy, but remains a favourite haunt for Xenos looking for easy targets along the Denver-Galileo trade lane.
 
 H 476045
-	A dense field of rock and dust, Xenos use the Alamosa field as cover to cross the Colorado system and raid the Galileo gate. The Liberty Navy conduct regular sorties into the field, but has had little effect on piracy in the area.
+	A dense field of rock and dust, Xenos use the Alamosa field as cover to cross the Colorado system and raid the Galileo Gate Construction Site. The Liberty Navy conduct regular sorties into the field, but it has had little effect on piracy in the area.
 
 H 476046
-	Once the major source of Silver for all of Liberty, the Silverton Field has been mined to rubble and dust. Within the field is the former site of an Ageira Technologies manufacturing facility, abandoned over a century ago in favour of Pueblo Station. Xenos and rogues regularly use the field as cover to attack traffic moving to and from Pueblo. Only trace amounts of silver remain.
+	Once the major source of Silver for all of Liberty, the Silverton Field has been mined to rubble and dust. Within the field is the former site of an Ageira Technologies manufacturing facility, abandoned over a century ago in favour of Pueblo Station. Xenos and rogues regularly use the field as cover to attack traffic moving to and from Pueblo. Only trace amounts of silver remain. 
+	
+	Despite this, DSE mining vessels are now a common sight in the field, recovering usable carbon and silver microdeposits for use in the Aurora scrappage scheme. 
 
 H 476047
 	CLASS: Tantalus
@@ -1342,7 +1344,10 @@ H 476047
 	POPULATION: 800
 
 H 476048
-	Denver was originally the home of miners, smelters, and shipyard workers, but these industries eventually collapsed in 600 AS. With the declining long-term water situation in the California System, however, the wealthy elite of Los Angeles began to look elsewhere for a vacation spot and found Denver's rough, beautiful vistas to be ideal. Emigration from Los Angeles and Manhattan injected new life into the Denver economy, reviving the planet even as the new upper-class assumed control of the local government. Today Cryer Pharmaceuticals maintains a major research lab on Denver, while Ageira Technologies has a planetside headquarters to oversee its interests in the system. Liberty Police, Inc. (LPI) is well paid by Colorado's new elite to handle security.
+	Denver was originally the home of miners, smelters, and shipyard workers, but these industries eventually collapsed in 600 AS. With the declining long-term water situation in the California System, however, the wealthy elite of Los Angeles began to look elsewhere for a vacation spot and found Denver's rough, beautiful vistas to be ideal. 
+
+
+	Despite a recent revival, Denver's economy was hit hard by the gate shutdowns following the Houston Catastrophe of 801 AS. Xenos support surged in the ensuing famines, with several brutal crackdowns taking place in response from the LPI. When the gate connection to New York was re-established, the Liberty government was quick to reassert control of the planet, making several major concessions to worker's cooperatives in the hope of quickly quelling popular support for the Xenos. The situation planetside is calm for the time being, but as work moves offplanet to Pueblo, Aurora and Manhattan resentment towards the authorities is beginning to build once again.
 
 H 476049
 	Constructed in 777 AS, the Battleship \iRio Grande\I  became famous in the 792 AS campaign against the Xenos in the Hudson System.
@@ -1353,7 +1358,10 @@ H 476050
 	A Xenos base. Xenos are a radical political faction that seeks to drive all foreign elements from their territory.
 	
 H 476051
-	Ageira Technologies manufacturing facility. Notice: All ships should be aware that Ageira Technologies facilities are protected by private security authorized to use deadly force against any deviation from standard flight procedures.
+	A major Ageira Technologies manufacturing facility. Following events in 801AS, Ageira have relocated their planetside headquarters in Denver to Pueblo, making substantial efforts to bolster their administrative and manufacturing capabilities on the station. 
+	
+
+	Notice: All ships should be aware that Ageira Technologies facilities are protected by private security authorized to use deadly force against any deviation from standard flight procedures.
 
 H 476052
 	Following the loss of both the LPI \iHuntsville\I and the LPI \iSugarland \I in the wake of the Houston Catastrophe, the Liberty authorities were forced to halt the mothballing of several ageing prison liners and rapidly bring them into service across New York and Colorado.
@@ -2970,3 +2978,26 @@ H 476075
 	The remains of a Xenos rookie caught by a Navy patrol. It appears they were attempting to pick over the wrecked cargo lost during the Houston Catastrophe.
 H 476076
 	The hull of a protoype Navy fighter, lost during a sortie towards the Kepler Debris Field. The wreck has been picked clean by scavengers.
+
+H 476077
+	DIAMETER: 10,102 km
+	MASS: 4.25 x x 10\x00B2\x2074 kg
+	TERRAIN: Barren
+	TEMPERATURE: -68\x00B0C to 43\x00B0C
+	ESCAPE VELOCITY: 6.88 km/s
+	
+	A desolate, airless planet, pockmarked by craters from stray asteroids. Gunnison boasts a modest belt of debris, all that remains of a convoy in transit to Kepler when the Houston Catastrophe occurred. Salvagers can sometimes be found in the area, despite efforts by the Navy to keep them at bay.
+
+H 476078
+	DIAMETER: 1800 km
+	MASS: 0.98 x x 10\x00B2\x2074 kg
+	TERRAIN: Volcanic
+	TEMPERATURE: -23\x00B0C to 78\x00B0C
+	ESCAPE VELOCITY: 1.34 km/s
+	
+	A tiny, volcanically active moon incapable of supporting life. Cinder cones will occasionally explode, spewing great plumes of sulfur hundreds of kilometers above the surface. The moon currently holds the Prison Liner /iTamms/I in orbit.
+
+H 476079
+	\b\cr>>>WARNING: NAVIGATIONAL HAZARD<<<\B\C
+
+	Like most of the resources in Colorado, the famed Copperton Field has long since been exhausted. Trace amounts of copper remain. Xenos activity is high in the field, and there are reports that the group have established static defences throughout, including a minefield. 
