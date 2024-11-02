@@ -3,8 +3,6 @@ from ini_utils import coerce_str_to_bool
 from sort_ini import parse_blocks
 from tqdm.auto import tqdm
 
-# TODO: Set up columns for drop_properties on all items, copy old values where they exist
-
 file_map = {
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_amssle.ini": ["[Munition]", "[Gun]"],
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_commodities.ini": ["[Commodity]"],
@@ -55,7 +53,7 @@ def default_properties(block):
         "[Mine]": "5, 0, 1, 0, 2, 1",
         "[MineDropper]": "5, 0, 1, 0, 2, 1",
         "[Munition]": "10, 0, 1, 0, 2, 1",
-        "[ShieldGenerator]": "5, 0, 1, 0, 2, 1",
+        "[ShieldGenerator]": "10, 0, 1, 0, 2, 1",
         "[Thruster]": "5, 0, 1, 0, 2, 1",
     }
     
@@ -107,7 +105,7 @@ def parse_all_files():
         blocks = [block for b, block in blocks.items()]
         
         # toss block types which should never drop
-        
+        blocks = [block for block in blocks if not block["type"] in invalid_blocks]
         
         # warn if the block type is false
         false_types = set([block["type"] for block in blocks if not block["type"] in correct_types])
