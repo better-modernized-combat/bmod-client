@@ -185,8 +185,6 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool, generate_loottab
 
     # Generate lootprops once all other inis are generated, as lootprops is based on these inis
     # TODO: When merging, convert file names to OS-agnostic format and delete comment
-    generate_lootprops(target_file = f"{root_copy_path}\\mod-assets\\DATA\\MISSIONS\\lootprops_SP.ini", no_drops = False)
-    generate_lootprops(target_file = f"{root_copy_path}\\mod-assets\\DATA\\MISSIONS\\lootprops_MP.ini", no_drops = True)
     generate_lootprops(target_file = f"{root_copy_path}\\mod-assets\\DATA\\MISSIONS\\lootprops.ini", no_drops = False)
 
     # Human-like sorting for any ini with more than one block type

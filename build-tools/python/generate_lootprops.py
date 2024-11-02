@@ -3,8 +3,6 @@ from ini_utils import coerce_str_to_bool
 from sort_ini import parse_blocks
 from tqdm.auto import tqdm
 
-# TODO: Weapons/Ammo or Good or both? If only one, remove corresponding drop_properties entries from the other in generate_guns.py
-# TODO: Are there other block types Playground should check for?
 # TODO: Set up columns for drop_properties on all items, copy old values where they exist
 
 file_map = {
@@ -35,20 +33,10 @@ file_map = {
         ],
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_shield.ini": ["[ShieldGenerator]"],
     "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini": ["[Munition]", "[Gun]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_amssle.ini": ["[Munition]", "[Gun]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_commodities.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_gear.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_guns.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_npc_only.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_playground.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_shield.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_commodities.ini": ["[Good]"],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini": [],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_ships.ini": [],
-    #"D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_weaponmoddb.ini": [],
-}
-always_drop = ["bm_com_dev", "voucher", "dogtags"]
-never_drop = ["_npc_"]
+}                                                           # parse only these files
+always_drop = ["bm_com_dev", "voucher", "dogtags"]          # gets 100% drop chance
+never_drop = ["_npc"]                                       # gets 0% drop chance, but still has a lootprops entry
+invalid_blocks = ["[Explosion]", "[LootCrate]", "[Motor]"]  # gets no entry
 
 def block_get(block: dict, keyword: str, default: bool = True):
     
@@ -63,7 +51,7 @@ def default_properties(block):
         "[Commodity]": "75, 0, 1, 0, 2, 1",
         "[Countermeasure]": "5, 0, 1, 0, 2, 1",
         "[CountermeasureDropper]": "5, 0, 1, 0, 2, 1",
-        "[Gun]": "1, 0, 1, 0, 2, 1",
+        "[Gun]": "0, 0, 1, 0, 2, 1",
         "[Mine]": "5, 0, 1, 0, 2, 1",
         "[MineDropper]": "5, 0, 1, 0, 2, 1",
         "[Munition]": "10, 0, 1, 0, 2, 1",
@@ -79,6 +67,7 @@ def default_properties(block):
     if any([x in block["nickname"] for x in always_drop]):
         return "100, 0, 1, 0, 2, 1"
     
+    # Return default value, or zero if the block type does not have a configured default
     return types.get(block["type"], "0, 0, 1, 0, 2, 1")
 
 def get_drop_properties(block, no_drop: bool = False):
@@ -92,7 +81,7 @@ def get_drop_properties(block, no_drop: bool = False):
     drop_properties = block_get(block, keyword = "drop_properties", default = default_properties(block)) # maybe missing
     
     # Empty, 0% drop
-    if len(drop_properties) == 0 or drop_properties in ["nan", None]: # empty
+    if len(drop_properties) == 0 or drop_properties in ["nan", "", None]: # empty
         return "0, 0, 1, 0, 2, 1"
     
     # Malformed, 0% drop, warning
@@ -111,13 +100,19 @@ def parse_all_files():
     
     all_blocks = []
     
-    for file, block_names in tqdm(file_map.items()):
+    for file, correct_types in tqdm(file_map.items()):
+        
         # parse out all blocks
         start_lines, lines, blocks, nicknames = parse_blocks(file)
         blocks = [block for b, block in blocks.items()]
         
-        # drop wrong block type
-        blocks = [block for block in blocks if block["type"] in file_map[file]] 
+        # toss block types which should never drop
+        
+        
+        # warn if the block type is false
+        false_types = set([block["type"] for block in blocks if not block["type"] in correct_types])
+        if len(false_types) >= 1:
+            print(f"WARNING: Wrong block type(s) {list(false_types)} in file {file}. Maybe check if you put a new thing into the wrong equipment file (e.g. Shields into the Guns file)? This will not cause a crash.")
         
         # if its a Munition/Mine/CM, it should require_ammo - if not, it should be lootable - else discard
         blocks = [
