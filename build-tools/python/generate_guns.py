@@ -399,28 +399,6 @@ def fill_admin_store(
         
         file.write(new_content)
 
-def fill_lootprops_gen_section(
-    lootprops_location: str,
-    lootprops: List,
-):
-    
-    with open(lootprops_location, "r") as file:
-        
-        content = file.read()
-        gam_pattern = "(?<=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;\n)((.|\n)*?)(?=;;; AUTOMATICALLY GENERATED: VARIANT GUNS AND AMMO ;;;)"
-        gam = []
-        # Add any generated weapon thats lootable and any generated ammo that is consumed
-        for sublist in lootprops:
-            gam.extend([f"[mLootProps]\nnickname = {nickname}\ndrop_properties = {5 if '_ammo' in nickname else 0}, 0, 1, 0, 2, 1\n" for nickname in sublist])
-        replacement = "\n".join(gam)+"\n"
-        new_content, count = re.subn(gam_pattern, replacement, content)
-        if count != 1:
-            print(print(f"{bcolors.WARNING}WARNING: The lootprops.ini section meant for weapons generated in generate_guns.py had {count} matches, meaning there was likely a problem."))
-        
-    with open(lootprops_location, "w") as file:
-        
-        file.write(new_content)
-
 def sanity_check(
     weapons: dict, 
     munitions: dict,
