@@ -872,7 +872,7 @@ def create_guns(
             [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True], 
             [weapon_name for weapon_name in writable_weapon_blocks]
             ],
-        filter = ["gd_civ", "aux"]
+        filter = ["gd_civ", "aux", "dev"]
         )
     
     # TODO: generate the following corresponding files based on the name of the gun:
