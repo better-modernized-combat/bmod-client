@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.18
+- Various text fixes.
+- Minor audio and infocard content additions.
+- Experimental NPC state graphs added.
+
 ## 0.0.17
 - Fix for a crash that occurred when destroying NPCs in Copperton
 - Create 'Aggressive', 'Cowardly' and 'Standard' pilots.
