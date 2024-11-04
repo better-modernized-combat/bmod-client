@@ -17,11 +17,12 @@ sys.path.append("./")
 from defaults import *
 from ini_utils import *
 from generate_guns import create_guns
+from generate_lootprops import generate_lootprops
 from generate_shiparch import may_shiparch_perish_under_my_wrathful_gaze
 from loot_sheet_to_json import create_loot_tables
 from sort_ini import sort_ini
 
-from utils import bcolors
+from utils import bcolors, root_copy_path
 
 def create_dirtree_without_files(src, dst):
     src = os.path.abspath(src)
@@ -181,6 +182,10 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool, generate_loottab
         # This shouldn't exist
         else:
             raise NotImplementedError("Stop messing around with the template, please.")
+
+    # Generate lootprops once all other inis are generated, as lootprops is based on these inis
+    # TODO: When merging, convert file names to OS-agnostic format and delete comment
+    generate_lootprops(target_file = f"{root_copy_path}\\mod-assets\\DATA\\MISSIONS\\lootprops.ini", no_drops = False)
 
     # Human-like sorting for any ini with more than one block type
     no_of_block_types = {}
