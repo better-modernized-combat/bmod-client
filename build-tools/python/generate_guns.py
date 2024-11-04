@@ -102,7 +102,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "mass": 1
     })
     if not pd.isna(weapon["Ammo Drop Properties"]) and not weapon["Ammo Drop Properties"] == "":
-        weapon_block["drop_properties"] = dfloat(weapon["Ammo Drop Properties"])
+        munition_block["drop_properties"] = dfloat(weapon["Ammo Drop Properties"])
     
     # Create weapon block
     weapon_block = OrderedDict({
@@ -214,7 +214,7 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         if not (pd.isna(weapon["Units per Container"]) or weapon["Units per Container"] == ""):
             munition_block["units_per_container"] = weapon["Units per Container"]
         if not pd.isna(weapon["Ammo Drop Properties"]) and not weapon["Ammo Drop Properties"] == "":
-            weapon_block["drop_properties"] = dfloat(weapon["Ammo Drop Properties"])
+            munition_block["drop_properties"] = dfloat(weapon["Ammo Drop Properties"])
         if coerce_str_to_bool(weapon["Uses Ammo?"]) is True:
             munition_block["ids_name"] = idx+2
             munition_block["ids_info"] = idx+3
