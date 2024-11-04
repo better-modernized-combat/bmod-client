@@ -4,6 +4,16 @@ import pandas as pd
 class CSVError(Exception):
     pass
 
+def coerce_str_to_bool(s: str | bool):
+    
+    if type(s) is bool:
+        return s
+    
+    match s.lower().strip():
+        case "false": return False
+        case "true": return True
+        case _: raise ValueError(f"coerce_str_to_bool called on string '{s}' which cannot be coerced to boolean value!")
+
 def pretty_numbers(s: str):
     
     # if its not a string, send out the kill squad. also make it a string

@@ -13,14 +13,14 @@ def parse_blocks(in_file: str) -> dict:
 
     for n, line in enumerate(lines):
 
-        if line.startswith("["):
+        if line.strip().startswith("["):
             i += 1
             blocks[i] = {}
             blocks[i]["type"] = line.strip()
             blocks[i]["content"] = []
             blocks[i]["dependencies"] = []
             blocks[i]["comments"] = [lines[x] for x in [n-2, n-1, n] if lines[x].startswith(";") and i!=1]
-        elif line.startswith("nickname ="):
+        elif line.strip().startswith("nickname ="):
             nickname = line.split(" = ")[1].strip()
             blocks[i]["nickname"] = nickname
             nicknames[nickname] = i
@@ -33,7 +33,7 @@ def parse_blocks(in_file: str) -> dict:
                     val = val.strip()
                     if val in nicknames:
                         blocks[i]["dependencies"].append(nicknames[val])
-            elif line.startswith(";") or line.strip() == "":
+            elif line.strip().startswith(";") or line.strip() == "":
                 continue
             blocks[i]["content"].append(line.strip())
 
