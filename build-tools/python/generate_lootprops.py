@@ -4,9 +4,9 @@ from sort_ini import parse_blocks
 from tqdm.auto import tqdm
 
 file_map = {
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_amssle.ini": ["[Munition]", "[Gun]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_commodities.ini": ["[Commodity]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_gear.ini": [
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_amssle.ini": ["[Munition]", "[Gun]"],
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_commodities.ini": ["[Commodity]"],
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_gear.ini": [
         "[CounterMeasure]", 
         "[CounterMeasureDropper]", 
         #"[LootCrate]", 
@@ -16,9 +16,9 @@ file_map = {
         "[Gun]", 
         "[Thruster]"
         ],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_guns.ini": ["[Munition]", "[Gun]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini": ["[Munition]", "[Gun]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_playground.ini": [
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_guns.ini": ["[Munition]", "[Gun]"],
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini": ["[Munition]", "[Gun]"],
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_playground.ini": [
         "[CounterMeasure]", 
         "[CounterMeasureDropper]", 
         #"[LootCrate]", 
@@ -29,14 +29,14 @@ file_map = {
         "[Thruster]", 
         "[ShieldGenerator]"
         ],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_shield.ini": ["[ShieldGenerator]"],
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini": ["[Munition]", "[Gun]"],
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_shield.ini": ["[ShieldGenerator]"],
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini": ["[Munition]", "[Gun]"],
 }                                                           # parse only these files
 always_drop = ["bm_com_dev", "voucher", "dogtags"]          # gets 100% drop chance
 never_drop = ["_npc"]                                       # gets 0% drop chance, but still has a lootprops entry
 never_drop_files = [
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini",
-    "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini"
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini",
+    "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini"
 ]                                                           # gets 0% drop chance for all in file, but still has lootprops entries
 invalid_blocks = ["[Explosion]", "[LootCrate]", "[Motor]"]  # gets no entry
 
@@ -134,7 +134,7 @@ def parse_all_files():
         
     return all_blocks
         
-def generate_lootprops(target_file: str = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini", no_drops: bool = False):
+def generate_lootprops(target_file: str = "mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini", no_drops: bool = False):
     
     print("Generating lootprops from configurated files ...")
     all_blocks = parse_all_files()
@@ -148,4 +148,4 @@ def generate_lootprops(target_file: str = "D:\\GitHub\\fl_parity\\mod-assets\\DA
 if __name__ == "__main__":
     
     # TODO: When merging, convert file names to OS-agnostic format and delete comment
-    generate_lootprops(target_file = "D:\\GitHub\\fl_parity\\mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini")
+    generate_lootprops(target_file = "mod-assets\\DATA\\MISSIONS\\lootprops_gen.ini")
