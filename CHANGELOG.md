@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.0.19
+- New explosion VFX for freighter-sized ships.
+- Fixes to the build script to ensure an error-free lootprops.ini file.
+
 ## 0.0.18
 - Various text fixes.
 - Minor audio and infocard content additions.
