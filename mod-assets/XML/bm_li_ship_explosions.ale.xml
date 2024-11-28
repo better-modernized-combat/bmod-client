@@ -5074,7 +5074,7 @@
                         </float>
                   </float_header>
                </effect>
-               <effect type="name"  name="BasicApp_TexName">AftermathArcPuff1</effect>
+               <effect type="name"  name="BasicApp_TexName">ArcPuff1</effect>
                <effect type="ipair" name="BasicApp_BlendInfo">5, 2</effect>
                <effect type="bool"  name="BasicApp_UseCommonTexFrame">false</effect>
                <effect type="fanim" name="BasicApp_TexFrame">
@@ -5262,7 +5262,7 @@
                         </float>
                   </float_header>
                </effect>
-               <effect type="name"  name="BasicApp_TexName">AftermathArcPuff1</effect>
+               <effect type="name"  name="BasicApp_TexName">ArcPuff1</effect>
                <effect type="ipair" name="BasicApp_BlendInfo">5, 2</effect>
                <effect type="bool"  name="BasicApp_UseCommonTexFrame">false</effect>
                <effect type="fanim" name="BasicApp_TexFrame">
