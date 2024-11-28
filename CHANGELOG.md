@@ -2,7 +2,9 @@
 
 # 0.0.19
 - New explosion VFX for freighter-sized ships.
+- New explosion VFX for the Liberty fighter line.
 - Fixes to the build script to ensure an error-free lootprops.ini file.
+- Clean up some unused prototype VFX.
 
 ## 0.0.18
 - Various text fixes.
