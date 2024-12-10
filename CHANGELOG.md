@@ -1,6 +1,8 @@
 # Changelog
 
-# 0.0.19
+## 0.0.20
+
+## 0.0.19
 - New explosion VFX for freighter-sized ships.
 - New explosion VFX for the Liberty fighter line.
 - New explosion VFX for the Junker fighter line.
