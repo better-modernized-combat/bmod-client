@@ -3,6 +3,7 @@
 ## 0.0.20
 - Fixed an error related to docking ring costumes.
 - Minor tweaks to the weapon generation script.
+- Fixed excess contrails on some NPC Anglers
 
 ## 0.0.19
 - New explosion VFX for freighter-sized ships.
