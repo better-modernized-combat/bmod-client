@@ -5,6 +5,7 @@
 - Minor tweaks to the weapon generation script.
 - Fixed excess contrails on some NPC Anglers.
 - Remove unwanted spin value from planets.
+- New explosion VFX for the Mule pirate freighter.
   
 ## 0.0.19
 - New explosion VFX for freighter-sized ships.
