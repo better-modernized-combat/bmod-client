@@ -6,6 +6,7 @@
 - Fixed excess contrails on some NPC Anglers.
 - Remove unwanted spin value from planets.
 - New explosion VFX for the Mule pirate freighter.
+- Fix #189, where dealers were sometimes blocked by a rumor dialog on Prison Liner Tamms
   
 ## 0.0.19
 - New explosion VFX for freighter-sized ships.
