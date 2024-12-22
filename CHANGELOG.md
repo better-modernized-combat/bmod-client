@@ -7,7 +7,7 @@
 - Remove unwanted spin value from planets.
 - New explosion VFX for the Mule pirate freighter.
 - Fix #189, where dealers were sometimes blocked by a rumor dialog on Prison Liner Tamms
-- Add some interesting scenery to the Galileo Gate Construction Site.
+- Add some interesting scenery to the Galileo Gate Construction Site and around Prison Liner Tamms.
   
 ## 0.0.19
 - New explosion VFX for freighter-sized ships.
