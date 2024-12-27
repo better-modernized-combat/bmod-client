@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.21
+
 ## 0.0.20
 - Fixed an error related to docking ring costumes.
 - Minor tweaks to the weapon generation script.
