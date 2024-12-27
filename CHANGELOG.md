@@ -1,6 +1,15 @@
 # Changelog
 
-# 0.0.19
+## 0.0.20
+- Fixed an error related to docking ring costumes.
+- Minor tweaks to the weapon generation script.
+- Fixed excess contrails on some NPC Anglers.
+- Remove unwanted spin value from planets.
+- New explosion VFX for the Mule pirate freighter.
+- Fix #189, where dealers were sometimes blocked by a rumor dialog on Prison Liner Tamms
+- Add some interesting scenery to the Galileo Gate Construction Site, Pueblo Station and around Prison Liner Tamms.
+  
+## 0.0.19
 - New explosion VFX for freighter-sized ships.
 - New explosion VFX for the Liberty fighter line.
 - New explosion VFX for the Junker fighter line.

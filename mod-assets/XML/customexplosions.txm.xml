@@ -37,6 +37,17 @@
             <MIP7 type="file" filename="customexplosions_txm\Shockwave1_mip7.tga"/>
             <MIP8 type="file" filename="customexplosions_txm\Shockwave1_mip8.tga"/>
          </Shockwave1>
+         <Halo1>
+            <MIP0 type="file" filename="customexplosions_txm\Halo1_mip0.tga"/>
+            <MIP1 type="file" filename="customexplosions_txm\Halo1_mip1.tga"/>
+            <MIP2 type="file" filename="customexplosions_txm\Halo1_mip2.tga"/>
+            <MIP3 type="file" filename="customexplosions_txm\Halo1_mip3.tga"/>
+            <MIP4 type="file" filename="customexplosions_txm\Halo1_mip4.tga"/>
+            <MIP5 type="file" filename="customexplosions_txm\Halo1_mip5.tga"/>
+            <MIP6 type="file" filename="customexplosions_txm\Halo1_mip6.tga"/>
+            <MIP7 type="file" filename="customexplosions_txm\Halo1_mip7.tga"/>
+            <MIP8 type="file" filename="customexplosions_txm\Halo1_mip8.tga"/>
+         </Halo1>
       </Texture_library>
    </UTF_ROOT>
 </UTFXML>

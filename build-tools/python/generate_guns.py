@@ -436,6 +436,10 @@ def sanity_check(
         # Skip aux and npc weapons, always
         if "aux" in n1 or "aux" in n2 or "npc" in n1 or "npc" in n2:
             continue
+
+        #Skip the dev gun in these checks, always
+        if "bm_dev_g01_1x_b" in n1 or "bm_dev_g01_1x_b" in n2:
+            continue
         
         # Skip variants?
         if check_variants is False and ("x_x" in n1 or "xT_x" in n1 or "x_x" in n2 or "xT_x" in n2):
