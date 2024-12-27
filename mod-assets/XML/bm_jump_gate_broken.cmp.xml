@@ -11,27 +11,15 @@
          <bm_jump_gate_broken.lod2-112.vms include="bm_jump_gate_broken_cmp\lod2-112.vms.xml"/>
          <bm_jump_gate_broken.lod3-112.vms include="bm_jump_gate_broken_cmp\lod3-112.vms.xml"/>
       </VMeshLibrary>
-      <Animation include="bm_jump_gate_broken_cmp\Animation.xml"/>
       <Exporter_Version name="Exporter Version" type="text">MAXLancer Tools 0.97</Exporter_Version>
       <Cmpnd>
          <Cons>
-            <Rev type="Rev" count="4">
-               <part>
-                  <!-- parent      --> "Root",
-                  <!-- child       --> "rings_lod1",
-                  <!-- position    --> -16.202576, 0.10307217, -522.95972,
-                  <!-- offset      --> 0, 0, 0,
-                  <!-- orientation -->   0.9978270500,   0.0658753960,   0.0012592159,
-                                        -0.0658861850,   0.9975085300,   0.0252144520,
-                                        404.93358e-06,  -0.0252426320,   0.9996810600,
-                  <!-- axis        -->   0.0057463972, -246.69168e-09,  -0.9999834900,
-                  <!-- min, max    --> -6.2831855, 6.2831855
-               </part>
+            <Rev type="Rev" count="3">
                <part>
                   <!-- parent      --> "Root",
                   <!-- child       --> "door1_lod1",
                   <!-- position    --> -262.21927, 324.91956, -492.15277,
-                  <!-- offset      --> 0, 0, 0,
+                  <!-- offset      --> 0, 0, -0,
                   <!-- orientation -->   0.1164191100,  -0.6701929600,   0.7329992700,
                                          0.6180813300,   0.6265843500,   0.4747288200,
                                         -0.7774458500,   0.3977857200,   0.4871801700,
@@ -42,7 +30,7 @@
                   <!-- parent      --> "Root",
                   <!-- child       --> "door3_lod1",
                   <!-- position    --> 123.57297, -313.67773, -368.11841,
-                  <!-- offset      --> 0, 0, 0,
+                  <!-- offset      --> 0, 0, -0,
                   <!-- orientation -->   0.6370172500,  -0.0919506550,   0.7653458100,
                                         -0.7216630000,  -0.4201184800,   0.5501847300,
                                          0.2709460600,  -0.9027988300,  -0.3339800500,
@@ -53,7 +41,7 @@
                   <!-- parent      --> "Root",
                   <!-- child       --> "door4_lod1",
                   <!-- position    --> -235.78371, -331.83643, -368.11835,
-                  <!-- offset      --> 0, 0, 0,
+                  <!-- offset      --> 0, 0, -0,
                   <!-- orientation -->  -0.2275635900,   0.7992695000,   0.5562218400,
                                          0.1908409300,  -0.5235245200,   0.8303623800,
                                          0.9548794000,   0.2951101400,  -0.0333982890,
@@ -62,33 +50,28 @@
                </part>
             </Rev>
          </Cons>
-         <Part_rings_lod1>
-            <Object_name name="Object name" type="text">rings_lod1</Object_name>
-            <Index type="int">0</Index>
-            <File_name name="File name" type="text">rings_lod1231209153203.3db</File_name>
-         </Part_rings_lod1>
          <Part_door1_lod1>
             <Object_name name="Object name" type="text">door1_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">door1_lod1231209153203.3db</File_name>
+            <File_name name="File name" type="text">door1_lod1241227164931.3db</File_name>
          </Part_door1_lod1>
          <Part_door3_lod1>
             <Object_name name="Object name" type="text">door3_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">door3_lod1231209153203.3db</File_name>
+            <File_name name="File name" type="text">door3_lod1241227164931.3db</File_name>
          </Part_door3_lod1>
          <Part_door4_lod1>
             <Object_name name="Object name" type="text">door4_lod1</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">door4_lod1231209153203.3db</File_name>
+            <File_name name="File name" type="text">door4_lod1241227164931.3db</File_name>
          </Part_door4_lod1>
          <Root>
             <Object_name name="Object name" type="text">Root</Object_name>
             <Index type="int">0</Index>
-            <File_name name="File name" type="text">bm_jump_gate_broken231209153203.3db</File_name>
+            <File_name name="File name" type="text">bm_jump_gate_broken241227164931.3db</File_name>
          </Root>
       </Cmpnd>
-      <bm_jump_gate_broken231209153203.3db>
+      <bm_jump_gate_broken241227164931.3db>
          <MultiLevel>
             <Switch2 type="float array" count="6">
                0,
@@ -196,31 +179,31 @@
                   <Position type="Vector">1.5386021, 1.7925661, -239.4268</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,   0.0000000000, -150.99580e-09,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                      150.99580e-09,   0.0000000000,  -1.0000000000
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      150.99580e-09,  -0.0000000000,  -1.0000000000
                   </Orientation>
                </HpDockMountA>
                <HpDockPointA01>
                   <Position type="Vector">1.5386643, 1.792673, -609.50623</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,   0.0000000000, -150.99580e-09,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                      150.99580e-09,   0.0000000000,  -1.0000000000
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      150.99580e-09,  -0.0000000000,  -1.0000000000
                   </Orientation>
                </HpDockPointA01>
                <HpDockPointA02>
                   <Position type="Vector">1.5386958, 1.7926356, -702.49994</Position>
                   <Orientation type="Matrix">
                       -1.0000000000,   0.0000000000, -150.99580e-09,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                      150.99580e-09,   0.0000000000,  -1.0000000000
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      150.99580e-09,  -0.0000000000,  -1.0000000000
                   </Orientation>
                </HpDockPointA02>
                <HpFX09>
                   <Position type="Vector">1.039046, 69.597984, -872.56287</Position>
                   <Orientation type="Matrix">
                      -162.92068e-09, -631.22970e-18,  -1.0000000000,
-                     -3.8744603e-09,   1.0000000000,   0.0000000000,
+                     -3.8744603e-09,   1.0000000000,  -0.0000000000,
                        1.0000000000,  3.8744603e-09, -162.92068e-09
                   </Orientation>
                </HpFX09>
@@ -228,47 +211,47 @@
                   <Position type="Vector">-27.965471, 21.322695, -441.94675</Position>
                   <Orientation type="Matrix">
                      -134.39323e-09,  92.095640e-09,  -1.0000000000,
-                       0.5652790100,   0.8248997900,   0.0000000000,
+                       0.5652790100,   0.8248997900,  -0.0000000000,
                        0.8248997900,  -0.5652790100, -162.92068e-09
                   </Orientation>
                </HpFX1>
                <HpFX2>
                   <Position type="Vector">1.0390295, -0.13564076, -490.19608</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,   0.0000000000,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,  -0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpFX2>
                <HpFX3>
                   <Position type="Vector">1.039022, -0.13565801, -328.60538</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,   0.0000000000,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,  -0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpFX3>
                <HpFX4>
                   <Position type="Vector">1.0390184, -0.1356754, -100.96817</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,   0.0000000000,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,  -0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpFX4>
                <HpFX5>
                   <Position type="Vector">1.0390161, -0.13569145, 120.49957</Position>
                   <Orientation type="Matrix">
-                       1.0000000000,   0.0000000000,   0.0000000000,
-                       0.0000000000,   1.0000000000,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       1.0000000000,   0.0000000000,  -0.0000000000,
+                       0.0000000000,   1.0000000000,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpFX5>
                <HpFX6>
                   <Position type="Vector">1.0390083, -0.87846816, -10.143981</Position>
                   <Orientation type="Matrix">
                      -162.92068e-09, -631.22970e-18,  -1.0000000000,
-                     -3.8744603e-09,   1.0000000000,   0.0000000000,
+                     -3.8744603e-09,   1.0000000000,  -0.0000000000,
                        1.0000000000,  3.8744603e-09, -162.92068e-09
                   </Orientation>
                </HpFX6>
@@ -276,7 +259,7 @@
                   <Position type="Vector">1.0389986, -0.87851882, 215.80841</Position>
                   <Orientation type="Matrix">
                       -1.0000000000, -34.075832e-09,  150.99580e-09,
-                     -34.075832e-09,   1.0000000000,   0.0000000000,
+                     -34.075832e-09,   1.0000000000,  -0.0000000000,
                      -150.99580e-09, -5.1453076e-15,  -1.0000000000
                   </Orientation>
                </HpFX7>
@@ -284,7 +267,7 @@
                   <Position type="Vector">1.0389988, 210.34187, 215.80843</Position>
                   <Orientation type="Matrix">
                       -1.0000000000, -34.075832e-09,  150.99580e-09,
-                     -34.075832e-09,   1.0000000000,   0.0000000000,
+                     -34.075832e-09,   1.0000000000,  -0.0000000000,
                      -150.99580e-09, -5.1453076e-15,  -1.0000000000
                   </Orientation>
                </HpFX8>
@@ -292,7 +275,7 @@
                   <Position type="Vector">1.0389967, 209.78831, 256.23547</Position>
                   <Orientation type="Matrix">
                      -162.92068e-09, -631.22970e-18,  -1.0000000000,
-                     -3.8744603e-09,   1.0000000000,   0.0000000000,
+                     -3.8744603e-09,   1.0000000000,  -0.0000000000,
                        1.0000000000,  3.8744603e-09, -162.92068e-09
                   </Orientation>
                </HpFXn01>
@@ -300,7 +283,7 @@
                   <Position type="Vector">1.0390024, 74.180214, 120.43977</Position>
                   <Orientation type="Matrix">
                      -162.92068e-09, -631.22970e-18,  -1.0000000000,
-                     -3.8744603e-09,   1.0000000000,   0.0000000000,
+                     -3.8744603e-09,   1.0000000000,  -0.0000000000,
                        1.0000000000,  3.8744603e-09, -162.92068e-09
                   </Orientation>
                </HpFXn02>
@@ -308,7 +291,7 @@
                   <Position type="Vector">1.0390369, 74.180405, -670.604</Position>
                   <Orientation type="Matrix">
                      -162.92068e-09, -631.22970e-18,  -1.0000000000,
-                     -3.8744603e-09,   1.0000000000,   0.0000000000,
+                     -3.8744603e-09,   1.0000000000,  -0.0000000000,
                        1.0000000000,  3.8744603e-09, -162.92068e-09
                   </Orientation>
                </HpFXn03>
@@ -316,40 +299,40 @@
                   <Position type="Vector">1.0390444, 162.06723, -835.48474</Position>
                   <Orientation type="Matrix">
                      -162.92068e-09, -631.22970e-18,  -1.0000000000,
-                     -3.8744603e-09,   1.0000000000,   0.0000000000,
+                     -3.8744603e-09,   1.0000000000,  -0.0000000000,
                        1.0000000000,  3.8744603e-09, -162.92068e-09
                   </Orientation>
                </HpFXn04>
                <HpRunningLight01>
                   <Position type="Vector">-292.54346, 294.01291, -243.89983</Position>
                   <Orientation type="Matrix">
-                       0.7071068900,  -0.7071066500,   0.0000000000,
-                       0.7071066500,   0.7071068900,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       0.7071068900,  -0.7071066500,  -0.0000000000,
+                       0.7071066500,   0.7071068900,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpRunningLight01>
                <HpRunningLight02>
                   <Position type="Vector">291.57208, -290.04678, -243.89993</Position>
                   <Orientation type="Matrix">
-                       0.7071068900,  -0.7071066500,   0.0000000000,
-                       0.7071066500,   0.7071068900,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       0.7071068900,  -0.7071066500,  -0.0000000000,
+                       0.7071066500,   0.7071068900,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpRunningLight02>
                <HpRunningLight03>
                   <Position type="Vector">292.28906, 296.50101, -243.8999</Position>
                   <Orientation type="Matrix">
-                       0.7071068900,  -0.7071066500,   0.0000000000,
-                       0.7071066500,   0.7071068900,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       0.7071068900,  -0.7071066500,  -0.0000000000,
+                       0.7071066500,   0.7071068900,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpRunningLight03>
                <HpRunningLight04>
                   <Position type="Vector">-291.79861, -289.96304, -243.89986</Position>
                   <Orientation type="Matrix">
-                       0.7071068900,  -0.7071066500,   0.0000000000,
-                       0.7071066500,   0.7071068900,   0.0000000000,
-                       0.0000000000,   0.0000000000,   1.0000000000
+                       0.7071068900,  -0.7071066500,  -0.0000000000,
+                       0.7071066500,   0.7071068900,  -0.0000000000,
+                      -0.0000000000,  -0.0000000000,   1.0000000000
                   </Orientation>
                </HpRunningLight04>
             </Fixed>
@@ -357,22 +340,22 @@
                <HpTurret_S1_01>
                   <Position type="Vector">160.67213, 159.20276, -412.47525</Position>
                   <Orientation type="Matrix">
-                       0.7071066500,   0.5171450400,   0.4822458600,
-                      -0.7071067100,   0.5171450400,   0.4822456800,
-                     -89.406967e-09,  -0.6819983700,   0.7313538800
+                       0.7071065900,   0.5171449800,   0.4822460100,
+                      -0.7071067100,   0.5171449800,   0.4822457700,
+                     -81.956387e-09,  -0.6819983100,   0.7313539400
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-6.2831855</Min>
                   <Max type="float">6.2831855</Max>
                </HpTurret_S1_01>
                <HpTurret_S1_02>
                   <Position type="Vector">-159.37379, -160.84322, -412.47531</Position>
                   <Orientation type="Matrix">
-                      -0.7071082600,  -0.5171442000,  -0.4822452100,
-                       0.7071061100,  -0.5171452800,  -0.4822468500,
-                      331.55084e-09,  -0.6819989100,   0.7313534000
+                      -0.7071088600,  -0.5171439100,  -0.4822444300,
+                       0.7071054000,  -0.5171458100,  -0.4822472900,
+                      465.66129e-09,  -0.6819987900,   0.7313534600
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-6.2831855</Min>
                   <Max type="float">6.2831855</Max>
                </HpTurret_S1_02>
@@ -383,7 +366,7 @@
                       -0.7071068300,   0.7071067100,  337.17475e-09,
                      -106.77014e-09,  370.06700e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-0.17454</Min>
                   <Max type="float">2.9670398</Max>
                </HpTurret_S1_03>
@@ -392,9 +375,9 @@
                   <Orientation type="Matrix">
                        0.7071065300,   0.7071070100, -106.77019e-09,
                        0.7071070100,  -0.7071065300,  106.77012e-09,
-                     -7.1054265e-15, -150.99582e-09,  -1.0000000000
+                     -3.5527133e-15, -150.99580e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-2.9670601</Min>
                   <Max type="float">0.17452</Max>
                </HpTurret_S1_04>
@@ -405,7 +388,7 @@
                       -0.7071068300,   0.7071067100,  337.17475e-09,
                      -106.77014e-09,  370.06700e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-2.9670601</Min>
                   <Max type="float">0.17452</Max>
                </HpTurret_S1_05>
@@ -414,9 +397,9 @@
                   <Orientation type="Matrix">
                        0.7071065300,   0.7071070100, -106.77019e-09,
                        0.7071070100,  -0.7071065300,  106.77012e-09,
-                     -7.1054265e-15, -150.99582e-09,  -1.0000000000
+                     -3.5527133e-15, -150.99580e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-0.17454</Min>
                   <Max type="float">2.9670398</Max>
                </HpTurret_S1_06>
@@ -427,7 +410,7 @@
                        0.7071066500,   0.7071068900,  337.17484e-09,
                      -275.35759e-09,  752.19464e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-2.9670601</Min>
                   <Max type="float">0.17452</Max>
                </HpTurret_S1_07>
@@ -438,7 +421,7 @@
                       -0.7071066500,  -0.7071069500,  275.35759e-09,
                      -12.334383e-09, -377.08000e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-0.17454</Min>
                   <Max type="float">2.9670398</Max>
                </HpTurret_S1_08>
@@ -447,9 +430,9 @@
                   <Orientation type="Matrix">
                        0.7071069500,  -0.7071066500, -106.77014e-09,
                       -0.7071066500,  -0.7071069500, -106.77018e-09,
-                       0.0000000000,  150.99580e-09,  -1.0000000000
+                      -0.0000000000,  150.99580e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-2.9670601</Min>
                   <Max type="float">0.17452</Max>
                </HpTurret_S1_09>
@@ -460,117 +443,14 @@
                        0.7071066500,   0.7071068900, -171.18947e-09,
                      -275.35759e-09,  33.259056e-09,  -1.0000000000
                   </Orientation>
-                  <Axis type="Vector">0, 1, 0</Axis>
+                  <Axis type="Vector">0, 1, -0</Axis>
                   <Min type="float">-0.17454</Min>
                   <Max type="float">2.9670398</Max>
                </HpTurret_S1_10>
             </Revolute>
          </Hardpoints>
-      </bm_jump_gate_broken231209153203.3db>
-      <rings_lod1231209153203.3db>
-         <MultiLevel>
-            <Switch2 type="float array" count="6">
-               0,
-               100,
-               1000,
-               10000,
-               100000,
-               1000000
-            </Switch2>
-            <Level0>
-               <VMeshPart>
-                  <VMeshRef type="VMeshRef">
-                     <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_jump_gate_broken.lod0-112.vms,
-                     <!-- start vert   --> 1268,
-                     <!-- num verts    --> 272,
-                     <!-- start index  --> 1968,
-                     <!-- num indices  --> 432,
-                     <!-- start mesh   --> 5,
-                     <!-- num meshes   --> 4,
-                     <!-- bounding box -->  311.15472,     311.18088,   481.4386,
-                                           -311.14209,    -311.11551,   357.57147,
-                     <!-- center       -->    0.05396843,    0.9427681, 419.45441,
-                     <!-- radius       --> 314.48181
-                  </VMeshRef>
-               </VMeshPart>
-            </Level0>
-            <Level1>
-               <VMeshPart>
-                  <VMeshRef type="VMeshRef">
-                     <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_jump_gate_broken.lod1-112.vms,
-                     <!-- start vert   --> 1076,
-                     <!-- num verts    --> 176,
-                     <!-- start index  --> 1365,
-                     <!-- num indices  --> 288,
-                     <!-- start mesh   --> 5,
-                     <!-- num meshes   --> 3,
-                     <!-- bounding box -->  311.15472,     311.18085,   481.43832,
-                                           -311.14209,    -311.11548,   357.57156,
-                     <!-- center       -->    0.05396843,    0.9427681, 419.45441,
-                     <!-- radius       --> 314.48181
-                  </VMeshRef>
-               </VMeshPart>
-            </Level1>
-            <Level2>
-               <VMeshPart>
-                  <VMeshRef type="VMeshRef">
-                     <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_jump_gate_broken.lod2-212.vms,
-                     <!-- start vert   --> 658,
-                     <!-- num verts    --> 128,
-                     <!-- start index  --> 768,
-                     <!-- num indices  --> 192,
-                     <!-- start mesh   --> 5,
-                     <!-- num meshes   --> 1,
-                     <!-- bounding box -->  310.823,       311.8212,    484.17459,
-                                           -310.48975,    -310.776,     353.70618,
-                     <!-- center       -->    0.05396843,    0.9427681, 419.45441,
-                     <!-- radius       --> 314.18204
-                  </VMeshRef>
-               </VMeshPart>
-            </Level2>
-            <Level3>
-               <VMeshPart>
-                  <VMeshRef type="VMeshRef">
-                     <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_jump_gate_broken.lod3-212.vms,
-                     <!-- start vert   --> 464,
-                     <!-- num verts    --> 96,
-                     <!-- start index  --> 504,
-                     <!-- num indices  --> 144,
-                     <!-- start mesh   --> 5,
-                     <!-- num meshes   --> 1,
-                     <!-- bounding box -->  310.82294,     311.80569,   484.17459,
-                                           -310.48969,    -310.74512,   353.70624,
-                     <!-- center       -->    0.05396843,    0.9427681, 419.45441,
-                     <!-- radius       --> 311.78314
-                  </VMeshRef>
-               </VMeshPart>
-            </Level3>
-            <Level4>
-               <VMeshPart>
-                  <VMeshRef type="VMeshRef">
-                     <!-- header size  --> 60,
-                     <!-- vmesh lib    --> bm_jump_gate_broken.lod4-212.vms,
-                     <!-- start vert   --> 96,
-                     <!-- num verts    --> 32,
-                     <!-- start index  --> 144,
-                     <!-- num indices  --> 48,
-                     <!-- start mesh   --> 3,
-                     <!-- num meshes   --> 1,
-                     <!-- bounding box -->  237.16316,     237.92773,   483.4104,
-                                           -237.12112,    -237.302,     353.06396,
-                     <!-- center       -->    0.05396843,    0.9427681, 419.45441,
-                     <!-- radius       --> 247.3752
-                  </VMeshRef>
-               </VMeshPart>
-            </Level4>
-         </MultiLevel>
-         <VMeshWire include="bm_jump_gate_broken_cmp\rings_lod1.vwd.xml"/>
-      </rings_lod1231209153203.3db>
-      <door1_lod1231209153203.3db>
+      </bm_jump_gate_broken241227164931.3db>
+      <door1_lod1241227164931.3db>
          <MultiLevel>
             <Switch2 type="float array" count="5">
                0,
@@ -584,16 +464,16 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_jump_gate_broken.lod0-112.vms,
-                     <!-- start vert   --> 1540,
-                     <!-- num verts    --> 58,
-                     <!-- start index  --> 2400,
+                     <!-- start vert   --> 1268,
+                     <!-- num verts    --> 57,
+                     <!-- start index  --> 1968,
                      <!-- num indices  --> 144,
-                     <!-- start mesh   --> 9,
+                     <!-- start mesh   --> 5,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.983032,    12.143372,   -2.3963318,
-                                           -67.058472,  -146.87004,  -223.43472,
-                     <!-- center       -->   2.0357666,  -67.543671, -108.84119,
-                     <!-- radius       --> 140.78554
+                     <!-- bounding box -->  66.98291,     12.143326,   -2.3962097,
+                                           -67.058533,  -146.87009,  -223.43466,
+                     <!-- center       -->   2.0357666,  -67.543671, -108.84122,
+                     <!-- radius       --> 140.78551
                   </VMeshRef>
                </VMeshPart>
             </Level0>
@@ -602,16 +482,16 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_jump_gate_broken.lod1-112.vms,
-                     <!-- start vert   --> 1252,
+                     <!-- start vert   --> 1076,
                      <!-- num verts    --> 33,
-                     <!-- start index  --> 1653,
+                     <!-- start index  --> 1365,
                      <!-- num indices  --> 60,
-                     <!-- start mesh   --> 8,
+                     <!-- start mesh   --> 5,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.98291,     12.143356,   -2.3963318,
-                                           -67.058411,  -143.57321,  -223.4346,
-                     <!-- center       -->   2.0357666,  -67.543671, -108.84119,
-                     <!-- radius       --> 140.78546
+                     <!-- bounding box -->  66.982788,    12.143341,   -2.3962097,
+                                           -67.058472,  -143.57324,  -223.43454,
+                     <!-- center       -->   2.0357666,  -67.543671, -108.84122,
+                     <!-- radius       --> 140.78542
                   </VMeshRef>
                </VMeshPart>
             </Level1>
@@ -626,10 +506,10 @@
                      <!-- num indices  --> 39,
                      <!-- start mesh   --> 0,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.983032,    12.143356,   -2.3963318,
-                                           -67.058411,  -143.57324,  -223.43463,
-                     <!-- center       -->   2.0357666,  -67.543671, -108.84119,
-                     <!-- radius       --> 140.78551
+                     <!-- bounding box -->  66.98291,     12.143341,   -2.3962402,
+                                           -67.058472,  -143.57327,  -223.43454,
+                     <!-- center       -->   2.0357666,  -67.543671, -108.84122,
+                     <!-- radius       --> 140.78545
                   </VMeshRef>
                </VMeshPart>
             </Level2>
@@ -644,17 +524,17 @@
                      <!-- num indices  --> 21,
                      <!-- start mesh   --> 0,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.982971,    12.143341,   -2.3963318,
-                                           -67.05835,   -143.57324,  -223.4346,
-                     <!-- center       -->   2.0357666,  -67.543671, -108.84119,
-                     <!-- radius       --> 140.78548
+                     <!-- bounding box -->  66.98291,     12.143326,   -2.3962097,
+                                           -67.058411,  -143.57332,  -223.43451,
+                     <!-- center       -->   2.0357666,  -67.543671, -108.84122,
+                     <!-- radius       --> 140.78543
                   </VMeshRef>
                </VMeshPart>
             </Level3>
          </MultiLevel>
          <VMeshWire include="bm_jump_gate_broken_cmp\door1_lod1.vwd.xml"/>
-      </door1_lod1231209153203.3db>
-      <door3_lod1231209153203.3db>
+      </door1_lod1241227164931.3db>
+      <door3_lod1241227164931.3db>
          <MultiLevel>
             <Switch2 type="float array" count="5">
                0,
@@ -668,16 +548,16 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_jump_gate_broken.lod0-112.vms,
-                     <!-- start vert   --> 1598,
+                     <!-- start vert   --> 1325,
                      <!-- num verts    --> 59,
-                     <!-- start index  --> 2544,
+                     <!-- start index  --> 2112,
                      <!-- num indices  --> 144,
-                     <!-- start mesh   --> 12,
+                     <!-- start mesh   --> 8,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.983063,    12.143372,   -2.3964539,
-                                           -67.058411,  -146.86996,  -223.43494,
-                     <!-- center       -->   2.0357361,  -67.54364,  -108.84116,
-                     <!-- radius       --> 140.78572
+                     <!-- bounding box -->  66.983063,    12.143402,   -2.3964233,
+                                           -67.05838,   -146.87,     -223.43498,
+                     <!-- center       -->   2.0357208,  -67.54364,  -108.84117,
+                     <!-- radius       --> 140.78577
                   </VMeshRef>
                </VMeshPart>
             </Level0>
@@ -686,16 +566,16 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_jump_gate_broken.lod1-112.vms,
-                     <!-- start vert   --> 1285,
+                     <!-- start vert   --> 1109,
                      <!-- num verts    --> 33,
-                     <!-- start index  --> 1713,
+                     <!-- start index  --> 1425,
                      <!-- num indices  --> 60,
-                     <!-- start mesh   --> 11,
+                     <!-- start mesh   --> 8,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.983063,    12.143372,   -2.3964539,
-                                           -67.058411,  -143.57318,  -223.43495,
-                     <!-- center       -->   2.0357361,  -67.54364,  -108.84116,
-                     <!-- radius       --> 140.78574
+                     <!-- bounding box -->  66.983063,    12.143402,   -2.3964233,
+                                           -67.05838,   -143.57321,  -223.43501,
+                     <!-- center       -->   2.0357208,  -67.54364,  -108.84117,
+                     <!-- radius       --> 140.7858
                   </VMeshRef>
                </VMeshPart>
             </Level1>
@@ -710,10 +590,10 @@
                      <!-- num indices  --> 39,
                      <!-- start mesh   --> 3,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.982971,    12.143372,   -2.3964539,
-                                           -67.058395,  -143.57315,  -223.4348,
-                     <!-- center       -->   2.0357361,  -67.54364,  -108.84116,
-                     <!-- radius       --> 140.78561
+                     <!-- bounding box -->  66.982971,    12.143402,   -2.3964386,
+                                           -67.05835,   -143.57318,  -223.43486,
+                     <!-- center       -->   2.0357208,  -67.54364,  -108.84117,
+                     <!-- radius       --> 140.78568
                   </VMeshRef>
                </VMeshPart>
             </Level2>
@@ -728,17 +608,17 @@
                      <!-- num indices  --> 21,
                      <!-- start mesh   --> 3,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.983002,    12.143372,   -2.3964539,
-                                           -67.058289,  -143.57324,  -223.43475,
-                     <!-- center       -->   2.0357361,  -67.54364,  -108.84116,
-                     <!-- radius       --> 140.7856
+                     <!-- bounding box -->  66.983002,    12.143402,   -2.3964386,
+                                           -67.058228,  -143.57324,  -223.4348,
+                     <!-- center       -->   2.0357208,  -67.54364,  -108.84117,
+                     <!-- radius       --> 140.78561
                   </VMeshRef>
                </VMeshPart>
             </Level3>
          </MultiLevel>
          <VMeshWire include="bm_jump_gate_broken_cmp\door3_lod1.vwd.xml"/>
-      </door3_lod1231209153203.3db>
-      <door4_lod1231209153203.3db>
+      </door3_lod1241227164931.3db>
+      <door4_lod1241227164931.3db>
          <MultiLevel>
             <Switch2 type="float array" count="5">
                0,
@@ -752,15 +632,15 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_jump_gate_broken.lod0-112.vms,
-                     <!-- start vert   --> 1657,
-                     <!-- num verts    --> 59,
-                     <!-- start index  --> 2688,
+                     <!-- start vert   --> 1384,
+                     <!-- num verts    --> 57,
+                     <!-- start index  --> 2256,
                      <!-- num indices  --> 144,
-                     <!-- start mesh   --> 15,
+                     <!-- start mesh   --> 11,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.982941,    12.143463,   -2.3963928,
-                                           -67.058502,  -146.87,     -223.43484,
-                     <!-- center       -->   2.0358582,  -67.543716, -108.84109,
+                     <!-- bounding box -->  66.982849,    12.143494,   -2.3963928,
+                                           -67.058533,  -146.86996,  -223.43484,
+                     <!-- center       -->   2.0358887,  -67.543732, -108.84109,
                      <!-- radius       --> 140.78561
                   </VMeshRef>
                </VMeshPart>
@@ -770,15 +650,15 @@
                   <VMeshRef type="VMeshRef">
                      <!-- header size  --> 60,
                      <!-- vmesh lib    --> bm_jump_gate_broken.lod1-112.vms,
-                     <!-- start vert   --> 1318,
+                     <!-- start vert   --> 1142,
                      <!-- num verts    --> 33,
-                     <!-- start index  --> 1773,
+                     <!-- start index  --> 1485,
                      <!-- num indices  --> 60,
-                     <!-- start mesh   --> 14,
+                     <!-- start mesh   --> 11,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.982971,    12.143417,   -2.3964233,
-                                           -67.058441,  -143.57321,  -223.43472,
-                     <!-- center       -->   2.0358582,  -67.543716, -108.84109,
+                     <!-- bounding box -->  66.98288,     12.143494,   -2.3963928,
+                                           -67.058472,  -143.57318,  -223.43472,
+                     <!-- center       -->   2.0358887,  -67.543732, -108.84109,
                      <!-- radius       --> 140.78561
                   </VMeshRef>
                </VMeshPart>
@@ -794,10 +674,10 @@
                      <!-- num indices  --> 39,
                      <!-- start mesh   --> 6,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.982971,    12.143417,   -2.3964233,
-                                           -67.058502,  -143.57315,  -223.43478,
-                     <!-- center       -->   2.0358582,  -67.543716, -108.84109,
-                     <!-- radius       --> 140.78558
+                     <!-- bounding box -->  66.98288,     12.143494,   -2.3963928,
+                                           -67.058533,  -143.57315,  -223.43478,
+                     <!-- center       -->   2.0358887,  -67.543732, -108.84109,
+                     <!-- radius       --> 140.78557
                   </VMeshRef>
                </VMeshPart>
             </Level2>
@@ -812,15 +692,15 @@
                      <!-- num indices  --> 21,
                      <!-- start mesh   --> 6,
                      <!-- num meshes   --> 3,
-                     <!-- bounding box -->  66.982941,    12.143417,   -2.3964233,
-                                           -67.05838,   -143.57321,  -223.43472,
-                     <!-- center       -->   2.0358582,  -67.543716, -108.84109,
+                     <!-- bounding box -->  66.982849,    12.143494,   -2.3963928,
+                                           -67.058441,  -143.57318,  -223.43472,
+                     <!-- center       -->   2.0358887,  -67.543732, -108.84109,
                      <!-- radius       --> 140.78557
                   </VMeshRef>
                </VMeshPart>
             </Level3>
          </MultiLevel>
          <VMeshWire include="bm_jump_gate_broken_cmp\door4_lod1.vwd.xml"/>
-      </door4_lod1231209153203.3db>
+      </door4_lod1241227164931.3db>
    </UTF_ROOT>
 </UTFXML>
