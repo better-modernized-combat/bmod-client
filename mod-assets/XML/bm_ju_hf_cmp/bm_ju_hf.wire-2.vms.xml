@@ -212,7 +212,5 @@
          <!--   199 -->     -7.0943594000,     -3.6749392000,      0.6478000000
       </vertex>
    </VMeshData>
-   <FaceData type="hex" size="0">
-      
-   </FaceData>
+   <FaceData/>
 </bm_ju_hf.wire-2.vms>
