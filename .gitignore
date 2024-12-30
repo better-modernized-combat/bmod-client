@@ -480,17 +480,6 @@ desktop.ini
 mod-assets\*.~lock
 *.ods#
 
-# UTF Files (These should be compiled from XML on client build)
-*.3db
-*.ale
-*.cmp
-*.mat
-*.sph
-*.txm
-*.utf
-*.vms
-*.dfm
-
 # Specific DLL Files
 mod-assets/EXE/BmodInfocards.dll
 mod-assets/EXE/BmodBlasterInfocards.dll
