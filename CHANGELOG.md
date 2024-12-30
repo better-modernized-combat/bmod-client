@@ -2,6 +2,7 @@
 
 ## 0.0.21
 - Break the jumpgate at Kepler into even more pieces.
+- Add new shield model variants for different shield types.
 
 ## 0.0.20
 - Fixed an error related to docking ring costumes.
