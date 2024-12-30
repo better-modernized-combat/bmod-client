@@ -16,7 +16,6 @@ jobs:
             key: ${{ secrets.CACHE }}
             path: |
               ${{ github.workspace }}/frc.exe
-              ${{ github.workspace }}/xml2utf.exe
             restore-keys: |
               ${{ secrets.CACHE }}
 
@@ -27,19 +26,12 @@ jobs:
             cd ${{ github.workspace }}
             curl -O http://adoxa.altervista.org/freelancer/frc.zip
             unzip frc.zip
-            curl -O http://adoxa.altervista.org/freelancer/xml2utf.exe
         
         - name: Upload Freelancer Resource Compiler artefact
           uses: actions/upload-artifact@v4
           with:
             name: frc
             path: ${{ github.workspace }}/frc.exe
-        
-        - name: Upload XML2UTF artefact
-          uses: actions/upload-artifact@v4
-          with:
-            name: xml2utf
-            path: ${{ github.workspace }}/xml2utf.exe  
 
   compile-release:
     needs: setup-environment
@@ -63,17 +55,6 @@ jobs:
       run: |
         Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\infocard_imports.frc", "staging\mod-assets\EXE\BmodInfocards.dll"
         Start-Process -Wait ${{ github.workspace }}\frc\frc.exe -ArgumentList "staging\mod-assets\weapon_infocard_imports.frc", "staging\mod-assets\EXE\BmodWeaponInfocards.dll"
-
-    - name: Compile UTF files
-      id: compile-utf
-      run: |
-        $files =  Get-ChildItem -Recurse -Path staging\mod-assets\XML -Filter "*.xml" -Exclude *.vms.xml, *.vwd.xml, *Animation.xml
-        Set-Location "${{ github.workspace }}/staging"
-        Start-Process -Wait D:\a\bmod-client\bmod-client\xml2utf\xml2utf.exe -ArgumentList "-o D:\a\bmod-client\bmod-client/staging/mod-assets/DATA mod-assets\XML\interface.generic.vms.xml"
-        foreach($file in $files){
-        Start-Process -Wait ${{ github.workspace }}\xml2utf\xml2utf.exe -ArgumentList "-o ${{ github.workspace }}/staging/mod-assets/DATA $($file.FullName)"
-          Write-Host "Compiling $($file.FullName) to UTF"
-        }
 
     - name: Create the Release.7z file
       id: create-release-archive
