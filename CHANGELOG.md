@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.22
+
 ## 0.0.21
 - Fixed a breaking issue that caused the game to crash when launching into space in Colorado (#197). Due to the root cause of this, we have had to disable our XML to UTF pipeline for the time being. Developers may wish to clone a fresh copy of the repository before proceeding with any work following this release.
 - Break the jumpgate at Kepler into even more pieces.
