@@ -1,0 +1,7 @@
+logLevel: Info
+logSinks:
+  []
+modules:
+  - FLUF.CrashWalker.dll
+  - FLUF.UI.dll
+  - ShipDealerHud.dll
