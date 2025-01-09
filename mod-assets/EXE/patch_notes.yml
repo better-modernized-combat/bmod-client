@@ -1,2 +1,2 @@
-url: http://localhost:8000/notes.yml
+url: https://raw.githubusercontent.com/better-modernized-combat/bmod-client/refs/heads/0.0.23/notes.yml
 sortPatchNotes: true
