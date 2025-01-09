@@ -1,3 +1,13 @@
+
+- version: "0.0.23"
+  date: "2025-01-09"
+  preamble: "This patch introduces a number of core functions and fixes for equipment and several new UI elements."
+  content: |
+    - Implement patch notes system for the main menu.
+    - Implement Laz's Raid UI.
+    - Implement Laz's Crash Walker module. This will handle instances where the game crashes to desktop and provide feedback where a known crashes occurs.
+    - Implement optional autoconnect plugin.
+
 - version: "0.0.22"
   date: "2025-01-09"
   preamble: "This patch introduces a new Xenos weapons platform and new hitboxes for the Hawk, Falcon and Eagle."
