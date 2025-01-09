@@ -1,0 +1,11 @@
+logLevel: Info
+logSinks:
+  - Console
+modules:
+  - "autoconnect.dll"
+  - "FLUF.CrashWalker.dll"
+  - "FLUF.UI.dll"
+  - "raid_ui.dll"
+  - "ship_dealer_enhancements.dll"
+  - "patch_notes.dll"
+setSaveDirectoryRelativeToExecutable: false
