@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.24
+
 ## 0.0.23
 - Implement patch notes system for the main menu.
 - Implement Laz's Raid UI.
