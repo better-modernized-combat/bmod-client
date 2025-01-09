@@ -1,6 +1,14 @@
 # Changelog
 
 ## 0.0.22
+9/01/2025
+- Implemented an all-new fully modelled Xenos weapons platform made for ambushes in asteroid fields, the Trapdoor. Currently has test spawns in the field south of the dev station (♥ IrateRedKite)
+- Added a new Navy checkpoint with a static Frigate and some weapons platforms between Denver and Alamosa field. WIP, not final yet (Beagle)
+- Added a new Triggers Terminal to this Navy outpost. It provides static Xenos targets to attack in Alamosa field. WIP, currently uses existing content from the Cheyenne DSE Terminal as placeholders (Beagle) 
+- Behind the scenes cleanup and optimizations (♥ IrateRedKite)
+- Brand new visual hardpoints with better detail and relative sizing to suit our weapon class system (♥ IrateRedKite)
+- New and improved hitboxing and shields for the Civilian fighter line: Hawk, Falcon, Eagle (♥ Haste)
+- Hawk LF and Eagle VHF have been resized - the Hawk has become a little smaller, the Eagle a little larger. If these changes playtest well, we'll be aiming to standardize these kinds of size differences between all fighter classes in the future (♥ IrateRedKite)
 
 ## 0.0.21
 - Fixed a breaking issue that caused the game to crash when launching into space in Colorado (#197). Due to the root cause of this, we have had to disable our XML to UTF pipeline for the time being. Developers may wish to clone a fresh copy of the repository before proceeding with any work following this release.
