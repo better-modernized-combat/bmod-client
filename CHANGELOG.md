@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.23
+
 ## 0.0.22
 - Implemented an all-new fully modelled Xenos weapons platform made for ambushes in asteroid fields, the Trapdoor. Currently has test spawns in the field south of the dev station (♥ IrateRedKite)
 - Added a new Navy checkpoint with a static Frigate and some weapons platforms between Denver and Alamosa field. WIP, not final yet (Beagle)
