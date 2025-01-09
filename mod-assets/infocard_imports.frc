@@ -308,6 +308,7 @@ S 468267 Piranha
 S 468268 Barracuda
 S 468269 Hammerhead
 S 468270 Paladin
+S 468276 Trapdoor Platform
 S 468271 Mule
 S 468272 CSV
 S 468273 Orca
@@ -460,6 +461,11 @@ H 468525
 	\m\bR-201-C "Angler" Junkers Heavy Fighter\B
 	\l
 	Built atop the chassis of the venerable Combat Service Vehicle, the Angler is a full-fighter conversion of the original design. With additional armour plating, a streamlined profile and massively improved heat dispersion capacity, the Angler is able to survive and thrive in a harsher post-Houston Sirius, and has the cargohold to turn a profit in the process.
+
+H 468526
+	\m\b"Trapdoor" Xenos Ambush Platform\B
+	\l
+	Placeholder Text\n
 
 H 469010
 	\m\bModel G "Quarrel" High-Performance Engine\B
@@ -3001,3 +3007,12 @@ H 476079
 	\b\cr>>>WARNING: NAVIGATIONAL HAZARD<<<\B\C
 
 	Like most of the resources in Colorado, the famed Copperton Field has long since been exhausted. Trace amounts of copper remain. Xenos activity is high in the field, and there are reports that the group have established static defences throughout, including a minefield. 
+
+S 476080 Alpha
+S 476081 Bravo
+S 476082 Delta
+S 476083 Echo
+S 476084 Foxtrot
+S 476085 Tango
+S 476086 Zulu
+S 476087 Frame
