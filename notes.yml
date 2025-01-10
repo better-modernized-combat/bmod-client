@@ -1,4 +1,12 @@
 
+- version: "0.0.24"
+  date: "2025-01-10"
+  preamble: "This patch introduces a number of core functions and fixes for equipment and several new UI elements."
+  content: |
+      - Deploy critical fix for an issue that caused a crash when the game Window lost focus.
+      - Enable more than 3 ships to be offered at a shipdealer, remove ships for sale at Pueblo station.
+      - Implement improved Wheel Scroll QOL patch from Adoxa
+
 - version: "0.0.23"
   date: "2025-01-09"
   preamble: "This patch introduces a number of core functions and fixes for equipment and several new UI elements."
