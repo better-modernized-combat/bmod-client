@@ -926,6 +926,8 @@ S 471639 WAYPOINT TYPE TEST
 S 471640 TRIGGERS TESTING SATELLITE
 S 471641 TOGGLE GROUP UI
 S 471642 Toggles the visibility of the group UI.
+S 471643 OPEN EXTENDED OPTIONS MENU
+S 471644 Opens the FLUF extended options menu.
 
 S 472011 Countermeasure Dropper
 S 472012 Countermeasure Dropper [+]

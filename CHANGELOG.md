@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.24
+- Deploy critical fix for an issue that caused a crash when the game Window lost focus.
+- Enable more than 3 ships to be offered at a shipdealer, remove ships for sale at Pueblo station.
+- Implement improved Wheel Scroll QOL patch from Adoxa
+
 ## 0.0.23
 - Implement patch notes system for the main menu.
 - Implement Laz's Raid UI.
