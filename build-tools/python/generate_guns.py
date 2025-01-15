@@ -138,6 +138,8 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "LODranges": weapon["LODranges"],
         "; cost": cost,
     })
+    if not (pd.isna(weapon["Burst Fire"]) or weapon["Burst Fire"] == ""):
+        weapon_block["burst_fire"] = weapon["Burst Fire"] # int magSize, float reloadTime
     if not pd.isna(weapon["Dispersion Angle"]) and not weapon["Dispersion Angle"] == "":
         weapon_block["dispersion_angle"] = dfloat(weapon["Dispersion Angle"])
     if not pd.isna(weapon["Muzzle Cone Override"]) and not weapon["Muzzle Cone Override"] == "":
@@ -209,8 +211,6 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
             "force_gun_ori": weapon["Force Gun Orientation"],
             "mass": 1,
         })
-        if not (pd.isna(weapon["Ammo Limit"]) or weapon["Ammo Limit"] == ""):
-            munition_block["ammo_limit"] = weapon["Ammo Limit"]
         if not (pd.isna(weapon["Units per Container"]) or weapon["Units per Container"] == ""):
             munition_block["units_per_container"] = weapon["Units per Container"]
         if not pd.isna(weapon["Ammo Drop Properties"]) and not weapon["Ammo Drop Properties"] == "":
@@ -254,16 +254,16 @@ def create_auxgun_ammo_blocks(weapon: dict, variant: dict, idx: int, is_override
         "dry_fire_sound": "fire_dry",
         "; cost": cost,
     })
+    if not (pd.isna(weapon["Burst Fire"]) or weapon["Burst Fire"] == ""):
+        weapon_block["burst_fire"] = weapon["Burst Fire"] # int magSize, float reloadTime
     if not pd.isna(weapon["Dispersion Angle"]) and not weapon["Dispersion Angle"] == "":
         weapon_block["dispersion_angle"] = dfloat(weapon["Dispersion Angle"])
     if not pd.isna(weapon["Muzzle Cone Override"]) and not weapon["Muzzle Cone Override"] == "":
         weapon_block["muzzle_cone_override"] = dfloat(weapon["Muzzle Cone Override"])
-    if not pd.isna(weapon["Projectiles / shot"]) and not weapon["Projectiles / shot"] == "":
-        weapon_block["total_projectiles_per_fire"] = dfloat(weapon["Projectiles / shot"])
-    if not pd.isna(weapon["Burst Interval"]) and not weapon["Burst Interval"] == "":
-        weapon_block["time_between_multiple_projectiles"] = dfloat(weapon["Burst Interval"])
     if not pd.isna(weapon["Weapon Drop Properties"]) and not weapon["Weapon Drop Properties"] == "":
         weapon_block["drop_properties"] = dfloat(weapon["Weapon Drop Properties"])
+    if not (pd.isna(weapon["Ammo Limit"]) or weapon["Ammo Limit"] == ""):
+        weapon_block["ammo_limit"] = weapon["Ammo Limit"]
     if not pd.isna(weapon["Free Ammo"]) and not weapon["Free Ammo"] == "":
         weapon_block["; free_ammo"] = dfloat(weapon["Free Ammo"])
     
