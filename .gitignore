@@ -473,6 +473,7 @@ build-tools/python/csv_dump
 # Credentials
 **/service_account.json
 FLHook.json
+paths.json
 
 # OS Desktop Config Files
 .DS_Store
