@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.26
+
 ## 0.0.25
 - Fixes for reticule behaviour.
 - New models for S, M and L Laser as well as SRM and LRM launchers.
