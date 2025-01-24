@@ -1,6 +1,10 @@
 # Changelog
 
 ## 0.0.25
+- Fixes for reticule behaviour.
+- New models for S, M and L Laser as well as SRM and LRM launchers.
+- Adjustments to how ammo stacking now behaves.
+- Static Xenos weapon platforms now placed around Ouray again.
 
 ## 0.0.24
 - Deploy critical fix for an issue that caused a crash when the game Window lost focus.
