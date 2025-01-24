@@ -416,9 +416,9 @@ entities =
 	},
 
 	{
-		entity_name = "Equip_g_heavytractorbeam",
+		entity_name = "bm_aux_lasl_1x_b",
 		type = COMPOUND,
-		template_name = "rtcprop_hardware_ge_heavy_tractor_beam",
+		template_name = "bm_aux_lasl_1x_b",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -596,9 +596,9 @@ entities =
 	},
 
 	{
-		entity_name = "Equip_g_missile01",
+		entity_name = "bm_mis_lrm_01",
 		type = COMPOUND,
-		template_name = "rtcprop_weapons_li_rad_launcher",
+		template_name = "bm_mis_lrm_01",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -614,9 +614,9 @@ entities =
 	},
 
 	{
-		entity_name = "Equip_l_shield_gen01",
+		entity_name = "bm_npc_aux_lasm_1x_xp1",
 		type = COMPOUND,
-		template_name = "rtcprop_st_li_refractor_shield",
+		template_name = "bm_npc_aux_lasm_1x_xp1",
 		lt_grp = 3, srt_grp = 0, usr_flg = 0,
 		flags = LIT_DYNAMIC,
 		spatialprops =
@@ -940,10 +940,10 @@ events =
 	},
 
 	{
-		0.000, ATTACH_ENTITY, { "Equip_g_missile01", "Cart_Li_Shield_Thrust" },
+		0.000, ATTACH_ENTITY, { "bm_mis_lrm_01", "Cart_Li_Shield_Thrust" },
 		{
 			duration = 12.375,
-			offset = { 0, 0, 0.46 },
+			offset = { 0, 0.5, -0.5 },
 			up = Y_AXIS,
 			front = NEG_Z_AXIS,
 			target_part = "HpConnect01",
@@ -966,10 +966,10 @@ events =
 	},
 
 	{
-		0.000, ATTACH_ENTITY, { "Equip_g_heavytractorbeam", "Cart_Li_Shield_Thrust" },
+		0.000, ATTACH_ENTITY, { "bm_aux_lasl_1x_b", "Cart_Li_Shield_Thrust" },
 		{
 			duration = 12.625,
-			offset = { 0, 0.575, 0 },
+			offset = { 0, 0.25, 0 },
 			up = Y_AXIS,
 			front = NEG_Z_AXIS,
 			target_part = "HpConnect04",
@@ -1148,10 +1148,10 @@ events =
 	},
 
 	{
-		0.000, ATTACH_ENTITY, { "Equip_l_shield_gen01", "Cart_Li_Shield_Thrust" },
+		0.000, ATTACH_ENTITY, { "bm_npc_aux_lasm_1x_xp1", "Cart_Li_Shield_Thrust" },
 		{
 			duration = 10.562,
-			offset = { 0, 0.069, 0 },
+			offset = { 0, 0.2, 0 },
 			up = Y_AXIS,
 			front = NEG_Z_AXIS,
 			target_part = "HpConnect03",
