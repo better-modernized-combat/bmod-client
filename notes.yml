@@ -1,3 +1,11 @@
+- version: "0.0.25"
+  date: "2025-01-24"
+  preamble: "This patch contains changes to the burst fire and ammo systems, as well as new models for some equipment."
+  content: |
+      - Fixes for reticule behaviour.
+      - New models for S, M and L Laser as well as SRM and LRM launchers.
+      - Adjustments to how ammo stacking now behaves.
+      - Static Xenos weapon platforms now placed around Ouray again.
 
 - version: "0.0.24"
   date: "2025-01-10"

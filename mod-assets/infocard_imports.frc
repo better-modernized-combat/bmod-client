@@ -2981,8 +2981,22 @@ S 474073 [SLVG] Mule Wreck
 
 S 474074 Xenos - Quad AC Platform
 S 474075 Xenos - NAC/L Platform
-S 474076 Xenos Stash
+S 474076 Xenos Hideout
 S 474077 Prototype Navy Fighter
+
+S 474078 Xenos - LRM Platform
+
+S 474079 Solos - Start of Field
+S 474080 Solos - Center of Field
+S 474081 Duos - Start of Field
+S 474082 Duos - Center of Field
+S 474083 Trios - Start of Field
+S 474084 Trios - Center of Field
+S 474085 Hideout Attack Range
+S 474086 Asteroid Base Attack Range
+S 474087 Space Base Attack Range
+
+
 
 H 476075
 	The remains of a Xenos rookie caught by a Navy patrol. It appears they were attempting to pick over the wrecked cargo lost during the Houston Catastrophe.
