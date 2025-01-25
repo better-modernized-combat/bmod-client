@@ -11,7 +11,7 @@ from argparse import ArgumentParser
 
 from defaults import *
 from generate_infocards import FRC_Entry, generate_weapon_infocard_entry, generate_ammo_infocard_entry, write_infocards_to_frc
-from ini_utils import CSVError, clean_unnamed_wip_empty, coerce_str_to_bool, pretty_numbers
+from ini_utils import CSVError, clean_unnamed_wip_empty, coerce_str_to_bool, find_all_nicknames, pretty_numbers
 from utils import bcolors
 
 # Currently supported multiplicities
@@ -134,7 +134,7 @@ def create_blaster_ammo_blocks(weapon: dict, variant: dict, multiplicity: int, s
         "separation_explosion": "sever_debris",
         "auto_turret": "false",
         "turn_rate": weapon["Turn Rate"],
-        "lootable": "false" if "_npc_" in nickname else "true",
+        "lootable": "false" if "npc" in nickname else "true",
         "LODranges": weapon["LODranges"],
         "; cost": cost,
     })
@@ -393,7 +393,12 @@ def fill_admin_store(
         store = []
         # Add anything from any dict to the store by nickname that isnt npc gear
         for sublist in admin_store_items:
-            store.extend([f"MarketGood = {nickname}, 0, -1, 10, 10, 0, 1" for nickname in sublist if not "npc" in nickname and any([x in nickname for x in filter])])
+            store.extend([
+                f"MarketGood = {nickname}, 0, -1, 10, 10, 0, 1" for nickname in sublist if (
+                    (not "npc" in nickname or "npcu" in nickname)   # Unique NPC weapons are allowed, non-uniques forbidden (you can buy PC versions so its fine)
+                    and any([x in nickname for x in filter])        # Must be bmod specific weaponry
+                    )
+                ])
         replacement = "\n".join(store)+"\n"
         new_content = re.sub(store_pattern, replacement, content)
         
@@ -850,13 +855,20 @@ def create_guns(
     
     # Fill admin store with goodies (for testing)
     # TODO: When merging, convert file names to OS-agnostic format and delete comment
+    npcu_equipment = find_all_nicknames(
+        files = {
+            "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini": ["[Munition]", "[Gun]"],
+            "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_npc_only.ini": ["[Good]"],
+        }
+    )
     fill_admin_store(
         admin_store_location = "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini",
         admin_store_items = [
-            [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True], 
-            [weapon_name for weapon_name in writable_weapon_blocks]
+            [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True],   # Gen muns
+            [weapon_name for weapon_name in writable_weapon_blocks],                                                                                    # Gen guns
+            [eq_name for eq_name in npcu_equipment]                                                                                                     # NPCU equip (see above)
             ],
-        filter = ["gd_civ", "aux", "dev"]
+        filter = ["_gd_civ_", "_aux_", "_auxf_", "_dev_", "_npcu_"]
         )
     
     # TODO: generate the following corresponding files based on the name of the gun:
