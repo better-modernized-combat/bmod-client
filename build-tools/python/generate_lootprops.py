@@ -33,7 +33,7 @@ file_map = {
     "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini": ["[Munition]", "[Gun]"],
 }                                                           # parse only these files
 always_drop = ["bm_com_dev", "voucher", "dogtags"]          # gets 100% drop chance
-never_drop = ["_npc"]                                       # gets 0% drop chance, but still has a lootprops entry
+never_drop = ["npc"]                                       # gets 0% drop chance, but still has a lootprops entry
 never_drop_files = [
     "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini",
     "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_solar.ini"
@@ -120,7 +120,7 @@ def parse_all_files():
         # warn if the block type is false
         false_types = set([block["type"] for block in blocks if not block["type"] in correct_types])
         if len(false_types) >= 1:
-            print(f"WARNING: Wrong block type(s) {list(false_types)} in file {file}. Maybe check if you put a new thing into the wrong equipment file (e.g. Shields into the Guns file)? This will not cause a crash.")
+            print(f"WARNING: Wrong block type(s) {list(false_types)} in file {file}. Maybe check if you put a new thing into the wrong equipment file (e.g. Shields into the Guns file)? This will not cause a crash, but other files may rely on the correct equipment types being in the correct files.")
         
         # if its a Munition/Mine/CM, it should require_ammo - if not, it should be lootable - else discard
         blocks = [
