@@ -1,5 +1,6 @@
-from typing import List, ContextManager
 import pandas as pd
+from sort_ini import parse_blocks
+from typing import List, Dict, ContextManager
 
 class CSVError(Exception):
     pass
@@ -13,6 +14,18 @@ def coerce_str_to_bool(s: str | bool):
         case "false": return False
         case "true": return True
         case _: raise ValueError(f"coerce_str_to_bool called on string '{s}' which cannot be coerced to boolean value!")
+
+def find_all_nicknames(files: Dict[str, List[str, ]]):
+    
+    nicknames = {}
+    
+    for filename, block_types in files.items():
+        s, l, b, n = parse_blocks(in_file = filename)
+        for block_type, nickname in zip(b, n):
+            if block_type in block_types:
+                nicknames[nickname] = block_type
+                
+    return nicknames
 
 def pretty_numbers(s: str):
     
