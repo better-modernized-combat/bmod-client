@@ -21,9 +21,9 @@ def find_all_nicknames(files: Dict[str, List[str, ]]):
     
     for filename, block_types in files.items():
         s, l, b, n = parse_blocks(in_file = filename)
-        for block_type, nickname in zip(b, n):
-            if block_type in block_types:
-                nicknames[nickname] = block_type
+        for block in b:
+            if block["type"] in block_types:
+                nicknames[block["nickname"]] = block["type"]
                 
     return nicknames
 
