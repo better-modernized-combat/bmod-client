@@ -1,0 +1,68 @@
+duration = 1;
+
+entities = {
+
+    {
+        entity_name = "Layer_Scene_m01_offer_reject",
+        type = SCENE,
+        template_name = "",
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        spatialprops = {
+            pos = {0, 0, 0},
+            orient = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+        },
+        up = Y_AXIS,
+        front = Z_AXIS,
+        ambient = {0, 0, 0}
+    }, {
+        entity_name = "Generic_Monitor",
+        type = MONITOR,
+        template_name = "",
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+    }, {
+        entity_name = "Char_juni",
+        type = DEFORMABLE,
+        template_name = "juni",
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-1.921512, 0, -8.87397},
+            orient = {
+                {-0.973749, 0.000000, -0.227625},
+                {0.000000, 1.000000, 0.000000}, {0.227625, 0.000000, -0.973749}
+            }
+        },
+        compoundprops = {floor_height = 0},
+        userprops = {actor = "juni", category = "Character"}
+    }, {
+        entity_name = "Char_trent",
+        type = DEFORMABLE,
+        template_name = "trent",
+        lt_grp = 0,
+        srt_grp = 0,
+        usr_flg = 0,
+        flags = LIT_DYNAMIC,
+        spatialprops = {
+            pos = {-24.98728, 0, 2.075682},
+            orient = {
+                {0.172092, 0.000000, 0.985081}, {0.000000, 1.000000, 0.000000},
+                {-0.985081, 0.000000, 0.172092}
+            }
+        },
+        compoundprops = {floor_height = 0},
+        userprops = {actor = "player", category = "Character"}
+    }
+};
+
+events = {
+    {
+        0.000, SET_CAMERA,
+        {"Generic_Monitor_static", "Cam_A_Wide_Crane_Trent_2"}
+    }
+};
