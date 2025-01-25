@@ -138,6 +138,16 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool, generate_loottab
     print("Populating inis ...")
     for csv in template:
         
+        # Regular inis first
+        if csv not in ["GUNS", "SHIPARCH", "NPC SHIPARCH", "LOOT TABLES"]:
+            if not csv.endswith(".csv"):
+                raise NotImplementedError(f"{csv} has no action attached. Stop messing around with the template, please.")
+            csv_to_ini(
+                csv_file = csv,
+                ini_out_file = template[csv]["ini"],
+                block_name = template[csv]["block_name"]
+                )
+        
         # Special ini
         if csv == "GUNS":
             create_guns(
@@ -153,7 +163,7 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool, generate_loottab
             )
             
         # Special ini
-        elif csv.endswith("SHIPARCH"):
+        if csv.endswith("SHIPARCH"):
             may_shiparch_perish_under_my_wrathful_gaze(
                 ship_csv = template[csv]["ship_csv"],
                 simples_csv = template[csv]["simples_csv"],
@@ -162,26 +172,11 @@ def generate_inis(master_sheet: str, weapon_sanity_check: bool, generate_loottab
             )
             
         # Special ini
-        elif csv == "LOOT TABLES":
-            if generate_loottables is True:
-                create_loot_tables(
-                    loot_table_csv = template[csv]["loot_tables_csv"],
-                    out_json = template[csv]["json"]
-                )
-            else:
-                pass
-            
-        # All regular inis
-        elif csv.endswith(".csv"):
-            csv_to_ini(
-                csv_file = csv,
-                ini_out_file = template[csv]["ini"],
-                block_name = template[csv]["block_name"]
-                )
-            
-        # This shouldn't exist
-        else:
-            raise NotImplementedError("Stop messing around with the template, please.")
+        if csv == "LOOT TABLES" and generate_loottables is True:
+            create_loot_tables(
+                loot_table_csv = template[csv]["loot_tables_csv"],
+                out_json = template[csv]["json"]
+            )
 
     # Generate lootprops once all other inis are generated, as lootprops is based on these inis
     # TODO: When merging, convert file names to OS-agnostic format and delete comment
