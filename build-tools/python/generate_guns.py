@@ -855,20 +855,13 @@ def create_guns(
     
     # Fill admin store with goodies (for testing)
     # TODO: When merging, convert file names to OS-agnostic format and delete comment
-    npcu_equipment = find_all_nicknames(
-        files = {
-            "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_equip_npc_only.ini": ["[Munition]", "[Gun]"],
-            "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_good_npc_only.ini": ["[Good]"],
-        }
-    )
     fill_admin_store(
         admin_store_location = "mod-assets\\DATA\\BMOD\\EQUIPMENT\\bmod_market_misc.ini",
         admin_store_items = [
             [munition_name for munition_name, munition in writable_munition_blocks.items() if coerce_str_to_bool(munition["requires_ammo"]) is True],   # Gen muns
             [weapon_name for weapon_name in writable_weapon_blocks],                                                                                    # Gen guns
-            [eq_name for eq_name in npcu_equipment]                                                                                                     # NPCU equip (see above)
             ],
-        filter = ["_gd_civ_", "_aux_", "_auxf_", "_dev_", "_npcu_"]
+        filter = ["_gd_civ_", "_aux_", "_auxf_", "_dev_"]
         )
     
     # TODO: generate the following corresponding files based on the name of the gun:

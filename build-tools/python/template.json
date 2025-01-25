@@ -169,14 +169,6 @@
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_npc_only.ini",
         "block_name": "[Good]"
     },
-    "./build-tools/python/csv_dump/bm_npc_ship_gd_hull.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/SHIPS/bmod_ship_good.ini",
-        "block_name": "[Good]"
-    },
-    "./build-tools/python/csv_dump/bm_npc_ship_gd_pkge.ini.csv": {
-        "ini": "./mod-assets/DATA/BMOD/SHIPS/bmod_ship_good.ini",
-        "block_name": "[Good]"
-    },
     "./build-tools/python/csv_dump/bm_cmdt_gd.ini.csv": {
         "ini": "./mod-assets/DATA/BMOD/EQUIPMENT/bmod_good_commodities.ini",
         "block_name": "[Good]"

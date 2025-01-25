@@ -83,8 +83,6 @@
             "npc_shiparch.ini",
             "npc_shiparch_simple.ini",
             "npc_shiparch_collisiongroup.ini",
-            "bm_npc_ship_gd_hull.ini",
-            "bm_npc_ship_gd_pkge.ini",
             "bm_cmdt_gd.ini",
             "bm_cmdt_eq.ini"
         ]
