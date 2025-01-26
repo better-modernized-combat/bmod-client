@@ -1,6 +1,10 @@
 # Changelog
 
 ## 0.0.26
+- Included a fully functional version of the AutoConnect module.
+- New models for the UGB and it's associated projectiles.
+- Barebones optional tutorial for basic game mechanics implemented into Single Player mode.
+- Removed AmmoLimmit.dll and DelayDisplay.dll as these functions are now handled by EquipmentModifications.dll
 
 ## 0.0.25
 - Fixes for reticule behaviour.
