@@ -15,6 +15,9 @@ S 462287 1 x SRM Pylon [+]
 S 462288 Twin SRM Launcher
 S 462289 Skipper Light Torpedo
 S 462290 UGB
+S 462291 Sulfur ASM Launcher
+S 462292 1 x Sulfur ASM Pylon
+S 462293 Twin Sulfur ASM Launcher
 
 S 462756 END AUX NAME
 
@@ -44,6 +47,7 @@ S 463283 Rocket
 S 463284 SRM
 S 463289 Skipper Light Torpedo
 S 463290 UG Bomb
+S 463291 Sulfur ASM
 
 H 462766
 	\m\bFleet PD Turret\B
@@ -155,7 +159,31 @@ H 462790
 	\m\bUGB\B
 	\l
 	UGB Placeholder\n
+	
+H 462791
+	\m\bSulfur ASM-114 Anti-Ship Missile Launcher\B
+	\l
+	This launcher fires a medium range missile designed to strike larger ships. It can't lock onto small craft like fighters, but deals enough damage to challenge the shields and hull of freighters and other big targets. It has below average agility and enough range for stand-off attacks. The launcher itself reloads quickly, capable of firing again after a short delay.
+	
+	\bADDITIONAL INFORMATION\B
+	The Sulfur ASM is a fighter's first weapon against anything too big to take in a brawl. Packing a potent shaped charge, it's capable of overloading an armoured transport's shields with multiple hits, then punching through its hull to wreck the softer internals within. With a modest range, Sulfurs allow fighters to stay at a safe distance outside of most point defense, allowing lone fighters to harass bigger foes effectively, and making them pressing threats in groups. The combination turns an outmatched contest on its head and lets fighters make that old adage true: it's not the size of the dog in the fight that counts, but the size of the fight in the dog.\n
+	
+H 462792
+	\m\b1 x Sulfur ASM-114 Anti-Ship Missile Pylon\B
+	\l
+	This pylon mounts a medium range missile designed to strike larger ships. It can't lock onto small craft like fighters, but deals enough damage to challenge the shields and hull of freighters and other big targets. It has below average agility and enough range for stand-off attacks. The pylon itself reloads slowly, capable of firing again only after a significant delay.
+	
+	\bADDITIONAL INFORMATION\B
+	The Sulfur ASM is a fighter's first weapon against anything too big to take in a brawl. Packing a potent shaped charge, it's capable of overloading an armoured transport's shields with multiple hits, then punching through its hull to wreck the softer internals within. With a modest range, Sulfurs allow fighters to stay at a safe distance outside of most point defense, allowing lone fighters to harass bigger foes effectively, and making them pressing threats in groups. The combination turns an outmatched contest on its head and lets fighters make that old adage true: it's not the size of the dog in the fight that counts, but the size of the fight in the dog.\n
 
+H 462793
+	\m\bTwin Sulfur ASM-114 Anti-Ship Missile Launcher\B
+	\l
+	This launcher fires up to two medium range missiles designed to strike larger ships. It can't lock onto small craft like fighters, but deals enough damage to challenge the shields and hull of freighters and other big targets. It has below average agility and enough range for stand-off attacks. The launcher itself reloads quickly, capable of firing another pair of missiles again after a short delay.
+	
+	\bADDITIONAL INFORMATION\B
+	The Sulfur ASM is a fighter's first weapon against anything too big to take in a brawl. Packing a potent shaped charge, it's capable of overloading an armoured transport's shields with multiple hits, then punching through its hull to wreck the softer internals within. With a modest range, Sulfurs allow fighters to stay at a safe distance outside of most point defense, allowing lone fighters to harass bigger foes effectively, and making them pressing threats in groups. The combination turns an outmatched contest on its head and lets fighters make that old adage true: it's not the size of the dog in the fight that counts, but the size of the fight in the dog.\n
+	
 H 462006
 	\m\bSP-Zu4 "Bastion" Frigate Positron Shield\B
 	\l
@@ -296,6 +324,14 @@ H 463790
 	\m\bUGB\B
 	\l
 	Placeholder Text\n
+	
+H 463791
+	\m\bSulfur ASM\B
+	\l
+	This is a medium range missile designed to strike larger ships. It can't lock onto small craft like fighters, but deals enough damage to challenge the shields and hull of freighters and other big targets. It has below average agility and enough range for stand-off attacks.
+	
+	\bADDITIONAL INFORMATION\B
+	The Sulfur ASM is a fighter's first weapon against anything too big to take in a brawl. Packing a potent shaped charge, it's capable of overloading an armoured transport's shields with multiple hits, then punching through its hull to wreck the softer internals within. With a modest range, Sulfurs allow fighters to stay at a safe distance outside of most point defense, allowing lone fighters to harass bigger foes effectively, and making them pressing threats in groups. The combination turns an outmatched contest on its head and lets fighters make that old adage true: it's not the size of the dog in the fight that counts, but the size of the fight in the dog.\n
 
 S 468260 Hawk
 S 468261 Falcon
