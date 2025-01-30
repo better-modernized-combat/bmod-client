@@ -1746,7 +1746,7 @@ S 480020 Repair Ship
 S 480021 Heavy Lifter
 S 480022 Armored Transport
 S 480023 Transport
-S 480024 Lazrius
+S 480024 Lazrius Frigate
 S 480025 Independence
 
 H 480270
@@ -3032,6 +3032,9 @@ S 474085 Hideout Attack Range
 S 474086 Asteroid Base Attack Range
 S 474087 Space Base Attack Range
 S 474088 REPAIR ZONE // Stand by for repairs...
+
+S 474089 Navy - Mobile Repair Bay
+S 474090 Navy - Lazrius Frigate
 
 
 
