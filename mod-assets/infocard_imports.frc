@@ -970,7 +970,7 @@ S 472012 Countermeasure Dropper [+]
 S 472013 Thruster
 S 472014 Wasp Cruise Disruptor
 S 472015 Wasp Cruise Disruptor [+]
-S 472016 M-EX1 Drone Mine
+S 472016 Crossbones X-MF Dropper
 S 472017 M-EX2 Cutter Mine
 S 472018 M-EM1 Razor EMP Mine
 S 472019 M-EM2 Wardog EMP Mine
@@ -1026,11 +1026,14 @@ H 472516
 	* Requires Wasp Cruise Disruptor Missile.\n
 
 H 472517
-	\m\bM-EX1 "Drone" Static Explosive Mine Dropper\B
+	\m\bCrossbones MF-EX1 Explosive Minefield Dropper\B
 	\l
-	The Drone is simple and effective, detonating and eviscerating its targets within a respectable kill radius. Given its relatively low cost and availability throughout Sirius, this mine dropper is by and large considered to be an old and faithful standby weapon.
+	This dropper deploys a cross-shaped pattern of 5 explosive mines, which will stay where deployed until detonating on any enemies that come too close. Each mine does considerable damage, with the combined field more than capable of disabling a fighter's shield or destroying an unshielded target outright. They have a small arming time before they can detonate, and will deactivate themselves if left in place for too long. The launcher itself reloads slowly, making this weapon intermittent but impactful in its effectiveness.
 	
-	* Requires Drone Static Explosive Mine.\n
+	\bADDITIONAL INFORMATION\B
+	An extremely violent countermeasure first pioneered by Sirius outlaws, fighter-sized minefield launchers are brutally effective at clearing pursuers off your tail. The first of many modern offerings now developed by law-abiding manufacturers, the ancient Crossbones MF-EX1 has enjoyed considerable popularity amongst Freelancers and corporate security in the centuries since it first appeared on the civilian market - ironically, often being used against the same kind of pirates who popularised craft-dropped mines in the first place. Combining modest blast range with deadly power and a slowly but reliably reloading launcher, the Crossbones reminds that no matter what side of the law you're on, the facts remain the same: a few dozen tons of proxy explosive in your face is a good reason to back off your target - or else.
+	
+	* Requires Crossbones Explosive Mine.\n
 
 H 472518
 	\m\bM-EX2 "Cutter" Seeking Explosive Mine Dropper\B
@@ -1113,7 +1116,7 @@ H 472525
 S 473013 CM-1 Countermeasure Flare
 S 473014 CM-1 Countermeasure Flare [+]
 S 473016 Wasp Cruise Disruptor Missile
-S 473018 M-EX1 Drone Mine
+S 473018 Crossbones MF-EX1 Mine
 S 473019 M-EX2 Cutter Mine
 S 473020 M-EM1 Razor EMP Mine
 S 473021 M-EM2 Wardog EMP Mine
@@ -1146,11 +1149,14 @@ H 473517
 	* Fired by Wasp Cruise Disruptor.\n
 
 H 473519 
-	\m\bM-EX1 "Drone" Static Explosive Mine\B
+	\m\bCrossbones MF-EX1 Explosive Mine\B
 	\l
-	The Drone is simple and effective, detonating and eviscerating its targets within a respectable kill radius.
+	This explosive mine is dropped in a cross-shaped pattern of 5 at a time, which will stay where deployed until detonating on any enemies that come too close. Each mine does considerable damage, with the combined field more than capable of disabling a fighter's shield or destroying an unshielded target outright. They have a small arming time before they can detonate, and will deactivate themselves if left in place for too long.
 	
-	* Fired by Drone Static Explosive Mine Dropper.\n
+	\bADDITIONAL INFORMATION\B
+	An extremely violent countermeasure first pioneered by Sirius outlaws, fighter-sized minefield launchers are brutally effective at clearing pursuers off your tail. The first of many modern offerings now developed by law-abiding manufacturers, the ancient Crossbones MF-EX1 has enjoyed considerable popularity amongst Freelancers and corporate security in the centuries since it first appeared on the civilian market - ironically, often being used against the same kind of pirates who popularised craft-dropped mines in the first place. Combining modest blast range with deadly power and a slowly but reliably reloading launcher, the Crossbones reminds that no matter what side of the law you're on, the facts remain the same: a few dozen tons of proxy explosive in your face is a good reason to back off your target - or else.
+	
+	* Fired by Crossbones MF-EX1 Explosive Minefield Dropper.\n
  
 H 473520 
 	\m\bM-EX2 "Cutter" Seeking Explosive Mine\B
