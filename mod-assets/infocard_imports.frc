@@ -350,8 +350,8 @@ S 468273 Orca
 S 468274 Manta
 S 468275 Angler
 S 468276 Trapdoor Platform
-S 468277 Drone
-S 468278 Heavy Drone
+S 468277 LF Drone
+S 468278 HF Drone
 
 S 468760 Civilian L. F. Engine
 S 468761 Civilian H. F. Engine
@@ -512,7 +512,7 @@ H 468527
 	Placeholder\n
 	
 H 468528
-	\m\bMQ-2 "Starbrawl" Unmanned Heavy Fighter\B
+	\m\bMQ-2 "Starfire" Unmanned Heavy Fighter\B
 	\l
 	Placeholder\n
 
