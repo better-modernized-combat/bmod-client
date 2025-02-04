@@ -352,6 +352,8 @@ S 468275 Angler
 S 468276 Trapdoor Platform
 S 468277 LF Drone
 S 468278 HF Drone
+S 468279 Falcon-2CQ
+S 468280 Falcon-2LR
 
 S 468760 Civilian L. F. Engine
 S 468761 Civilian H. F. Engine
@@ -429,7 +431,7 @@ H 468510
 H 468511
 	\m\bCTE-3000 "Falcon" Civilian Heavy Fighter\B
 	\l
-	As the name attests, this ship is formidable and is well-deserving of the reputation that it enjoys. With abalanced combination of refined offensive and defensive technologies, the Falcon delivers an astonishingamount of potential firepower to potential adversaries quickly and efficiently.
+	As the name attests, this ship is formidable and is well-deserving of the reputation that it enjoys. With a balanced combination of refined offensive and defensive technologies, the Falcon delivers an astonishing amount of potential firepower to potential adversaries quickly and efficiently.
 
 H 468512
 	\m\bCTE-6000 "Eagle" Civilian Very Heavy Fighter\B
@@ -515,7 +517,17 @@ H 468528
 	\m\bMQ-2 "Starfire" Unmanned Heavy Fighter\B
 	\l
 	Placeholder\n
-
+	
+H 468529
+	\m\bFLC-2CQ "Falcon" Civilian Heavy Fighter\B
+	\l
+	 PLACEHOLDER DESCRIPTION. An advanced close quarters configuration of the venerable Falcon HF.\n
+	
+H 468530
+	\m\bFLC-2LR "Falcon" Civilian Heavy Fighter\B
+	\l
+	 PLACEHOLDER DESCRIPTION. An advanced long range configuration of the venerable Falcon HF.\n
+	 
 H 469010
 	\m\bModel G "Quarrel" High-Performance Engine\B
 	\l
