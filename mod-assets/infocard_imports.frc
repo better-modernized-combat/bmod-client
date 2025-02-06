@@ -1246,7 +1246,7 @@ S 474037 Pueblo Security Exclusion Zone
 S 474038 Durango Orbital Security Perimeter
 S 474039 Kepler Gate Debris Field
 S 474040 "Big Yen" Asteroid Cluster // INCREASED XENOS THREAT
-S 474041 Unknown Planet
+S 474041 Planet Ham
 S 474042 The Maverock
 S 474043 Maverick Station
 S 474044 Communications Satellite
@@ -2977,6 +2977,14 @@ H 483623
 	\m\bSHIELDED CONTAINER\B
 	\l
 	The contents of this cargo could be anything; without scanners being able to penetrate its exterior, the only way to find out is to crack it open by force.
+	
+S 482624 [TASTY] Ham
+H 483624
+	Ham for a sweet baby boy.
+	
+S 482625 [TASTY] Chicken
+H 483625
+	Chicken for our spoilt baby.
 
 S 474054 DSE - Boar Mining Ship
 S 474055 [USE] DSE Radar C-01
@@ -3066,6 +3074,16 @@ S 474088 REPAIR ZONE // Stand by for repairs...
 
 S 474089 Navy - Mobile Repair Bay
 S 474090 Navy - Lazrius Frigate
+
+S 474091 Home
+S 474092 Home Station
+S 474093 Our Son
+S 474094 Our Boy
+S 474095 Me
+S 474096 You
+S 474097 Baby Buoy
+S 474098 Pack of Ham
+S 474099 Pack of Chicken
 
 
 
